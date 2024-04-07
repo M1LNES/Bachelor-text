@@ -181,10 +181,13 @@ přístup neoprávněných uživatelů.
 
 Existuje hned několik způsobů, jak data embedovat. Mezi nejpopulárnější a nejrozšířenější způsoby patří HTML iframe, webová komponenta či React SDK s voláním API \cite{goodDataEmbedded}. 
 
-Nejjednodušší a nejrychlejší metodou embedování je využití použití iframu \cite{goodDataEmbedded}. Iframe (Inline frame) je HTML prvek, který umožňuje načíst HTML stránku uvnitř dokumentu \cite{iFrameAdv}. Používá se pro vložení určitého obsahu z jednoho zdroje do druhého. To se poté jeví jako nové okno v dané stránce, jedná se ovšem o embedovaný iframe. Tuto možnost embedování využívají např. Google Mapy nebo YouTube \cite{iFrameAdv}. Velkou výhodou je, že není třeba instalovat pro běh žádné dependence.
+\subsection{Iframe}
+Nejjednodušší a nejrychlejší metodou embedování je využití použití iframu \cite{goodDataEmbedded}. Iframe (inline frame) je HTML prvek, který umožňuje načíst HTML stránku uvnitř dokumentu \cite{iFrameAdv}. Používá se pro vložení určitého obsahu z jednoho zdroje do druhého. To se poté jeví jako nové okno v dané stránce, jedná se ovšem o embedovaný iframe. Tuto možnost embedování využívají např. Google Mapy nebo YouTube \cite{iFrameAdv}. Velkou výhodou je, že není třeba instalovat pro běh žádné dependence.
 
+\subsection{Webová komponenta}
 Pokročilejší technikou pro embedování je použití webové komponenty. Výhoda opět spočívá v tom, že není třeba instalovat závislosti pro běh. Embedování probíhá pomocí knihovny, která se naimportuje přes HTML tag \texttt{<script>}. Poté je možno embedovat vizualizace pouze prostřednictvím naimplementovaných webových komponent \cite{webComp}.
 
+\subsection{React SDK + API}
 Poslední zmiňovanou možností je embedování prostřednictvím React SDK s voláním API. 
 
 SDK (Software development kit) je označení sady nástrojů pro tvorbu softwaru \cite{SDKvsAPI}, které umožňuje vývojářům vytvářet rychleji a standartizovaně nové aplikace. API 
@@ -202,16 +205,34 @@ Zabezpečení API je důležitou součástí v moderním inženýrství zajišť
 systémy je nezbytné věnovat zvláštní pozornost implementaci efektivních bezpečnostních opatření. API authentication (autentizace) je řešením pro ověřování uživatelů - to umožňuje
 vlastníkovi daného API ochranu před neoprávněným přístupem ze strany uživatelů, kteří nemohou ověřit svou totožnost \cite{whatIsAPI}.
 
-Řešení autentizace jsou obvykle nastavena tak, aby zablokovala přístup do API, pokud se při volání zjistí něco nesprávného/nevalidního s uživatelem. S tím se pojí druhá bezpečnostní
+Řešení autentizace jsou obvykle nastavena tak, aby zablokovala přístup do API, pokud se při volání zjistí něco nesprávného či nevalidního s uživatelem. S tím se pojí druhá bezpečnostní
 složka, kterou je autorizace (authorization). Zatímco autentizace ověřuje identitu uživatele, autorizace se zabývá tím, jaké akce má daný uživatel povoleny \cite{mostUsedAuthentication}. 
 Mezi nejpoužívanější metody patří HTTP authentication, API keys a OAuth 2.0. 
 
-HTTP authentication omezuje přístup k serveru pomocí Basic HTTP schématu \cite{mozillaHTTPAuth}. Uživatel, který chce ověřit svou identitu, tak může učinit vložením hlavičky 
+\subsection{HTTP autentizace}
+HTTP autentizace omezuje přístup k serveru pomocí předdefinovaných schémat. 
+
+Jedním z používaných schémat je Basic HTTP \cite{mozillaHTTPAuth}. Uživatel, který chce ověřit svou identitu, tak může učinit vložením hlavičky 
 Authorization s bezpečnostními údaji - nejčasteji tím bývá uživatelské jméno a heslo. 
+Samotné ověřování pomocí HTTP Basic se ovšem nedoporučuje. Přenášené údaje jsou sice zakódované, ale nejsou zašifrované \cite{mozillaHTTPAuth}. Proto je třeba v případě použití zajistit šifrované spojení (HTTPS/TLS). Atribut hlavičky se zakódovaným uživatelským jménem a heslem může vypadat např. jako na ukázce \ref{basicHeader}.
 
+\begin{lstlisting}[language=json, caption={Autorizační atribut - Basic schéma}, label=basicHeader]
+	Authorization: Basic drgnpdrgud653==,
+\end{lstlisting}
+
+Bearer schéma obsahuje tzv. bearer tokeny. Bearer token specifikuje, k jakým zdrojům může uživatel v API přistupovat \cite{mostUsedAuthentication}. Token je obvykle řetězec vygenerovaný serverem v reakci na požadavek na přihlášení. Opět je nutné zajistit zabezpečené spojení jako v případě Basic schématu. Atribut hlavičky s tokenem může vypadat např. jako na ukázce \ref{bearerHeader}
+
+\begin{lstlisting}[language=json, caption={Autorizační atribut - Bearer schéma}, label=bearerHeader]
+	Authorization: Bearer se5Edg345dsBNN-7df,
+\end{lstlisting}
+
+
+\subsection{API key}
 API klíč (key) je jedinečný alfanumerický řetězec, který slouží k jednoznačné identifikaci klientů/aplikací \cite{amazonAPIKey}, jenž API využívají. Narozdíl od tokenů
-nejsou časově omezené - to může znamena bezpečnostní problém v případě, že při zadávání požadavku API by přenášený klíč mohl být zachycen \cite{mostUsedAuthentication}.
+nejsou časově omezené - to může znamenat bezpečnostní problém v případě, že při zadávání požadavku API by přenášený klíč mohl být zachycen \cite{mostUsedAuthentication} a s ním i celá síť, pokud by obsahovala jeden nezabezpečený bod. Proto je i v tomto případě nutné zajistit šifrované spojení.
+Pokud API bude sloužit pouze ke čtení, je zabezpečení API klíčem tou nejlepší volbou - uživatelé budou moci data stahovat, ale nikterak modifikovat či mazat \cite{mostUsedAuthentication}. 
 
+\subsection{OAuth}
 OAuth (Open Authorization) protokol byl vyvinut jako řešení pro udělování přístupu na předem definovanou dobu bez sdílené uživatelských jmen a hesel \cite{understandingOAuth2}. OAuth 2.0
 je nejlepší volbou pro identifikaci osobních uživatelských účtů a udělování patřičných oprávnění \cite{mostUsedAuthentication}. Proces autentizace je vidět na obrázku \ref{fig:oauth2Diagram}.
 
@@ -219,53 +240,61 @@ je nejlepší volbou pro identifikaci osobních uživatelských účtů a udělo
 \begin{figure}
 	\centering
 	\includegraphics[width=1\textwidth]{pictures/oauth2-diagram.png}
-	\caption{Autentizační diagram protokolu OAuth 2.0}
+	\caption{Autentizační diagram protokolu OAuth 2.0 \cite{oAuthImage}}
 	\label{fig:oauth2Diagram}
 \end{figure}
 
 
-Nejprve se uživatel přihlásí do systému - nejčastěji formou uživatelského jména a hesla, nebo client\_id a client\_secret. Tím pošle HTTP požadavek na endpoint. Autorizace uživateli následně
+Nejprve se uživatel přihlásí do systému - nejčastěji formou uživatelského jména a hesla, nebo klientského id a secretu. Tím se pošle HTTP požadavek na endpoint. Autorizace uživateli následně
 vrátí token. Pokud má uživatel již platný token, může přistupovat k datům. Naopak pokud mu token již expiroval nebo není platný, volání do API mu vrátí chybové hlášení. 
 
-Součástí autorizační odpovědi bývá i několik dalších údajů. Odpověď může vypadat např. jako na výpisu \ref{tokenResponse}. 
+Součástí autorizační odpovědi bývá i několik dalších údajů. Odpověď může vypadat např. jako na \ref{tokenResponse}. 
 
 \begin{lstlisting}[language=json, caption={Ukázková odpověď autorizačního serveru}, label=tokenResponse]
 {
-	"access_token": "ABCDEF1234567890GHIJKL",
+	"access_token": "G7k4Q2s1bD5z9x",
 	"token_type": "Bearer",
 	"expires_in": 3600,
-	"refresh_token": "ZYXWVU0987654321DCBANMLKJIHGFEDCBA",
+	"refresh_token": "5aB3c9Cx8P5y2z",
 	"scope": "create"
 }
 \end{lstlisting}
 	  
-Odpověď bývá ve formátu JSON a obsahuje informace o daném tokenu. Kromě přístupového tokenu obsahuje i refresh\_token, který slouží k obnově tokenu po vypršení jeho platnosti (expires\_in - platnost je v sekundách). To umožňuje uživateli 
-používat stále jeden token bez nutnosti generování nového. Dále obsahuje atribut scope, který specifikuje práva uživatele a atribut token\_type \cite{oauthResponseExample}.
-
+Odpověď bývá ve formátu JSON (JavaScript Object Notation) a obsahuje informace o daném přístupovém tokenu (access\_token). Kromě přístupového tokenu obvykle obsahuje i refresh\_token. Ten umožňuje uživateli 
+používat stále jeden token bez nutnosti generování nového \cite{oauthResponseExample}. Dále může obsahovat specifikující práva uživatele (scope), platnost tokenu (expires\_in) či typ tokenu (token\_type), jež některé z nich byly zmíněny v předchozí kapitole.
+Přesný formát odpovědi je ale specifikován samotným API - tudíž každé API může mít jiné délky přístupových a obnovovacích tokenů, časové platnosti tokenů či i samotné atributy v odpovědi a jejich názvy.
 %
 % Podkapitola existující řešení
 %
 \section{Existující řešení}
 Embedded analytics problematikou se zabývá mnoho firem a každá z nich disponuje jinými způsoby řešení. Zde budou zmíněny firmy, které se objevují často na vrchních příčkách
 internetových recenzí či firmy, které byly pro inspiraci doporučeny externím zadavatelem. Pro aktuálnost jsou brány informace ze zdrojů z roků 2022/2023.
-
+\subsection{GoodData}
 Firma GoodData byla zmíněna zadavatelem jako jedna z nejvýraznějších na trhu. Dodává embedded analytics systémy firmám jako je VISA, Zalando či Bentley \cite{goodDataEmbeddingPlatform}. 
-Embedování provádí třemi zmíněnými způsoby - HTML iFramem, webovou komponentou či React SDK. Zákazníkům nabízí přizpůsobení dashboardů tak, aby odpovídaly zákazníkovo značce. GoodData získaly
+Embedování provádí třemi zmíněnými způsoby - HTML iframem, webovou komponentou či React SDK. Zákazníkům nabízí přizpůsobení dashboardů tak, aby odpovídaly zákazníkovo značce. GoodData získaly
 v roce 2023 hned několik ocenění firmou TrustRadius, důvěryhodnou platformou v oblasti B2B (bussines to bussines) \cite{trustRadiusDiscusionGoodData}. Firma GoodData obdržela ocenění Best Value for Price,
-Best Relationship či Top Rated 2023. Recenze zákazníků firmy GoodData si chválí hlavně snadné používání, zákaznickou podporu, širokou škálu podporovaných databází či uživatelsky přívětivé
+Best Relationship či Top Rated 2023. Zákazníci firmy GoodData si v recenzích chválí hlavně snadné používání, zákaznickou podporu, širokou škálu podporovaných databází či uživatelsky přívětivé
 rozhraní \cite{trustRadiusDiscusionGoodData}. Naopak se zmiňují, že dokumentace může být nedostačující či některé endpointy v API mají neintuitivní parametry. I tak ale 92\% recenzentů uvádí,
 že by si produkt zakoupili znovu.
 
+\subsection{Microsoft Power BI}
 Mezi často zmiňovaným produktem je Microsoft Power BI, který je ve svém oboru nejlepší v oblasti bezpečnosti a zabezpečení \cite{bestEmbTools2023},
 jelikož Microsoft zaměstnává více než 3500 bezpečnostních expertů. V produktu nabízí také tzv. playground, který
 umožňuje uživatelům testovat funkce a vlastnosti daných dashboardů před úplným nasazením. Je také podporvána integrace s cloudovou službou Microsoft Azure. Na webu TrustRadius je k 
 Microsoft Power BI podstatně méně recenzí než k produktu GoodData (5x méně). Uživatelé zmiňují dlouhou dobu při zpracování většího objemu dat či vysokou provozní cenu \cite{trustRadiusDiscusionAzure}.
 
+\subsection{Powered by Looker}
 V oblasti modelování data vyniká platforma Powered by Looker \cite{bestEmbTools2023}. Jedná se o produkt služby Google Cloud, který poskytuje způsob, jak sledovat změny a prohlížet jejich
 historii v databázi. Disponuje modelovacím jazykem LookML založeným na SQL, který slouží k vytváření sémantických datových modelů. Pomocí něj lze popisovat jednotlivé dimenze, agregáty,
 výpočty či datové vztahy v databázi \cite{googleLookMLDoc}. Z toho vyplývá, že datové modely jsou rozšiřitelné, opakovatelně použitelné a konzistentní a tudíž efektivní. V roce 2022 byl tento produkt
 oceněn Top Rated a Most Loved společností TrustRadius \cite{trustRadiusDiscusionLooker}. Uživatelé zmiňují, že produkt může být pomalejší a že nástroje na přizpůsobení dashboardů by mohly být
 vylepšeny a rozšířeny.
+
+
+\subsection{Tableau}
+Tableau vyniká ve vytváření estetických a interaktivních vizualizací \cite{tableauBlog}. Dále nabízí zákazníkům publikaci vizualizací prostřednictvím produktu Tableau Online. Cena produktu začíná na \$70 měsíčně za jednoho uživatele \cite{trustRadiusTableAU}. 
+Zákazníci produkt hodnotí velmi kladně - 100\% z nich uvádí, že implementace proběhla jak očekávali, 98\% jsou s výsledkem spokojeni a 91\% by si tento produkt zakoupilo zase \cite{trustRadiusTableAU}. Silné stránky 
+tohoto produktu spočívají v automatickém generování kódu pro embedování a jednoduché vkládání dashboardů do webových stránek \cite{tableauBlog}. Kritika naopak zaznívá na zákaznickou podporu či pomalé načítání při velkém množství dat \cite{trustRadiusTableAU}.
 % _____________________________________________________________________________
 %
 %

@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber bp"] 1712508788 "bp.bcf" "bp.bbl" "bp" 1712508806 0
-  "./bp.bib" 1712508328 4914 6b2f5ee817df1476ca62f62ea5afe047 ""
-  "bp.bcf" 1712508805 110172 8085ec0ae4f70fa64366695a7a08e0fe "pdflatex"
+["biber bp"] 1712530393 "bp.bcf" "bp.bbl" "bp" 1712530468 0
+  "./bp.bib" 1712529911 5632 b796b109bae8af6ed0b97d16bcb63739 ""
+  "bp.bcf" 1712530467 110887 c43140481dfe1ceac4589b898e7bf6b9 "pdflatex"
   (generated)
   "bp.bbl"
   "bp.blg"
   (rewritten before read)
-["pdflatex"] 1712508801 "c:/Users/milan/Desktop/LaTex/bp/bp.tex" "bp.pdf" "bp" 1712508806 0
+["pdflatex"] 1712530463 "c:/Users/milan/Desktop/LaTex/bp/bp.tex" "bp.pdf" "bp" 1712530468 0
   "C:/Users/milan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1712492492 165642 500e04356f709535579a391bee399919 ""
   "C:/Users/milan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1701527373 24200609 b9cd52f7445c48da5904dfb5999abb09 ""
   "C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/enc/dvips/GTAmerica/a_ewcozh.enc" 1701518284 3379 251d25309ec463a6b41e6c44f528547e ""
@@ -280,16 +280,16 @@
   "D:/Install/MikTex/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "D:/Install/MikTex/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "D:/Install/MikTex/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
-  "bp.aux" 1712508805 11433 0c69c5c90588bbdcbb6e2c3b09b6b3b3 "pdflatex"
-  "bp.bbl" 1712508791 19651 fb9b9987bcc215fffd7cc6c970988959 "biber bp"
-  "bp.lof" 1712508805 1649 3b512bff9d413a8b9069673dda5b924a "pdflatex"
-  "bp.lol" 1712508805 110 b685239bcbadc937879139176eb60fca "pdflatex"
-  "bp.lot" 1712508805 1416 07a383909d977c2662cd99f990360993 "pdflatex"
-  "bp.out" 1712508805 2569 9f6972be75421eeeb1b642a27e7aa6ce "pdflatex"
-  "bp.run.xml" 1712508805 2419 0c8fdbf3a3681e152c52f6fd575e2c02 "pdflatex"
-  "bp.tex" 1712508783 28013 8617fb4b0bf4d5ad66cf6ef07624e03e ""
-  "bp.toc" 1712508805 2871 b11e1c33d557c690033b83ec62bd17be "pdflatex"
-  "c:/Users/milan/Desktop/LaTex/bp/bp.tex" 1712508783 28013 8617fb4b0bf4d5ad66cf6ef07624e03e ""
+  "bp.aux" 1712530467 14256 c1bd7ae0dad73de96b70c1afaffa5c42 "pdflatex"
+  "bp.bbl" 1712530396 22289 ea6df4a0a92e9a93bedbed5d4ada1710 "biber bp"
+  "bp.lof" 1712530467 1859 3f4f151671fd50f26f7379d3e9f2c724 "pdflatex"
+  "bp.lol" 1712530467 317 cebc0d6a0966976fdc25d6bfd05aa523 "pdflatex"
+  "bp.lot" 1712530467 1584 78505ad3fc64b130b2711b8d6a271986 "pdflatex"
+  "bp.out" 1712530467 3802 a367422dccc4e026b41b4d917c71341e "pdflatex"
+  "bp.run.xml" 1712530467 2419 0c8fdbf3a3681e152c52f6fd575e2c02 "pdflatex"
+  "bp.tex" 1712530462 30890 18a20fdc76c34be3ab82a05b4f3aaace ""
+  "bp.toc" 1712530467 3861 db45765ef6414a06bd836150e8343b4c "pdflatex"
+  "c:/Users/milan/Desktop/LaTex/bp/bp.tex" 1712530462 30890 18a20fdc76c34be3ab82a05b4f3aaace ""
   "fasthesis.cls" 1708004154 55614 9f38ebd9514516418993889d32c89852 ""
   "img/background-kiv.pdf" 1701518290 8873 b97839523fb81367fe0494450b7edebc ""
   "img/kiv-black-cz.pdf" 1701518290 8971 8015c8d8d645426feaf34fd9b87f0981 ""

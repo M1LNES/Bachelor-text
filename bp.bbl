@@ -271,8 +271,8 @@
       \list{organization}{1}{%
         {Amazon Web Services}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{note}{[Online: accessed 9.Dec.2023]}
@@ -316,6 +316,25 @@
       \verb https://medium.com/web-security/understanding-oauth2-a50f29f0fbf7
       \endverb
     \endentry
+    \entry{oAuthImage}{online}{}
+      \list{organization}{1}{%
+        {Eraser}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Online: accessed 7.Apr.2024]}
+      \field{title}{Auth Flow Diagrams}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.eraser.io/use-case/auth-flow-diagrams
+      \endverb
+      \verb{url}
+      \verb https://www.eraser.io/use-case/auth-flow-diagrams
+      \endverb
+    \endentry
     \entry{oauthResponseExample}{online}{}
       \list{organization}{1}{%
         {OAuth}%
@@ -357,8 +376,8 @@
       \list{organization}{1}{%
         {TrustRadius}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{note}{[Online: accessed 9.Dec.2023]}
@@ -386,8 +405,8 @@
       \strng{authorbibnamehash}{c55675f55a2a357d172aee5be26128b5}
       \strng{authornamehash}{c55675f55a2a357d172aee5be26128b5}
       \strng{authorfullhash}{c55675f55a2a357d172aee5be26128b5}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{30}
@@ -406,8 +425,8 @@
       \list{organization}{1}{%
         {TrustRadius}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{note}{[Online: accessed 9.Dec.2023]}
@@ -459,6 +478,57 @@
       \verb https://www.trustradius.com/products/looker/reviews
       \endverb
     \endentry
+    \entry{tableauBlog}{online}{}
+      \name{author}{1}{}{%
+        {{hash=04a2e0300b63a1a8ac6c2fe07c9d6807}{%
+           family={Rehana},
+           familyi={R\bibinitperiod},
+           given={Sharon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Comparing Embedded Analytics Solutions in 5 Business Intelligence (BI) Tools}%
+      }
+      \strng{namehash}{04a2e0300b63a1a8ac6c2fe07c9d6807}
+      \strng{fullhash}{04a2e0300b63a1a8ac6c2fe07c9d6807}
+      \strng{bibnamehash}{04a2e0300b63a1a8ac6c2fe07c9d6807}
+      \strng{authorbibnamehash}{04a2e0300b63a1a8ac6c2fe07c9d6807}
+      \strng{authornamehash}{04a2e0300b63a1a8ac6c2fe07c9d6807}
+      \strng{authorfullhash}{04a2e0300b63a1a8ac6c2fe07c9d6807}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{Auth Flow Diagrams}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.analytics8.com/blog/comparing-embedded-analytics-solutions-in-five-business-intelligence-tools/#tableau
+      \endverb
+      \verb{url}
+      \verb https://www.analytics8.com/blog/comparing-embedded-analytics-solutions-in-five-business-intelligence-tools/#tableau
+      \endverb
+    \endentry
+    \entry{trustRadiusTableAU}{online}{}
+      \list{organization}{1}{%
+        {TrustRadius}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Online: accessed 8.Apr.2024]}
+      \field{title}{What is Tableau Desktop?}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.trustradius.com/products/tableau-desktop/reviews
+      \endverb
+      \verb{url}
+      \verb https://www.trustradius.com/products/tableau-desktop/reviews
+      \endverb
+    \endentry
     \entry{whyUsingReact}{online}{}
       \name{author}{1}{}{%
         {{hash=6173cde0617bfd345235038c684fc7d1}{%
@@ -473,8 +543,8 @@
       \strng{authorbibnamehash}{6173cde0617bfd345235038c684fc7d1}
       \strng{authornamehash}{6173cde0617bfd345235038c684fc7d1}
       \strng{authorfullhash}{6173cde0617bfd345235038c684fc7d1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{18}
@@ -503,8 +573,8 @@
       \strng{authorbibnamehash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
       \strng{authornamehash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
       \strng{authorfullhash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{12}
@@ -523,8 +593,8 @@
       \list{organization}{1}{%
         {Javatpoint}%
       }
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{note}{[Online: accessed 9.Dec.2023]}

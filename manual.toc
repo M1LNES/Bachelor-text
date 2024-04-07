@@ -1,0 +1,35 @@
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\contentsline {chapter}{\chapternumberline {1}Úvod}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Instalace}{5}{section.1.1}%
+\contentsline {chapter}{\chapternumberline {2}Použití šablony}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Nastavení třídy {\ttzfamily fasthesis}}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Seznam přepínačů třídy {\ttzfamily fas\-the\-sis}}{8}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Minimální kostra dokumentu třídy {\ttzfamily fas\-the\-sis}}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Některé úvodní \uv {stavové} příkazy}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Vložení zadání práce}{10}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Specifikace souboru s bibliografickou databází}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Abstrakt}{12}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Klíčová slova}{12}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Sazba titulních stránek}{13}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Sazba poslední stránky (desek)}{14}{section.2.5}%
+\contentsline {chapter}{\chapternumberline {3}Sazba některých specifických částí textu}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Matematika}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Vzorce, rovnice a jejich soustavy}{15}{subsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.1.1}Sazba vzorců}{15}{subsubsection.3.1.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.1.2}Sazba rovnic a jejich soustav}{16}{subsubsection.3.1.1.2}%
+\contentsline {section}{\numberline {3.2}Obrázky, ilustrace, grafy, diagramy}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Zdrojový kód}{19}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Terminál/konzole operačního systému}{20}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Když je něco opravdu hodně důležité}{23}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Užitečné drobnosti}{24}{section.3.6}%
+\contentsline {appendix}{\chapternumberline {A}Lokální instalace fontu GT America}{27}{appendix.A}%
+\contentsline {appendix}{\chapternumberline {B}Přehled balíčků importovaných třídou {\ttzfamily fasthesis}}{29}{appendix.B}%
+\contentsline {chapter}{Bibliografie}{33}{section*.4}%
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\contentsline {chapter}{Seznam obrázků}{35}{appendix*.5}%
+\contentsline {chapter}{Seznam tabulek}{37}{appendix*.6}%
+\contentsline {chapter}{Seznam výpisů}{39}{appendix*.7}%

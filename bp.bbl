@@ -1,0 +1,481 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{goodDataEmbedded}{online}{}
+      \name{author}{1}{}{%
+        {{hash=421f353511037357ef7d4203898fde5a}{%
+           family={Seidelova},
+           familyi={S\bibinitperiod},
+           given={Tereza},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {GoodData}%
+      }
+      \strng{namehash}{421f353511037357ef7d4203898fde5a}
+      \strng{fullhash}{421f353511037357ef7d4203898fde5a}
+      \strng{bibnamehash}{421f353511037357ef7d4203898fde5a}
+      \strng{authorbibnamehash}{421f353511037357ef7d4203898fde5a}
+      \strng{authornamehash}{421f353511037357ef7d4203898fde5a}
+      \strng{authorfullhash}{421f353511037357ef7d4203898fde5a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{31}
+      \field{month}{10}
+      \field{title}{Embedded Analytics: All You Need To Know}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.gooddata.com/blog/what-embedded-analytics/
+      \endverb
+      \verb{url}
+      \verb https://www.gooddata.com/blog/what-embedded-analytics/
+      \endverb
+    \endentry
+    \entry{coJeDashboard}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0cfd29726fbb261444004d054cd75b56}{%
+           family={Bruk},
+           familyi={B\bibinitperiod},
+           given={Vojtěch},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{0cfd29726fbb261444004d054cd75b56}
+      \strng{fullhash}{0cfd29726fbb261444004d054cd75b56}
+      \strng{bibnamehash}{0cfd29726fbb261444004d054cd75b56}
+      \strng{authorbibnamehash}{0cfd29726fbb261444004d054cd75b56}
+      \strng{authornamehash}{0cfd29726fbb261444004d054cd75b56}
+      \strng{authorfullhash}{0cfd29726fbb261444004d054cd75b56}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{22}
+      \field{month}{2}
+      \field{title}{Co je Dashboard?}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://vojtechbruk.cz/pojem/dashboard/
+      \endverb
+      \verb{url}
+      \verb https://vojtechbruk.cz/pojem/dashboard/
+      \endverb
+    \endentry
+    \entry{emplifiDashboard}{online}{}
+      \list{organization}{1}{%
+        {Emplifi}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{[Online: accessed 9.Dec.2023]}
+      \field{title}{Dashboard}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.emplifi.io/platform/latest/home/dashboard
+      \endverb
+      \verb{url}
+      \verb https://docs.emplifi.io/platform/latest/home/dashboard
+      \endverb
+    \endentry
+    \entry{saasDefinition}{online}{}
+      \list{organization}{1}{%
+        {Investopedia}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{12}
+      \field{title}{Software as a Service (SaaS): Definition and Examples}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.investopedia.com/terms/s/software-as-a-service-saas.asp
+      \endverb
+      \verb{url}
+      \verb https://www.investopedia.com/terms/s/software-as-a-service-saas.asp
+      \endverb
+    \endentry
+    \entry{SDKvsAPI}{online}{}
+      \list{organization}{1}{%
+        {IBM}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{day}{13}
+      \field{month}{7}
+      \field{title}{SDK vs. API: What’s the Difference?}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ibm.com/blog/sdk-vs-api/
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/blog/sdk-vs-api/
+      \endverb
+    \endentry
+    \entry{whatIsAPI}{online}{}
+      \list{organization}{1}{%
+        {Noname Security}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{6}
+      \field{title}{What is API Authentication?}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://nonamesecurity.com/learn/what-is-api-authentication/
+      \endverb
+      \verb{url}
+      \verb https://nonamesecurity.com/learn/what-is-api-authentication/
+      \endverb
+    \endentry
+    \entry{mostUsedAuthentication}{online}{}
+      \name{author}{1}{}{%
+        {{hash=48b660e3ee22642cb961722005b19bc1}{%
+           family={Levin},
+           familyi={L\bibinitperiod},
+           given={Guy},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{48b660e3ee22642cb961722005b19bc1}
+      \strng{fullhash}{48b660e3ee22642cb961722005b19bc1}
+      \strng{bibnamehash}{48b660e3ee22642cb961722005b19bc1}
+      \strng{authorbibnamehash}{48b660e3ee22642cb961722005b19bc1}
+      \strng{authornamehash}{48b660e3ee22642cb961722005b19bc1}
+      \strng{authorfullhash}{48b660e3ee22642cb961722005b19bc1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{26}
+      \field{month}{7}
+      \field{title}{4 Most Used REST API Authentication Methods}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://blog.restcase.com/4-most-used-rest-api-authentication-methods/
+      \endverb
+      \verb{url}
+      \verb https://blog.restcase.com/4-most-used-rest-api-authentication-methods/
+      \endverb
+    \endentry
+    \entry{mozillaHTTPAuth}{online}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{[Online: accessed 9.Dec.2023]}
+      \field{title}{HTTP authentication}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication
+      \endverb
+    \endentry
+    \entry{amazonAPIKey}{online}{}
+      \list{organization}{1}{%
+        {Amazon Web Services}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{[Online: accessed 9.Dec.2023]}
+      \field{title}{What is an API key?}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/what-is/api-key/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/what-is/api-key/
+      \endverb
+    \endentry
+    \entry{understandingOAuth2}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b333174bf788b4b78403a0d4a1c850d5}{%
+           family={Starreveld},
+           familyi={S\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b333174bf788b4b78403a0d4a1c850d5}
+      \strng{fullhash}{b333174bf788b4b78403a0d4a1c850d5}
+      \strng{bibnamehash}{b333174bf788b4b78403a0d4a1c850d5}
+      \strng{authorbibnamehash}{b333174bf788b4b78403a0d4a1c850d5}
+      \strng{authornamehash}{b333174bf788b4b78403a0d4a1c850d5}
+      \strng{authorfullhash}{b333174bf788b4b78403a0d4a1c850d5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{2}
+      \field{month}{8}
+      \field{title}{Understanding OAuth2}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/web-security/understanding-oauth2-a50f29f0fbf7
+      \endverb
+      \verb{url}
+      \verb https://medium.com/web-security/understanding-oauth2-a50f29f0fbf7
+      \endverb
+    \endentry
+    \entry{oauthResponseExample}{online}{}
+      \list{organization}{1}{%
+        {OAuth}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{[Online: accessed 9.Dec.2023]}
+      \field{title}{Access Token Response}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/
+      \endverb
+      \verb{url}
+      \verb https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/
+      \endverb
+    \endentry
+    \entry{goodDataEmbeddingPlatform}{online}{}
+      \list{organization}{1}{%
+        {GoodData}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{GoodData embedded analytics platform}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.gooddata.com/embedded-analytics/
+      \endverb
+      \verb{url}
+      \verb https://www.gooddata.com/embedded-analytics/
+      \endverb
+    \endentry
+    \entry{trustRadiusDiscusionGoodData}{online}{}
+      \list{organization}{1}{%
+        {TrustRadius}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{[Online: accessed 9.Dec.2023]}
+      \field{title}{What is GoodData?}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.trustradius.com/products/gooddata/reviews?qs=pros-and-cons#reviews
+      \endverb
+      \verb{url}
+      \verb https://www.trustradius.com/products/gooddata/reviews?qs=pros-and-cons#reviews
+      \endverb
+    \endentry
+    \entry{bestEmbTools2023}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c55675f55a2a357d172aee5be26128b5}{%
+           family={Porritt},
+           familyi={P\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c55675f55a2a357d172aee5be26128b5}
+      \strng{fullhash}{c55675f55a2a357d172aee5be26128b5}
+      \strng{bibnamehash}{c55675f55a2a357d172aee5be26128b5}
+      \strng{authorbibnamehash}{c55675f55a2a357d172aee5be26128b5}
+      \strng{authornamehash}{c55675f55a2a357d172aee5be26128b5}
+      \strng{authorfullhash}{c55675f55a2a357d172aee5be26128b5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{1}
+      \field{title}{Best Embedded Analytics Tools (2023)}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://technologyadvice.com/blog/information-technology/embedded-analytics-software/
+      \endverb
+      \verb{url}
+      \verb https://technologyadvice.com/blog/information-technology/embedded-analytics-software/
+      \endverb
+    \endentry
+    \entry{trustRadiusDiscusionAzure}{online}{}
+      \list{organization}{1}{%
+        {TrustRadius}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{[Online: accessed 9.Dec.2023]}
+      \field{title}{What is Microsoft Power BI Embedded?}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.trustradius.com/products/microsoft-power-bi-embedded/reviews?qs=pros-and-cons
+      \endverb
+      \verb{url}
+      \verb https://www.trustradius.com/products/microsoft-power-bi-embedded/reviews?qs=pros-and-cons
+      \endverb
+    \endentry
+    \entry{googleLookMLDoc}{online}{}
+      \list{organization}{1}{%
+        {Google Cloud}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{[Online: accessed 9.Dec.2023]}
+      \field{title}{Introduction to LookML}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://cloud.google.com/looker/docs/what-is-lookml
+      \endverb
+      \verb{url}
+      \verb https://cloud.google.com/looker/docs/what-is-lookml
+      \endverb
+    \endentry
+    \entry{trustRadiusDiscusionLooker}{online}{}
+      \list{organization}{1}{%
+        {TrustRadius}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{[Online: accessed 9.Dec.2023]}
+      \field{title}{What is Looker?}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.trustradius.com/products/looker/reviews	
+      \endverb
+      \verb{url}
+      \verb https://www.trustradius.com/products/looker/reviews
+      \endverb
+    \endentry
+    \entry{whyUsingReact}{online}{}
+      \name{author}{1}{}{%
+        {{hash=6173cde0617bfd345235038c684fc7d1}{%
+           family={Surve},
+           familyi={S\bibinitperiod},
+           given={Suraj},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6173cde0617bfd345235038c684fc7d1}
+      \strng{fullhash}{6173cde0617bfd345235038c684fc7d1}
+      \strng{bibnamehash}{6173cde0617bfd345235038c684fc7d1}
+      \strng{authorbibnamehash}{6173cde0617bfd345235038c684fc7d1}
+      \strng{authornamehash}{6173cde0617bfd345235038c684fc7d1}
+      \strng{authorfullhash}{6173cde0617bfd345235038c684fc7d1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{month}{2}
+      \field{title}{Why You Should Use React.js For Web Development}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.freecodecamp.org/news/why-use-react-for-web-development/
+      \endverb
+      \verb{url}
+      \verb https://www.freecodecamp.org/news/why-use-react-for-web-development/
+      \endverb
+    \endentry
+    \entry{whyUsingReact2}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4f477f4aa0e4a14f7c70bcc92466c4b4}{%
+           family={Hutsulyak},
+           familyi={H\bibinitperiod},
+           given={Oleksandr},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
+      \strng{fullhash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
+      \strng{bibnamehash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
+      \strng{authorbibnamehash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
+      \strng{authornamehash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
+      \strng{authorfullhash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{12}
+      \field{month}{3}
+      \field{title}{10 Key Reasons Why You Should Use React for Web Development}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.techmagic.co/blog/why-we-use-react-js-in-the-development/
+      \endverb
+      \verb{url}
+      \verb https://www.techmagic.co/blog/why-we-use-react-js-in-the-development/
+      \endverb
+    \endentry
+    \entry{whatIsDOM}{online}{}
+      \list{organization}{1}{%
+        {Javatpoint}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{[Online: accessed 9.Dec.2023]}
+      \field{title}{What is Dom in React?}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.javatpoint.com/what-is-dom-in-react
+      \endverb
+      \verb{url}
+      \verb https://www.javatpoint.com/what-is-dom-in-react
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

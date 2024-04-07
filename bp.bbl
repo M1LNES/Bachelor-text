@@ -105,8 +105,8 @@
       \list{organization}{1}{%
         {Investopedia}%
       }
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labeltitlesource}{title}
       \field{day}{15}
       \field{month}{12}
@@ -120,12 +120,59 @@
       \verb https://www.investopedia.com/terms/s/software-as-a-service-saas.asp
       \endverb
     \endentry
+    \entry{iFrameAdv}{online}{}
+      \name{author}{1}{}{%
+        {{hash=19fab074e63dacffa18b54706e20f470}{%
+           family={Chinn},
+           familyi={C\bibinitperiod},
+           given={Kerrie-Anne},
+           giveni={K\bibinithyphendelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{19fab074e63dacffa18b54706e20f470}
+      \strng{fullhash}{19fab074e63dacffa18b54706e20f470}
+      \strng{bibnamehash}{19fab074e63dacffa18b54706e20f470}
+      \strng{authorbibnamehash}{19fab074e63dacffa18b54706e20f470}
+      \strng{authornamehash}{19fab074e63dacffa18b54706e20f470}
+      \strng{authorfullhash}{19fab074e63dacffa18b54706e20f470}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{14}
+      \field{month}{9}
+      \field{note}{[Online: accessed 7.Apr.2024]}
+      \field{title}{What’s an iFrame and how can I use it?}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.go1.com/blog/whats-iframe-can-use
+      \endverb
+      \verb{url}
+      \verb https://www.go1.com/blog/whats-iframe-can-use
+      \endverb
+    \endentry
+    \entry{webComp}{online}{}
+      \list{organization}{1}{%
+        {GoodData}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online: accessed 7.Apr.2024]}
+      \field{title}{Embed Visualizations Using Web Components}
+      \verb{urlraw}
+      \verb https://www.gooddata.com/docs/cloud/embed-visualizations/web-components/
+      \endverb
+      \verb{url}
+      \verb https://www.gooddata.com/docs/cloud/embed-visualizations/web-components/
+      \endverb
+    \endentry
     \entry{SDKvsAPI}{online}{}
       \list{organization}{1}{%
         {IBM}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{day}{13}
       \field{month}{7}
@@ -139,12 +186,28 @@
       \verb https://www.ibm.com/blog/sdk-vs-api/
       \endverb
     \endentry
+    \entry{reactSDKComp}{online}{}
+      \list{organization}{1}{%
+        {GoodData}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online: accessed 7.Apr.2024]}
+      \field{title}{Embed Visualizations Using React SDK}
+      \verb{urlraw}
+      \verb https://www.gooddata.com/docs/cloud/embed-visualizations/react-sdk/
+      \endverb
+      \verb{url}
+      \verb https://www.gooddata.com/docs/cloud/embed-visualizations/react-sdk/
+      \endverb
+    \endentry
     \entry{whatIsAPI}{online}{}
       \list{organization}{1}{%
         {Noname Security}%
       }
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{day}{8}
       \field{month}{6}
@@ -172,8 +235,8 @@
       \strng{authorbibnamehash}{48b660e3ee22642cb961722005b19bc1}
       \strng{authornamehash}{48b660e3ee22642cb961722005b19bc1}
       \strng{authorfullhash}{48b660e3ee22642cb961722005b19bc1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{26}
@@ -237,8 +300,8 @@
       \strng{authorbibnamehash}{b333174bf788b4b78403a0d4a1c850d5}
       \strng{authornamehash}{b333174bf788b4b78403a0d4a1c850d5}
       \strng{authorfullhash}{b333174bf788b4b78403a0d4a1c850d5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{2}
@@ -257,8 +320,8 @@
       \list{organization}{1}{%
         {OAuth}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{note}{[Online: accessed 9.Dec.2023]}
@@ -276,8 +339,8 @@
       \list{organization}{1}{%
         {GoodData}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{title}{GoodData embedded analytics platform}
@@ -294,8 +357,8 @@
       \list{organization}{1}{%
         {TrustRadius}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{note}{[Online: accessed 9.Dec.2023]}
@@ -323,8 +386,8 @@
       \strng{authorbibnamehash}{c55675f55a2a357d172aee5be26128b5}
       \strng{authornamehash}{c55675f55a2a357d172aee5be26128b5}
       \strng{authorfullhash}{c55675f55a2a357d172aee5be26128b5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{30}
@@ -362,8 +425,8 @@
       \list{organization}{1}{%
         {Google Cloud}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{note}{[Online: accessed 9.Dec.2023]}
@@ -381,8 +444,8 @@
       \list{organization}{1}{%
         {TrustRadius}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{note}{[Online: accessed 9.Dec.2023]}
@@ -410,8 +473,8 @@
       \strng{authorbibnamehash}{6173cde0617bfd345235038c684fc7d1}
       \strng{authornamehash}{6173cde0617bfd345235038c684fc7d1}
       \strng{authorfullhash}{6173cde0617bfd345235038c684fc7d1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{18}
@@ -440,8 +503,8 @@
       \strng{authorbibnamehash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
       \strng{authornamehash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
       \strng{authorfullhash}{4f477f4aa0e4a14f7c70bcc92466c4b4}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{12}
@@ -460,8 +523,8 @@
       \list{organization}{1}{%
         {Javatpoint}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{note}{[Online: accessed 9.Dec.2023]}

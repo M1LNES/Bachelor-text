@@ -42,9 +42,10 @@
 %
 % _____________________________________________________________________________
 %
-\abstract{Tato bakalářská práce se zaměřuje na vývoj specializované JavaScript knihovny s cílem umožnit snadné embedování vizualizací do aplikací třetích stran. Hlavními cíli práce jsou návrh a implementace knihovny, navržení rozhraní pro efektivní komunikaci s Public API firmy Emplifi a zajištění bezpečného přístupu k datům pomocí OAuth 2 protokolu. V teoretické části práce je diskutována problematika spojená s embedováním vizualizací do externích aplikací, bezpečný přístup k datům třetích stran a jsou analyzována již existující řešení. Praktická část se zaměřuje na návrh a implementaci JavaScript knihovny, popisuje navržení rozhraní pro efektivní komunikaci s API a zabývá implementací bezpečného přístupu v souladu se standardem OAuth 2.}
+\abstract{Tato bakalářská práce se zaměřuje na vývoj specializované JavaScript knihovny s cílem umožnit snadné embedování vizualizací do aplikací třetích stran. Hlavními cíli práce jsou návrh a implementace knihovny, navržení rozhraní pro efektivní komunikaci s Public API firmy Emplifi a zajištění bezpečného přístupu k datům pomocí OAuth 2 protokolu. V teoretické části práce je diskutována problematika spojená s embedováním vizualizací do externích aplikací, bezpečný přístup k datům třetích stran a jsou analyzována již existující řešení. Praktická část se zaměřuje na návrh a implementaci JavaScript knihovny, popisuje navržení rozhraní pro efektivní komunikaci s API a zabývá se implementací bezpečného přístupu k datům v souladu se standardem OAuth 2.
+}
 % *** English abstract ***
-{This bachelor thesis focuses on the development of a specialized JavaScript library to enable easy embedding of visualizations into third-party applications. The main goals of the thesis are to design and implement the library, design an interface to communicate efficiently with Emplifi's Public API and provide secure data access using the OAuth 2 protocol. The theoretical part of the thesis discusses the issues related to embedding visualizations in external applications, secure access to third-party data and analyzes existing solutions. The practical part focuses on the design and implementation of a JavaScript library, describes the design of interfaces for efficient communication with APIs and deals with the implementation of secure access in accordance with the OAuth 2 standard.}
+{This bachelor thesis focuses on the development of a specialized JavaScript library to enable easy embedding of visualizations into third-party applications. The main goals of the thesis are to design and implement the library, design an interface to communicate efficiently with Emplifi's Public API and provide secure data access using the OAuth 2 protocol. The theoretical part of the thesis discusses the issues related to embedding visualizations in external applications, secure access to third-party data and analyzes existing solutions. The practical part focuses on the design and implementation of a JavaScript library, describes the design of interfaces for efficient communication with APIs and deals with the implementation of secure data access in accordance with the OAuth 2 standard.}
 \keywords{OAuth 2.0, embedování, Emplifi Public API, token, JavaScript}
 % _____________________________________________________________________________
 %
@@ -54,9 +55,13 @@
 \acknowledgement{Na tomto místě bych rád poděkoval všem, kteří přispěli k úspěšnému dokončení této bakalářské práce.
 Velké díky patří především
 
-Bc. Ondřeji Altmanovi za trpělivost, cenné rady a vstřícnost při implementaci praktické části
+Bc. Ondřejovi Altmanovi za trpělivost, cenné rady a vstřícnost při navrhování a implementaci praktické části 
 
-Doc. Ing. Daliborovi Fialovi Ph.D. za jeho podporu a ochotu při tvorbě teoretické části
+Ing. Michalovi Kacerovskému za poskytování připomínek v rámci detailní revize kódu, která významně přispěla k vylepšení čitelnosti a efektivity kódu
+
+Monice Opltové za důkladné a pečlivé otestování implementované praktické části
+
+Doc. Ing. Daliborovi Fialovi, Ph.D. za jeho podporu a ochotu při tvorbě teoretické části
 
 a také rodině za podporu během celého studia.
 }
@@ -126,13 +131,13 @@ a také rodině za podporu během celého studia.
 % _____________________________________________________________________________
 %
 \chapter{Úvod}
-V současné době internetu tvoří data významnou a důležitou součást každodenního života. Problematikou dat je nejen efektivně ukládat, 
-ale také je umět rychle a efektivně interpretovat. 
+V současné době internetu tvoří data významnou a důležitou součást každodenního života. Problematikou dat je nejen je efektivní ukládání, 
+ale také rychlé a efektivní interpretování. 
 Vizualizace dat není pouhým trendem, ale stala se klíčovým nástrojem v mnoha odvětvích. Od oblasti logistiky, kde pomáha monitorovat a řídit tok zásob a logistické operace, až po oblast sociálního marketingu, kde je využívána na k personalizovaným reklamám či sledování aktivit zákazníků. 
-Pro snadné integrování vizualizací do aplikací třetích stran se využívá koncept embedded analytics – ten umožňuje uživatelům rychlý a efektivní přístup datům bez potřeby přecházet mezi různými aplikacemi. 
+Pro snadné integrování vizualizací do aplikací třetích stran se využívá koncept embedded analytics – ten umožňuje uživatelům rychlý a efektivní přístup k datům bez potřeby přecházet mezi různými aplikacemi. 
 
 Cílem této práce, zadanou společností Emplifi, která se specializuje na sociální marketing, je vytvořit praktickou knihovnu umožňující embedování analytických grafů do aplikací třetích stran. 
-Velký důraz bude kladen na bezpečný přístup k datům skrze OAuth 2 protokol, který je klíčovým prvkem Emplifi Public API. Součástí bude také administrační rozhraní, jenž umožní snadné generování a obnovování OAuth 2 tokenu.
+Velký důraz bude kladen na bezpečný přístup k datům skrze OAuth 2 protokol, který je klíčovým prvkem Emplifi Public API. Součástí bude také administrační rozhraní, jenž umožní snadné generování a obnovování OAuth 2 tokenu, a podrobná uživatelská dokumentace, která bude obsahovat veškeré informace k nastavení a používání knihovny či uživatelského rozhraní.
 
 V rámci teoretické části bude podrobně diskutována problematika spojená s embedováním. Analyzovat se bude princip, výhody a nevýhody bezpečnostního protokolu OAuth 2 a již existující řešení embedded analytics.
 
@@ -161,7 +166,8 @@ Emplifi dashboardy umožňují definovat, vytvářet a vizualizovat aktivity už
 	\label{fig:emplifiDashUkazka}
 \end{figure}
 
-Na obrázku \ref{fig:emplifiDashUkazka} vidíme příklad dashboardu - skládá se z několika grafů často nazývané jako widgety \cite{emplifiDashboard}, jejichž obsah lze modifikovat pomocí přepínačů v liště. Obsah může být modifikován v časovém období (posledních 30 dní, poslední rok, konkrétní časový rozsah, ...), ale lze ho modifikovat také na základě metrik jako je např. sociální síť (Facebook, Instragram, LinkedIn), druh interakcí (komentáře, liky, sdílení) apod.
+Na obrázku \ref{fig:emplifiDashUkazka} vidíme příklad dashboardu - skládá se z několika grafů, obvykle nazývané jako widgety \cite{emplifiDashboard}, jejichž obsah lze modifikovat pomocí přepínačů v liště. Obsah může být modifikován v časovém období (posledních 30 dní, poslední rok, konkrétní časový rozsah, ...), ale lze jej modifikovat také na základě metrik jako je např. sociální síť (Facebook, Instragram, LinkedIn), druh interakcí (komentáře, liky, sdílení) apod.\footnote{Widgety nemusí být obecně pouze vizualizace, může se jednat také o ovládací prvky (např. výběrové seznamy, check boxy, textfieldy, apod.). Tato možnost se využívá zejména ve vývojářských dashboardech pro rychlejší tvorbu vizualizací. V samotném produktu firmy se ale používá kvůli uživatelské přívětivosti pouze pro vizualizace \cite{emplifiDashboard}. 
+}
 
 Embedded analytics se nechová a nevypadá jako samostatná aplikace, ale je integrován do jiného softwaru nebo webového portálu. Koncoví uživatelé často ani nepoznají, že se jedná
 integrovanou analytiku a vnímají software s touto integrovanou analytikou jako jeden nástroj \cite{goodDataEmbedded}. To umožňuje softwarovým společnostem získat a plně
@@ -173,13 +179,20 @@ tento program, stačí se do programu přihlásit přes internet. Pro firmu to z
 Nevýhodou SaaS je bezpečnost dat a rychlost jejich doručování. Protože jsou data umístěna na externích serverech, je třeba zajistit rychlé a spolehlivé internetové připojení a vyloučit
 přístup neoprávněných uživatelů.
 
-Existuje hned několik způsobů, jak data embedovat. Mezi nejpopulárnější iframe a HTML, webová komponenta či React SDK s voláním API. Zatímco nejjednodušší a nejrychlejším metoda je
-používáním HTML iframu, pokročilejší techniky embedování využívají React SDK a API.
+Existuje hned několik způsobů, jak data embedovat. Mezi nejpopulárnější a nejrozšířenější způsoby patří HTML iframe, webová komponenta či React SDK s voláním API \cite{goodDataEmbedded}. 
+
+Nejjednodušší a nejrychlejší metodou embedování je využití použití iframu \cite{goodDataEmbedded}. Iframe (Inline frame) je HTML prvek, který umožňuje načíst HTML stránku uvnitř dokumentu \cite{iFrameAdv}. Používá se pro vložení určitého obsahu z jednoho zdroje do druhého. To se poté jeví jako nové okno v dané stránce, jedná se ovšem o embedovaný iframe. Tuto možnost embedování využívají např. Google Mapy nebo YouTube \cite{iFrameAdv}. Velkou výhodou je, že není třeba instalovat pro běh žádné dependence.
+
+Pokročilejší technikou pro embedování je použití webové komponenty. Výhoda opět spočívá v tom, že není třeba instalovat závislosti pro běh. Embedování probíhá pomocí knihovny, která se naimportuje přes HTML tag \texttt{<script>}. Poté je možno embedovat vizualizace pouze prostřednictvím naimplementovaných webových komponent \cite{webComp}.
+
+Poslední zmiňovanou možností je embedování prostřednictvím React SDK s voláním API. 
 
 SDK (Software development kit) je označení sady nástrojů pro tvorbu softwaru \cite{SDKvsAPI}, které umožňuje vývojářům vytvářet rychleji a standartizovaně nové aplikace. API 
 (Application Programming Interface) je rozhraní usnadňující komunikaci mezi dvěmi platformami. Uživatel specifikuje požadavek na data, rozhraní API provede volání na webový server, který
 následně tento požadavek zpracuje a odešle odpověď na specifikované volání (může se jednat např. o data ve formátu JSON). Díky tomu se krátí vývojový cyklus (automatizace), efektivně 
 se poskytují nové služby uživatelům a může zlepšit reputaci důvěryhodnost značky.
+
+K embedování je potřeba následovat instrukce (např. nainstalování dependencí, zprovoznění backendu, apod.) a zajistit, že všechny kroky v nich obsažené budou splněny \cite{reactSDKComp}. Jedná se tedy o programátorsky náročnější metodu, ovšem výhoda spočívá ve větší flexibilitě vývojářů, kteří mohou vizualizace snadno modifikovat \cite{goodDataEmbedded}.
 
 %
 % Podkapitola zabezpečení
@@ -260,7 +273,8 @@ vylepšeny a rozšířeny.
 %
 % _____________________________________________________________________________
 %
-\chapter{Návrh knihovny}
+\chapter{Návrh knihovny a uživatelského rozhraní}
+
 \section{Technologie}
 \subsection{JavaScript a React}
 Pro vývoj knihovny bude využit JavaScript s knihovnou React. Důvodem zvolení těchto technologií je požadavek ze strany zadavatele. React a JavaScript jsou dnes

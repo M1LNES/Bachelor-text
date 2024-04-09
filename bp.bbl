@@ -608,6 +608,25 @@
       \verb https://www.javatpoint.com/what-is-dom-in-react
       \endverb
     \endentry
+    \entry{emplifiDocs}{online}{}
+      \list{organization}{1}{%
+        {Emplifi}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Online: accessed 9.Apr.2024]}
+      \field{title}{Emplifi API Documentation}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://api.emplifi.io/
+      \endverb
+      \verb{url}
+      \verb https://api.emplifi.io/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -634,7 +634,13 @@ INPUT .\pictures\oauth2-diagram.png
 INPUT .\pictures\oauth2-diagram.png
 INPUT D:\Install\MikTex\fonts\vf\public\cochineal\Cochineal-Roman-tlf-t1.vf
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Roman-tlf-t1--base.tfm
-INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Italic-tlf-t1.tfm
+INPUT .\pictures\emplifiAPI.png
+INPUT .\pictures\emplifiAPI.png
+INPUT .\pictures\emplifiAPI.png
+INPUT .\pictures\emplifiAPI.png
+INPUT .\pictures\emplifiAPI.png
+INPUT .\pictures\emplifiAPI.png
+INPUT .\pictures\emplifiAPI.png
 INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxttza.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxttza.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Roman-tlf-ot1.tfm
@@ -661,6 +667,7 @@ INPUT D:\Install\MikTex\fonts\tfm\public\newtx\ntxsyc.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\newtx\ntxexa.tfm
+INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Italic-tlf-t1.tfm
 INPUT D:\Install\MikTex\fonts\vf\public\cochineal\Cochineal-Italic-tlf-t1.vf
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Italic-tlf-t1--base.tfm
 INPUT .\bp.lof

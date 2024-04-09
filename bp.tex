@@ -17,7 +17,6 @@
 %        Last modification on 28-Feb-2023 by KE
 %
 % *****************************************************************************
-
 % _____________________________________________________________________________
 %
 %
@@ -26,6 +25,9 @@
 % _____________________________________________________________________________
 %
 \documentclass[czech, bc, kiv, he, iso690numb]{fasthesis}
+\usepackage{hyperref}
+
+%\usepackage{float} 
 \title{\texttt {}Vývoj Javascript knihovny pro embedování vizualizací skrze Emplifi Public API}
 \author{Milan}{Janoch}{}{}
 \supervisor{Doc. Ing. Dalibor Fiala, Ph.D.}
@@ -295,6 +297,7 @@ vylepšeny a rozšířeny.
 Tableau vyniká ve vytváření estetických a interaktivních vizualizací \cite{tableauBlog}. Dále nabízí zákazníkům publikaci vizualizací prostřednictvím produktu Tableau Online. Cena produktu začíná na \$70 měsíčně za jednoho uživatele \cite{trustRadiusTableAU}. 
 Zákazníci produkt hodnotí velmi kladně - 100\% z nich uvádí, že implementace proběhla jak očekávali, 98\% jsou s výsledkem spokojeni a 91\% by si tento produkt zakoupilo zase \cite{trustRadiusTableAU}. Silné stránky 
 tohoto produktu spočívají v automatickém generování kódu pro embedování a jednoduché vkládání dashboardů do webových stránek \cite{tableauBlog}. Kritika naopak zaznívá na zákaznickou podporu či pomalé načítání při velkém množství dat \cite{trustRadiusTableAU}.
+
 % _____________________________________________________________________________
 %
 %
@@ -304,18 +307,21 @@ tohoto produktu spočívají v automatickém generování kódu pro embedování
 %
 \chapter{Návrh knihovny a uživatelského rozhraní}
 
+V této kapitole bude popsán detailní návrh knihovny, uživatelského rozhraní a technologie, jež budou použité k realizaci. 
+
 \section{Technologie}
+
 \subsection{JavaScript a React}
 Pro vývoj knihovny bude využit JavaScript s knihovnou React. Důvodem zvolení těchto technologií je požadavek ze strany zadavatele. React a JavaScript jsou dnes
 široce používané technologie ve vývoji webových aplikací. 
 
 React je snadný na naučení, obsahuje málo konceptů, které je třeba se naučit \cite{whyUsingReact}. Jeho instalace je snadná -
-stačí pouze naimportovat jeho knihovnu. Využívá speciální JSX syntaxe, která sice vypadá jako HTML, ale ve skutečnosti je tato syntaxe převáděna na HTML. Jelikož je React hojně využíván
-v Facebook aplikaci či na Instagramu, dostává se mu velké podpory právě i z tohoto odvětví - čtyři největší přispěvatelé knihovny React jsou zaměstnanci Facebooku \cite{whyUsingReact}. Kromě 
+stačí pouze v kódu nainstalovat a naimportovat jeho knihovnu. Využívá speciální JSX syntaxe, která sice vypadá jako HTML, ale ve skutečnosti je tato syntaxe převáděna na HTML. Jelikož je React hojně využíván
+v aplikaci Facebook či na Instagramu, dostává se mu velké podpory právě i z tohoto odvětví - čtyři největší přispěvatelé knihovny React jsou zaměstnanci Facebooku \cite{whyUsingReact}. Kromě 
 Facebooku využívají React značky jako jsou např. Netflix, airbnb, BBC News či PayPal \cite{whyUsingReact2}. Díky virtualizaci a uchováváním DOM poskytuje React
 velmi rychlé vykreslování, přičemž všechny změny se snadno promítají do virtuálního DOM.
 
-DOM (Document Object Model) je strukturovaná reprezentace jazykla HTML, které reprezentuje celé uživatelské rozhraní jakos stromovou datovou strukturu \cite{whatIsDOM}. Každý prvek uživatelského
+DOM (Document Object Model) je strukturovaná reprezentace jazyka HTML, které reprezentuje celé uživatelské rozhraní jako stromovou datovou strukturu \cite{whatIsDOM}. Každý prvek uživatelského
 rozhraní tvoří v DOM stromu právě jeden uzel. Dojde-li ke změně uživatelského rozhraní, DOM se aktualizuje 	a při každé změně se vykresluje znovu, což výrazně ovlivňuje výkon aplikace. 
 Toto lze vyřešit použitím virtuálního DOM. Při přidávání nových věcí do aplikace se vytvoří virtuální DOM, která je reprezentován jako strom. Novější virtuální DOM se porovnává se starším, aby
 zaznamenal změny. Poté zjistí, jak je možné tyto změny provést pomocí skutečného DOM a aktualizované prvky se následně vykreslí.
@@ -331,19 +337,143 @@ React se kvůli těmto vlastnostem doporučuje využívat u:
 \item Multi-platformních aplikací
 \end{enumerate}
 
-\subsection{API}	
-Data, která budou následně vizualizována knihovnou, budou získávána prostřednictvím Emplifi Public API. Toto rozhraní poskytuje klientům snadný a oblíbený způsob, jak získat přístup k potřebným datům. 
+\subsection{Emplifi API}	
+Data potřebná k embedování grafů budou získávána prostřednictvím Emplifi Public API. 
+Toto rozhraní poskytuje klientům snadný a oblíbený způsob, jak získat přístup k potřebným datům. 
+Emplifi API se nachází na veřejné webové adrese a žádat o data může každý, kdo má přístupový token.
+Struktura dotazů a ukázkové dotazy jsou dostupné na veřejné dokumentaci \cite{emplifiDocs}.
+
+\subsubsection{Vytvoření tokenu}
+
+Vytvoření tokenu je umožněno pouze osobám, jež mají u firmy Emplifi vytvořený účet v produktu Suite. Na diagramu \ref{fig:emplifAPIDiagram} je schéma, které udává průběh akcí během žádání o 
+přístupový token a zaslání prvního requestu s žádostí o data.
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{pictures/emplifiAPI.png}
+	\caption{Diagram vytvoření Emplifi API tokenu \cite{emplifiDocs}}
+	\label{fig:emplifAPIDiagram}
+\end{figure}
+
+Pro vytvoření tokenu je třeba uživatele přesměrovat na webovou URL \url{https://api.emplifi.io/oauth2/0/auth}, kde bude požádán o udělení souhlasu z jeho Emplifi Suite účtu.
+Do URL, na kterou uživatele přesměrujeme, bude třeba vložit několik parametrů potřebných k autentizaci a k následnému vrácení tokenu. 
+
+\begin{center}
+	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
+	\caption{Seznam všech parametrů vkládaných do URL adresy při tvorbě tokenu \cite{emplifiDocs}}
+	\label{tab:allParametersAPI}\\
+	\toprule[1.5pt]
+	\endhead
+	\midrule
+	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
+	\endfoot
+	\bottomrule[1.5pt]
+	\endlastfoot
+	%
+	\verb"client_id" &  Jedinečný klientský identifikátor pro aplikaci.\\
+	\midrule
+	\verb"redirect_uri" & Návratová adresa. Na tuto adresu bude při úspěšné autorizaci přesměrován přístupový token. Zároveň tato adresa musí být povolena vývojáři v interní databázi.\\
+	\midrule
+	\verb"response_type" & Typ - Emplifi momentálně podporuje pouze hodnotu "code".\\
+	\midrule
+	\verb"scope" & Specifikuje prostředky oddělené mezerou, ke kterým aplikace může přistupovat klientským účtem. Ty při udělování souhlasu budou předloženy ke schválení. \\
+	\midrule
+	\verb"state" & Hodnota sloužící k validaci přijaté odpovědi. Při zaslání requestu je vložena hodnota do parametru, autorizační server jí při zpracování dotazu odešle zpět s daty. Uživatelská aplikace by následně měla porovnávat, zda tato zaslaná hodnota je shodná s původní - to slouží k zabránění útoků Cross-site Request Forgery.\\
+	\midrule
+	\verb"prompt" & Musí být nastavena na hodnotu "consent", pokud má být refresh token vrácen společně s přístupovým.\\
+	\end{longtable}
+\end{center}
+
+
+Pokud veškeré parametry budou správně nastaveny a uživatel udělí souhlas s používáním Suite účtu, na URL "redirect\_uri" se vrátí zpráva s autorizačním kódem. Tento kód
+slouží k výměně za přístupový token. O ten je možno si zažádat POST requestem na adresu \url{https://api.emplifi.io/oauth2/0/token}. Struktura requestu je popsána v tabulkách \ref{tab:exampleRequestHeader} \ref{tab:exampleRequestBody}.
+
+\begin{center}
+	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
+	\caption{Hlavička requestu na token \cite{emplifiDocs}.}
+	\label{tab:exampleRequestHeader}\\
+	\toprule[1.5pt]
+	\endhead
+	\midrule
+	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
+	\endfoot
+	\bottomrule[1.5pt]
+	\endlastfoot
+	%
+	\verb"Authorization" & Řetězec "Basic" s klientským identifikátorem a zakódovaným klientským secretem oddělený dvojtečkou v Base64. Výsledná hodnota vypadá např. takto: "Basic Y2xpZW50X2lkOmNsaWVudF9zZWNyZXQ=."\\
+	\midrule
+	\verb"Content-Type" & Hodnota "application/x-www-form-urlencoded" \\
+	\end{longtable}
+\end{center}
+
+\begin{center}
+	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
+	\caption{Tělo requestu na token \cite{emplifiDocs}.}
+	\label{tab:exampleRequestBody}\\
+	\toprule[1.5pt]
+	\endhead
+	\midrule
+	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
+	\endfoot
+	\bottomrule[1.5pt]
+	\endlastfoot
+	%
+	\verb"code" & Řetězec sloužící k následné validaci při zpětném volání. \\
+	\midrule
+	\verb"grant_type" & Hodnota "authorization\_code" \\
+	\midrule
+	\verb"redirect_uri" & URL adresa, kam bude přesměrován token. Musí být stejná jako v tabulce \ref{tab:allParametersAPI} \\
+	\end{longtable}
+\end{center}
+
+Následně obdržíme token ve formátu jako na \ref{tokenResponse}. Přesné návratové hodnoty jsou popsány v tabulce \ref{tab:exampleRequestResponse}.
+
+\begin{center}
+	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
+	\caption{Tělo odpovědi se zaslaným tokenm \cite{emplifiDocs}.}
+	\label{tab:exampleRequestResponse}\\
+	\toprule[1.5pt]
+	\endhead
+	\midrule
+	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
+	\endfoot
+	\bottomrule[1.5pt]
+	\endlastfoot
+	%
+	\verb"access_token" & Přístupový token k Emplifi Public API. \\
+	\midrule
+	\verb"token_type" & Jediný podporovaný typem je "bearer". \\
+	\midrule
+	\verb"expires_in" & Platnost tokenu ve vteřinách. \\
+	\midrule
+	\verb"refresh_token" & Token pro obnovení přístupového tokenu. Zaslán pouze v případě, pokud \verb"scope" obsahuje řetězec "offline\_access".\\
+	\midrule
+	\verb"scope" & Prostředky, které byly uživatelem uděleny. Odděleny mezerou. \\
+	\end{longtable}
+\end{center}
+
+
+
+Užívání tokenů má ovšem nastavené limity - 500 requestů za hodinu pro uživatele, 1000 requestů za hodinu pro účet \cite{emplifiDocs}. Pokud bude tato hranice přesažena,
+API vrátí odpověď s informací, že uživatel či účet překročili maximální limit dotazů.
+
+\subsubsection{Žádost od data}
+
+Má-li uživatel platný token, může začít se zasíláním dotazů. 
+
 \subsection{OAuth 2.0}
 Přístup k datům bude zabezpečen protokolem OAuth 2.0. To umožní nejen autentizaci uživatele, ale také umožné uživatelům udělovat patřičná omezení (např. které endpointy může běžný uživatel volat).
 
 \section{Funkcionality}
+
 \subsection{Komunikace s API}
 Navrhovaná knihovna bude vybavená funkcionalitou pro provádění dotazů na Emplifi Public API, což umožní získávat potřebná data pro vizualizaci.
 Bude také umět reagovat na chybové odpovědi ze strany API (např. nevalidní token, špatný request, neexistující data apod.). 
 \subsection{Playground}
+
 Vytvoření playgroundu umožní uživatelům náhled na vizualizace, které budou chtít embedovat v aplikacích třetích stran. To se může využít zejména pokud si budou chtít ověřit funkčnost či pozměnit
 design vizualizace. 
 \subsection{Obnova OAuth 2.0 tokenů}
+
 K dispozici bude uživatelské rozhraní, které umožní snadné vytvoření či obnovení OAuth 2.0 tokenu. Jedná se o důležitou funkcionalitu, aby budoucí uživatelé nemuseli složitě získávat
 token, ale stačilo jim k tomu pouze jednoduché rozhraní. 
 \subsection{PreJSON}

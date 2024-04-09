@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.2)  8 APR 2024 00:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.2)  10 APR 2024 00:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1468,69 +1468,76 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \FASThesis@sans@font@size=\skip295
 \FASThesis@typewriter@font@size=\skip296
 )
-LaTeX Info: Redefining \oldstylenums on input line 75.
+LaTeX Info: Redefining \oldstylenums on input line 77.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'czech'.
- (bp.aux <Reading QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" at level 6-M from aux file.>
+ (bp.aux
+
+LaTeX Warning: Label `tab:allParametersAPI' multiply defined.
+
+
+LaTeX Warning: Label `tab:exampleRequestResponse' multiply defined.
+
+<Reading QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" at level 6-M from aux file.>
 )
 \openout1 = `bp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/zcochmi/m/it on input line 75.
-LaTeX Font Info:    Trying to load font information for OML+zcochmi on input line 75.
+LaTeX Font Info:    Checking defaults for OML/zcochmi/m/it on input line 77.
+LaTeX Font Info:    Trying to load font information for OML+zcochmi on input line 77.
  (D:\Install\MikTex\tex/latex/cochineal\omlzcochmi.fd
 File: omlzcochmi.fd 2015/06/23 Fontinst v1.933 font definitions for OML/zcochmi.
 )
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 75.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 75.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 77.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 77.
  (D:\Install\MikTex\tex/latex/newtx\untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 75.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 75.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 77.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 77.
  (D:\Install\MikTex\tex/latex/newtx\lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 75.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 75.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 77.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 77.
  (D:\Install\MikTex\tex/latex/newtx\lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
 \c@mv@tabular=\count551
 \c@mv@boldtabular=\count552
-LaTeX Info: Command `\dddot' is already robust on input line 75.
-LaTeX Info: Command `\ddddot' is already robust on input line 75.
-LaTeX Info: Redefining \microtypecontext on input line 75.
-Package microtype Info: Applying patch `toc' on input line 75.
-Package microtype Info: Applying patch `eqnum' on input line 75.
-Package microtype Info: Applying patch `footnote' on input line 75.
-Package microtype Info: Applying patch `verbatim' on input line 75.
+LaTeX Info: Command `\dddot' is already robust on input line 77.
+LaTeX Info: Command `\ddddot' is already robust on input line 77.
+LaTeX Info: Redefining \microtypecontext on input line 77.
+Package microtype Info: Applying patch `toc' on input line 77.
+Package microtype Info: Applying patch `eqnum' on input line 77.
+Package microtype Info: Applying patch `footnote' on input line 77.
+Package microtype Info: Applying patch `verbatim' on input line 77.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 10, shrink: 10, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 75.
+LaTeX Info: Redefining \showhyphens on input line 77.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: Adjustment of character kerning enabled.
@@ -1562,8 +1569,8 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'bp.bbl' found.
  (bp.bbl)
-Package biblatex Info: Reference section=0 on input line 75.
-Package biblatex Info: Reference segment=0 on input line 75.
+Package biblatex Info: Reference section=0 on input line 77.
+Package biblatex Info: Reference segment=0 on input line 77.
  (D:\Install\MikTex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count553
@@ -1619,13 +1626,13 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 75.
+Package hyperref Info: Link coloring OFF on input line 77.
 (bp.out) (bp.out)
 \@outlinefile=\write6
 \openout6 = `bp.out'.
 
 \FASThesis@titlebox=\box97
-LaTeX Font Info:    Trying to load font information for T1+GTAmerica-LF on input line 76.
+LaTeX Font Info:    Trying to load font information for T1+GTAmerica-LF on input line 78.
  (C:/Users/milan/Desktop/LaTex/bp/texmf\tex/latex/GTAmerica\t1gtamerica-lf.fd
 File: T1GTAmerica-LF.fd 2022/09/09 (autoinst) Font definitions for T1/GTAmerica-LF.
 )
@@ -1633,97 +1640,97 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `GTAmerica-LF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for T1+newtxttz on input line 76.
+LaTeX Font Info:    Trying to load font information for T1+newtxttz on input line 78.
  (D:\Install\MikTex\tex/latex/newtxtt\t1newtxttz.fd
 File: t1newtxttz.fd 2020/02/15 Font definitions for T1/newtxttz.
 )
 
 LaTeX Font Warning: Font shape `T1/newtxttz/bc/n' undefined
-(Font)              using `T1/newtxttz/m/n' instead on input line 76.
+(Font)              using `T1/newtxttz/m/n' instead on input line 78.
 
 LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
-(Font)              scaled to size 25.75995pt on input line 76.
+(Font)              scaled to size 25.75995pt on input line 78.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `newtxttz' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+mincochineal on input line 76.
+LaTeX Font Info:    Trying to load font information for OT1+mincochineal on input line 78.
 (D:\Install\MikTex\tex/latex/cochineal\ot1mincochineal.fd
 File: ot1mincochineal.fd 2022/02/04 (msharpe) Font definitions for OT1/mincochineal.
 )
 LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 78.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `mincochineal' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
-(Font)              scaled to size 8.8pt on input line 76.
+(Font)              scaled to size 8.8pt on input line 78.
 LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
-(Font)              scaled to size 6.6pt on input line 76.
+(Font)              scaled to size 6.6pt on input line 78.
 LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 78.
 LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
-(Font)              scaled to size 8.8pt on input line 76.
+(Font)              scaled to size 8.8pt on input line 78.
 LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
-(Font)              scaled to size 6.6pt on input line 76.
+(Font)              scaled to size 6.6pt on input line 78.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 78.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.8pt on input line 76.
+(Font)              scaled to size 8.8pt on input line 78.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.6pt on input line 76.
+(Font)              scaled to size 6.6pt on input line 78.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 78.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.8pt on input line 76.
+(Font)              scaled to size 8.8pt on input line 78.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 76.
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 76.
+(Font)              scaled to size 6.6pt on input line 78.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 78.
  (D:\Install\MikTex\tex/latex/newtx\untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 78.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.8pt on input line 76.
+(Font)              scaled to size 8.8pt on input line 78.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.6pt on input line 76.
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 76.
+(Font)              scaled to size 6.6pt on input line 78.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 78.
  (D:\Install\MikTex\tex/latex/newtx\untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 78.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.8pt on input line 76.
+(Font)              scaled to size 8.8pt on input line 78.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.6pt on input line 76.
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 76.
+(Font)              scaled to size 6.6pt on input line 78.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 78.
  (D:\Install\MikTex\tex/latex/newtx\untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 78.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.8pt on input line 76.
+(Font)              scaled to size 8.8pt on input line 78.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.6pt on input line 76.
+(Font)              scaled to size 6.6pt on input line 78.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 78.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.8pt on input line 76.
+(Font)              scaled to size 8.8pt on input line 78.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.6pt on input line 76.
+(Font)              scaled to size 6.6pt on input line 78.
 \FASThesis@auxdim@lx=\dimen360
 \FASThesis@auxdim@ly=\dimen361
 <img/kiv-cmyk-cz.pdf, id=162, 762.42366pt x 133.46764pt>
 File: img/kiv-cmyk-cz.pdf Graphic file (type pdf)
 <use img/kiv-cmyk-cz.pdf>
-Package pdftex.def Info: img/kiv-cmyk-cz.pdf  used on input line 76.
+Package pdftex.def Info: img/kiv-cmyk-cz.pdf  used on input line 78.
 (pdftex.def)             Requested size: 409.59695pt x 71.70093pt.
 
-Overfull \hbox (22.63947pt too wide) in paragraph at lines 76--76
+Overfull \hbox (22.63947pt too wide) in paragraph at lines 78--78
 [] 
  []
 
@@ -1733,7 +1740,7 @@ pdfTeX warning: pdflatex (file ./img/background-kiv.pdf): PDF inclusion: found P
 <img/background-kiv.pdf, id=163, 597.50786pt x 845.04686pt>
 File: img/background-kiv.pdf Graphic file (type pdf)
 <use img/background-kiv.pdf>
-Package pdftex.def Info: img/background-kiv.pdf  used on input line 76.
+Package pdftex.def Info: img/background-kiv.pdf  used on input line 78.
 (pdftex.def)             Requested size: 597.5064pt x 845.08348pt.
 [1
 
@@ -1743,16 +1750,16 @@ Package pdftex.def Info: img/background-kiv.pdf  used on input line 76.
 ]
 \FASThesis@titlebox@bw=\box98
 LaTeX Font Info:    Font shape `T1/newtxttz/bc/n' will be
-(Font)              scaled to size 25.75995pt on input line 76.
+(Font)              scaled to size 25.75995pt on input line 78.
 \FASThesis@auxdim@lx=\dimen362
 \FASThesis@auxdim@ly=\dimen363
 <img/kiv-black-cz.pdf, id=184, 762.42366pt x 133.46764pt>
 File: img/kiv-black-cz.pdf Graphic file (type pdf)
 <use img/kiv-black-cz.pdf>
-Package pdftex.def Info: img/kiv-black-cz.pdf  used on input line 76.
+Package pdftex.def Info: img/kiv-black-cz.pdf  used on input line 78.
 (pdftex.def)             Requested size: 409.59695pt x 71.70093pt.
 
-Overfull \hbox (22.63947pt too wide) in paragraph at lines 76--76
+Overfull \hbox (22.63947pt too wide) in paragraph at lines 78--78
 [] 
  []
 
@@ -1760,39 +1767,39 @@ Overfull \hbox (22.63947pt too wide) in paragraph at lines 76--76
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 \frontpages[tm]
+l.78 \frontpages[tm]
                      % or notm if the `trademark' declaration is not needed [1 <./img/kiv-black-cz.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+Cochineal-TLF on input line 76.
+LaTeX Font Info:    Trying to load font information for TS1+Cochineal-TLF on input line 78.
  (D:\Install\MikTex\tex/latex/cochineal\ts1cochineal-tlf.fd
 File: TS1Cochineal-TLF.fd 2016/01/19 (msharpe) Font definitions for TS1/Cochineal-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/Cochineal-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 78.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Cochineal-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 78.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/sl' will be
-(Font)              scaled to size 12.0pt on input line 76.
+(Font)              scaled to size 12.0pt on input line 78.
 LaTeX Font Info:    Font shape `T1/newtxttz/m/sl' will be
-(Font)              scaled to size 11.03998pt on input line 76.
+(Font)              scaled to size 11.03998pt on input line 78.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 \frontpages[tm]
+l.78 \frontpages[tm]
                      % or notm if the `trademark' declaration is not needed [2{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_rwqxgv.enc}{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_cuw7wa.enc}{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_otkq6i.enc}{D:/Install/MikTex/fonts/enc/dvips/cochineal/cochTH-tlf-t1.enc}]
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 \frontpages[tm]
+l.78 \frontpages[tm]
                      % or notm if the `trademark' declaration is not needed
 <zadanibp.pdf, id=200, page=1, 597.51233pt x 845.0471pt>
 File: zadanibp.pdf Graphic file (type pdf)
 <use zadanibp.pdf, page 1>
-Package pdftex.def Info: zadanibp.pdf , page1 used on input line 76.
+Package pdftex.def Info: zadanibp.pdf , page1 used on input line 78.
 (pdftex.def)             Requested size: 597.51086pt x 845.08372pt.
  [1
 
@@ -1801,49 +1808,49 @@ Package pdftex.def Info: zadanibp.pdf , page1 used on input line 76.
 pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 \frontpages[tm]
+l.78 \frontpages[tm]
                      % or notm if the `trademark' declaration is not needed [2]
-Underfull \hbox (badness 10000) in paragraph at lines 76--76
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--76
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 
  []
 
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 76.
+(Font)              scaled to size 10.95pt on input line 78.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 \frontpages[tm]
+l.78 \frontpages[tm]
                      % or notm if the `trademark' declaration is not needed [1]
 pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 \frontpages[tm]
+l.78 \frontpages[tm]
                      % or notm if the `trademark' declaration is not needed [2] [3] [4
 
 ] (bp.toc [1
 
 ])
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 77.
+(Font)              scaled to size 10.95pt on input line 79.
 \FASThesis@runninghead@rule@offset=\dimen364
 
 
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 77.
+(in both cases you will find help in the memoir manual). on input line 79.
 
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [2]
-Overfull \hbox (1.8pt too wide) detected at line 133
+Overfull \hbox (1.8pt too wide) detected at line 135
 [] 
  []
 
@@ -1852,72 +1859,72 @@ Overfull \hbox (1.8pt too wide) detected at line 133
 ] [4
 
 ]
-Overfull \hbox (1.8pt too wide) detected at line 152
+Overfull \hbox (1.8pt too wide) detected at line 154
 [] 
  []
 
 <pictures/emplifi-dashboard-example.png, id=291, 1578.89874pt x 926.46124pt>
 File: pictures/emplifi-dashboard-example.png Graphic file (type png)
 <use pictures/emplifi-dashboard-example.png>
-Package pdftex.def Info: pictures/emplifi-dashboard-example.png  used on input line 164.
+Package pdftex.def Info: pictures/emplifi-dashboard-example.png  used on input line 166.
 (pdftex.def)             Requested size: 386.95749pt x 227.0486pt.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
-(Font)              scaled to size 8.8pt on input line 169.
+(Font)              scaled to size 8.8pt on input line 171.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 170.
+(Font)              scaled to size 10.0pt on input line 172.
 LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
-(Font)              scaled to size 10.0pt on input line 170.
+(Font)              scaled to size 10.0pt on input line 172.
 LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
-(Font)              scaled to size 7.3pt on input line 170.
+(Font)              scaled to size 7.3pt on input line 172.
 LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
-(Font)              scaled to size 5.5pt on input line 170.
+(Font)              scaled to size 5.5pt on input line 172.
 LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
-(Font)              scaled to size 10.0pt on input line 170.
+(Font)              scaled to size 10.0pt on input line 172.
 LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
-(Font)              scaled to size 7.3pt on input line 170.
+(Font)              scaled to size 7.3pt on input line 172.
 LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
-(Font)              scaled to size 5.5pt on input line 170.
+(Font)              scaled to size 5.5pt on input line 172.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.0pt on input line 170.
+(Font)              scaled to size 10.0pt on input line 172.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.3pt on input line 170.
+(Font)              scaled to size 7.3pt on input line 172.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.5pt on input line 170.
+(Font)              scaled to size 5.5pt on input line 172.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 170.
+(Font)              scaled to size 10.0pt on input line 172.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 170.
+(Font)              scaled to size 7.3pt on input line 172.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 170.
+(Font)              scaled to size 5.5pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.0pt on input line 170.
+(Font)              scaled to size 10.0pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.3pt on input line 170.
+(Font)              scaled to size 7.3pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.5pt on input line 170.
+(Font)              scaled to size 5.5pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.0pt on input line 170.
+(Font)              scaled to size 10.0pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.3pt on input line 170.
+(Font)              scaled to size 7.3pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.5pt on input line 170.
+(Font)              scaled to size 5.5pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.0pt on input line 170.
+(Font)              scaled to size 10.0pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.3pt on input line 170.
+(Font)              scaled to size 7.3pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.5pt on input line 170.
+(Font)              scaled to size 5.5pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.0pt on input line 170.
+(Font)              scaled to size 10.0pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.3pt on input line 170.
+(Font)              scaled to size 7.3pt on input line 172.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.5pt on input line 170.
+(Font)              scaled to size 5.5pt on input line 172.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 170.
+(Font)              scaled to size 7.3pt on input line 172.
 [5 <./pictures/emplifi-dashboard-example.png>]
 LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 188.
+(Font)              scaled to size 11.03998pt on input line 190.
 
 Underfull \vbox (badness 8132) has occurred while \output is active []
 
@@ -1931,23 +1938,23 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [7{D:/Install/MikTex/fonts/enc/dvips/newtxtt/txttAec.enc}]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 219.
-LaTeX Font Info:    Trying to load font information for T1+newtxtt on input line 219.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 221.
+LaTeX Font Info:    Trying to load font information for T1+newtxtt on input line 221.
  (D:\Install\MikTex\tex/latex/newtxtt\t1newtxtt.fd
 File: t1newtxtt.fd 2020/02/15 Font definitions for T1/newtxtt.
 )
 LaTeX Font Info:    Font shape `T1/newtxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 219.
+(Font)              scaled to size 12.0pt on input line 221.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `newtxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 220.
+(Font)              scaled to size 8.0pt on input line 222.
 <pictures/oauth2-diagram.png, id=346, 2057.6875pt x 1521.685pt>
 File: pictures/oauth2-diagram.png Graphic file (type png)
 <use pictures/oauth2-diagram.png>
-Package pdftex.def Info: pictures/oauth2-diagram.png  used on input line 242.
+Package pdftex.def Info: pictures/oauth2-diagram.png  used on input line 244.
 (pdftex.def)             Requested size: 386.95749pt x 286.15112pt.
 \FASThesis@runninghead@rule@offset=\dimen367
 
@@ -1971,11 +1978,70 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
  [11] [12
 
 ]
-Overfull \hbox (1.8pt too wide) detected at line 305
+Overfull \hbox (1.8pt too wide) detected at line 308
 [] 
  []
 
 [13]
+<pictures/emplifiAPI.png, id=427, 1204.5pt x 630.85687pt>
+File: pictures/emplifiAPI.png Graphic file (type png)
+<use pictures/emplifiAPI.png>
+Package pdftex.def Info: pictures/emplifiAPI.png  used on input line 352.
+(pdftex.def)             Requested size: 386.95749pt x 202.66766pt.
+LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
+(Font)              scaled to size 12.0pt on input line 357.
+LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
+(Font)              scaled to size 10.95pt on input line 357.
+LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
+(Font)              scaled to size 10.95pt on input line 357.
+LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
+(Font)              scaled to size 8.0pt on input line 357.
+LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
+(Font)              scaled to size 6.1pt on input line 357.
+LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
+(Font)              scaled to size 10.95pt on input line 357.
+LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
+(Font)              scaled to size 8.0pt on input line 357.
+LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
+(Font)              scaled to size 6.1pt on input line 357.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 10.95pt on input line 357.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.0pt on input line 357.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.1pt on input line 357.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 10.95pt on input line 357.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 357.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.1pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 10.95pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.0pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.1pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 10.95pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.0pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.1pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 10.95pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.0pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.1pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 10.95pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.0pt on input line 357.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.1pt on input line 357.
+LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/it' will be
+(Font)              scaled to size 12.0pt on input line 367.
 \FASThesis@runninghead@rule@offset=\dimen371
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
@@ -1985,123 +2051,87 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [15] [16
-
-]
-Overfull \hbox (1.8pt too wide) detected at line 362
-[] 
- []
-
-[17] [18
-
-]
-LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 376.
-LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
-(Font)              scaled to size 12.0pt on input line 376.
-LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
-(Font)              scaled to size 10.95pt on input line 376.
-LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
-(Font)              scaled to size 10.95pt on input line 376.
-LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
-(Font)              scaled to size 8.0pt on input line 376.
-LaTeX Font Info:    Font shape `OT1/mincochineal/m/n' will be
-(Font)              scaled to size 6.1pt on input line 376.
-LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
-(Font)              scaled to size 10.95pt on input line 376.
-LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
-(Font)              scaled to size 8.0pt on input line 376.
-LaTeX Font Info:    Font shape `OML/zcochmi/m/it' will be
-(Font)              scaled to size 6.1pt on input line 376.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.95pt on input line 376.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.0pt on input line 376.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.1pt on input line 376.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.95pt on input line 376.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 376.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.1pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.95pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.0pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.1pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.95pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.0pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.1pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.95pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.0pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.1pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.95pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.0pt on input line 376.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.1pt on input line 376.
-
-Overfull \hbox (20.78072pt too wide) in paragraph at lines 377--377
-\T1/Cochineal-TLF/m/n/12 (-10) 2023-10-31. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/blog/what -[] embedded -[]
- []
-
-
-Overfull \hbox (5.28377pt too wide) in paragraph at lines 377--377
-[]\T1/Cochineal-TLF/m/it/12 (-10) Embed Vi-su-a-li-zati-ons Using Web Com-po-nents\T1/Cochineal-TLF/m/n/12 (-10) . Go-od-Data. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https :
- []
-
-
-Overfull \hbox (10.94525pt too wide) in paragraph at lines 377--377
-\T1/newtxttz/m/n/10.95 //www . gooddata . com/docs/cloud/embed -[] visualizations/web -[] components/
- []
-
-[19
-
-]
-Overfull \hbox (8.47386pt too wide) in paragraph at lines 377--377
-[]$\T1/newtxttz/m/n/10.95 https : //medium . com/web -[] security/understanding -[] oauth2 -[] a50f29f0fbf7$[]\T1/Cochineal-TLF/m/n/12 (-10) . 
- []
-
-
-Overfull \hbox (23.71718pt too wide) in paragraph at lines 377--377
-\T1/Cochineal-TLF/m/n/12 (-10) stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //technologyadvice . com/blog/information -[] technology/
- []
-
-
-Overfull \hbox (6.8463pt too wide) in paragraph at lines 377--377
-[]$\T1/newtxttz/m/n/10.95 https : //www . trustradius . com/products/microsoft -[] power -[] bi -[] embedded/
- []
-
-
-Overfull \hbox (22.11537pt too wide) in paragraph at lines 377--377
-[]\T1/Cochineal-TLF/m/it/12 (-10) What is Lo-o-ker? \T1/Cochineal-TLF/m/n/12 (-10) TrustRa-dius, 2023-12. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . trustradius .
+ [15]
+Underfull \hbox (badness 1478) in paragraph at lines 448--449
+[]|\T1/Cochineal-TLF/m/n/12 (+10) Token pro ob-no-vení p°í-stu-po-vého to-kenu. Za-slán
  []
 
 \FASThesis@runninghead@rule@offset=\dimen373
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [20]
+ [16 <./pictures/emplifiAPI.png>]
 \FASThesis@runninghead@rule@offset=\dimen374
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [21] [22
+ [17]
+\FASThesis@runninghead@rule@offset=\dimen375
 
-] (bp.lof) [23] [24
+Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
-] (bp.lot) [25] [26
+ [18]
+Overfull \hbox (1.8pt too wide) detected at line 492
+[] 
+ []
 
-] (bp.lol) [27] 
+[19
+
+] [20
+
+]
+Overfull \hbox (20.78072pt too wide) in paragraph at lines 507--507
+\T1/Cochineal-TLF/m/n/12 (-10) 2023-10-31. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/blog/what -[] embedded -[]
+ []
+
+
+Overfull \hbox (5.28377pt too wide) in paragraph at lines 507--507
+[]\T1/Cochineal-TLF/m/it/12 (-10) Embed Vi-su-a-li-zati-ons Using Web Com-po-nents\T1/Cochineal-TLF/m/n/12 (-10) . Go-od-Data. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https :
+ []
+
+
+Overfull \hbox (10.94525pt too wide) in paragraph at lines 507--507
+\T1/newtxttz/m/n/10.95 //www . gooddata . com/docs/cloud/embed -[] visualizations/web -[] components/
+ []
+
+[21
+
+]
+Overfull \hbox (8.47386pt too wide) in paragraph at lines 507--507
+[]$\T1/newtxttz/m/n/10.95 https : //medium . com/web -[] security/understanding -[] oauth2 -[] a50f29f0fbf7$[]\T1/Cochineal-TLF/m/n/12 (-10) . 
+ []
+
+
+Overfull \hbox (23.71718pt too wide) in paragraph at lines 507--507
+\T1/Cochineal-TLF/m/n/12 (-10) stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //technologyadvice . com/blog/information -[] technology/
+ []
+
+
+Overfull \hbox (6.8463pt too wide) in paragraph at lines 507--507
+[]$\T1/newtxttz/m/n/10.95 https : //www . trustradius . com/products/microsoft -[] power -[] bi -[] embedded/
+ []
+
+
+Overfull \hbox (22.11537pt too wide) in paragraph at lines 507--507
+[]\T1/Cochineal-TLF/m/it/12 (-10) What is Lo-o-ker? \T1/Cochineal-TLF/m/n/12 (-10) TrustRa-dius, 2023-12. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . trustradius .
+ []
+
+\FASThesis@runninghead@rule@offset=\dimen376
+
+Overfull \vbox (14.49998pt too high) has occurred while \output is active []
+
+ [22]
+\FASThesis@runninghead@rule@offset=\dimen377
+
+Overfull \vbox (14.49998pt too high) has occurred while \output is active []
+
+ [23] [24
+
+] (bp.lof) [25] [26
+
+] (bp.lot) [27] [28
+
+] (bp.lol) [29] 
 
 <QR code requested for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" in version 0-M.>
 <Copying the QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" in version 6-M as previously calculated.>
@@ -2109,13 +2139,13 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 387.
+(in both cases you will find help in the memoir manual). on input line 517.
 
 File: img/background-kiv.pdf Graphic file (type pdf)
 <use img/background-kiv.pdf>
-Package pdftex.def Info: img/background-kiv.pdf  used on input line 387.
+Package pdftex.def Info: img/background-kiv.pdf  used on input line 517.
 (pdftex.def)             Requested size: 597.5064pt x 845.08348pt.
-[28
+[30
 
 ]
 \tf@toc=\write7
@@ -2140,24 +2170,27 @@ L3 programming layer <2020/03/25>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `bp.out' has not changed.
-(rerunfilecheck)             Checksum: A367422DCCC4E026B41B4D917C71341E;3802.
+(rerunfilecheck)             Checksum: A060EB0C759F90D40A453F5B34AED570;3845.
 Package logreq Info: Writing requests to 'bp.run.xml'.
 \openout1 = `bp.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48282 strings out of 474586
- 907612 string characters out of 5758344
+ 48337 strings out of 474586
+ 908694 string characters out of 5758344
  2017558 words of memory out of 5000000
- 69473 multiletter control sequences out of 15000+600000
+ 69518 multiletter control sequences out of 15000+600000
  983485 words of font info for 260 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,13n,113p,1969b,3319s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb>
-Output written on bp.pdf (38 pages, 768279 bytes).
+Output written on bp.pdf (40 pages, 836752 bytes).
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
- 54187 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 675 PDF objects out of 1000 (max. 8388607)
+ 120 named destinations out of 1000 (max. 500000)
+ 55216 words of extra memory for PDF output out of 61914 (max. 10000000)
 

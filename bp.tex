@@ -63,7 +63,7 @@ Ing. Michalovi Kacerovskému za poskytování připomínek v rámci detailní re
 
 Monice Opltové za důkladné a pečlivé otestování implementované praktické části
 
-Doc. Ing. Daliborovi Fialovi, Ph.D. za jeho podporu a ochotu při tvorbě teoretické části
+Doc. Ing. Daliborovi Fialovi, Ph.D. za jeho spolupráci a ochotu při tvorbě teoretické části
 
 a také rodině za podporu během celého studia.
 }
@@ -164,11 +164,11 @@ Emplifi dashboardy umožňují definovat, vytvářet a vizualizovat aktivity už
 \begin{figure}
 	\centering
 	\includegraphics[width=1\textwidth]{pictures/emplifi-dashboard-example.png}
-	\caption{Ukázka dashboardu v produktu firmy Emplifi}
+	\caption{Ukázka dashboardu v produktu firmy Emplifi \cite{emplifidashboardIMAGE}}
 	\label{fig:emplifiDashUkazka}
 \end{figure}
 
-Na obrázku \ref{fig:emplifiDashUkazka} vidíme příklad dashboardu - skládá se z několika grafů, obvykle nazývané jako widgety \cite{emplifiDashboard}, jejichž obsah lze modifikovat pomocí přepínačů v liště. Obsah může být modifikován v časovém období (posledních 30 dní, poslední rok, konkrétní časový rozsah, ...), ale lze jej modifikovat také na základě metrik jako je např. sociální síť (Facebook, Instragram, LinkedIn), druh interakcí (komentáře, liky, sdílení) apod.\footnote{Widgety nemusí být obecně pouze vizualizace, může se jednat také o ovládací prvky (např. výběrové seznamy, check boxy, textfieldy, apod.). Tato možnost se využívá zejména ve vývojářských dashboardech pro rychlejší tvorbu vizualizací. V samotném produktu firmy se ale používá kvůli uživatelské přívětivosti pouze pro vizualizace \cite{emplifiDashboard}. 
+Na obrázku \ref{fig:emplifiDashUkazka} vidíme příklad dashboardu - skládá se z několika grafů, obvykle nazývané jako widgety \cite{emplifiDashboard}, jejichž obsah lze modifikovat pomocí přepínačů v liště. Obsah může být modifikován v časovém období (posledních 30 dní, poslední rok, konkrétní časový rozsah, ...), ale lze jej modifikovat také na základě metrik jako je např. sociální síť (Facebook, Instragram, LinkedIn), druh interakcí (komentáře, liky, sdílení) apod.\footnote{Widgety nemusí být obecně pouze vizualizace, může se jednat také o ovládací prvky (např. výběrové seznamy, check boxy, textfieldy apod.). Tato možnost se využívá zejména ve vývojářských dashboardech pro rychlejší tvorbu vizualizací. V samotném produktu firmy se ale používá kvůli uživatelské přívětivosti pouze pro vizualizace \cite{emplifiDashboard}. 
 }
 
 Embedded analytics se nechová a nevypadá jako samostatná aplikace, ale je integrován do jiného softwaru nebo webového portálu. Koncoví uživatelé často ani nepoznají, že se jedná
@@ -197,7 +197,7 @@ SDK (Software development kit) je označení sady nástrojů pro tvorbu softwaru
 následně tento požadavek zpracuje a odešle odpověď na specifikované volání (může se jednat např. o data ve formátu JSON). Díky tomu se krátí vývojový cyklus (automatizace), efektivně 
 se poskytují nové služby uživatelům a může zlepšit reputaci důvěryhodnost značky.
 
-K embedování je potřeba následovat instrukce (např. nainstalování dependencí, zprovoznění backendu, apod.) a zajistit, že všechny kroky v nich obsažené budou splněny \cite{reactSDKComp}. Jedná se tedy o programátorsky náročnější metodu, ovšem výhoda spočívá ve větší flexibilitě vývojářů, kteří mohou vizualizace snadno modifikovat \cite{goodDataEmbedded}.
+K embedování je potřeba následovat instrukce (např. nainstalování dependencí, zprovoznění backendu apod.) a zajistit, že všechny kroky v nich obsažené budou splněny \cite{reactSDKComp}. Jedná se tedy o programátorsky náročnější metodu, ovšem výhoda spočívá ve větší flexibilitě vývojářů, kteří mohou vizualizace snadno modifikovat \cite{goodDataEmbedded}.
 
 %
 % Podkapitola zabezpečení
@@ -337,6 +337,8 @@ React se kvůli těmto vlastnostem doporučuje využívat u:
 \item Multi-platformních aplikací
 \end{enumerate}
 
+Na frontend komponent knihovny a rozhraní pro obnovu tokenů bude použita knihovna MUI, která nabízí širokou škálu předdefinovaných komponent a stylů \cite{muiDocs}. 	
+
 \subsection{Emplifi API}	
 Data potřebná k embedování grafů budou získávána prostřednictvím Emplifi Public API. 
 Toto rozhraní poskytuje klientům snadný a oblíbený způsob, jak získat přístup k potřebným datům. 
@@ -429,7 +431,7 @@ Následně obdržíme token ve formátu jako na \ref{tokenResponse}. Přesné n�
 
 \begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
-	\caption{Tělo odpovědi se zaslaným tokenm \cite{emplifiDocs}.}
+	\caption{Tělo odpovědi se zaslaným tokenem \cite{emplifiDocs}.}
 	\label{tab:exampleRequestResponse}\\
 	\toprule[1.5pt]
 	\endhead
@@ -456,30 +458,126 @@ Následně obdržíme token ve formátu jako na \ref{tokenResponse}. Přesné n�
 Užívání tokenů má ovšem nastavené limity - 500 requestů za hodinu pro uživatele, 1000 requestů za hodinu pro účet \cite{emplifiDocs}. Pokud bude tato hranice přesažena,
 API vrátí odpověď s informací, že uživatel či účet překročili maximální limit dotazů.
 
-\subsubsection{Žádost od data}
+\subsubsection{Endpointy}
 
-Má-li uživatel platný token, může začít se zasíláním dotazů. 
+Má-li uživatel platný token, může začít se zasíláním dotazů. Emplifi API disponuje množstvím endpointů, přičemž endpointy využívané k embedování jsou zmíněné v tabulce \ref{tab:embeddingEndpoints}. 
 
-\subsection{OAuth 2.0}
-Přístup k datům bude zabezpečen protokolem OAuth 2.0. To umožní nejen autentizaci uživatele, ale také umožné uživatelům udělovat patřičná omezení (např. které endpointy může běžný uživatel volat).
+\begin{center}
+	\begin{longtable}{p{.25\textwidth}p{.6\textwidth}}
+	\caption{Endpointy používané k embedování.}
+	\label{tab:embeddingEndpoints}\\
+	\toprule[1.5pt]
+	\endhead
+	\midrule
+	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
+	\endfoot
+	\bottomrule[1.5pt]
+	\endlastfoot
+	%
+	\verb"/3/omni/metrics" & Získávání dat pro vizualizace. Data jsou ve formátu omni. \\
+	\midrule
+	\verb"/3/omni-studio" &  Získávání widget konfigurací, fieldů a vytváření Omni API tokenů\\
+	\midrule
+	\verb"/oauth2/0" &  Vytváření Public API tokenů. \\
+	\end{longtable}
+\end{center}
 
-\section{Funkcionality}
+Endpoint omni-studio bylo nutné vytvořit zadavatelem, jelikož Omni API endpointy bylo možné volat pouze při použití firemní VPN. Nyní lze tyto endpointy provolávat prostřednictvím Public API. Původní
+strukturu Omni API requestu lze vložit do těla public API requestu, což umožní uživateli embedovat grafy i mimo VPN.
 
-\subsection{Komunikace s API}
-Navrhovaná knihovna bude vybavená funkcionalitou pro provádění dotazů na Emplifi Public API, což umožní získávat potřebná data pro vizualizaci.
-Bude také umět reagovat na chybové odpovědi ze strany API (např. nevalidní token, špatný request, neexistující data apod.). 
-\subsection{Playground}
+\subsubsection{Knihovny pro fetchování dat}
 
-Vytvoření playgroundu umožní uživatelům náhled na vizualizace, které budou chtít embedovat v aplikacích třetích stran. To se může využít zejména pokud si budou chtít ověřit funkčnost či pozměnit
-design vizualizace. 
-\subsection{Obnova OAuth 2.0 tokenů}
+V současné době existuje mnoho knihoven určené pro fetchování dat. Data bude nejprve nutné načíst na backend běžící aplikace, která je následně vrátí na frontend. Na backendu probíhá fetchování dvojím způsobem - 
+využitím zabudovaného fetch API v Node.js a knihovnou axios. Pro načítání dat z backendu na frontend budeme využívat rozhraní JavaScriptu Fetch API a knihovnu TanStack React Query. Její výhodou je cachování
+requestů \cite{tanstackQueryDocs} - pokud byl poslán jednou již stejný dotaz na data, načtení dat neproběhne z API, ale z uložené cache. To omezí počet requestů zaslaných na API a zmenší prodlevu vizualizace (data načtou rychleji z cache než z API). 
 
-K dispozici bude uživatelské rozhraní, které umožní snadné vytvoření či obnovení OAuth 2.0 tokenu. Jedná se o důležitou funkcionalitu, aby budoucí uživatelé nemuseli složitě získávat
-token, ale stačilo jim k tomu pouze jednoduché rozhraní. 
-\subsection{PreJSON}
-Interní knihovna, která bude zveřejněna během příštího roku. Informace budou dopsány, jakmile bude zveřejněna (včetně vhodné ukázky). Slouží k tomu, aby se do schémat grafů daly jednoduše
-vkládat hodnoty. Např. zavoláním Emplifi Public API se vrátí schéma grafu, které bude ukazovat aktivitu uživatelů za posledních X dní. Díky PreJSON knihovně se mohou jednoduše do tohoto schématu
-vkládat hodnoty, na kterých je graf závislý (v tomto případě počet dní). Bude poskytnuta i dokumentace, až se tato knihovna zveřejní, takže poté odcituju a provede ukázku.
+\subsection{PreJSON a Vision}
+
+Interní knihovny, které budou využiti k upravování widget konfigurací (PreJSON) a následné vizualizaci grafů (Vision).
+
+PreJSON slouží k expandování konfigurací widgetů. Stažené konfigurace widgetů obsahují tzv. preJSON hodnoty, které jsou později dodefinovány uživatelem. Např. je-li stažena konfigurace, která obsahuje
+nespecifikovaný parametr, můžeme jej dodefinovat použitím instance PreJSONu \cite{preJSONDocs}. Na zjedodušené ukázce \ref{notExpandedPreJson} je zobrazen PreJSON objekt, který by mohl specifikovat tělo dotazu. 
+
+\begin{lstlisting}[language=json, caption={Neexpandovaný PreJSON objekt}, label=notExpandedPreJson]
+{
+	customer_id: 12651141417427,
+	time: "P30D/now[sD]",
+	platform: ${string:platform_name}
+}
+\end{lstlisting}
+		
+Atributy \texttt{customer\_id} a \texttt{time} jsou již předdefinové, ale na uživateli zůstává možnost volby parametru \texttt{platform}. Datový typ parametru musí být vždy specifikován.
+Zde se očekává string hodnota, která může nabývat (opět pouze pro ukázku) např. hodnot "instragram", "facebook", "snapchat", "linkedin" apod. Uživatel tedy zvolí jednu ze sociálních sítí
+a pomocí funkce \texttt{expand()} může tuto hodnotu dodefinovat. Výsledek může vypadat poté jako na ukázce \ref{expandedPreJson}.
+
+\begin{lstlisting}[language=json, caption={Expandovaný PreJSON objekt}, label=expandedPreJson]
+{
+	customer_id: 12651141417427,
+	time: "P30D/now[sD]",
+	platform: "snapchat"
+}
+\end{lstlisting}
+
+Knihovna Vision slouží k vytváření vizualizací. Obsahuje komponentu, která ovšem nespecifikuje, jak daná vizualizace bude vypadat \cite{visionDocs}, ale slouží k vykreslení vizualizace. 
+Veškeré data a konfigy vizualizace (např. jakou barvu bude mít graf, jaká je popsána osa X apod.) jsou předány uživatelem a knihovna se pouze postará o vykreslení. Tato výsledná vizualizace 
+neobsahuje ale např. nadpisy, nápovědy apod., to bude zajišťovat výsledná knihovna této bakalářské práce.
+
+O vykreslování se stará komponenta \texttt{<Vision/>}. Pro potřeby BP budou využívány parametry uvedené v tabulce \ref{tab:visionParams}.
+
+\begin{center}
+	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
+	\caption{Parametry komponenty <Vision/>}
+	\label{tab:visionParams}\\
+	\toprule[1.5pt]
+	\endhead
+	\midrule
+	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
+	\endfoot
+	\bottomrule[1.5pt]
+	\endlastfoot
+	%
+	\verb"spec" & Validní JSON expandovaná konfigurace grafu (druh grafu, popisky os, barvy grafu apod.). \\
+	\midrule
+	\verb"input" &  Data zobrazována v grafu. \\
+	\end{longtable}
+\end{center}
+
+Následně je třeba tuto komponenta s předanými parametry vložit do komponenty \texttt{<VisionContextProvider/>}, aby došlo ke správnému vyrenderování.
+
+\section{Návrh UI}
+
+Při navrhování uživatelského rozhraní je třeba myslet na UX (User Experience). Výsledné rozhraní musí být přehledné, uživatelsky přívětivé a nezasekávat se. Pro lepší UX bude rozhraní 
+obsahovat nejen sekci pro správu tokenů, ale také sekci pro náhled embedovaných grafů a následné generování zdrojového kódu pro tyto náhledy. Tím se zvýší použitelnost tohoto UI, jelikož 
+věci potřebné k embedování sloučí do jednoho UI (tj. bude se jednat o jednostránkovou aplikaci). Ze strany zadavatele je důraz především na funkcionalitu a UX, nikoliv na estetiku. Proto toto bude zohledněno při navrhování.
+
+\subsection{Vytváření tokenů}
+
+K vytvoření tokenů bude sloužit patička stránky. V ní se budou nacházet dvě tlačítka - jedno pro vytvoření Public API tokenu, druhé pro Omni API token. K vytvoření těchto tokenů je třeba být přihlášen v
+účtu Suite, jak bylo dřívě zmíněno. Po stisknutí tlačítka bude uživatel přesměrován na stránku, kde udělí patřičné oprávnění, že se pro jeho účet vytvoří token. Po potvrzení se uživateli token uloží
+do local storage webového prohlížeče. To umožní okamžitou možnost embedování v UI a zároveň snadnou přístupnost k tomuto tokenu. Pokud bude chtít uživatel token používat ve své aplikaci, jednoduše jej z local storage
+zkopíruje k sobě do aplikace, kde jej bude dále moci normálně využívat. To by platilo pro případ, kdy by jeden z tokenů vypršel. Ovšem bude-li uživatel nový a bude nutno vygenerovat oba dva tokeny pro potřebné vizualizace,
+bude přidáno tlačítko, které uživateli zkopíruje oba dva tokeny ve formátu .env souboru. Uživatel tedy nebude muset sám hodnoty přepisovat, ale pouze je vloží zkopírované do envu. Zkopírované tokeny
+budou ve formátu:
+\lstset{style=plainsrc}
+\begin{lstlisting}
+ACCESS_TOKEN=pis4185dfgfdesfDs5asd
+OMNI_API_TOKEN=s5Z9sB=Fd--lK67a44ed12
+\end{lstlisting}
+
+\subsection{Náhled vizualizací}
+Součástí uživatelského rozhraní bude také sekce pro náhled na vizualizované grafy. Ten bude obsahovat základní uživatelské vstupy (všechny, které bude přijímat výsledná komponenta z naimplementované knihovny), 
+díky kterým se vizualizace budou moci rychle ovládat a vykreslovat. Pro rychlé embedování bude vytvořeno i tlačítko, které otevře uživateli dialog, v němž bude vygenerovaný zdrojový kód, kterým by se
+v jeho aplikaci daný graf vykreslil. Výstup bude vypadat zhruba takto:
+
+\lstset{style=plainsrc}
+\begin{lstlisting}
+<Widget widgetID={1598} boardID={12} 
+params={{time:"now"}} width={500}/>
+\end{lstlisting}
+
+
+\section{Programátorská dokumentace}
+
 
 
 % _____________________________________________________________________________
@@ -491,7 +589,7 @@ vkládat hodnoty, na kterých je graf závislý (v tomto případě počet dní)
 %
 \chapter{Závěr}
 Aktuálně je praktická část bakalářské práce ve formě, kdy React aplikace dokáže vizualizovat grafy. Grafy lze vizualizovat pomocí playgroundu, kterému bude v budoucnu ještě upraven
-frontend. Zároveň aplikace dokáže obnovovat OAuth2 tokeny (jak token pro Emplifi Public Api, který vrací schémata widgetů, tak i token pro Omni Api, který vrací data do widgetů). Toto je
+frontend. Zároveň aplikace dokáže obnovovat OAuth2 tokeny (jak token pro Emplifi Public Api, který vrací schémata widgetů, tak i token pro Omni API, který vrací data do widgetů). Toto je
 udělané pouze formou dvou tlačítek. Ty jsou automaticky vypnuté, pokud jsou tokeny validní - momentálně se uchovávají v local storage webového prohlížeče. Externí zadavatel určí co dále. 
 Jsou i vypisovány základní stavy tokenu (platný, neplatný, neexistující) a vizualizace v playground nelze embedovat, dokud tyto tokeny nejsou platné. Playground umožňuje uživatelům widgety
 i upravovat - například zadáním CSS stylu či zadáním šířky/výšky. Pro debuggování a kontrolu jsou umožněny i výpisy schémat daného widgetu - ty se ovládají jednoduchým přepínačem. Jsou 

@@ -670,6 +670,11 @@ INPUT D:\Install\MikTex\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Italic-tlf-t1.tfm
 INPUT D:\Install\MikTex\fonts\vf\public\cochineal\Cochineal-Italic-tlf-t1.vf
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Italic-tlf-t1--base.tfm
+INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxttza.tfm
+INPUT D:\Install\MikTex\tex\latex\newtxtt\ts1newtxttz.fd
+INPUT D:\Install\MikTex\tex\latex\newtxtt\ts1newtxttz.fd
+INPUT D:\Install\MikTex\tex\latex\newtxtt\ts1newtxttz.fd
+INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\tcxttz.tfm
 INPUT .\bp.lof
 INPUT .\bp.lof
 INPUT bp.lof
@@ -703,3 +708,5 @@ INPUT C:\Users\milan\Desktop\LaTex\bp\texmf\fonts\type1\lcdftools\GTAmerica\GTAm
 INPUT C:\Users\milan\Desktop\LaTex\bp\texmf\fonts\type1\lcdftools\GTAmerica\GTAmerica-CondensedRegular.pfb
 INPUT D:\Install\MikTex\fonts\type1\public\newtxtt\newtxtt.pfb
 INPUT D:\Install\MikTex\fonts\type1\public\newtxtt\newtxtt.pfb
+INPUT D:\Install\MikTex\fonts\type1\public\txfonts\tcxtt.pfb
+INPUT D:\Install\MikTex\fonts\type1\public\txfonts\tcxtt.pfb

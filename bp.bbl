@@ -101,12 +101,29 @@
       \verb https://docs.emplifi.io/platform/latest/home/dashboard
       \endverb
     \endentry
+    \entry{emplifidashboardIMAGE}{online}{}
+      \list{organization}{1}{%
+        {Emplifi}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{month}{4}
+      \field{note}{[Online: accessed 11.Apr.2024]}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://emplifi.io/resources/blog/linkedin-insights-emplifi-analytics-dashboard-widgets
+      \endverb
+      \verb{url}
+      \verb https://emplifi.io/resources/blog/linkedin-insights-emplifi-analytics-dashboard-widgets
+      \endverb
+    \endentry
     \entry{saasDefinition}{online}{}
       \list{organization}{1}{%
         {Investopedia}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labeltitlesource}{title}
       \field{day}{15}
       \field{month}{12}
@@ -252,8 +269,8 @@
       \endverb
     \endentry
     \entry{mozillaHTTPAuth}{online}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{note}{[Online: accessed 9.Dec.2023]}
@@ -339,8 +356,8 @@
       \list{organization}{1}{%
         {OAuth}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{note}{[Online: accessed 9.Dec.2023]}
@@ -358,8 +375,8 @@
       \list{organization}{1}{%
         {GoodData}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{month}{12}
       \field{title}{GoodData embedded analytics platform}
@@ -514,8 +531,8 @@
       \list{organization}{1}{%
         {TrustRadius}%
       }
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{note}{[Online: accessed 8.Apr.2024]}
@@ -608,12 +625,28 @@
       \verb https://www.javatpoint.com/what-is-dom-in-react
       \endverb
     \endentry
+    \entry{muiDocs}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Online: accessed 11.Apr.2024]}
+      \field{title}{MUI documentation}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://mui.com/
+      \endverb
+      \verb{url}
+      \verb https://mui.com/
+      \endverb
+    \endentry
     \entry{emplifiDocs}{online}{}
       \list{organization}{1}{%
         {Emplifi}%
       }
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{month}{4}
       \field{note}{[Online: accessed 9.Apr.2024]}
@@ -626,6 +659,78 @@
       \verb{url}
       \verb https://api.emplifi.io/
       \endverb
+    \endentry
+    \entry{tanstackQueryDocs}{online}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Online: accessed 11.Apr.2024]}
+      \field{title}{Powerful asynchronous state management for TS/JS, React, Solid, Vue, Svelte and Angular}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://tanstack.com/query/latest
+      \endverb
+      \verb{url}
+      \verb https://tanstack.com/query/latest
+      \endverb
+    \endentry
+    \entry{preJSONDocs}{online}{}
+      \name{author}{1}{}{%
+        {{hash=00ce2b90d942428034a7724952527d13}{%
+           family={Kacerovský},
+           familyi={K\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Emplifi}%
+      }
+      \strng{namehash}{00ce2b90d942428034a7724952527d13}
+      \strng{fullhash}{00ce2b90d942428034a7724952527d13}
+      \strng{bibnamehash}{00ce2b90d942428034a7724952527d13}
+      \strng{authorbibnamehash}{00ce2b90d942428034a7724952527d13}
+      \strng{authornamehash}{00ce2b90d942428034a7724952527d13}
+      \strng{authorfullhash}{00ce2b90d942428034a7724952527d13}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Attached in bachelor thesis .zip file as .pdf]}
+      \field{title}{PreJSON documentation}
+      \field{year}{2024}
+      \field{dateera}{ce}
+    \endentry
+    \entry{visionDocs}{online}{}
+      \name{author}{1}{}{%
+        {{hash=00ce2b90d942428034a7724952527d13}{%
+           family={Kacerovský},
+           familyi={K\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Emplifi}%
+      }
+      \strng{namehash}{00ce2b90d942428034a7724952527d13}
+      \strng{fullhash}{00ce2b90d942428034a7724952527d13}
+      \strng{bibnamehash}{00ce2b90d942428034a7724952527d13}
+      \strng{authorbibnamehash}{00ce2b90d942428034a7724952527d13}
+      \strng{authornamehash}{00ce2b90d942428034a7724952527d13}
+      \strng{authorfullhash}{00ce2b90d942428034a7724952527d13}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{note}{[Attached in bachelor thesis .zip file as .pdf]}
+      \field{title}{Vision documentation}
+      \field{year}{2024}
+      \field{dateera}{ce}
     \endentry
   \enddatalist
 \endrefsection

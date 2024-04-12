@@ -544,6 +544,43 @@ O vykreslování se stará komponenta \texttt{<Vision/>}. Pro potřeby BP budou 
 
 Následně je třeba tuto komponenta s předanými parametry vložit do komponenty \texttt{<VisionContextProvider/>}, aby došlo ke správnému vyrenderování.
 
+\section{Návrh knihovny}
+
+Knihovna se bude skládat jak z front-endové části (vykreslování widgetů), tak i back-endové (provolávání API endpointů). Jejím cílem bude identifikovat, jaká data stáhnout z API a patřičně je zpracovat případně reagovat na chyby (nevalidní data, vypršení platnosti tokenu).
+\subsection{Omni Studio}
+Veškeré vizualizace se nachází v interní aplikaci Omni Studio, která slouží vývojářům k rychlému a jednoduchému zobrazení grafů. K embedování bude zapotřebí mít přístup do této aplikace (přes VPN). Tato interní aplikace
+obsahuje stovky dashboardů, na nichž se nachází widgety. Jak již bylo zmíněno, widgety nejsou ovšem jen vizualizované grafy, ale může se jednat např. o tabulky, výběrové seznamy či prostý text sloužící k popisu boardu.
+Knihovna má sloužit k embedování vizualizací (tudíž pouze Vision komponent - jak se v aplikaci grafy nazývají), ale bude navržena tak, aby v budoucnu byla rozšířitelná a šla použít i pro jiné druhy widgetů.
+
+Ukázkový dashboard z Omni Studio je vidět na obrázku BLABLABLA ZDE DOPLNIT ID V URL ATD
+
+OBRAZEK
+
+Vidíme, že dasboard obsahuje nejen vizualizace, ale i ovládací prvky. Každý tento widget má svoje jedinečné ID, které je dostupné, pokud se rozklikne nastavení widgetu. Zároveň Omni Studio 
+umožňuje uživateli zobrazit konfiguraci grafu (neexpandované), datové requesty (neexpandované) a i samotná data. V jedné ze sekcí widgetu jsou i tzv. debuggovací nástroje, ve kterých se nachází pole JSON parametrů,
+které je dodefinovat, aby graf mohl být vykreslen. Na obrázku BLABLA vidíme, že uživatel specifikoval ... 
+Tyto hodnoty se následně převedou do pole JSON objektů a následně se při vizualizaci uplatní. Tím grafy zůstávají dynamické, protože při každé uživatelské interakci se ihned překreslí s novými
+daty.
+
+Tyto parametry budou klíčové pro správnou funkcionalitu knihovny - zajistí správné vykreslení a pokud nebudou v rámci aplikace specifikovány nějakými prvky (např. že by uživatelova aplikace obsahovala
+inputy/výběrové seznamy pro všechny nespecifikované hodnoty), bude nutné je specifikovat ručně. To bude provedeno předáním přes properties React komponenty.
+
+\subsection{Funkcionalita knihovny}
+Knihovna tedy bude obsahovat obecnou komponentu \texttt{<Widget/>}, která bude reprezentovat právě jednu vizualizaci. Bude nutné komponentě předat číslo boardu, číslo widgetu a případně parametry, které 
+budou expandovány knihovnou PreJSON v konfiguraci widgetu. Tato komponenta se postará o veškeré fetchování dat a následnou vizualizaci. Jelikož Vision knihovna vizualizuje pouze samotný graf, bude nutné, aby
+Widget komopnenta uměla zobrazit i nadpisy, podnadpisy a další prvky obsažené v hlavičce. Bude tedy třeba zajistit základní stylování (např. fonty a velikost písma), ale uživateli bude umožněno vložení CSS stylů
+opět přes propsu komponenty - to nabídne uživateli větší možnosti, jak si embedovaný graf sám vystylovat. Postup při vizualizaci bude vypadat přibližně takto:
+
+\begin{enumerate}
+	\item Uživatel zadá ID boardu a widgetu + další potřebné parametry
+	\item Komponenta provede veškerá potřebná volání - stáhne konfigurace, proběhne expandace konfigů apod.
+	\item Aplikují se předané CSS styly 
+	\item Výsledné zobrazení grafu
+\end{enumerate}
+
+Výsledná knihovna bude přístupná přes npm (Node Package Manager), což zajistí její snadné stažení a použití. Instalace bude vyžadovat pouze nainstalovaného správce balíčků npm a použití budete
+detailně vysvětleno v uživatelské dokumentaci.
+
 \section{Návrh UI}
 
 Při navrhování uživatelského rozhraní je třeba myslet na UX (User Experience). Výsledné rozhraní musí být přehledné, uživatelsky přívětivé a nezasekávat se. Pro lepší UX bude rozhraní 
@@ -576,7 +613,7 @@ params={{time:"now"}} width={500}/>
 \end{lstlisting}
 
 
-\section{Programátorská dokumentace}
+\section{Uživatelská dokumentace}
 
 
 

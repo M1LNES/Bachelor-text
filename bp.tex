@@ -542,23 +542,29 @@ O vykreslování se stará komponenta \texttt{<Vision/>}. Pro potřeby BP budou 
 	\end{longtable}
 \end{center}
 
-Následně je třeba tuto komponenta s předanými parametry vložit do komponenty \texttt{<VisionContextProvider/>}, aby došlo ke správnému vyrenderování.
+Následně je třeba tuto komponentu s předanými parametry vložit do komponenty \texttt{<VisionContextProvider/>}, aby došlo ke správnému vyrenderování.
 
 \section{Návrh knihovny}
 
-Knihovna se bude skládat jak z front-endové části (vykreslování widgetů), tak i back-endové (provolávání API endpointů). Jejím cílem bude identifikovat, jaká data stáhnout z API a patřičně je zpracovat případně reagovat na chyby (nevalidní data, vypršení platnosti tokenu).
+Knihovna se bude skládat jak z front-endové části (vykreslování widgetů), tak i back-endové (provolávání API endpointů). Jejím cílem bude identifikovat, jaká data stáhnout z API a patřičně je zpracovat, případně reagovat na chyby (nevalidní data, vypršení platnosti tokenu).
 \subsection{Omni Studio}
 Veškeré vizualizace se nachází v interní aplikaci Omni Studio, která slouží vývojářům k rychlému a jednoduchému zobrazení grafů. K embedování bude zapotřebí mít přístup do této aplikace (přes VPN). Tato interní aplikace
 obsahuje stovky dashboardů, na nichž se nachází widgety. Jak již bylo zmíněno, widgety nejsou ovšem jen vizualizované grafy, ale může se jednat např. o tabulky, výběrové seznamy či prostý text sloužící k popisu boardu.
 Knihovna má sloužit k embedování vizualizací (tudíž pouze Vision komponent - jak se v aplikaci grafy nazývají), ale bude navržena tak, aby v budoucnu byla rozšířitelná a šla použít i pro jiné druhy widgetů.
 
-Ukázkový dashboard z Omni Studio je vidět na obrázku BLABLABLA ZDE DOPLNIT ID V URL ATD
-
-OBRAZEK
-
+Ukázkový dashboard z Omni Studia je znázorněn na obrázku \ref{fig:omniStudioDashboard}.
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{pictures/omni-studio.png}
+	\caption{Dashboard v Omni Studiu}
+	\label{fig:omniStudioDashboard}
+\end{figure}
 Vidíme, že dasboard obsahuje nejen vizualizace, ale i ovládací prvky. Každý tento widget má svoje jedinečné ID, které je dostupné, pokud se rozklikne nastavení widgetu. Zároveň Omni Studio 
 umožňuje uživateli zobrazit konfiguraci grafu (neexpandované), datové requesty (neexpandované) a i samotná data. V jedné ze sekcí widgetu jsou i tzv. debuggovací nástroje, ve kterých se nachází pole JSON parametrů,
-které je dodefinovat, aby graf mohl být vykreslen. Na obrázku BLABLA vidíme, že uživatel specifikoval ... 
+které je dodefinovat, aby graf mohl být vykreslen. Na obrázku \ref{fig:omniStudioDashboard} je zřejmé, že uživatel pro realizaci vykreslení musel vybrat hodnoty v ovládacích prvkách (konkrétně 
+časovou škálu, časovou agregaci a hodnotu labelu - hodnota pro filtry zůstala nevyplněná, jelikož je nepovinná - udává pouze omezení na datový request, pokud by chtěl uživatel data ještě nějak
+dál extrahovat - např. filtrování na základě sociální sítě, typu interakcí apod.). 
+
 Tyto hodnoty se následně převedou do pole JSON objektů a následně se při vizualizaci uplatní. Tím grafy zůstávají dynamické, protože při každé uživatelské interakci se ihned překreslí s novými
 daty.
 
@@ -630,6 +636,14 @@ přístupná na veřejné URL adrese. Pro tuto možnost využijeme Docosaurus - 
 Docosaurus umožní ze souborů s příponou .md (soubory běžně používané pro dokumentace v gitových repozitářích) zbuildit statickou webovou stránku, která uživateli poskytne přehledné 
 rozhraní. Výsledná dokumentace bude vydána na veřejné internetové stránce, aby k ní byl snadný přístup odkudkoliv.
 
+
+\chapter{Implementace}
+Tato kapitola popisuje implementaci knihovny a uživatelského rozhraní. 
+\section{Implementace knihovny}
+
+\subsection{}
+
+\section{Implementace uživatelského rozhraní}
 
 
 % _____________________________________________________________________________

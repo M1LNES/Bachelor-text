@@ -613,7 +613,22 @@ params={{time:"now"}} width={500}/>
 \end{lstlisting}
 
 
-\section{Uživatelská dokumentace}
+\section{Dokumentace}
+
+Výstupem bude i podrobná dokumentace - a to jak uživatelská, která bude specifikovat použití pro koncové uživatele, tak i programátorská, která bude obsahovat souhrn informací potřebné
+pro další vývoj. Dokumentace bude obsahovat následující body:
+
+\begin{enumerate}
+	\item Instalaci knihovny a její následnou integraci do uživatelovi aplikace
+	\item Stručný návod k používání uživatelského rozhraní pro obnovu tokenů
+	\item Sekci pro vývojáře
+\end{enumerate}
+
+Přístupu k dokumentaci je několik - od stručného souboru .pdf až po samostatnou webovou aplikaci. Aby dokumentace byla přehledná a snadno rozšiřitelná, bude dokumentace statická stránka
+přístupná na veřejné URL adrese. Pro tuto možnost využijeme Docosaurus - generátor statických stránek určen pro generaci právě uživatelských dokumentací. 
+
+Docosaurus umožní ze souborů s příponou .md (soubory běžně používané pro dokumentace v gitových repozitářích) zbuildit statickou webovou stránku, která uživateli poskytne přehledné 
+rozhraní. Výsledná dokumentace bude vydána na veřejné internetové stránce, aby k ní byl snadný přístup odkudkoliv.
 
 
 

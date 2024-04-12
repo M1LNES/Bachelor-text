@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.2)  12 APR 2024 02:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.2)  12 APR 2024 13:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2100,7 +2100,7 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [22]
-Overfull \hbox (1.8pt too wide) detected at line 627
+Overfull \hbox (1.8pt too wide) detected at line 642
 [] 
  []
 
@@ -2109,39 +2109,39 @@ Overfull \hbox (1.8pt too wide) detected at line 627
 ] [24
 
 ]
-Overfull \hbox (20.78072pt too wide) in paragraph at lines 642--642
+Overfull \hbox (20.78072pt too wide) in paragraph at lines 657--657
 \T1/Cochineal-TLF/m/n/12 (-10) 2023-10-31. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/blog/what -[] embedded -[]
  []
 
 
-Overfull \hbox (5.28377pt too wide) in paragraph at lines 642--642
+Overfull \hbox (5.28377pt too wide) in paragraph at lines 657--657
 []\T1/Cochineal-TLF/m/it/12 (-10) Embed Vi-su-a-li-zati-ons Using Web Com-po-nents\T1/Cochineal-TLF/m/n/12 (-10) . Go-od-Data. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https :
  []
 
 
-Overfull \hbox (10.94525pt too wide) in paragraph at lines 642--642
+Overfull \hbox (10.94525pt too wide) in paragraph at lines 657--657
 \T1/newtxttz/m/n/10.95 //www . gooddata . com/docs/cloud/embed -[] visualizations/web -[] components/
  []
 
 [25
 
 ]
-Overfull \hbox (8.47386pt too wide) in paragraph at lines 642--642
+Overfull \hbox (8.47386pt too wide) in paragraph at lines 657--657
 []$\T1/newtxttz/m/n/10.95 https : //medium . com/web -[] security/understanding -[] oauth2 -[] a50f29f0fbf7$[]\T1/Cochineal-TLF/m/n/12 (-10) . 
  []
 
 
-Overfull \hbox (23.71718pt too wide) in paragraph at lines 642--642
+Overfull \hbox (23.71718pt too wide) in paragraph at lines 657--657
 \T1/Cochineal-TLF/m/n/12 (-10) stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //technologyadvice . com/blog/information -[] technology/
  []
 
 
-Overfull \hbox (6.8463pt too wide) in paragraph at lines 642--642
+Overfull \hbox (6.8463pt too wide) in paragraph at lines 657--657
 []$\T1/newtxttz/m/n/10.95 https : //www . trustradius . com/products/microsoft -[] power -[] bi -[] embedded/
  []
 
 
-Overfull \hbox (22.11537pt too wide) in paragraph at lines 642--642
+Overfull \hbox (22.11537pt too wide) in paragraph at lines 657--657
 []\T1/Cochineal-TLF/m/it/12 (-10) What is Lo-o-ker? \T1/Cochineal-TLF/m/n/12 (-10) TrustRa-dius, 2023-12. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . trustradius .
  []
 
@@ -2168,11 +2168,11 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 652.
+(in both cases you will find help in the memoir manual). on input line 667.
 
 File: img/background-kiv.pdf Graphic file (type pdf)
 <use img/background-kiv.pdf>
-Package pdftex.def Info: img/background-kiv.pdf  used on input line 652.
+Package pdftex.def Info: img/background-kiv.pdf  used on input line 667.
 (pdftex.def)             Requested size: 597.5064pt x 845.08348pt.
 [34
 
@@ -2203,23 +2203,23 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `bp.out' has not changed.
-(rerunfilecheck)             Checksum: A2CDB50AD7B3BF155C3AF2DAFCE65039;4241.
+(rerunfilecheck)             Checksum: 1B3D32ADBF52AC347F679AA63563987F;4172.
 Package logreq Info: Writing requests to 'bp.run.xml'.
 \openout1 = `bp.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48475 strings out of 474586
- 911100 string characters out of 5758344
+ 48478 strings out of 474586
+ 911120 string characters out of 5758344
  2017558 words of memory out of 5000000
  69610 multiletter control sequences out of 15000+600000
  985001 words of font info for 266 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,13n,113p,1969b,3319s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (44 pages, 862133 bytes).
+Output written on bp.pdf (44 pages, 863501 bytes).
 PDF statistics:
- 759 PDF objects out of 1000 (max. 8388607)
- 156 named destinations out of 1000 (max. 500000)
+ 763 PDF objects out of 1000 (max. 8388607)
+ 159 named destinations out of 1000 (max. 500000)
  56256 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -25,7 +25,9 @@
 % _____________________________________________________________________________
 %
 \documentclass[czech, bc, kiv, he, iso690numb]{fasthesis}
+\usepackage{dirtree}
 \usepackage{hyperref}
+\usepackage{fontawesome5} 
 
 %\usepackage{float} 
 \title{\texttt {}Vývoj Javascript knihovny pro embedování vizualizací skrze Emplifi Public API}
@@ -390,7 +392,7 @@ Do URL, na kterou uživatele přesměrujeme, bude třeba vložit několik parame
 \end{center}
 
 
-Pokud veškeré parametry budou správně nastaveny a uživatel udělí souhlas s používáním Suite účtu, na URL "redirect\_uri" se vrátí zpráva s autorizačním kódem. Tento kód
+Pokud veškeré parametry budou správně nastaveny a uživatel udělí souhlas s používáním Suite účtu, na URL \texttt{redirect\_uri} se vrátí zpráva s autorizačním kódem. Tento kód
 slouží k výměně za přístupový token. O ten je možno si zažádat POST requestem na adresu \url{https://api.emplifi.io/oauth2/0/token}. Struktura requestu je popsána v tabulkách \ref{tab:exampleRequestHeader} a \ref{tab:exampleRequestBody}.
 
 \begin{center}
@@ -642,12 +644,258 @@ rozhraní. Výsledná dokumentace bude vydána na veřejné internetové stránc
 
 
 \chapter{Implementace}
-Tato kapitola popisuje implementaci knihovny a uživatelského rozhraní. 
+Tato kapitola popisuje implementaci knihovny a uživatelského rozhraní. Jako první bude vyvíjena knihovna, protože následně bude rovnou využívána uživatelským rozhraním pro
+náhled vizualizací.
+
 \section{Implementace knihovny}
 
-\subsection{}
+\subsection{Vývoj knihovny v čase}
+
+Pro okamžité testování funkcionality byla knihovna nejprve vyvíjena formou React aplikace, která byla po implementaci všech potřebných funkcionalit převedena na knihovnu.
+Zároveň v době vývoje nebyly ještě zadavatelem vystaveny endpointy na Omni Studio API v rámci Public API. Aplikace tedy pracovala přímo s Omni Studio API, z čehož ale vyplývá,
+že pro vyvíjení bylo třeba být připojen na firemní VPN. To samé platilo i pro správné fungování - spustil-li uživatel aplikaci lokálně a nebyl připojen na VPN, grafy nemohly být vykresleny,
+protože aplikace neměla přístup k Omni Studio API. 
+
+Pro frontend aplikace byl použit framework React a další knihovny jako např. MUI, tanstack react query apod. Backendová část byla psána v Node.js. Backend používal webový server express - ten
+řešil veškeré načítání a posílání dat. Kód byl členěn do dvou hlavních složek - \texttt{server} a \texttt{client}. Adresář \texttt{server} obsahoval inicializaci backendu a následné nastvení a spuštění webového serveru. Naopak
+adresář \texttt{client} obsahoval funkcionální komponenty k vykreslování embedovaných grafů a pomocné funkce, které sloužily k přeposílání dat z frontendu na backend či opačně. Jakmile aplikace
+dokázala vykreslovat libovolné grafy, byla transformována z React aplikace do samotné JavaScriptové knihovny.
+
+\subsection{Struktura knihovny}
+
+Výsledná transformovaná knihovna má následující strukturu:
+
+\dirtree{%
+    .0 {}.
+    .1 \faFolder{} docs.
+	.1 \faFolder{} scripts.
+		.2 \faFile[regular]{} postinstall.sh.
+    .1 \faFolder{} src.
+        .2 \faFolder{} client.
+        .2 \faFolder{} server.
+        .2 \faFolder{} tests.
+        .2 \faFile[regular]{} index.js.
+        .2 \faFile[regular]{} backend.js.
+    .1 \faFile[regular]{} .babelrc.
+	.1 \faFile[regular]{} .gitignore.
+    .1 \faFile[regular]{} .mocharc.json.
+    .1 \faFile[regular]{} .npmignore.
+	.1 \faFile[regular]{} .prettierrc.js.
+    .1 \faFile[regular]{} README.md.
+	.1 \faFile[regular]{} package-lock.json.
+    .1 \faFile[regular]{} package.json.
+    .1 \faFile[regular]{} webpack.config.js.
+}
+
+Veškeré složky či soubory uvedené ve výše zmiňovaném adresáři jsou podrobně popsány v tabulce \ref{tab:dirLibrary}
+
+
+\begin{center}
+	\begin{longtable}{p{.25\textwidth}p{.6\textwidth}}
+	\caption{Obsah knihovny}
+	\label{tab:dirLibrary}\\
+	\toprule[1.5pt]
+	\endhead
+	\midrule
+	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
+	\endfoot
+	\bottomrule[1.5pt]
+	\endlastfoot
+	%
+	\verb"docs" & Obsahuje složku s uživatelskou dokumentací generovanou Docosaurem. \\
+	\midrule
+	\verb"scripts" & Složka se souborem sloužící k nainstalování minifikovaných verzí interních knihoven. \\
+	\midrule
+	\verb"src/client" & Složka s frontendovou implementací - veškeré React komponenty, konstanty a pomocné funkce určené k fetchování a zpracování dat.  \\
+	\midrule
+	\verb"src/server" & Složka s backendovou implementací - veškeré routy serveru Express určené k fetchování dat z API.  \\
+	\midrule
+	\verb"src/index.js" & Exportovaná frontendová část knihovny \\
+	\midrule
+	\verb"src/backend.js" & Exportovaná backendová část knihovny \\
+	\midrule
+	\verb".babelrc" & Slouží k definici přednastavené sady Babel pluginů, které se použijí k transformaci JavaScript kódu z jedné syntaxe do druhé.  \\
+	\midrule
+	\verb".mocharc.json" & Registruje mocha unit testy u babelu, aby mohly být spuštěny.  \\
+	\midrule
+	\verb".npmignore" & Specifije, které soubory budou při nahrávání na \url{https://www.npmjs.com/} ignorovány. \\
+	\midrule
+	\verb".prettierrc.js" & Soubor specifikující konfiguraci pro automatické formátování kódu. \\
+	\midrule
+	\verb"README.md" & Soubor pro uživatele pro rychlé porozumění projektu.  \\
+	\midrule
+	\verb"package-lock.json" & Soubor zajišťující konzistenci verzí závislostí v Node.js projektu a optimalizující proces instalace balíčků.  \\
+	\midrule
+	\verb"package.json" & Soubor obsahující metadata, závislosti a skripty pro projekt v Node.js. \\
+	\midrule
+	\verb"webpack.config.js" & Definuje, jak bude zdrojový kód knihovny zbuilděn.  \\
+	\end{longtable}
+\end{center}
+
+\subsection{Postinstall skript}
+
+Jelikož interní knihovny nebyly veřejné, bylo třeba je nějakým způsobem poskytnout. Nejprve připadala v úvahu možnost, že by se stahovaly pomocí npm, ovšem
+nakonec se přistoupilo k možnosti, že knihovny budou stahovány pomocí Emplifi Public API. K jejímu stažení se bude uživatel muset prokázat platným přístupovým tokenem.
+To zajišťuje i částečnou ochranu před neoprávněným stažením.
+
+Stažení a následné uložení řeší bash skriptový kód v souboru \texttt{postinstall.sh}. Ten nejprve vytvoří složku \texttt{dist} a následně zkontroluje, zda je v systémové proměnné
+nastavená hodnota tokenu a URL (\texttt{PACKAGE\_URL}), odkud knihovny stáhnout. Pokud hodnoty nastavené nejsou, automaticky bude brát hodnoty z .env filu. Následně pomocí CURL pošle dotaz na
+specifikovanou URL, v těle přiloží přístupový token a výsledek uloží do souboru \texttt{embedding.js} ve složce \texttt{dist}.
+
+Tento skript se automaticky spouští při instalaci dependencí této knihovny - je tedy před samotnou instalací zajistit, aby byl zajištěn přístup k platnému tkoenu a URL adrese.
+
+\subsection{Backendové routy}
+
+Jak již bylo zmíněno, výstupem knihovny budou mimo jiné i routy serveru Express, které budou zajišťovat a zprostředkovávat komunikace s API.
+
+Výstupem jsou tři backendové routy, které slouží ke stažení widget konfigurace, kte stažení dat pro widget a ke stažení dashboard fieldů (jejich význam bude vysvětlen u samotného vykreslování).
+Routy pro widget konfigurace a dashboard fieldy jsou typu GET - ten slouží zejména ke čtení dat, nikoliv upravování, mazání či vkládání. Obě tyto routy přijímají v parametru requestu ID
+dashboardu a následně provedou volání na API. 
+
+Token je možné specifikovat dvěma způsoby - a to buď specifikováním v .env souboru či systémové proměnné, nebo předání v hlavičce requestu. To umožňuje větší použitelnost pro koncového
+uživatele - jak bude zmíněno např. v implementaci uživatelského rozhraní. Routy následně vrací data na frontend ve formátu JSON. Došlo-li při fetchování dat k chybě, je vrácena chyba.
+
+Třetí routa je typu POST - POST zpravidla slouží k získání dat, ale oproti metodě GET obsahuje i tělo, kterým může předávat potřebné parametry či specifikace. To samozřejmě může být provedeno i
+použitím GET, ale v praxi se toto užití nedoporučuje kvůli tomu, že hlavička requestu GET by byla pak velmi dlouhá. V tomto případě předáváme v tělu POST requestu cestu k endpointu, ze kterého data
+fetchovat, a dále payload. Payload je objekt, který definuje dotaz na data - specifikuje jak data filtrovat, agregovat, řadit apod. 
+
+Všechny tři routy využívají k fetchování dat z Public API knihovnu axios. Následně jsou tyto routy vyexportovány jako jeden Express router, aby bylo možné jejich další použití v jiných částí projektu.
+
+\subsection{Organizace frontendové části}
+
+Frontendová část obsahuje kromě konstant, komponent a funkcí i soubor \texttt{.eslintrc.js}. Tento soubor slouží jako konfigurace pro plugin ESLint, který slouží ke statické analýze
+kódu - upozorňuje a pomáhá odstraňovat nekonzistence či špatné praktiky v kódu. Díky tomuto pluginu kód neobsahuje např. zbytečné importy a deklarace komponent, které se v kódu nijak nevyskytují,
+upozorňuje na chybějící dependence u React hooků či validuje předané properties.
+
+\subsubsection{Adresář constants}
+
+Adresář obsahuje dva soubory. První soubor \texttt{api-messages.js} obsahuje konstanty pro chybové výpisy (při fetchování dat z API, nevalidních PreJSON parametrech apod.).
+Druhý soubor \texttt{prejson-type.js} obsahuje mapu pro knihovnu PreJSON. PreJSON knihovna se naimportuje z minifikovaného souboru a následně se vytvoří mapa, která specifikuje
+pro hodnoty widgetů jejich PreJSON typ. Ta je poté využívána při deklaraci datového typu dashboard fieldu (zmíněno v nadcházející kapitole).
+
+\subsubsection{Adresář functions}
+
+V tomto adresáři se nachází veškeré funkce, které se využívají k dotazování dat z frontendu na backend či funkce pro PreJSON.
+
+Soubor \texttt{functions.js} obsahuje funkci určenou pro parsování řetězce na string. Byla vytvořena z důvodu jednoduché manipulace s uživatelovým vstupem. Není tedy třeba
+testovat, zda je řetězec validní JSON objekt nebo ne, tato funkce vrátí buď zparsovaný JSON objekt, nebo hodnotu null.
+
+Jelikož časový rozsah widgetů lze určit i řetězcem (např. hodnota P60D/now[sD] specifikuje posledních 60 dní), je třeba jej umět převést z tohoto řetězce. O to se stará soubor
+\texttt{prejson-suite.js}, jehož výstupem je objekt, který tento časový úsek reprezentuje.
+
+Veškeré funkce, které zpostředkovávají komunikaci mezi frontendem a backendovými routami, jsou specifikovány v souboru \texttt{widget-config.js}. Obsahuje 4 procedury pro výše zmiňované
+volání - pro získání widget konfigurace, dat a dashboard fieldů. Widget může obsahovat více requestů na data (např. počet komentářů a počet celkových interakcí). Proto je nutné detekovat,
+jak přistupovat k volání dat - je-li datový request objekt, zavolá se API jednou a výslednou návratovou hodnotou je opět objekt se staženými daty. Jestliže je ale datový request pole, jedná se o pole objektů, které specifikují request - je tedy
+nutné iterovat postupně přes všechny requesty v poli pomocí funkce \texttt{map()}. Návratovou hodnotou bude v tomto případě pole dat.
+
+\subsubsection{Adresář components}
+
+Složka obsahuje veškeré React komponenty této knihovny. Hlavní komponenta, definovaná v souboru \texttt{widget.jsx}, slouží k vykreslení celého widgetu z Omni Studia. Jejím úkolem
+je zpracování parametrů pro widget, stažení a načtení dat a následně jsou tyto hodnoty předány dceřinné komponentě pro vykreslení.
+
+K funkcionalitě je nutno specifikovat několik parametrů, které jsou specifikované v tabulce \ref{tab:widgetProps}.
+
+\begin{center}
+	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
+	\caption{Properties komponenty <Widget/>}
+	\label{tab:widgetProps}\\
+	\toprule[1.5pt]
+	\endhead
+	\midrule
+	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
+	\endfoot
+	\bottomrule[1.5pt]
+	\endlastfoot
+	%
+	\verb"boardID" & Identifikátor dashboardu.  \\
+	\midrule
+	\verb"widgetID" & Identifikátor widgetu\footnote{Jedinými vyžadovanými parametry jsou \texttt{boardID} spolu s \texttt{widgetID}. Zbytek parametrů je nepovinný, je ale velice pravděpodobný, že může být potřebný ke správnému vykreslení (např. parametr \texttt{params}).}. \\
+	\midrule
+	\verb"params" & Pole parametrů potřebné k vizualizaci grafu \footnote{Tyto parametry jsou k nalezení v aplikaci Omni Studio. Detailní postup bude v uživatelské dokumentaci.}. \\
+	\midrule
+	\verb"className" & Jméno MUI třídy - specifikace stylu dle již existujících tříd. \\
+	\midrule
+	\verb"style" & Vlastní specifikace CSS stylu pomocí MUI komponenty \texttt{<Box/>}. \\
+	\midrule
+	\verb"width" & Šířka výsledné vizualizace (v pixelech). \\
+	\midrule
+	\verb"height" & Výška výsledné vizualizace (v pixelech). \\
+	\midrule
+	\verb"tokenFunc" & Funkce vracející tokeny, které jsou následně používány na backendu místo systémové proměnné. \\
+	\end{longtable}
+\end{center}
+
+Nejprve se z pole parametrů vytvoří objekt. Tento objekt obsahuje vždy jméno atributu (což je název proměnné z Omni Studia, kterou je třeba dodefinovat) a k němu patřičná hodnota (specifikovaná
+hodnota pro nedefinovaný parametr). Pokud se nejdná o pole, vrátí se prázdný objekt.
+
+Následuje první stahování dat. Dle boardID předaného v properties se pošle request na API, který stáhne fieldy z daného boardu. Fieldy slouží k přesné specifikaci datového typu - např.
+obsahuje-li konfigurace widgetu parametr \texttt{time}, specifikace hodnoty vypadat takto:
+\lstset{style=plainsrc}
+\begin{lstlisting}
+...
+key: "${time}"
+...
+\end{lstlisting}
+
+Po obdržení fieldů z API je nutné tyto konfigurační předpisy rozšířit pomocí instance \texttt{PreJSONContext}. Po rozšíření vypadá specifikovaná hodnota takto:
+\lstset{style=plainsrc}
+\begin{lstlisting}
+...
+key: "${daterange:time}"
+...
+\end{lstlisting}
+
+Dále je možno načíst konfiguraci widgetu, která obsahuje jak specifikaci vizualizace (barvy, popisky os, ...), tak i datové requesty. Opět se specifikuje číslo dashboardu, API stáhne veškeré widgety z toho boardu a následně se dle widgetID vyfiltrují na jeden vyhovující. Jestliže
+neexistuje widget s daným ID, je vrácena chybová hláška o nenalezení widgetu a stahování dat neproběhne. Pokud byly specifikované identifikátory správné, dalším krokem je expandování
+widget konfigurace. 
+
+Pro expandaci je nejprve nutné převést datové requesty widget konfigurace do PreJSON objektu. Po úspěšné převedení dat se vezme námi vytvořený objekt s datovými requesty a vytvořenou instancí \texttt{PreJSONContext} se zkontroluje, zda-li uživatel zadal všechny parametry, které jsou
+potřebné k expandování a následné vizualizaci. Pokud uživatel nezadal všechny ptořebné parametry, expandace neproběhne a uživatele o tom informuje chybová hláška. Pokud ale zadal 
+všechny potřebné parametry, expanduje PreJSON objekt danými parametry a následně zkonvertuje do objektu JSON.
+
+Posledním krokem je stažení dat. To proběhne pouze v případě, jestliže expandování datových requestů proběhlo v pořádku. Requesty jsou pak jeden po druhém postupně volány a vrácená data
+uložena jako objekt/pole (jak bylo zmiňováno, pro více než 1 request bude návratový typ dat pole). Widget může obsahovat ale i hodnoty navrácených dat např. v nadpise či nápovědě.
+To ovšem knihovna Vision neřeší, jelikož vykresluje pouze samotné vizualizace bez hlaviček. Proto je nutné ještě expandovat konfiguraci widgetu samotnými daty, kdyby se v hlavičce vyskytovala
+hodnota závislá na datech (např. právě zmiňovaný počet datových reqestů). 
+
+Proběhlo-li veškeré fetchování dat v pořádku, data, widget konfigurace a datové requesty jsou předány dceřinné komponentě k vykreslení. Jestliže nastala při načítání, zpracovávání či expandování dat
+chyba, je vypsána místo samotné vizualizace. 
+
+Než se výše popsané kroky provedou, bude třeba indikovat načítání komponenty - zejména pokud datových requestů bude více a bude nutné posílat více dotazů na API. Tento stav bude velmi jednoduché 
+detekovat, protože používaná fetchovací funkce \texttt{useQuery()} vrací nejen načtená data, ale také dokáže indikovat, zda-li došlo při stahování k chybě nebo jestli stahování stále probíhá. Proto
+je pro všechna tři načtení udržován stav \texttt{useQuery()} \texttt{isLoading} (pro každou funkci samozřejmě přejmenován na jiný název proměnné). Díky nim lze snadno vizualizovat, zda se vizualizace stále načítá.
+Pro tuto indikaci je použita předdefinovaná komponenta \texttt{<CircularProgress/>} z knihovny MUI.
+
+Výhodou používání \texttt{useQuery()} je také zmiňované cachování. Každé volání \texttt{useQuery()} má svůj klíč a jestliže již data byla jednou žádána s tímto klíčem,
+nebude se provádět volání na backend a API, ale rovnou se načtou z cache. Díky tomu se widget vykreslí téměř okamžitě, protože již veškerá potřebná data k vizualizaci obsahuje. 
+
+V neposlední řadě užívání \texttt{useQuery()} umožňuje aktivovat dané volání pouze za předpokladu, že jsou splněny specifikované podmínky. To zajišťuje atribut \texttt{enabled},
+což je podmínka, která jestliže je splněna, tak se spustí stahování dat. Toto usnadnilo při implementaci práci zejména tím, že nebylo nutné si držet vlastní stavy a díky tomu
+je kód čitelnější.
+
+Nehledě na výsledek a stav vizualizace, uplatní se na výsledek této komponenty výška, šířka a styly předané přes properties. Pro budoucí rozšíření knihovny byla tato komponenta
+naimplementována obecněji - tj. pokud proběhly veškeré data fetche v pořádku, ještě se zkontroluje, zda-li typ widgetu je opravdu "vision". Momentálně jiný typ widgetu ani podporován není,
+ale komponenta je připravena v budoucnosti na podporu všech druhů widgetů.
+
+
+Dceřinná komponenta \texttt{<WidgetVision/>} následně zpracovává přijatou konfiguraci a data a poté je vizualizuje. Nejprve zkontroluje hlavičku konfigurace (nadpisy, podnadpisy, tooltipy, ...),
+předá data a widget konfiguraci komponentě \texttt{<Vision/>} a vykreslí patičku s informačním štítkem, že se jedná o data pocházející z Emplifi. Pro vývojářské a debuggovací účely jsou 
+zřízeny i dvě komponenty. které vizualizují neexpandované a expandované datové requesty. Pokud uživatel nespecifikuje pomocí properties, že je chce vypsat, jsou automaticky ignorovány a nevykresleny.
+
+\subsubsection{Sestavení knihovny}
+
+Protože knihovna obsahuje frontendovou část i backendovou část, výstupem budou dva soubory. Pro přehlednost jsou exportované komponenty a routy v kořenu adresáře \texttt{src}. Zároveň používání
+funkce \texttt{useQuery} vyžaduje tzv. QueryProvidera. Proto při exportu \texttt{<Widget/>} je komponenta vložená do komponenty \texttt{<QueryClientProvider/>}, která přijímá v properties instanci
+Query Clienta. Tato komponenta obohacená o Query Clienta je poté vyexportována jako normální \texttt{<Widget/>} komponenta a uživatel tedy nemusí ve svém projektu tohoto Query Clienta vytvářet.
+
+Pro sestavení knihovny se využívá modul webpack. Jeho konfigurace je uložená v kořenovým adresáři knihovny a obsahuje dvě konfigurace pro buildění - pro frontendovou část a backendovou.
+Na sestavení knihovny je následně vytvořen skript, který je definovaný v \texttt{package.json} a spouští se pomocí npm. Výsledné dva vytvořené soubory (\texttt{empli-embed-backend.js} a \texttt{empli-embed.js})
+jsou uloženy do složky \texttt{dist}. Poté už je třeba jen aktualizovanou verzi knihovny zveřejnit na \url{https://www.npmjs.com/}. Pro tuto akci je taktéž vytvořen skript v \texttt{package.json}.
+Podrobnější informace jsou v uživatelské dokumentaci.
 
 \section{Implementace uživatelského rozhraní}
+
+
 
 
 % _____________________________________________________________________________
@@ -658,16 +906,6 @@ Tato kapitola popisuje implementaci knihovny a uživatelského rozhraní.
 % _____________________________________________________________________________
 %
 \chapter{Závěr}
-Aktuálně je praktická část bakalářské práce ve formě, kdy React aplikace dokáže vizualizovat grafy. Grafy lze vizualizovat pomocí playgroundu, kterému bude v budoucnu ještě upraven
-frontend. Zároveň aplikace dokáže obnovovat OAuth2 tokeny (jak token pro Emplifi Public Api, který vrací schémata widgetů, tak i token pro Omni API, který vrací data do widgetů). Toto je
-udělané pouze formou dvou tlačítek. Ty jsou automaticky vypnuté, pokud jsou tokeny validní - momentálně se uchovávají v local storage webového prohlížeče. Externí zadavatel určí co dále. 
-Jsou i vypisovány základní stavy tokenu (platný, neplatný, neexistující) a vizualizace v playground nelze embedovat, dokud tyto tokeny nejsou platné. Playground umožňuje uživatelům widgety
-i upravovat - například zadáním CSS stylu či zadáním šířky/výšky. Pro debuggování a kontrolu jsou umožněny i výpisy schémat daného widgetu - ty se ovládají jednoduchým přepínačem. Jsou 
-ošetřeny základní chyby, které mohou nastat při vizualizaci (chybějící tokeny, nezadané parametry pro PreJSON apod.). 
-
-Nyní bych rád pokračoval v zefektivnění kódu, dopsáním dokumentačních komentářů, napsáním jednotkových testů pro kritické sekce programu, zlepšení frontendu pro playground a pro rozhraní pro
-obnovu OAuth 2.0 tokenů. Zároveň bude třeba ošetřit všechny výjimky, které mohou nastat. Dalším krokem bude převést React aplikaci na knihovnu a domluvit se se zadavatelem, jak pokračovat dále -
-například zda-li stačí vizualizovat jednotlivé widgety, nebo celé dashboardy. Jako poslední budou provedeny i funkcionální testy podle scénářů, které budou přiloženy ve finálním odevzdání bakalářské práce.
 
 \appendix
 \backmatter

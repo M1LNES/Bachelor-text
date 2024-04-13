@@ -702,6 +702,8 @@ INPUT D:\Install\MikTex\fonts\tfm\public\fontawesome5\fa5free1solid.tfm
 INPUT D:\Install\MikTex\fonts\enc\dvips\fontawesome5\fa5free1.enc
 INPUT D:\Install\MikTex\fonts\tfm\public\fontawesome5\fa5free1regular.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxttza.tfm
+INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxbttza.tfm
+INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxtta.tfm
 INPUT .\bp.lof
 INPUT .\bp.lof
 INPUT bp.lof
@@ -737,6 +739,8 @@ INPUT C:\Users\milan\Desktop\LaTex\bp\texmf\fonts\type1\lcdftools\GTAmerica\GTAm
 INPUT C:\Users\milan\Desktop\LaTex\bp\texmf\fonts\type1\lcdftools\GTAmerica\GTAmerica-CondensedBold.pfb
 INPUT C:\Users\milan\Desktop\LaTex\bp\texmf\fonts\type1\lcdftools\GTAmerica\GTAmerica-CondensedRegular.pfb
 INPUT C:\Users\milan\Desktop\LaTex\bp\texmf\fonts\type1\lcdftools\GTAmerica\GTAmerica-CondensedRegular.pfb
+INPUT D:\Install\MikTex\fonts\type1\public\newtxtt\newtxbtt.pfb
+INPUT D:\Install\MikTex\fonts\type1\public\newtxtt\newtxbtt.pfb
 INPUT D:\Install\MikTex\fonts\type1\public\newtxtt\newtxtt.pfb
 INPUT D:\Install\MikTex\fonts\type1\public\newtxtt\newtxtt.pfb
 INPUT D:\Install\MikTex\fonts\type1\public\txfonts\tcxtt.pfb

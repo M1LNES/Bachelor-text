@@ -28,6 +28,8 @@
 \usepackage{dirtree}
 \usepackage{hyperref}
 \usepackage{fontawesome5} 
+\usepackage{listings}
+\usepackage{color}
 
 %\usepackage{float} 
 \title{\texttt {}Vývoj Javascript knihovny pro embedování vizualizací skrze Emplifi Public API}
@@ -127,6 +129,23 @@ a také rodině za podporu během celého studia.
       {[}{{{\color{blue}{[}}}}{1}
       {]}{{{\color{blue}{]}}}}{1},
 }
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+
 % _____________________________________________________________________________
 %
 %
@@ -809,9 +828,9 @@ K funkcionalitě je nutno specifikovat několik parametrů, které jsou specifik
 	%
 	\verb"boardID" & Identifikátor dashboardu.  \\
 	\midrule
-	\verb"widgetID" & Identifikátor widgetu\footnote{Jedinými vyžadovanými parametry jsou \texttt{boardID} spolu s \texttt{widgetID}. Zbytek parametrů je nepovinný, je ale velice pravděpodobný, že může být potřebný ke správnému vykreslení (např. parametr \texttt{params}).}. \\
+	\verb"widgetID" & Identifikátor widgetu\footnote{Jedinými vyžadovanými parametry jsou \texttt{boardID} spolu s \texttt{widgetID}. Zbytek parametrů je nepovinný, je ale velice pravděpodobné, že může být potřebný ke správnému vykreslení (např. parametr \texttt{params}).}. \\
 	\midrule
-	\verb"params" & Pole parametrů potřebné k vizualizaci grafu \footnote{Tyto parametry jsou k nalezení v aplikaci Omni Studio. Detailní postup bude v uživatelské dokumentaci.}. \\
+	\verb"params" & Pole parametrů potřebné k vizualizaci grafu \footnote{Tyto parametry jsou k nalezení v aplikaci Omni Studio. Detailní postup je zmíněn v uživatelské dokumentaci.}. \\
 	\midrule
 	\verb"className" & Jméno MUI třídy - specifikace stylu dle již existujících tříd. \\
 	\midrule
@@ -895,8 +914,57 @@ Podrobnější informace jsou v uživatelské dokumentaci.
 
 \section{Implementace uživatelského rozhraní}
 
+\subsection{Importování knihovny}
 
+Jelikož uživatelské rozhraní bude sloužit i k náhledům na vizualizace, je nutné knihovnu naimporovat (je ale nutné ji instalovat do již existujícího projektu). Protože se ale knihovna nachází na npm, bude to velice snadné.
+Postup i průběh je znázorněn na výpisu: 
+\setwinprompt{C:/Users/janochmi/ReactProjects/init_example}
+\begin{console}{Instalace knihovny}
+`\winprompt` npm i empli-embed
 
+added 159 packages, and audited 160 packages in 19s
+
+30 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+\end{console}
+
+Knihovna se nainstalovala a dalším krokem je inicializace React aplikace, která bude tuto knihovnu používat.
+
+\subsection{Inicializace aplikace}
+
+Uživatelské rozhraní je jednostránková aplikace s frontendovou i backendovou částí. Nejprve bylo třeba nainicializovat backendovou část. Jelikož knihovna obashuje routy pro webový
+server Express, bylo nutné tyto routy přidat do námi vytvořeného routeru, který mimo jiné obsahuje i vlastní routy pro tvorbu tokenů (bude zmíněno v dalších kapitolách). To je předvedeno na
+ukázce \ref{expressInit}.
+
+\begin{lstlisting}[language=Javascript, caption={Inicializace Express serveru}, label=expressInit]
+	const express = require('express')
+	// Requiring library routes
+	const { routes } = require('empli-embed') 
+	// Other requirements ...
+	const apiRouter = require('./api-router')
+	const nonApiRouter = require('./non-api-router')
+	// Other actions ...
+	const app = express()
+	app.use(express.json())
+	app.use('/api', routes, apiRouter, nonApiRouter)
+	// Other actions ...
+	app.listen(...)
+\end{lstlisting}
+
+Po úspěšném nastavení serveru je možné přejít na inicializaci frontendu aplikace. Je opět nutné naimportovat knihovní komponenty jako na ukázce \ref{reactIniti}.
+\begin{lstlisting}[language=Javascript, caption={Inicializace React komponenty}, label=reactIniti]
+	import { Widget } from 'empli-embed'
+	// other code ...
+
+	export default const App = () => {
+		return <Widget boardID={100} 
+				widgetID={51989} params={...}/>
+	}
+\end{lstlisting}
+
+Nyní je inicializace aplikace dokončena. 
 
 % _____________________________________________________________________________
 %

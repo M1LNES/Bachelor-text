@@ -41,9 +41,11 @@
 \contentsline {subsubsection}{\numberline {4.1.5.2}Adresář functions}{29}{subsubsection.4.1.5.2}%
 \contentsline {subsubsection}{\numberline {4.1.5.3}Adresář components}{29}{subsubsection.4.1.5.3}%
 \contentsline {subsubsection}{\numberline {4.1.5.4}Sestavení knihovny}{32}{subsubsection.4.1.5.4}%
-\contentsline {section}{\numberline {4.2}Implementace uživatelského rozhraní}{32}{section.4.2}%
-\contentsline {chapter}{\chapternumberline {5}Závěr}{33}{chapter.5}%
-\contentsline {chapter}{Bibliografie}{35}{section*.3}%
+\contentsline {section}{\numberline {4.2}Implementace uživatelského rozhraní}{33}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Importování knihovny}{33}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Inicializace aplikace}{33}{subsection.4.2.2}%
+\contentsline {chapter}{\chapternumberline {5}Závěr}{35}{chapter.5}%
+\contentsline {chapter}{Bibliografie}{37}{section*.3}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
@@ -106,6 +108,6 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
-\contentsline {chapter}{Seznam obrázků}{39}{appendix*.4}%
-\contentsline {chapter}{Seznam tabulek}{41}{appendix*.5}%
-\contentsline {chapter}{Seznam výpisů}{43}{appendix*.6}%
+\contentsline {chapter}{Seznam obrázků}{41}{appendix*.4}%
+\contentsline {chapter}{Seznam tabulek}{43}{appendix*.5}%
+\contentsline {chapter}{Seznam výpisů}{45}{appendix*.6}%

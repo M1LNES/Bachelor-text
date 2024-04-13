@@ -96,6 +96,8 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
 \contentsline {chapter}{Seznam obrázků}{33}{appendix*.4}%
 \contentsline {chapter}{Seznam tabulek}{35}{appendix*.5}%
 \contentsline {chapter}{Seznam výpisů}{37}{appendix*.6}%

@@ -231,7 +231,7 @@ Bearer schéma obsahuje tzv. bearer tokeny. Bearer token specifikuje, k jakým z
 
 \subsection{API key}
 API klíč (key) je jedinečný alfanumerický řetězec, který slouží k jednoznačné identifikaci klientů/aplikací \cite{amazonAPIKey}, jenž API využívají. Narozdíl od tokenů
-nejsou časově omezené - to může znamenat bezpečnostní problém v případě, že při zadávání požadavku API by přenášený klíč mohl být zachycen \cite{mostUsedAuthentication} a s ním i celá síť, pokud by obsahovala jeden nezabezpečený bod. Proto je i v tomto případě nutné zajistit šifrované spojení.
+nejsou časově omezené - to může znamenat bezpečnostní problém v případě, že při zadávání požadavku API by přenášený klíč mohl být zachycen \cite{mostUsedAuthentication} a s ním i celá síť, pokud by obsahovala jeden nezabezpečený bod. Proto je i v tomto případě nutné zajistit šifrované spojení \cite{keepingApiKeysSafe}.
 Pokud API bude sloužit pouze ke čtení, je zabezpečení API klíčem tou nejlepší volbou - uživatelé budou moci data stahovat, ale nikterak modifikovat či mazat \cite{mostUsedAuthentication}. 
 
 \subsection{OAuth}
@@ -319,14 +319,18 @@ React je snadný na naučení, obsahuje málo konceptů, které je třeba se nau
 stačí pouze v kódu nainstalovat a naimportovat jeho knihovnu. Využívá speciální JSX syntaxe, která sice vypadá jako HTML, ale ve skutečnosti je tato syntaxe převáděna na HTML. Jelikož je React hojně využíván
 v aplikaci Facebook či na Instagramu, dostává se mu velké podpory právě i z tohoto odvětví - čtyři největší přispěvatelé knihovny React jsou zaměstnanci Facebooku \cite{whyUsingReact}. Kromě 
 Facebooku využívají React značky jako jsou např. Netflix, airbnb, BBC News či PayPal \cite{whyUsingReact2}. Díky virtualizaci a uchováváním DOM poskytuje React
-velmi rychlé vykreslování, přičemž všechny změny se snadno promítají do virtuálního DOM.
+velmi rychlé vykreslování, přičemž všechny změny se snadno promítají do virtuálního DOM. 
 
 DOM (Document Object Model) je strukturovaná reprezentace jazyka HTML, které reprezentuje celé uživatelské rozhraní jako stromovou datovou strukturu \cite{whatIsDOM}. Každý prvek uživatelského
 rozhraní tvoří v DOM stromu právě jeden uzel. Dojde-li ke změně uživatelského rozhraní, DOM se aktualizuje 	a při každé změně se vykresluje znovu, což výrazně ovlivňuje výkon aplikace. 
 Toto lze vyřešit použitím virtuálního DOM. Při přidávání nových věcí do aplikace se vytvoří virtuální DOM, která je reprezentován jako strom. Novější virtuální DOM se porovnává se starším, aby
 zaznamenal změny. Poté zjistí, jak je možné tyto změny provést pomocí skutečného DOM a aktualizované prvky se následně vykreslí.
 
-Na popularitě Reactu přidává také použití knihovny Redux, která umožňuje uchování dat jako jeden objekt (stav). K tomuto objektu se dá pak jednoduše přistupovat, což značně usnadňuje práci s daty.
+React využívá tzv. komponent, které slouží k vizualizaci aplikace \cite{introToReact}. Existují dva druhy těchto komponent - funkcionální a třídní \cite{functionalVsClass}. Knihovna bude používat funkcionální, jelikož
+se jedná o novější verzi komponent.
+
+Na popularitě Reactu přidává také použití knihovny Redux, která umožňuje uchování dat jako jeden objekt (stav). Použití Reduxu je vhodné zejména u velkých aplikací - čím větší je aplikace, tím
+náročnější je správa stavu aplikace \cite{introToRedux}. K reduxovému stavu objektu se dá pak jednoduše přistupovat, což značně usnadňuje práci s daty.
 Je-li tento stav změněn, aplikace se překreslí a zobrazení se stále synchronizuje se souvisejícími daty \cite{whyUsingReact2}. 
 
 React se kvůli těmto vlastnostem doporučuje využívat u:
@@ -387,7 +391,7 @@ Do URL, na kterou uživatele přesměrujeme, bude třeba vložit několik parame
 
 
 Pokud veškeré parametry budou správně nastaveny a uživatel udělí souhlas s používáním Suite účtu, na URL "redirect\_uri" se vrátí zpráva s autorizačním kódem. Tento kód
-slouží k výměně za přístupový token. O ten je možno si zažádat POST requestem na adresu \url{https://api.emplifi.io/oauth2/0/token}. Struktura requestu je popsána v tabulkách \ref{tab:exampleRequestHeader} \ref{tab:exampleRequestBody}.
+slouží k výměně za přístupový token. O ten je možno si zažádat POST requestem na adresu \url{https://api.emplifi.io/oauth2/0/token}. Struktura requestu je popsána v tabulkách \ref{tab:exampleRequestHeader} a \ref{tab:exampleRequestBody}.
 
 \begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}

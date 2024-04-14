@@ -761,7 +761,7 @@ Stažení a následné uložení řeší bash skriptový kód v souboru \texttt{
 nastavená hodnota tokenu a URL (\texttt{PACKAGE\_URL}), odkud knihovny stáhnout. Pokud hodnoty nastavené nejsou, automaticky bude brát hodnoty z .env filu. Následně pomocí CURL pošle dotaz na
 specifikovanou URL, v těle přiloží přístupový token a výsledek uloží do souboru \texttt{embedding.js} ve složce \texttt{dist}.
 
-Tento skript se automaticky spouští při instalaci dependencí této knihovny - je tedy před samotnou instalací zajistit, aby byl zajištěn přístup k platnému tkoenu a URL adrese.
+Tento skript se automaticky spouští při instalaci dependencí této knihovny - je tedy před samotnou instalací zajistit, aby byl zajištěn přístup k platnému tokenu a URL adrese.
 
 \subsection{Backendové routy}
 
@@ -934,7 +934,7 @@ Knihovna se nainstalovala a dalším krokem je inicializace React aplikace, kter
 
 \subsection{Inicializace aplikace}
 
-Uživatelské rozhraní je jednostránková aplikace s frontendovou i backendovou částí. Nejprve bylo třeba nainicializovat backendovou část. Jelikož knihovna obashuje routy pro webový
+Uživatelské rozhraní je jednostránková aplikace s frontendovou i backendovou částí. Nejprve bylo třeba nainicializovat backendovou část. Jelikož knihovna obsahuje routy pro webový
 server Express, bylo nutné tyto routy přidat do námi vytvořeného routeru, který mimo jiné obsahuje i vlastní routy pro tvorbu tokenů (bude zmíněno v dalších kapitolách). To je předvedeno na
 ukázce \ref{expressInit}.
 
@@ -966,7 +966,187 @@ Po úspěšném nastavení serveru je možné přejít na inicializaci frontendu
 
 Nyní je inicializace aplikace dokončena. 
 
-% _____________________________________________________________________________
+\subsection{Vytváření tokenů}
+
+Nejprve bylo nutné připravit grafické rozhraní pro patičku stránky. Ta obsahuje dvě tlačítka pro generaci tokenů a jedno pro kopírování těchto tokenů. Tyto tlačítka
+jsou importována z knihovny MUI, jelikož obsahují již předdefinované styly a nabízí i více funkcionalit (např. vkládání ikon na začátek/konec tlačítka, definici velikosti
+tlačítek přes argument apod.). Každé tlačítko má přiřazen label, který indikuje, o jaký token se jedná. Tento label je realizován pomocí MUI komponenty
+\texttt{<Tooltip/>}, která při najetí kurzoru myši na daný label zobrazí i dodatečný titulek (v tomto případě indikuje stav tokenu - je-li platný, neplatný či jestli vypršel).
+
+
+\subsubsection{Public API token}
+K vytvoření Public API tokenu je nutné být přihlášen v produktu Suite. Uživateli je po stisku tlačítka otevřena v novém okně stránka produktu Suite, kde udělí patřičné souhlasy. 
+Toto přesměrování je realizováno tak, že při každém stisku tlačítka je vygenerováno uživateli ID requestu. Toto ID se uloží na serverový backend jako objekt do pole s nainicializovanou
+hodnotou tokenu \texttt{null}. Mezitím se frontend každých 500 ms dotazuje metodou aktivního čekání, zda se již pro jeho request vygeneroval token. To se ověřuje pomocí kontrolování hodnoty
+tokenu v objektu - je-li objekt stále \texttt{null}, probíhá kontrola stále dokola, dokud token není vygenerován a nebo uživatel nezavře stránku uživatelského rozhraní.
+
+Přesměrování na stránku suite probíhá způsobem, který byl popsán v návrhu aplikace. Z frontendu se aplikace provolá na backendovou routu, která následně přesměruje nové okno
+na URL vygenerovanou funkcí \texttt{getPublicApiCallbackUrl()}. Tato funkce přidá do URL adresy OAuth providera potřebné parametry zmíněné v tabulce \ref{tab:allParametersAPI}.
+Až uživatel udělí patřičná oprávnění, na URL specifikovanou v \texttt{redirect\_uri} je zaslán autorizační kód. Tento kód se zachytí na backendu aplikace a
+vytvoří se nový dotaz pro API. Zde je nutné se autorizovat pomocí klientského ID a secretu. O to se stará funkce \texttt{getAuthorization()}, která je zmíněna na 
+ukázce \ref{autorHeader}. Klientské ID a secret musí být uložené v systémové proměnné (nebo .env souboru), aby bylo možné autentizaci provést.
+
+\begin{lstlisting}[language=Javascript, caption={Vytvoření autozirační hlavičky pro následnou autentizaci}, label=autorHeader]
+function getAuthorization() {
+	return `Basic ${Buffer.from(
+		`${process.env.CLIENT_ID_PUBLIC_API}:
+		${process.env.CLIENT_SECRET_PUBLIC_API}`
+	).toString('base64')}`
+}
+\end{lstlisting}
+
+Po přijetí odpovědi z API se v poli requestů vyhledá request s uživatelovým ID. Tato hodnota je vložena při dotazech do parametru \texttt{state}, a proto můžeme snadně
+určit, pro které ID requestu (respektive uživatele) se token vrátil. Po nalezení položky v poli se změní hodnota tokenu na obdržený token z Public API a automaticky se
+zavolá skript na zavření okna, v němž uživatel uděloval oprávnění.
+
+Na frontendu se po chvíli (500 ms) detekuje, že hodnota tokenu uloženého na backendu aplikace se změnila. Struktura tokenu byla uvedena v tabulce \ref{tab:exampleRequestResponse}.
+Zbývá identifikovat, co z přijatých parametrů bude vhodné uložit. Uložit bude nutné \texttt{access\_token} a kvůli budoucímu rozšíření i \texttt{refresh\_token}. Tyto
+dva tokeny se uloží do local storage, jak je uvedeno na ukázce \ref{savingPublicToken}.
+
+\begin{lstlisting}[language=Javascript, caption={Ukládání Public API tokenů do local storage}, label=savingPublicToken]
+	localStorage.setItem('public-api-access-token', 
+	token.access_token)
+	localStorage.setItem('public-api-refresh-token', 
+	token.refresh_token)
+\end{lstlisting}
+
+\subsubsection{Omni API token}
+K vytvoření Omni API tokenu je nutné být přihlášen na firemní VPN. Princip je velmi podobný. Uživateli se otevře nové okno, kde je přesměrován na stránku Omni Studia, kde je požádán
+o souhlas. Po potvrzení je opět na \texttt{redirect\_uri} zaslán autorizační kód. Nyní je třeba zaslat dotaz na Omni APi, které je ovšem schované za VPN. Zadavatel ovšem pro tento případ
+vystavil zmiňovaný endpoint na Public API. Do těla requestu se uloží parametry pro Omni API (znázorněno na ukázce \ref{omniApiCall}) a následně se provede volání na vystavený endpoint
+\texttt{/3/omni-studio/oauth2/token}. 
+
+\begin{lstlisting}[language=Javascript, caption={Parametry pro Omni API}, label=omniApiCall]
+body: JSON.stringify({
+		headers: {
+			Accept: 'application/json',
+			'Content-Type': 'application/x-www-form-urlencoded',
+			Authorization: `Basic ${Buffer.from(
+				`${process.env.CLIENT_ID_OMNI_STUDIO}:
+				${process.env.CLIENT_SECRET_OMNI_STUDIO}`
+			).toString('base64')}`,
+		},
+		body: `grant_type=authorization_code&
+		code=${res.req.query.code}&redirect_uri=${uri}`,
+}),
+\end{lstlisting}
+
+Jak je vidět, i pro Omni API je třeba autentizace formou klientského ID a secretu, ale jak je vidět, jedná se o jiné hodnoty než v Public API. Pro každé API
+je tedy třeba jiného ID a secretu. Po vrácení tokenu z API je opět v poli requestů nalezen objekt s daným request ID, hodnota tokenu v objektu je nahrazena přijatou hodnotou a okno, v němž
+uživatel uděloval oprávnění, je zavřeno. 
+
+Pole pro requesty jsou dvě - jedno pro Public API, druhé pro Omni API. Nevýhodou při fetchování Omni API tokenu je ta, že v systémové proměnné musí být platný token - uživatel nemá jak předat
+backendové routě, která zachytává kód vrácený z API, svůj Public API token (pokud je vůbec vygenerován). Proto je třeba, aby toto rozhraní v systémové proměnné (prozatím) obsahovalo stále platný 
+Public API token. Výhodou ale je, že uživatel není omezen tím, jaký token vygeneruje první.
+
+Opět se na frontendu metodou aktivního čekání každých 500 ms kontroluje, zda-li se token objevil v poli requestů na backendu a následně se ukládá do local storage jako na ukázce
+\ref{savingOmniToken}.
+
+\begin{lstlisting}[language=Javascript, caption={Ukládání Omni API tokenů do local storage}, label=savingOmniToken]
+	localStorage.setItem('omni-studio-api-access-token',
+	 token.access_token)
+	localStorage.setItem('omni-studio-api-refresh-token',
+	 token.refresh_token)
+\end{lstlisting}
+	
+\subsubsection{Kontrola validity tokenů}
+
+Při otevření stránky či po každém nastavení nového tokenu se spustí automaticky funkce \texttt{checkTokenAvailability()}, která kontroluje platnost tokenů. Pokud se v local storage nenachází
+žádná hodnota pro token, je automaticky token nastaven na nevalidní a nastavena informační hláška při najetí myší na daný label tokeun. Pokud se ovšem nachází v local storage nachází
+nějaká hodnota (ať už platný token, tak i ten nevalidní), vezme se daná hodnota a pošle se jako autorizační token v dotazu na API. Pokud API vrátí validní data, je zřejmé, že token je platný.
+Na frontendu se následně nastaví validita tokenu na \texttt{true} a zlačítko pro obnovení tokenu zmizí a je nahrazeno zelenou checkmark ikonkou. Pokud ale API vrátí chybovou hlášku, 
+vezme se tato chybová hláška a uloží se do informační hlášky labelu, token bude stále nevalidní a tlačítko se bude stále zobrazovat. 
+
+\subsubsection{Zkopírování tokenů}
+
+Pro tuto funkcionalitu je vystaveno tlačítko, které po stisknutí uloží do clipboardu oba dva tokeny (jak Omni API, tak Public API) a umožní je tak ihned
+manuálně vložit do .env souboru. K tokenům je možné stále přistupovat i přes local storage, ale tato varianta je méně uživatelsky přívětivější než jedno stisknutí tlačítka.
+
+
+
+\subsection{Náhled vizualizací}
+% tady pak hlavně zmínit ten redux - ten to také dost natáhne - a jednotlivé modaly
+Pro zobrazování náhledů vizualizací je třeba mít v local storage platné tokeny. Pokud platné nebudou, aplikace automaticky nastaví parametr tlačítko
+\texttt{disabled} na \texttt{true}. Pro veškeré parametry, které přijímá komponenta \texttt{<Widget/>}, jsou vytvořeny vlastní ovládací prvky.
+Pro boolean hodnoty jsou to přepínače, pro JSON objekty (parametry a CSS styly) a číselné hodnoty jsou to textová pole. Všechny tyto komponenty
+jsou importovány z knihovny MUI.
+
+Hodnoty těchto parametrů jsou ukládány v Redux storu. Tento reduxový store obsahuje dva reducery: 
+
+\begin{enumerate}
+	\item playground - spravuje hodnoty \texttt{<Widget/>} parametrů 
+	\item playgroundUI - spravuje stavy dialogů (které z dialogových oken je otevřené)
+\end{enumerate}
+
+V playgroundu (vzniklý název pro toto výsledné UI) je nutné umět k těmto hodnotám přistupovat a měnit je. K tomu slouží funkce \texttt{useSelector()} a \texttt{useDispatch()},
+které je třeba naimportovat. Pro přístup ke stavu je využita funkce \texttt{useSelector()}, která vrací objekt s destruktorovanými proměnnými z Redux storu. Naopak funkce 
+\texttt{useDispatch()} slouží k odesílání akcí do Redux storu, které které umožňují měnit stav aplikace. Dále je třeba naimporovat z jednotlivých sliců action creatory, které
+slouží k vytvoření příslušné akce, jež může následně upravovat stav aplikace. Změna aplikačního stavu je pak prováděna např. následujícím příkazem:
+
+\begin{lstlisting}[language=Javascript]
+onChange={() => dispatch(changeBoardID(event.target.value))}
+\end{lstlisting}
+
+V této ukázce reaguje komponenta na změnu hodnoty v poli. To spustí anonymní funkci, která volá \texttt{dispatch()} a předává ji výsledek volání \texttt{changeBoardID}. Kromě parametrů
+importujeme ze storu i proměnné pro stav tokenů, stav vizualizace či validitu JSON parametrů. Veškeré hodnoty jsou automaticky inicializovány na hodnotu \texttt{null} nebo \texttt{false}.
+
+Při stisku tlačítka pro náhled se nejprve ověří, jsou-li vyplněné parametry čísla widgetu a boardu. Následně se do URL parametrů nastaví hodnoty všech proměnných z Redux storu
+používané pro \texttt{<Widget/>} komponentu. Pro změnu stavu je \texttt{dispatch()} funkcí změněn stav vizualizace a začne se vykreslovat náhled vizualizace (ten reaguje automaticky
+na změnu stavu vizualizace). Pro playground jsou tedy nutné dva stavy - jeden indikující hodnoty v uživatelských prvcích, druhý pro správu vizualizace (pokud by se používal pouze jeden,
+znamenalo by to, že při každé změně hodnoty by se graf začal automaticky překreslovat, což by bylo velmi nepraktické).
+
+Po úspěšném vykreslení vizualizace je zobrazeno tlačítko pro embedování. To otevře dialog, v němž uživatel vidí vizualizovaný graf a zdrojový kód, kterým je tento graf možné vykreslit.
+Tento kód lze snadno zkopírovat do clipboardu a vložit do již existující aplikace, kde se následně vykreslí. Do výsledného zdrojového kódu se přidávají jen specifikované parametry -
+prochází se veškeré parametry a filtrují se ty, jejichž hodnota je \texttt{null}. Ty, které zbyly, budou obsaženy ve výsledném zdrojovém kódu. Výsledný zdrojový kód nebude tedy vypadat následovně:
+\begin{lstlisting}
+	<Widget boardID={108} widgetID={187} height={null}
+	width={null} params={{time:"now"}} style={null}/>
+\end{lstlisting}
+ale pouze takto:
+\begin{lstlisting}
+	<Widget boardID={108} widgetID={187} 
+	params={{time:"now"}}/>
+\end{lstlisting}
+
+\subsection{Dokumentace}
+
+Při implementaci knihovny byly vytvářeny Markdown (.md) soubory, které popisují důležité části knihovny a aplikace. Následně nástroj Docosaurus tyto soubory zkompiloval,
+aby vytvořil webovou stránku, která je přístupná pro uživatele. Tímto způsobem byla vytvořena přehledná dokumentace, která slouží jako důležitý zdroj informací nejen pro koncové uživatele,
+ale také pro vývojáře. Zdrojové soubory výsledné dokumentace se nachází ve složce \texttt{docs} uložené ve zdrojovém kódu knihovny.
+
+\chapter{Testování}
+\section{Testovací strategie a výsledky}
+Při testování byl kladen velký důraz na správnou funkcionalitu a stabilitu knihovny. Výsledná knihovna byla testována jednotkovými testy a testováním podle
+scénářů. Jednotkové testy pokrývají 100\% výkonného kódu (testováno nástrojem istanbul/nyc, který zkoumá míru pokrytí kódu testy), což zahrnuje testování všech funkcí a komponent, 
+které jsou přímou součástí implementace knihovny.
+Tyto testy ověřují správnost a spolehlivost výkonného kódu v různých scénářích a podmínkách.
+
+Pro provedení těchto jednotkových testů byl využíván testovací framework Mocha, který poskytl robustní a flexibilní prostředí pro psaní a spouštění testů. 
+Díky Mocha bylo možné snadno definovat a organizovat testovací scénáře a sledovat jejich výsledky.
+
+Je však důležité poznamenat, že některé části funkcionality, jako například mapování datových typů z PreJSONu, jsou pevně definovány a standardizovány v rámci specifikace knihovny nebo externích závislostí. 
+Z tohoto důvodu není nutné testovat tato mapování v rámci unit testů, protože jsou považovány za externě ověřené a stabilní.
+
+Namísto toho se zaměřujeme na testování klíčových aspektů funkcionality, které mohou být náchylnější k chybám a které mohou ovlivnit výkon nebo spolehlivost knihovny. 
+Tímto přístupem zajišťujeme, že naše unit testy jsou účinné a efektivní ve zjišťování a prevenci chyb v implementaci naší knihovny.
+
+Pro jednotkové testy bylo také nutné využít mockování. Veškerá mockovaná data jsou uložena v samostatném souboru a jsou předávána při volání API, 
+což zajišťuje konzistentní a opakovatelné prostředí pro testování.
+
+Dále byla knihovna testována v rámci testování uživatelského rozhraní - opět probíhalo testování podle scénářů a testerem přímo ze zadavatelské firmy.
+
+Během testování uživatelského rozhraní byla ověřována především uživatelská přívětivost, intuitivnost a funkčnost knihovny z pohledu reálných uživatelů. 
+Tester ze zadavatelské firmy se podílel na identifikaci potenciálních problémů a nedostatků v uživatelském rozhraní a poskytoval cennou zpětnou vazbu ohledně použitelnosti a uživatelského zážitku.
+Tímto způsobem jsme se snažili zajistit, že knihovna nejen splňuje požadavky a očekávání našich uživatelů, ale také poskytuje optimální uživatelský zážitek při interakci s aplikací.
+
+Výsledkem tohoto testování bylo zdokonalení uživatelského rozhraní a identifikace potřebných úprav a vylepšení, které byly následně doimplementovány. 
+
+\section{Testovací scénáře - knihovna}
+budou dopsány
+\section{Testovací scénáře - uživatelské rozhraní}
+budou dopsány
+
+
 %
 %
 %        CHAPTER Závěr
@@ -974,8 +1154,28 @@ Nyní je inicializace aplikace dokončena.
 % _____________________________________________________________________________
 %
 \chapter{Závěr}
+Cílem bakalářské práce bylo vytvoření JavaScript knihovny, která umožní uživatelům embedovat grafy do aplikací třetích stran skrze
+Emplifi Public API. Důležitou součástí bylo i navržení uživatelského rozhraní pro vytváření přístupových tokenů.
 
-\appendix
+Nejprve byly zmíněny možnosti embedování a již existující řešení včetně srovnání zpětných vazeb zákazníků. Velká pozornost byla také
+věnována k srovnávání jednotlivých přístupů k API.
+
+Při implementaci knihovny bylo klíčové nejen zajistit její funkčnost, ale také udržovat přehledný a efektivní kód.
+Velký důraz byl kladen na správnou implementaci funkčních požadavků a na použití moderních technologií. 
+Tímto způsobem byl kladen důraz na vytvoření knihovny, která je nejen spolehlivá a efektivní, ale také snadno rozšiřitelná a udržovatelná v dlouhodobém horizontu.
+
+Při tvorbě uživatelského rozhraní byla věnována pozornost na dvě klíčové oblasti - bezpečnost a uživatelskou přívětivost. Při generování přístupových tokenů bylo dbáno na
+bezpečnostní normy a osvědčené postupy, aby bylo zajištěno, že přístup k citlivým datům je řádně zabezpečen. 
+Zároveň byl kladen důraz na uživatelskou přívětivost s cílem zajistit, že výsledné rozhraní je intuitivní a funkční.
+
+Výsledkem práce je uživatelské rozhraní pro vytváření tokenů, veřejná knihovna, která umožňuje integrování vizualizací z interní aplikace Omni Studio
+do aplikací třetích stran, a podrobná uživatelská dokumentace, která popisuje použití knihovny a rozhraní koncovým uživatelem.
+
+Testování prokázalo, že knihovna i uživatelské rozhraní jsou stabilní, spolehlivé, schopné reagovat na nevalidní stavy a poskytovat uživatelům očekávanou funkcionalitu. 
+
+
+
+ \appendix
 \backmatter
 \printbibliography
 \listoffigures

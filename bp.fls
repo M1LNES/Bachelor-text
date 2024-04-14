@@ -704,6 +704,10 @@ INPUT D:\Install\MikTex\fonts\tfm\public\fontawesome5\fa5free1regular.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxttza.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxbttza.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxtta.tfm
+INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Roman-tlf-sc-t1.tfm
+INPUT D:\Install\MikTex\fonts\vf\public\cochineal\Cochineal-Roman-tlf-sc-t1.vf
+INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Roman-tlf-sc-t1--base.tfm
+INPUT D:\Install\MikTex\fonts\enc\dvips\cochineal\coch_7ifgnr.enc
 INPUT .\bp.lof
 INPUT .\bp.lof
 INPUT bp.lof

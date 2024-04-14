@@ -303,32 +303,31 @@
       \verb https://aws.amazon.com/what-is/api-key/
       \endverb
     \endentry
-    \entry{keepingApiKeysSafe}{online}{}
+    \entry{keepingApiKeysSafe}{article}{}
       \name{author}{1}{}{%
-        {{hash=40c413b43cae857958f763eca6d0ed64}{%
+        {{hash=fbea7b0badd69b44407f177fb127f16b}{%
            family={Lu},
            familyi={L\bibinitperiod},
-           given={HongQian\bibnamedelima Karen},
+           given={Hongqian\bibnamedelima Karen},
            giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
       }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{40c413b43cae857958f763eca6d0ed64}
-      \strng{fullhash}{40c413b43cae857958f763eca6d0ed64}
-      \strng{bibnamehash}{40c413b43cae857958f763eca6d0ed64}
-      \strng{authorbibnamehash}{40c413b43cae857958f763eca6d0ed64}
-      \strng{authornamehash}{40c413b43cae857958f763eca6d0ed64}
-      \strng{authorfullhash}{40c413b43cae857958f763eca6d0ed64}
+      \strng{namehash}{fbea7b0badd69b44407f177fb127f16b}
+      \strng{fullhash}{fbea7b0badd69b44407f177fb127f16b}
+      \strng{bibnamehash}{fbea7b0badd69b44407f177fb127f16b}
+      \strng{authorbibnamehash}{fbea7b0badd69b44407f177fb127f16b}
+      \strng{authornamehash}{fbea7b0badd69b44407f177fb127f16b}
+      \strng{authorfullhash}{fbea7b0badd69b44407f177fb127f16b}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{day}{4}
-      \field{month}{12}
       \field{title}{Keeping Your API Keys in a Safe}
       \field{year}{2014}
-      \field{dateera}{ce}
+      \field{pages}{962\bibrangedash 965}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/CLOUD.2014.143
+      \endverb
     \endentry
     \entry{understandingOAuth2}{online}{}
       \name{author}{1}{}{%
@@ -652,7 +651,7 @@
       \verb https://www.javatpoint.com/what-is-dom-in-react
       \endverb
     \endentry
-    \entry{introToReact}{online}{}
+    \entry{introToReact}{article}{}
       \name{author}{1}{}{%
         {{hash=2848f04a7847a6fe08b0163d47b0603b}{%
            family={Gackenheimer},
@@ -675,6 +674,8 @@
       \field{title}{Introduction to React}
       \field{year}{2015}
       \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 18}
+      \range{pages}{18}
     \endentry
     \entry{functionalVsClass}{online}{}
       \list{organization}{1}{%
@@ -693,7 +694,7 @@
       \verb https://legacy.reactjs.org/docs/components-and-props.html
       \endverb
     \endentry
-    \entry{introToRedux}{online}{}
+    \entry{introToRedux}{article}{}
       \name{author}{1}{}{%
         {{hash=101b8e47361981e22b3224aeaf03740f}{%
            family={Bugl},
@@ -715,6 +716,8 @@
       \field{title}{Learning Redux}
       \field{year}{2017}
       \field{dateera}{ce}
+      \field{pages}{2\bibrangedash 98}
+      \range{pages}{97}
     \endentry
     \entry{muiDocs}{online}{}
       \field{sortinit}{5}

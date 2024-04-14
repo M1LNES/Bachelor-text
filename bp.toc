@@ -44,8 +44,19 @@
 \contentsline {section}{\numberline {4.2}Implementace uživatelského rozhraní}{33}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Importování knihovny}{33}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Inicializace aplikace}{33}{subsection.4.2.2}%
-\contentsline {chapter}{\chapternumberline {5}Závěr}{35}{chapter.5}%
-\contentsline {chapter}{Bibliografie}{37}{section*.3}%
+\contentsline {subsection}{\numberline {4.2.3}Vytváření tokenů}{34}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}Public API token}{34}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}Omni API token}{35}{subsubsection.4.2.3.2}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}Kontrola validity tokenů}{36}{subsubsection.4.2.3.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.4}Zkopírování tokenů}{37}{subsubsection.4.2.3.4}%
+\contentsline {subsection}{\numberline {4.2.4}Náhled vizualizací}{37}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Dokumentace}{38}{subsection.4.2.5}%
+\contentsline {chapter}{\chapternumberline {5}Testování}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Testovací strategie a výsledky}{39}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Testovací scénáře - knihovna}{40}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Testovací scénáře - uživatelské rozhraní}{40}{section.5.3}%
+\contentsline {chapter}{\chapternumberline {6}Závěr}{41}{chapter.6}%
+\contentsline {chapter}{Bibliografie}{43}{section*.3}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
@@ -108,6 +119,14 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
-\contentsline {chapter}{Seznam obrázků}{41}{appendix*.4}%
-\contentsline {chapter}{Seznam tabulek}{43}{appendix*.5}%
-\contentsline {chapter}{Seznam výpisů}{45}{appendix*.6}%
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\babel@toc {czech}{}\relax 
+\contentsline {chapter}{Seznam obrázků}{47}{appendix*.4}%
+\contentsline {chapter}{Seznam tabulek}{49}{appendix*.5}%
+\contentsline {chapter}{Seznam výpisů}{51}{appendix*.6}%

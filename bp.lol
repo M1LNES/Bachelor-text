@@ -10,3 +10,4 @@
 \contentsline {lstlisting}{\numberline {4.5}Ukládání Public API tokenů do local storage}{35}{lstlisting.4.5}%
 \contentsline {lstlisting}{\numberline {4.6}Parametry pro Omni API}{35}{lstlisting.4.6}%
 \contentsline {lstlisting}{\numberline {4.7}Ukládání Omni API tokenů do local storage}{36}{lstlisting.4.7}%
+\contentsline {lstlisting}{\numberline {A.1}Spuštění uživatelské dokumentace}{43}{lstlisting.A.1}%

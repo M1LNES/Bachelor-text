@@ -507,7 +507,7 @@ Má-li uživatel platný token, může začít se zasíláním dotazů. Emplifi 
 	\end{longtable}
 \end{center}
 
-Endpoint omni-studio bylo nutné vytvořit zadavatelem, jelikož Omni API endpointy bylo možné volat pouze při použití firemní VPN. Nyní lze tyto endpointy provolávat prostřednictvím Public API. Původní
+Endpoint omni-studio bylo nutné vytvořit zadavatelem, jelikož Omni API endpointy bylo možné volat pouze při použití firemní VPN (Virtual Private Network). Nyní lze tyto endpointy provolávat prostřednictvím Public API. Původní
 strukturu Omni API requestu lze vložit do těla public API requestu, což umožní uživateli embedovat grafy i mimo VPN.
 
 \subsubsection{Knihovny pro fetchování dat}
@@ -614,7 +614,7 @@ detailně vysvětleno v uživatelské dokumentaci.
 
 \section{Návrh UI}
 
-Při navrhování uživatelského rozhraní je třeba myslet na UX (User Experience). Výsledné rozhraní musí být přehledné, uživatelsky přívětivé a nezasekávat se. Pro lepší UX bude rozhraní 
+Při navrhování uživatelského rozhraní (UI) je třeba myslet na UX (User Experience). Výsledné rozhraní musí být přehledné, uživatelsky přívětivé a nezasekávat se. Pro lepší UX bude rozhraní 
 obsahovat nejen sekci pro správu tokenů, ale také sekci pro náhled embedovaných grafů a následné generování zdrojového kódu pro tyto náhledy. Tím se zvýší použitelnost tohoto UI, jelikož 
 věci potřebné k embedování sloučí do jednoho UI (tj. bude se jednat o jednostránkovou aplikaci). Ze strany zadavatele je důraz především na funkcionalitu a UX, nikoliv na estetiku. Proto toto bude zohledněno při navrhování.
 
@@ -624,7 +624,7 @@ K vytvoření tokenů bude sloužit patička stránky. V ní se budou nacházet 
 účtu Suite, jak bylo dřívě zmíněno. Po stisknutí tlačítka bude uživatel přesměrován na stránku, kde udělí patřičné oprávnění, že se pro jeho účet vytvoří token. Po potvrzení se uživateli token uloží
 do local storage webového prohlížeče. To umožní okamžitou možnost embedování v UI a zároveň snadnou přístupnost k tomuto tokenu. Pokud bude chtít uživatel token používat ve své aplikaci, jednoduše jej z local storage
 zkopíruje k sobě do aplikace, kde jej bude dále moci normálně využívat. To by platilo pro případ, kdy by jeden z tokenů vypršel. Ovšem bude-li uživatel nový a bude nutno vygenerovat oba dva tokeny pro potřebné vizualizace,
-bude přidáno tlačítko, které uživateli zkopíruje oba dva tokeny ve formátu .env souboru. Uživatel tedy nebude muset sám hodnoty přepisovat, ale pouze je vloží zkopírované do envu. Zkopírované tokeny
+bude přidáno tlačítko, které uživateli zkopíruje oba dva tokeny ve formátu \texttt{.env} souboru. Uživatel tedy nebude muset sám hodnoty přepisovat, ale pouze je vloží zkopírované do \texttt{.env} souboru. Zkopírované tokeny
 budou ve formátu:
 \lstset{style=plainsrc}
 \begin{lstlisting}
@@ -655,10 +655,10 @@ pro další vývoj. Dokumentace bude obsahovat následující body:
 	\item Sekci pro vývojáře
 \end{enumerate}
 
-Přístupu k dokumentaci je několik - od stručného souboru .pdf až po samostatnou webovou aplikaci. Aby dokumentace byla přehledná a snadno rozšiřitelná, bude dokumentace statická stránka
-přístupná na veřejné URL adrese. Pro tuto možnost využijeme Docosaurus - generátor statických stránek určen pro generaci právě uživatelských dokumentací. 
+Přístupu k dokumentaci je několik - od stručného souboru \texttt{.pdf} až po samostatnou webovou aplikaci. Aby dokumentace byla přehledná a snadno rozšiřitelná, bude dokumentace statická stránka
+přístupná na veřejné URL adrese. Pro tuto možnost využijeme Docusaurus - generátor statických stránek určen pro generaci právě uživatelských dokumentací. 
 
-Docosaurus umožní ze souborů s příponou .md (soubory běžně používané pro dokumentace v gitových repozitářích) zbuildit statickou webovou stránku, která uživateli poskytne přehledné 
+Docusaurus umožní ze souborů s příponou .md (soubory běžně používané pro dokumentace v gitových repozitářích) zbuildit statickou webovou stránku, která uživateli poskytne přehledné 
 rozhraní. Výsledná dokumentace bude vydána na veřejné internetové stránce, aby k ní byl snadný přístup odkudkoliv.
 
 
@@ -721,7 +721,7 @@ Veškeré složky či soubory uvedené ve výše zmiňovaném adresáři jsou po
 	\bottomrule[1.5pt]
 	\endlastfoot
 	%
-	\verb"docs" & Obsahuje složku s uživatelskou dokumentací generovanou Docosaurem. \\
+	\verb"docs" & Obsahuje složku s uživatelskou dokumentací generovanou Docusaurem. \\
 	\midrule
 	\verb"scripts" & Složka se souborem sloužící k nainstalování minifikovaných verzí interních knihoven. \\
 	\midrule
@@ -758,7 +758,7 @@ nakonec se přistoupilo k možnosti, že knihovny budou stahovány pomocí Empli
 To zajišťuje i částečnou ochranu před neoprávněným stažením.
 
 Stažení a následné uložení řeší bash skriptový kód v souboru \texttt{postinstall.sh}. Ten nejprve vytvoří složku \texttt{dist} a následně zkontroluje, zda je v systémové proměnné
-nastavená hodnota tokenu a URL (\texttt{PACKAGE\_URL}), odkud knihovny stáhnout. Pokud hodnoty nastavené nejsou, automaticky bude brát hodnoty z .env filu. Následně pomocí CURL pošle dotaz na
+nastavená hodnota tokenu a URL (\texttt{PACKAGE\_URL}), odkud knihovny stáhnout. Pokud hodnoty nastavené nejsou, automaticky bude brát hodnoty z \texttt{.env} souboru. Následně pomocí CURL pošle dotaz na
 specifikovanou URL, v těle přiloží přístupový token a výsledek uloží do souboru \texttt{embedding.js} ve složce \texttt{dist}.
 
 Tento skript se automaticky spouští při instalaci dependencí této knihovny - je tedy před samotnou instalací zajistit, aby byl zajištěn přístup k platnému tokenu a URL adrese.
@@ -771,7 +771,7 @@ Výstupem jsou tři backendové routy, které slouží ke stažení widget konfi
 Routy pro widget konfigurace a dashboard fieldy jsou typu GET - ten slouží zejména ke čtení dat, nikoliv upravování, mazání či vkládání. Obě tyto routy přijímají v parametru requestu ID
 dashboardu a následně provedou volání na API. 
 
-Token je možné specifikovat dvěma způsoby - a to buď specifikováním v .env souboru či systémové proměnné, nebo předání v hlavičce requestu. To umožňuje větší použitelnost pro koncového
+Token je možné specifikovat dvěma způsoby - a to buď specifikováním v \texttt{.env} souboru či systémové proměnné, nebo předání v hlavičce requestu. To umožňuje větší použitelnost pro koncového
 uživatele - jak bude zmíněno např. v implementaci uživatelského rozhraní. Routy následně vrací data na frontend ve formátu JSON. Došlo-li při fetchování dat k chybě, je vrácena chyba.
 
 Třetí routa je typu POST - POST zpravidla slouží k získání dat, ale oproti metodě GET obsahuje i tělo, kterým může předávat potřebné parametry či specifikace. To samozřejmě může být provedeno i
@@ -984,7 +984,7 @@ Přesměrování na stránku suite probíhá způsobem, který byl popsán v ná
 na URL vygenerovanou funkcí \texttt{getPublicApiCallbackUrl()}. Tato funkce přidá do URL adresy OAuth providera potřebné parametry zmíněné v tabulce \ref{tab:allParametersAPI}.
 Až uživatel udělí patřičná oprávnění, na URL specifikovanou v \texttt{redirect\_uri} je zaslán autorizační kód. Tento kód se zachytí na backendu aplikace a
 vytvoří se nový dotaz pro API. Zde je nutné se autorizovat pomocí klientského ID a secretu. O to se stará funkce \texttt{getAuthorization()}, která je zmíněna na 
-ukázce \ref{autorHeader}. Klientské ID a secret musí být uložené v systémové proměnné (nebo .env souboru), aby bylo možné autentizaci provést.
+ukázce \ref{autorHeader}. Klientské ID a secret musí být uložené v systémové proměnné (nebo \texttt{.env} souboru), aby bylo možné autentizaci provést.
 
 \begin{lstlisting}[language=Javascript, caption={Vytvoření autozirační hlavičky pro následnou autentizaci}, label=autorHeader]
 function getAuthorization() {
@@ -1060,7 +1060,7 @@ vezme se tato chybová hláška a uloží se do informační hlášky labelu, to
 \subsubsection{Zkopírování tokenů}
 
 Pro tuto funkcionalitu je vystaveno tlačítko, které po stisknutí uloží do clipboardu oba dva tokeny (jak Omni API, tak Public API) a umožní je tak ihned
-manuálně vložit do .env souboru. K tokenům je možné stále přistupovat i přes local storage, ale tato varianta je méně uživatelsky přívětivější než jedno stisknutí tlačítka.
+manuálně vložit do \texttt{.env} souboru. K tokenům je možné stále přistupovat i přes local storage, ale tato varianta je méně uživatelsky přívětivější než jedno stisknutí tlačítka.
 
 
 
@@ -1087,7 +1087,7 @@ slouží k vytvoření příslušné akce, jež může následně upravovat stav
 onChange={() => dispatch(changeBoardID(event.target.value))}
 \end{lstlisting}
 
-V této ukázce reaguje komponenta na změnu hodnoty v poli. To spustí anonymní funkci, která volá \texttt{dispatch()} a předává ji výsledek volání \texttt{changeBoardID}. Kromě parametrů
+V této ukázce reaguje komponenta na změnu hodnoty v poli. To spustí anonymní funkci, která volá \texttt{dispatch()} a předává ji výsledek volání \texttt{changeBoardID()}. Kromě parametrů
 importujeme ze storu i proměnné pro stav tokenů, stav vizualizace či validitu JSON parametrů. Veškeré hodnoty jsou automaticky inicializovány na hodnotu \texttt{null} nebo \texttt{false}.
 
 Při stisku tlačítka pro náhled se nejprve ověří, jsou-li vyplněné parametry čísla widgetu a boardu. Následně se do URL parametrů nastaví hodnoty všech proměnných z Redux storu
@@ -1110,12 +1110,11 @@ ale pouze takto:
 
 \subsection{Dokumentace}
 
-Při implementaci knihovny byly vytvářeny Markdown (.md) soubory, které popisují důležité části knihovny a aplikace. Následně nástroj Docosaurus tyto soubory zkompiloval,
+Při implementaci knihovny byly vytvářeny Markdown (\texttt{.md}) soubory, které popisují důležité části knihovny a aplikace. Následně nástroj Docusaurus tyto soubory zkompiloval,
 aby vytvořil webovou stránku, která je přístupná pro uživatele. Tímto způsobem byla vytvořena přehledná dokumentace, která slouží jako důležitý zdroj informací nejen pro koncové uživatele,
-ale také pro vývojáře. Zdrojové soubory výsledné dokumentace se nachází ve složce \texttt{docs} uložené ve zdrojovém kódu knihovny.
+ale také pro vývojáře. Zdrojové soubory výsledné dokumentace se nachází ve složce \texttt{docs} uložené ve zdrojovém kódu knihovny. Návod na její použití se nachází v příloze \ref{app:docuDocs}.
 
 \chapter{Testování}
-\section{Testovací strategie a výsledky}
 Při testování byl kladen velký důraz na správnou funkcionalitu a stabilitu knihovny. Výsledná knihovna byla testována jednotkovými testy a testováním podle
 scénářů. Jednotkové testy pokrývají 100\% výkonného kódu (testováno nástrojem istanbul/nyc, který zkoumá míru pokrytí kódu testy), což zahrnuje testování všech funkcí a komponent, 
 které jsou přímou součástí implementace knihovny.
@@ -1139,12 +1138,9 @@ Během testování uživatelského rozhraní byla ověřována především uži
 Tester ze zadavatelské firmy se podílel na identifikaci potenciálních problémů a nedostatků v uživatelském rozhraní a poskytoval cennou zpětnou vazbu ohledně použitelnosti a uživatelského zážitku.
 Tímto způsobem jsme se snažili zajistit, že knihovna nejen splňuje požadavky a očekávání našich uživatelů, ale také poskytuje optimální uživatelský zážitek při interakci s aplikací.
 
-Výsledkem tohoto testování bylo zdokonalení uživatelského rozhraní a identifikace potřebných úprav a vylepšení, které byly následně doimplementovány. 
+Výsledkem tohoto testování bylo zdokonalení uživatelského rozhraní a identifikace potřebných úprav a vylepšení, které byly následně doimplementovány. Veškeré testovací scénáře
+jsou uvedené v příloze \ref{app:testCases}.
 
-\section{Testovací scénáře - knihovna}
-budou dopsány
-\section{Testovací scénáře - uživatelské rozhraní}
-budou dopsány
 
 
 %
@@ -1175,7 +1171,258 @@ Testování prokázalo, že knihovna i uživatelské rozhraní jsou stabilní, s
 
 
 
- \appendix
+\appendix
+\chapter{Uživatelská dokumentace}\label{app:docuDocs}
+Uživatelská dokumentace se nachází ve zdrojovém kódu ve složce \texttt{docs}. K jejímu lokálnímu spuštění je potřeba mít nainstalovaný npm.
+Celý postup na lokální spuštění dokumentace je znázorněn na ukázce:
+
+\setwinprompt{C:/Users/janochmi/ReactProjects/library/docs}
+\begin{console}{Spuštění uživatelské dokumentace}
+`\winprompt` npm i
+`\winprompt` npm start
+
+> docs@0.0.0 start
+> docusaurus start
+
+[INFO] Starting the development server...
+[SUCCESS] Docusaurus website is running at: http://localhost:3000/
+
+ Compiled successfully in 6.50s
+
+client (webpack 5.90.3) compiled successfully
+\end{console}
+
+V konzoli se ukáže adresa, na které je dokumentace spuštěna. Pro účel bakalářské práce byla tato dokumentace
+zveřejněna na adrese \url{https://embedding-docs.vercel.app/}. 
+
+Dokumentace obsahuje i odkaz na GitHub repozitář se zdrojovým kódem. V něm se nachází i tato dokumentace vyexportovaná do souboru \texttt{.pdf} v adresáři \texttt{docs}. 
+
+V tabulce \ref{tab:docsTabs} jsou popsány jednotlivé sekce, které dokumentace obsahuje.
+
+\begin{center}
+	\begin{longtable}{p{.25\textwidth}p{.6\textwidth}}
+	\caption{Struktura uživatelské dokumentace.}
+	\label{tab:docsTabs}\\
+	\toprule[1.5pt]
+	\endhead
+	\midrule
+	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
+	\endfoot
+	\bottomrule[1.5pt]
+	\endlastfoot
+	%
+	\verb"Introduction" & Úvod do knihovny. \\
+	\midrule
+	\verb"Getting-started" & Obsahuje detailní postup instalace knihovny, nainicializování projektu a použití knihovny. \\
+	\midrule
+	\verb"Development" & Určeno pro budoucí vývoj. Popisuje strukturu knihovny či návody ke stažení,vývoji a publikování.\\
+	\midrule
+	\verb"Embedding-Studio" & Popisuje funkcionalitu rozhraní a návod k jeho použití. \\
+	\end{longtable}
+\end{center}
+
+\chapter{Testovací scénáře}\label{app:testCases}
+\section{Testování knihovny}
+\subsection{Pozitivní scénáře}
+Pro veškeré pozitivní scénáře budeme předpokládat správně nainicializovanou aplikaci s platnými tokeny.
+\subsubsection{Vykreslení widgetu}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu.
+	\item Do atributu \texttt{params} vložíme potřebné parametry.
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vykreslení vizualizace.
+
+\subsubsection{Vykreslení widgetu s hlavičkou}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu, který obsahuje v hlavičce prvky (nadpis, podnadpis, nápovědu apod.).
+	\item Do atributu \texttt{params} vložíme potřebné parametry.
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vykreslení vizualizace, která bude obsahovat veškeré prvky z hlavičky.
+
+\subsubsection{Vykreslení widgetu s MUI styly}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu.
+	\item Do atributu \texttt{params} vložíme potřebné parametry.
+	\item Do atributu \texttt{style} vložíme libovolný objekt s MUI styly.
+	\item Zobrazíme
+\end{enumerate}
+Očekávaný výsledek je vykreslení vizualizace s aplikovanými MUI styly.
+
+\subsubsection{Vykreslení widgetu s danou výškou/šířkou}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu.
+	\item Do atributu \texttt{params} vložíme potřebné parametry.
+	\item Do atributů \texttt{width} a \texttt{height} vložíme námi zvolené číselné hodnoty pro velikost (v pixelech).
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vykreslení vizualizace s výškou {height} a šířkou \texttt{width}.
+
+\subsubsection{Vykreslení widgetu s debuggovacími výpisy}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu.
+	\item Do atributu \texttt{params} vložíme potřebné parametry.
+	\item Nastavíme atributy \texttt{showConfig} a \texttt{showConfigRevealed} na \texttt{true}.
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vykreslení vizualizace s vypsanými datovými requesty – a to jak expandovanými, tak neexpandovanými.
+
+\subsubsection{Správné cáchování}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu.
+	\item Do atributu \texttt{params} vložíme potřebné parametry.
+	\item Zobrazíme.
+	\item Změníme na jiné číslo widgetu a znovu zobrazíme.
+	\item Změníme na původní číslo widgetu.
+\end{enumerate}
+Očekávaný výsledek je okamžité vykreslení vizualizace, protože původní data jsou cachována.
+
+\subsection{Negativní scénáře}
+\subsubsection{Nevalidní číslo widgetu}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu, který se na daném boardu nenachází.
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vypsání chybové hlášky, že daný widget se na boardu nenachází.
+
+\subsubsection{Nespecifikování všech parametrů}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu.
+	\item Do atributu \texttt{params} vložíme parametry (nikoliv všechny potřebné).
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vypsání chybové hlášky, že nebyly specifikovány všechny parametry.
+
+\subsubsection{Nevalidní formát datových requestů}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu, který obsahuje nevalidní formát requestů.
+	\item Do atributu \texttt{params} vložíme parametry.
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vypsání chybové hlášky, že datový request je nevalidní.
+
+\subsubsection{Nevalidní formát konfigurace widgetu}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu, který obsahuje nevalidní konfiguraci.
+	\item Do atributu \texttt{params} vložíme parametry.
+	\item Zobrazíme.
+\end{enumerate}
+
+Očekávaný výsledek je vypsání chybové hlášky, že výsledná konfigurace je nevalidní.
+
+\subsubsection{Nevalidní číslo dashboardu}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme do čísla dasbhoardu libovolný řetězec.
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vypsání chybové hlášky a stabilita aplikace.
+
+\subsubsection{Nevalidní Public API token}
+Pro tento test budeme předpokládat nevalidní Public API token.
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu.
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vypsání chybové hlášky, že nastala chyba během stahování dat.
+
+\subsubsection{Nevalidní Omni API token}
+Pro tento test budeme předpokládat nevalidní Omni API token.
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu.
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vypsání chybové hlášky, že nastala chyba během stahování dat z Omni API.
+
+\subsubsection{Překročení limitu Public API tokenu}
+Pro tento test budeme předpokládat validní Public API token, který provedl již 500 žádostí za hodinu.
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu.
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vypsání chybové hlášky, že nastala chyba během stahování dat z Public API.
+
+\subsubsection{Nepodporovaný typ widgetu}
+\begin{enumerate}
+	\item Do \texttt{<Widget/>} komponenty zadáme číslo dashboardu a widgetu, který ovšem není grafem (např. výběrový seznam).
+	\item Zobrazíme.
+\end{enumerate}
+Očekávaný výsledek je vypsání chybové hlášky.
+
+\section{Testování UI}
+\subsection{Pozitivní scénáře}
+Pro všechny pozitivní scénáře budeme předpokládat přístup do účtu Suite a přihlášení k firemní VPN.
+\subsubsection{Generování Public API tokenu}
+\begin{enumerate}
+	\item Stiskneme tlačítko pro vygenerování Public API tokenu.
+	\item Udělíme patřičná oprávnění.
+\end{enumerate}
+Očekávaný výsledek je vygenerování Public API tokenu, uložení obnovovacího tokenu a přístupového tokenu do local storage a následné vykreslení zelené ikonky.
+
+\subsubsection{Generování Omni API tokenu}
+\begin{enumerate}
+	\item Stiskneme tlačítko pro vygenerování Omni API tokenu.
+	\item Udělíme patřičná oprávnění.
+\end{enumerate}
+Očekávaný výsledek je vygenerování Omni API tokenu, uložení obnovovacího tokenu a přístupového tokenu do local storage a následné vykreslení zelené ikonky.
+
+\subsubsection{Zkopírování tokenů}
+Předpokladem je mít vygenerované oba tokeny.
+\begin{enumerate}
+	\item Stiskneme tlačítko pro kopírování tokenů.
+\end{enumerate}
+Očekávaný výsledek je uložení tokenů do clipboardu ve formátu souboru \texttt{.env}.
+
+\subsubsection{Náhled vizualizace}
+Předpokladem je mít vygenerované oba tokeny.
+\begin{enumerate}
+	\item Vyplníme uživatelské rozhraní (tj. číslo boardu, widgetu, parametry, MUI styly apod.).
+	\item Stiskneme tlačítko pro náhled.
+\end{enumerate}
+Očekávaný výsledek je vykreslení vizualizace.
+
+\subsubsection{Kód pro embedování vizualizace}
+Předpokladem je mít vygenerované oba tokeny.
+\begin{enumerate}
+	\item Vyplníme uživatelské rozhraní (tj. číslo boardu, widgetu, parametry, MUI styly apod.).
+	\item Stiskneme tlačítko pro náhled.
+	\item V pravém horním rohu se objeví tlačítko Embed.
+	\item Stiskneme jej.
+\end{enumerate}
+Očekávaný výsledek je otevření dialogu se zmenšenou vizualizací a vygenerovaným React kódem.
+
+\subsubsection{Kontrola tokenů}
+Předpokladem je mít vygenerované oba tokeny a uložené v local storage.
+
+\begin{enumerate}
+	\item Otevřeme aplikaci.
+	\item Počkáme, na stažení dat z backendu.
+\end{enumerate}
+Očekávaný výsledek je vykreslení zelených ikonek u obou tokenů v patičce stránky.
+
+\subsubsection{Vyplnění formuláře přes URL}
+
+\begin{enumerate}
+	\item Otevřeme aplikaci a do URL specifikujeme čísla widgetu, boardu a další argumenty, které se mají do formuláře vložit.
+	\item Potvrdíme.
+\end{enumerate}
+Očekávaný výsledek je načtení hodnot zadaných v URL do uživatelské rozhraní.
+\subsection{Negativní scénáře}
+
+\subsubsection{Neaktivní VPN}
+\begin{enumerate}
+	\item Otevřeme aplikaci a zkusíme vygenerovat Omni API token.
+\end{enumerate}
+Očekávaný výsledek je vyskočení chybového okna, že daná stránka neexistuje.
+
+\subsubsection{Vložení nevalidního tokenu do local storage}
+\begin{enumerate}
+	\item Otevřeme aplikaci a vložíme nevalidní token do local storage.
+\end{enumerate}
+Očekávaný výsledkem je vypsání chyby při vizualizaci a po následném obnovení stránky objevení tlačítka pro vytvoření nového tokenu.
+
+
+
 \backmatter
 \printbibliography
 \listoffigures

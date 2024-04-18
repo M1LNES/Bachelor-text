@@ -189,7 +189,7 @@ Emplifi dashboardy umožňují definovat, vytvářet a vizualizovat aktivity už
 	\label{fig:emplifiDashUkazka}
 \end{figure}
 
-Na obrázku \ref{fig:emplifiDashUkazka} vidíme příklad dashboardu - skládá se z několika grafů, obvykle nazývané jako widgety \cite{emplifiDashboard}, jejichž obsah lze modifikovat pomocí přepínačů v liště. Obsah může být modifikován v časovém období (posledních 30 dní, poslední rok, konkrétní časový rozsah, ...), ale lze jej modifikovat také na základě metrik jako je např. sociální síť (Facebook, Instragram, LinkedIn), druh interakcí (komentáře, liky, sdílení) apod.\footnote{Widgety nemusí být obecně pouze vizualizace, může se jednat také o ovládací prvky (např. výběrové seznamy, check boxy, textfieldy apod.). Tato možnost se využívá zejména ve vývojářských dashboardech pro rychlejší tvorbu vizualizací. V samotném produktu firmy se ale používá kvůli uživatelské přívětivosti pouze pro vizualizace \cite{emplifiDashboard}. 
+Na obrázku \ref{fig:emplifiDashUkazka} vidíme příklad dashboardu - skládá se z několika grafů, obvykle nazývané jako widgety \cite{emplifiDashboard}, jejichž obsah lze modifikovat pomocí přepínačů v liště. Obsah může být modifikován v časovém období (posledních 30 dní, poslední rok, konkrétní časový rozsah, ...), ale lze jej modifikovat také na základě metrik jako je např. sociální síť (Facebook, Instragram, LinkedIn), druh interakcí (komentáře, reakce, sdílení) apod.\footnote{Widgety nemusí být obecně pouze vizualizace, může se jednat také o ovládací prvky (např. výběrové seznamy, check boxy, textfieldy apod.). Tato možnost se využívá zejména ve vývojářských dashboardech pro rychlejší tvorbu vizualizací. V samotném produktu firmy se ale používá kvůli uživatelské přívětivosti pouze pro vizualizace \cite{emplifiDashboard}. 
 }
 
 Embedded analytics se nechová a nevypadá jako samostatná aplikace, ale je integrován do jiného softwaru nebo webového portálu. Koncoví uživatelé často ani nepoznají, že se jedná
@@ -372,7 +372,7 @@ Struktura dotazů a ukázkové dotazy jsou dostupné na veřejné dokumentaci \c
 
 \subsubsection{Vytvoření tokenu}
 
-Vytvoření tokenu je umožněno pouze osobám, jež mají u firmy Emplifi vytvořený účet v produktu Suite. Na diagramu \ref{fig:emplifAPIDiagram} je schéma, které udává průběh akcí během žádání o 
+Vytvoření tokenu je umožněno pouze osobám, jež mají u firmy Emplifi vytvořený účet v produktu Suite. Na obrázku \ref{fig:emplifAPIDiagram} je schéma, které udává průběh akcí během žádání o 
 přístupový token a zaslání prvního requestu s žádostí o data.
 \begin{figure}
 	\centering
@@ -416,7 +416,7 @@ slouží k výměně za přístupový token. O ten je možno si zažádat POST r
 
 \begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
-	\caption{Hlavička requestu na token \cite{emplifiDocs}.}
+	\caption{Hlavička requestu na token \cite{emplifiDocs}}
 	\label{tab:exampleRequestHeader}\\
 	\toprule[1.5pt]
 	\endhead
@@ -434,7 +434,7 @@ slouží k výměně za přístupový token. O ten je možno si zažádat POST r
 
 \begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
-	\caption{Tělo requestu na token \cite{emplifiDocs}.}
+	\caption{Tělo requestu na token \cite{emplifiDocs}}
 	\label{tab:exampleRequestBody}\\
 	\toprule[1.5pt]
 	\endhead
@@ -456,7 +456,7 @@ Následně obdržíme token ve formátu jako na \ref{tokenResponse}. Přesné n�
 
 \begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
-	\caption{Tělo odpovědi se zaslaným tokenem \cite{emplifiDocs}.}
+	\caption{Tělo odpovědi se zaslaným tokenem \cite{emplifiDocs}}
 	\label{tab:exampleRequestResponse}\\
 	\toprule[1.5pt]
 	\endhead
@@ -489,7 +489,7 @@ Má-li uživatel platný token, může začít se zasíláním dotazů. Emplifi 
 
 \begin{center}
 	\begin{longtable}{p{.25\textwidth}p{.6\textwidth}}
-	\caption{Endpointy používané k embedování.}
+	\caption{Endpointy používané k embedování}
 	\label{tab:embeddingEndpoints}\\
 	\toprule[1.5pt]
 	\endhead
@@ -658,7 +658,7 @@ pro další vývoj. Dokumentace bude obsahovat následující body:
 Přístupu k dokumentaci je několik - od stručného souboru \texttt{.pdf} až po samostatnou webovou aplikaci. Aby dokumentace byla přehledná a snadno rozšiřitelná, bude dokumentace statická stránka
 přístupná na veřejné URL adrese. Pro tuto možnost využijeme Docusaurus - generátor statických stránek určen pro generaci právě uživatelských dokumentací. 
 
-Docusaurus umožní ze souborů s příponou .md (soubory běžně používané pro dokumentace v gitových repozitářích) zbuildit statickou webovou stránku, která uživateli poskytne přehledné 
+Docusaurus umožní ze souborů s příponou .md (soubory běžně používané pro dokumentace v gitových repozitářích) sestavit statickou webovou stránku, která uživateli poskytne přehledné 
 rozhraní. Výsledná dokumentace bude vydána na veřejné internetové stránce, aby k ní byl snadný přístup odkudkoliv.
 
 
@@ -747,7 +747,7 @@ Veškeré složky či soubory uvedené ve výše zmiňovaném adresáři jsou po
 	\midrule
 	\verb"package.json" & Soubor obsahující metadata, závislosti a skripty pro projekt v Node.js. \\
 	\midrule
-	\verb"webpack.config.js" & Definuje, jak bude zdrojový kód knihovny zbuilděn.  \\
+	\verb"webpack.config.js" & Definuje, jak bude zdrojový kód knihovny sestaven.  \\
 	\end{longtable}
 \end{center}
 
@@ -847,7 +847,7 @@ K funkcionalitě je nutno specifikovat několik parametrů, které jsou specifik
 Nejprve se z pole parametrů vytvoří objekt. Tento objekt obsahuje vždy jméno atributu (což je název proměnné z Omni Studia, kterou je třeba dodefinovat) a k němu patřičná hodnota (specifikovaná
 hodnota pro nedefinovaný parametr). Pokud se nejdná o pole, vrátí se prázdný objekt.
 
-Následuje první stahování dat. Dle boardID předaného v properties se pošle request na API, který stáhne fieldy z daného boardu. Fieldy slouží k přesné specifikaci datového typu - např.
+Následuje první stahování dat. Dle \texttt{boardID} předaného v properties se pošle request na API, který stáhne fieldy z daného boardu. Fieldy slouží k přesné specifikaci datového typu - např.
 obsahuje-li konfigurace widgetu parametr \texttt{time}, specifikace hodnoty vypadat takto:
 \lstset{style=plainsrc}
 \begin{lstlisting}
@@ -864,7 +864,7 @@ key: "${daterange:time}"
 ...
 \end{lstlisting}
 
-Dále je možno načíst konfiguraci widgetu, která obsahuje jak specifikaci vizualizace (barvy, popisky os, ...), tak i datové requesty. Opět se specifikuje číslo dashboardu, API stáhne veškeré widgety z toho boardu a následně se dle widgetID vyfiltrují na jeden vyhovující. Jestliže
+Dále je možno načíst konfiguraci widgetu, která obsahuje jak specifikaci vizualizace (barvy, popisky os, ...), tak i datové requesty. Opět se specifikuje číslo dashboardu, API stáhne veškeré widgety z toho boardu a následně se dle \texttt{widgetID} vyfiltrují na jeden vyhovující. Jestliže
 neexistuje widget s daným ID, je vrácena chybová hláška o nenalezení widgetu a stahování dat neproběhne. Pokud byly specifikované identifikátory správné, dalším krokem je expandování
 widget konfigurace. 
 
@@ -907,7 +907,8 @@ Protože knihovna obsahuje frontendovou část i backendovou část, výstupem b
 funkce \texttt{useQuery} vyžaduje tzv. QueryProvidera. Proto při exportu \texttt{<Widget/>} je komponenta vložená do komponenty \texttt{<QueryClientProvider/>}, která přijímá v properties instanci
 Query Clienta. Tato komponenta obohacená o Query Clienta je poté vyexportována jako normální \texttt{<Widget/>} komponenta a uživatel tedy nemusí ve svém projektu tohoto Query Clienta vytvářet.
 
-Pro sestavení knihovny se využívá modul webpack. Jeho konfigurace je uložená v kořenovým adresáři knihovny a obsahuje dvě konfigurace pro buildění - pro frontendovou část a backendovou.
+Pro sestavení knihovny se využívá modul webpack. Jeho konfigurace je uložená v kořenovým adresáři knihovny a obsahuje dvě konfigurace pro sestavení a kompilaci (často
+označováno jako \textit{build}) - pro frontendovou část a backendovou.
 Na sestavení knihovny je následně vytvořen skript, který je definovaný v \texttt{package.json} a spouští se pomocí npm. Výsledné dva vytvořené soubory (\texttt{empli-embed-backend.js} a \texttt{empli-embed.js})
 jsou uloženy do složky \texttt{dist}. Poté už je třeba jen aktualizovanou verzi knihovny zveřejnit na \url{https://www.npmjs.com/}. Pro tuto akci je taktéž vytvořen skript v \texttt{package.json}.
 Podrobnější informace jsou v uživatelské dokumentaci.
@@ -1114,7 +1115,8 @@ Při implementaci knihovny byly vytvářeny Markdown (\texttt{.md}) soubory, kte
 aby vytvořil webovou stránku, která je přístupná pro uživatele. Tímto způsobem byla vytvořena přehledná dokumentace, která slouží jako důležitý zdroj informací nejen pro koncové uživatele,
 ale také pro vývojáře. Zdrojové soubory výsledné dokumentace se nachází ve složce \texttt{docs} uložené ve zdrojovém kódu knihovny. Návod na její použití se nachází v příloze \ref{app:docuDocs}.
 
-\chapter{Testování}
+\chapter{Testování a možná rozšíření}
+\section{Testování}
 Při testování byl kladen velký důraz na správnou funkcionalitu a stabilitu knihovny. Výsledná knihovna byla testována jednotkovými testy a testováním podle
 scénářů. Jednotkové testy pokrývají 100\% výkonného kódu (testováno nástrojem istanbul/nyc, který zkoumá míru pokrytí kódu testy), což zahrnuje testování všech funkcí a komponent, 
 které jsou přímou součástí implementace knihovny.
@@ -1141,6 +1143,21 @@ Tímto způsobem jsme se snažili zajistit, že knihovna nejen splňuje požadav
 Výsledkem tohoto testování bylo zdokonalení uživatelského rozhraní a identifikace potřebných úprav a vylepšení, které byly následně doimplementovány. Veškeré testovací scénáře
 jsou uvedené v příloze \ref{app:testCases}.
 
+\section{Možná rozšíření}
+\subsection{Plně automatická obnova tokenu}
+Pro lepší uživatelskou přívětivost by se knihovna mohla automaticky starat o obnovování tokenu. Uživatel by nemusel po vypršení tokenu generovan ručně nový, ale
+po jeho vypršení by se automaticky vygeneroval nový přístupový token, který by knihovna nahradila za expirovaný.
+Nyní je tento token generován a ukládán v uživatelském rozhraní, takže knihovna je na toto rozšíření v budoucnu připravena.
+
+\subsection{Předdefinované třídy}
+Užitečným rozšířením by mohlo být definování tříd, které by obsahovaly jednotlivé MUI styly. Koncový uživatel by tak nemusel psát vůbec konfiguraci pro styly,
+ale stačilo by mu pouze do argumentu \texttt{className} zadat jednu z předdefinovaných tříd. Třídy by upravovaly rozložení, centrování, rámečky či barvu pozadí a sloužily
+by jako základní šablony pro vizualizace.
+
+\subsection{Podpora ostatních typů widgetů}
+Nyní knihovna umožňuje zobrazovat pouze vizualizace. V interní aplikaci se kromě nich nacházejí ale i další druhy widgetů, např. zmiňované výběrové seznamy,
+pole pro řetězce a čísla či kalendář pro výběr časového rozmezí. To by umožnilo plně interaktivní chování grafů i bez nutnosti tvorby vlastních ovládacích prvků.
+Uživatel by pouze specifikoval číslo widgetu a veškeré povolené hodnoty by se samy automaticky nainicializovaly.
 
 
 %
@@ -1167,8 +1184,8 @@ Zároveň byl kladen důraz na uživatelskou přívětivost s cílem zajistit, �
 Výsledkem práce je uživatelské rozhraní pro vytváření tokenů, veřejná knihovna, která umožňuje integrování vizualizací z interní aplikace Omni Studio
 do aplikací třetích stran, a podrobná uživatelská dokumentace, která popisuje použití knihovny a rozhraní koncovým uživatelem.
 
-Testování prokázalo, že knihovna i uživatelské rozhraní jsou stabilní, spolehlivé, schopné reagovat na nevalidní stavy a poskytovat uživatelům očekávanou funkcionalitu. 
-
+Testování prokázalo, že knihovna i uživatelské rozhraní jsou stabilní, spolehlivé, schopné reagovat na nevalidní stavy a poskytovat uživatelům očekávanou funkcionalitu. Byly zmíněny 
+také možnosti rozšíření, které by mohly dále zvýšit funkcionalitu a uživatelskou přívětivost knihovny.
 
 
 \appendix
@@ -1201,7 +1218,7 @@ V tabulce \ref{tab:docsTabs} jsou popsány jednotlivé sekce, které dokumentace
 
 \begin{center}
 	\begin{longtable}{p{.25\textwidth}p{.6\textwidth}}
-	\caption{Struktura uživatelské dokumentace.}
+	\caption{Struktura uživatelské dokumentace}
 	\label{tab:docsTabs}\\
 	\toprule[1.5pt]
 	\endhead
@@ -1411,6 +1428,7 @@ Očekávaný výsledek je načtení hodnot zadaných v URL do uživatelské rozh
 
 \subsubsection{Neaktivní VPN}
 \begin{enumerate}
+	\item Odpojíme se od firemní VPN.
 	\item Otevřeme aplikaci a zkusíme vygenerovat Omni API token.
 \end{enumerate}
 Očekávaný výsledek je vyskočení chybového okna, že daná stránka neexistuje.

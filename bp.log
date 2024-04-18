@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.2)  18 APR 2024 21:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.2)  19 APR 2024 01:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1752,7 +1752,7 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 6.6pt on input line 82.
 \FASThesis@auxdim@lx=\dimen370
 \FASThesis@auxdim@ly=\dimen371
-<img/kiv-cmyk-cz.pdf, id=258, 762.42366pt x 133.46764pt>
+<img/kiv-cmyk-cz.pdf, id=278, 762.42366pt x 133.46764pt>
 File: img/kiv-cmyk-cz.pdf Graphic file (type pdf)
 <use img/kiv-cmyk-cz.pdf>
 Package pdftex.def Info: img/kiv-cmyk-cz.pdf  used on input line 82.
@@ -1765,7 +1765,7 @@ Overfull \hbox (22.63947pt too wide) in paragraph at lines 82--82
 
 
 pdfTeX warning: pdflatex (file ./img/background-kiv.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/background-kiv.pdf, id=259, 597.50786pt x 845.04686pt>
+<img/background-kiv.pdf, id=279, 597.50786pt x 845.04686pt>
 File: img/background-kiv.pdf Graphic file (type pdf)
 <use img/background-kiv.pdf>
 Package pdftex.def Info: img/background-kiv.pdf  used on input line 82.
@@ -1781,7 +1781,7 @@ LaTeX Font Info:    Font shape `T1/newtxttz/bc/n' will be
 (Font)              scaled to size 25.75995pt on input line 82.
 \FASThesis@auxdim@lx=\dimen372
 \FASThesis@auxdim@ly=\dimen373
-<img/kiv-black-cz.pdf, id=280, 762.42366pt x 133.46764pt>
+<img/kiv-black-cz.pdf, id=300, 762.42366pt x 133.46764pt>
 File: img/kiv-black-cz.pdf Graphic file (type pdf)
 <use img/kiv-black-cz.pdf>
 Package pdftex.def Info: img/kiv-black-cz.pdf  used on input line 82.
@@ -1824,7 +1824,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has b
                    \relax 
 l.82 \frontpages[tm]
                      % or notm if the `trademark' declaration is not needed
-<zadanibp.pdf, id=296, page=1, 597.51233pt x 845.0471pt>
+<zadanibp.pdf, id=316, page=1, 597.51233pt x 845.0471pt>
 File: zadanibp.pdf Graphic file (type pdf)
 <use zadanibp.pdf, page 1>
 Package pdftex.def Info: zadanibp.pdf , page1 used on input line 82.
@@ -1891,7 +1891,7 @@ Overfull \hbox (1.8pt too wide) detected at line 175
 [] 
  []
 
-<pictures/emplifi-dashboard-example.png, id=411, 1578.89874pt x 926.46124pt>
+<pictures/emplifi-dashboard-example.png, id=436, 1578.89874pt x 926.46124pt>
 File: pictures/emplifi-dashboard-example.png Graphic file (type png)
 <use pictures/emplifi-dashboard-example.png>
 Package pdftex.def Info: pictures/emplifi-dashboard-example.png  used on input line 187.
@@ -1979,7 +1979,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 243.
-<pictures/oauth2-diagram.png, id=470, 2057.6875pt x 1521.685pt>
+<pictures/oauth2-diagram.png, id=495, 2057.6875pt x 1521.685pt>
 File: pictures/oauth2-diagram.png Graphic file (type png)
 <use pictures/oauth2-diagram.png>
 Package pdftex.def Info: pictures/oauth2-diagram.png  used on input line 265.
@@ -2011,7 +2011,7 @@ Overfull \hbox (1.8pt too wide) detected at line 329
  []
 
 [13]
-<pictures/emplifiAPI.png, id=556, 1204.5pt x 630.85687pt>
+<pictures/emplifiAPI.png, id=581, 1204.5pt x 630.85687pt>
 File: pictures/emplifiAPI.png Graphic file (type png)
 <use pictures/emplifiAPI.png>
 Package pdftex.def Info: pictures/emplifiAPI.png  used on input line 379.
@@ -2099,7 +2099,7 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [18]
-<pictures/omni-studio.png, id=639, 1630.59187pt x 1212.02812pt>
+<pictures/omni-studio.png, id=664, 1630.59187pt x 1212.02812pt>
 File: pictures/omni-studio.png Graphic file (type png)
 <use pictures/omni-studio.png>
 Package pdftex.def Info: pictures/omni-studio.png  used on input line 583.
@@ -2204,15 +2204,15 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [32]
 LaTeX Font Info:    Font shape `T1/newtxttz/b/n' will be
-(Font)              scaled to size 10.0pt on input line 923.
+(Font)              scaled to size 10.0pt on input line 924.
 LaTeX Font Info:    Font shape `T1/newtxtt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 942.
+(Font)              scaled to size 10.0pt on input line 943.
 \FASThesis@runninghead@rule@offset=\dimen398
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [33]
-Overfull \hbox (0.87741pt too wide) in paragraph at lines 977--977
+Overfull \hbox (0.87741pt too wide) in paragraph at lines 978--978
 |[] []| 
  []
 
@@ -2243,7 +2243,7 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [38]
-Overfull \hbox (1.8pt too wide) detected at line 1117
+Overfull \hbox (1.8pt too wide) detected at line 1118
 [] 
  []
 
@@ -2258,7 +2258,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [40]
-Overfull \hbox (1.8pt too wide) detected at line 1152
+Overfull \hbox (1.8pt too wide) detected at line 1169
 [] 
  []
 
@@ -2267,7 +2267,7 @@ Overfull \hbox (1.8pt too wide) detected at line 1152
 ] [42
 
 ]
-Overfull \hbox (1.8pt too wide) detected at line 1175
+Overfull \hbox (1.8pt too wide) detected at line 1192
 [] 
  []
 
@@ -2277,7 +2277,7 @@ Overfull \hbox (1.8pt too wide) detected at line 1175
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [44]
-Overfull \hbox (1.8pt too wide) detected at line 1224
+Overfull \hbox (1.8pt too wide) detected at line 1241
 [] 
  []
 
@@ -2299,7 +2299,7 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [48]
-Overfull \hbox (0.14542pt too wide) in paragraph at lines 1355--1355
+Overfull \hbox (0.14542pt too wide) in paragraph at lines 1372--1372
 |[] []| 
  []
 
@@ -2308,7 +2308,7 @@ Overfull \hbox (0.14542pt too wide) in paragraph at lines 1355--1355
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [49]
-Overfull \hbox (0.67545pt too wide) in paragraph at lines 1412--1412
+Overfull \hbox (0.67545pt too wide) in paragraph at lines 1429--1429
 |[] []| 
  []
 
@@ -2324,17 +2324,17 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
  [51] [52
 
 ]
-Overfull \hbox (20.78072pt too wide) in paragraph at lines 1428--1428
+Overfull \hbox (20.78072pt too wide) in paragraph at lines 1446--1446
 \T1/Cochineal-TLF/m/n/12 (-10) 2023-10-31. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/blog/what -[] embedded -[]
  []
 
 
-Overfull \hbox (5.28377pt too wide) in paragraph at lines 1428--1428
+Overfull \hbox (5.28377pt too wide) in paragraph at lines 1446--1446
 []\T1/Cochineal-TLF/m/it/12 (-10) Embed Vi-su-a-li-zati-ons Using Web Com-po-nents\T1/Cochineal-TLF/m/n/12 (-10) . Go-od-Data. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https :
  []
 
 
-Overfull \hbox (10.94525pt too wide) in paragraph at lines 1428--1428
+Overfull \hbox (10.94525pt too wide) in paragraph at lines 1446--1446
 \T1/newtxttz/m/n/10.95 //www . gooddata . com/docs/cloud/embed -[] visualizations/web -[] components/
  []
 
@@ -2342,24 +2342,24 @@ Overfull \hbox (10.94525pt too wide) in paragraph at lines 1428--1428
 
 ]
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 1427.
+(Font)              scaled to size 12.0pt on input line 1445.
 
-Overfull \hbox (8.47386pt too wide) in paragraph at lines 1428--1428
+Overfull \hbox (8.47386pt too wide) in paragraph at lines 1446--1446
 []$\T1/newtxttz/m/n/10.95 https : //medium . com/web -[] security/understanding -[] oauth2 -[] a50f29f0fbf7$[]\T1/Cochineal-TLF/m/n/12 (-10) . 
  []
 
 
-Overfull \hbox (23.71718pt too wide) in paragraph at lines 1428--1428
+Overfull \hbox (23.71718pt too wide) in paragraph at lines 1446--1446
 \T1/Cochineal-TLF/m/n/12 (-10) stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //technologyadvice . com/blog/information -[] technology/
  []
 
 
-Overfull \hbox (6.8463pt too wide) in paragraph at lines 1428--1428
+Overfull \hbox (6.8463pt too wide) in paragraph at lines 1446--1446
 []$\T1/newtxttz/m/n/10.95 https : //www . trustradius . com/products/microsoft -[] power -[] bi -[] embedded/
  []
 
 
-Overfull \hbox (22.11537pt too wide) in paragraph at lines 1428--1428
+Overfull \hbox (22.11537pt too wide) in paragraph at lines 1446--1446
 []\T1/Cochineal-TLF/m/it/12 (-10) What is Lo-o-ker? \T1/Cochineal-TLF/m/n/12 (-10) TrustRa-dius, 2023-12. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . trustradius .
  []
 
@@ -2386,11 +2386,11 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 1438.
+(in both cases you will find help in the memoir manual). on input line 1456.
 
 File: img/background-kiv.pdf Graphic file (type pdf)
 <use img/background-kiv.pdf>
-Package pdftex.def Info: img/background-kiv.pdf  used on input line 1438.
+Package pdftex.def Info: img/background-kiv.pdf  used on input line 1456.
 (pdftex.def)             Requested size: 597.5064pt x 845.08348pt.
 [62
 
@@ -2421,16 +2421,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `bp.out' has not changed.
-(rerunfilecheck)             Checksum: 14CF12A9F7C1C0E8930551F1C1A6E0AF;7654.
+(rerunfilecheck)             Checksum: 937AD03AEC31DD350FECE3B0354B37CF;8662.
 Package logreq Info: Writing requests to 'bp.run.xml'.
 \openout1 = `bp.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52119 strings out of 474586
- 987406 string characters out of 5758344
+ 52130 strings out of 474586
+ 987563 string characters out of 5758344
  2017558 words of memory out of 5000000
- 72964 multiletter control sequences out of 15000+600000
+ 72969 multiletter control sequences out of 15000+600000
  999202 words of font info for 280 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,13n,113p,1969b,3321s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2441,9 +2441,9 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (72 pages, 1752473 bytes).
+Output written on bp.pdf (72 pages, 1758412 bytes).
 PDF statistics:
- 1296 PDF objects out of 1440 (max. 8388607)
- 403 named destinations out of 1000 (max. 500000)
- 62069 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1323 PDF objects out of 1440 (max. 8388607)
+ 409 named destinations out of 1000 (max. 500000)
+ 62109 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -51,7 +51,12 @@
 \contentsline {subsubsection}{\numberline {4.2.3.4}Zkopírování tokenů}{37}{subsubsection.4.2.3.4}%
 \contentsline {subsection}{\numberline {4.2.4}Náhled vizualizací}{37}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}Dokumentace}{38}{subsection.4.2.5}%
-\contentsline {chapter}{\chapternumberline {5}Testování}{39}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}Testování a možná rozšíření}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Testování}{39}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Možná rozšíření}{40}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Plně automatická obnova tokenu}{40}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Předdefinované třídy}{40}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Podpora ostatních typů widgetů}{40}{subsection.5.2.3}%
 \contentsline {chapter}{\chapternumberline {6}Závěr}{41}{chapter.6}%
 \contentsline {appendix}{\chapternumberline {A}Uživatelská dokumentace}{43}{appendix.A}%
 \contentsline {appendix}{\chapternumberline {B}Testovací scénáře}{45}{appendix.B}%

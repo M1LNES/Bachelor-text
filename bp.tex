@@ -30,14 +30,15 @@
 \usepackage{fontawesome5} 
 \usepackage{listings}
 \usepackage{color}
+\usepackage{enumitem}
 
 %\usepackage{float} 
-\title{\texttt {}Vývoj Javascript knihovny pro embedování vizualizací skrze Emplifi Public API}
+\title{\texttt {}Vývoj JavaScript knihovny pro embedování vizualizací skrze Emplifi Public API}
 \author{Milan}{Janoch}{}{}
 \supervisor{Doc. Ing. Dalibor Fiala, Ph.D.}
 %\supervisor{Ing. Tomáš Marný}
 \assignment{zadanibp.pdf}
-\signdate{15}{12}{2023}{V Plzni}% << the longest local name in the Czech Rep.
+\signdate{19}{04}{2024}{V Plzni}% << the longest local name in the Czech Rep.
 
 \addbibresource{bp.bib}% << the file with the bibliographical database to be used throughout the text
 
@@ -202,7 +203,7 @@ tento program, stačí se do programu přihlásit přes internet. Pro firmu to z
 Nevýhodou SaaS je bezpečnost dat a rychlost jejich doručování. Protože jsou data umístěna na externích serverech, je třeba zajistit rychlé a spolehlivé internetové připojení a vyloučit
 přístup neoprávněných uživatelů.
 
-Existuje hned několik způsobů, jak data embedovat. Mezi nejpopulárnější a nejrozšířenější způsoby patří HTML iframe, webová komponenta či React SDK s voláním API \cite{goodDataEmbedded}. 
+Existuje hned několik způsobů, jak data embedovat. Mezi nejpopulárnější a nejrozšířenější způsoby patří HTML (Hypertext Markup Language) iframe, webová komponenta či React SDK s voláním API \cite{goodDataEmbedded}. 
 
 \subsection{Iframe}
 Nejjednodušší a nejrychlejší metodou embedování je využití použití iframu \cite{goodDataEmbedded}. Iframe (inline frame) je HTML prvek, který umožňuje načíst HTML stránku uvnitř dokumentu \cite{iFrameAdv}. Používá se pro vložení určitého obsahu z jednoho zdroje do druhého. To se poté jeví jako nové okno v dané stránce, jedná se ovšem o embedovaný iframe. Tuto možnost embedování využívají např. Google Mapy nebo YouTube \cite{iFrameAdv}. Velkou výhodou je, že není třeba instalovat pro běh žádné dependence.
@@ -337,7 +338,7 @@ Pro vývoj knihovny bude využit JavaScript s knihovnou React. Důvodem zvolení
 široce používané technologie ve vývoji webových aplikací. 
 
 React je snadný na naučení, obsahuje málo konceptů, které je třeba se naučit \cite{whyUsingReact}. Jeho instalace je snadná -
-stačí pouze v kódu nainstalovat a naimportovat jeho knihovnu. Využívá speciální JSX syntaxe, která sice vypadá jako HTML, ale ve skutečnosti je tato syntaxe převáděna na HTML. Jelikož je React hojně využíván
+stačí pouze v kódu nainstalovat a naimportovat jeho knihovnu. Využívá speciální JSX (JavaScript XML) syntaxe, která sice vypadá jako HTML, ale ve skutečnosti je tato syntaxe převáděna na HTML. Jelikož je React hojně využíván
 v aplikaci Facebook či na Instagramu, dostává se mu velké podpory právě i z tohoto odvětví - čtyři největší přispěvatelé knihovny React jsou zaměstnanci Facebooku \cite{whyUsingReact}. Kromě 
 Facebooku využívají React značky jako jsou např. Netflix, airbnb, BBC News či PayPal \cite{whyUsingReact2}. Díky virtualizaci a uchováváním DOM poskytuje React
 velmi rychlé vykreslování, přičemž všechny změny se snadno promítají do virtuálního DOM. 
@@ -381,8 +382,8 @@ přístupový token a zaslání prvního requestu s žádostí o data.
 	\label{fig:emplifAPIDiagram}
 \end{figure}
 
-Pro vytvoření tokenu je třeba uživatele přesměrovat na webovou URL \url{https://api.emplifi.io/oauth2/0/auth}, kde bude požádán o udělení souhlasu z jeho Emplifi Suite účtu.
-Do URL, na kterou uživatele přesměrujeme, bude třeba vložit několik parametrů potřebných k autentizaci a k následnému vrácení tokenu. 
+Pro vytvoření tokenu je třeba uživatele přesměrovat na webovou URL (Uniform Resource Locator), kde bude požádán o udělení souhlasu z jeho Emplifi Suite účtu.
+Do URL (\url{https://api.emplifi.io/oauth2/0/auth}), na kterou uživatele přesměrujeme, bude třeba vložit několik parametrů potřebných k autentizaci a k následnému vrácení tokenu. 
 
 \begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
@@ -658,7 +659,7 @@ pro další vývoj. Dokumentace bude obsahovat následující body:
 Přístupu k dokumentaci je několik - od stručného souboru \texttt{.pdf} až po samostatnou webovou aplikaci. Aby dokumentace byla přehledná a snadno rozšiřitelná, bude dokumentace statická stránka
 přístupná na veřejné URL adrese. Pro tuto možnost využijeme Docusaurus - generátor statických stránek určen pro generaci právě uživatelských dokumentací. 
 
-Docusaurus umožní ze souborů s příponou .md (soubory běžně používané pro dokumentace v gitových repozitářích) sestavit statickou webovou stránku, která uživateli poskytne přehledné 
+Docusaurus umožní ze souborů s příponou \texttt{.md} (soubory běžně používané pro dokumentace v gitových repozitářích) sestavit statickou webovou stránku, která uživateli poskytne přehledné 
 rozhraní. Výsledná dokumentace bude vydána na veřejné internetové stránce, aby k ní byl snadný přístup odkudkoliv.
 
 
@@ -729,9 +730,9 @@ Veškeré složky či soubory uvedené ve výše zmiňovaném adresáři jsou po
 	\midrule
 	\verb"src/server" & Složka s backendovou implementací - veškeré routy serveru Express určené k fetchování dat z API.  \\
 	\midrule
-	\verb"src/index.js" & Exportovaná frontendová část knihovny \\
+	\verb"src/index.js" & Exportovaná frontendová část knihovny. \\
 	\midrule
-	\verb"src/backend.js" & Exportovaná backendová část knihovny \\
+	\verb"src/backend.js" & Exportovaná backendová část knihovny. \\
 	\midrule
 	\verb".babelrc" & Slouží k definici přednastavené sady Babel pluginů, které se použijí k transformaci JavaScript kódu z jedné syntaxe do druhé.  \\
 	\midrule
@@ -1126,7 +1127,7 @@ Pro provedení těchto jednotkových testů byl využíván testovací framework
 Díky Mocha bylo možné snadno definovat a organizovat testovací scénáře a sledovat jejich výsledky.
 
 Je však důležité poznamenat, že některé části funkcionality, jako například mapování datových typů z PreJSONu, jsou pevně definovány a standardizovány v rámci specifikace knihovny nebo externích závislostí. 
-Z tohoto důvodu není nutné testovat tato mapování v rámci unit testů, protože jsou považovány za externě ověřené a stabilní.
+Z tohoto důvodu není nutné testovat tato mapování v rámci testů, protože jsou považovány za externě ověřené a stabilní.
 
 Namísto toho se zaměřujeme na testování klíčových aspektů funkcionality, které mohou být náchylnější k chybám a které mohou ovlivnit výkon nebo spolehlivost knihovny. 
 Tímto přístupem zajišťujeme, že naše unit testy jsou účinné a efektivní ve zjišťování a prevenci chyb v implementaci naší knihovny.
@@ -1446,6 +1447,25 @@ Očekávaný výsledkem je vypsání chyby při vizualizaci a po následném obn
 \listoffigures
 \listoftables
 \listoflistings
+
+\chapter{Přehled zkratek}
+
+\begin{itemize}[align=left, labelwidth=1.5cm, labelsep=10pt, leftmargin=!]
+    \item[\textbf{API}]    Application Programming Interface  
+    \item[\textbf{DOM}] 	Document Object Model
+    \item[\textbf{HTML}]  Hypertext Markup Language
+    \item[\textbf{JSON}]  JavaScript Object Notation
+    \item[\textbf{JSX}] JavaScript XML
+    \item[\textbf{NPM}] Node Package Manager
+    \item[\textbf{SaaS}]  Software as a Service
+    \item[\textbf{SDK}]    Software Development Kit
+    \item[\textbf{UI}]        User Interface
+    \item[\textbf{URL}] Uniform Resource Locator
+    \item[\textbf{UX}]        User Experience
+    \item[\textbf{VPN}]        Virtual Private Network
+
+\end{itemize}
+
 % _____________________________________________________________________________
 %
 %		BACK COVER

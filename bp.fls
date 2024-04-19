@@ -433,6 +433,8 @@ INPUT D:\Install\MikTex\tex\latex\fontawesome5\fontawesome5-generic-helper.sty
 INPUT D:\Install\MikTex\tex\latex\fontawesome5\fontawesome5-generic-helper.sty
 INPUT D:\Install\MikTex\tex\latex\fontawesome5\fontawesome5-mapping.def
 INPUT D:\Install\MikTex\tex\latex\fontawesome5\fontawesome5-mapping.def
+INPUT D:\Install\MikTex\tex\latex\enumitem\enumitem.sty
+INPUT D:\Install\MikTex\tex\latex\enumitem\enumitem.sty
 INPUT .\bp.aux
 INPUT .\bp.aux
 INPUT bp.aux
@@ -567,6 +569,9 @@ INPUT D:\Install\MikTex\fonts\vf\public\cochineal\Cochineal-Bold-tlf-t1.vf
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Bold-tlf-t1--base.tfm
 INPUT D:\Install\MikTex\fonts\enc\dvips\cochineal\coch_otkq6i.enc
 INPUT D:\Install\MikTex\fonts\enc\dvips\cochineal\cochTH-tlf-t1.enc
+INPUT .\zadanibp.pdf
+INPUT .\zadanibp.pdf
+INPUT .\zadanibp.pdf
 INPUT .\zadanibp.pdf
 INPUT .\zadanibp.pdf
 INPUT .\zadanibp.pdf

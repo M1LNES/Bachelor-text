@@ -164,3 +164,4 @@
 \contentsline {chapter}{Seznam obrázků}{57}{appendix*.4}%
 \contentsline {chapter}{Seznam tabulek}{59}{appendix*.5}%
 \contentsline {chapter}{Seznam výpisů}{61}{appendix*.6}%
+\contentsline {chapter}{Přehled zkratek}{63}{appendix*.7}%

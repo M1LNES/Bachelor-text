@@ -752,7 +752,7 @@ Veškeré složky či soubory uvedené ve výše zmiňovaném adresáři jsou po
 	\end{longtable}
 \end{center}
 
-\subsection{Postinstall skript}
+\subsection{Skript po instalaci}
 
 Jelikož interní knihovny nebyly veřejné, bylo třeba je nějakým způsobem poskytnout. Nejprve připadala v úvahu možnost, že by se stahovaly pomocí npm, ovšem
 nakonec se přistoupilo k možnosti, že knihovny budou stahovány pomocí Emplifi Public API. K jejímu stažení se bude uživatel muset prokázat platným přístupovým tokenem.
@@ -988,7 +988,7 @@ Až uživatel udělí patřičná oprávnění, na URL specifikovanou v \texttt{
 vytvoří se nový dotaz pro API. Zde je nutné se autorizovat pomocí klientského ID a secretu. O to se stará funkce \texttt{getAuthorization()}, která je zmíněna na 
 ukázce \ref{autorHeader}. Klientské ID a secret musí být uložené v systémové proměnné (nebo \texttt{.env} souboru), aby bylo možné autentizaci provést.
 
-\begin{lstlisting}[language=Javascript, caption={Vytvoření autozirační hlavičky pro následnou autentizaci}, label=autorHeader]
+\begin{lstlisting}[language=Javascript, caption={Vytvoření autorizační hlavičky pro následnou autentizaci}, label=autorHeader]
 function getAuthorization() {
 	return `Basic ${Buffer.from(
 		`${process.env.CLIENT_ID_PUBLIC_API}:
@@ -1188,6 +1188,24 @@ do aplikací třetích stran, a podrobná uživatelská dokumentace, která popi
 Testování prokázalo, že knihovna i uživatelské rozhraní jsou stabilní, spolehlivé, schopné reagovat na nevalidní stavy a poskytovat uživatelům očekávanou funkcionalitu. Byly zmíněny 
 také možnosti rozšíření, které by mohly dále zvýšit funkcionalitu a uživatelskou přívětivost knihovny.
 
+\chapter*{Přehled zkratek}
+\addcontentsline{toc}{chapter}{Přehled zkratek}
+
+\begin{itemize}[align=left, labelwidth=1.5cm, labelsep=10pt, leftmargin=!]
+    \item[\textbf{API}]    Application Programming Interface  
+    \item[\textbf{DOM}] 	Document Object Model
+    \item[\textbf{HTML}]  Hypertext Markup Language
+    \item[\textbf{JSON}]  JavaScript Object Notation
+    \item[\textbf{JSX}] JavaScript XML
+    \item[\textbf{NPM}] Node Package Manager
+    \item[\textbf{OAuth}] Open Authorization
+    \item[\textbf{SaaS}]  Software as a Service
+    \item[\textbf{SDK}]    Software Development Kit
+    \item[\textbf{UI}]        User Interface
+    \item[\textbf{URL}] Uniform Resource Locator
+    \item[\textbf{UX}]        User Experience
+    \item[\textbf{VPN}]        Virtual Private Network
+\end{itemize}
 
 \appendix
 \chapter{Uživatelská dokumentace}\label{app:docuDocs}
@@ -1447,24 +1465,6 @@ Očekávaný výsledkem je vypsání chyby při vizualizaci a po následném obn
 \listoffigures
 \listoftables
 \listoflistings
-
-\chapter{Přehled zkratek}
-
-\begin{itemize}[align=left, labelwidth=1.5cm, labelsep=10pt, leftmargin=!]
-    \item[\textbf{API}]    Application Programming Interface  
-    \item[\textbf{DOM}] 	Document Object Model
-    \item[\textbf{HTML}]  Hypertext Markup Language
-    \item[\textbf{JSON}]  JavaScript Object Notation
-    \item[\textbf{JSX}] JavaScript XML
-    \item[\textbf{NPM}] Node Package Manager
-    \item[\textbf{SaaS}]  Software as a Service
-    \item[\textbf{SDK}]    Software Development Kit
-    \item[\textbf{UI}]        User Interface
-    \item[\textbf{URL}] Uniform Resource Locator
-    \item[\textbf{UX}]        User Experience
-    \item[\textbf{VPN}]        Virtual Private Network
-
-\end{itemize}
 
 % _____________________________________________________________________________
 %

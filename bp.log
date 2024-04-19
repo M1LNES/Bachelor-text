@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.2)  19 APR 2024 16:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  19 APR 2024 19:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2280,40 +2280,42 @@ Overfull \hbox (1.8pt too wide) detected at line 1170
 
 ] [42
 
+] [43] [44
+
 ]
-Overfull \hbox (1.8pt too wide) detected at line 1193
+Overfull \hbox (1.8pt too wide) detected at line 1211
 [] 
  []
 
-[43]
+[45]
 \FASThesis@runninghead@rule@offset=\dimen406
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [44]
-Overfull \hbox (1.8pt too wide) detected at line 1242
+ [46]
+Overfull \hbox (1.8pt too wide) detected at line 1260
 [] 
  []
 
-[45
+[47
 
 ]
 \FASThesis@runninghead@rule@offset=\dimen407
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [46]
+ [48]
 \FASThesis@runninghead@rule@offset=\dimen408
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [47]
+ [49]
 \FASThesis@runninghead@rule@offset=\dimen409
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [48]
-Overfull \hbox (0.14542pt too wide) in paragraph at lines 1373--1373
+ [50]
+Overfull \hbox (0.14542pt too wide) in paragraph at lines 1391--1391
 |[] []| 
  []
 
@@ -2321,8 +2323,8 @@ Overfull \hbox (0.14542pt too wide) in paragraph at lines 1373--1373
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [49]
-Overfull \hbox (0.67545pt too wide) in paragraph at lines 1430--1430
+ [51]
+Overfull \hbox (0.67545pt too wide) in paragraph at lines 1448--1448
 |[] []| 
  []
 
@@ -2330,50 +2332,50 @@ Overfull \hbox (0.67545pt too wide) in paragraph at lines 1430--1430
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [50]
+ [52]
 \FASThesis@runninghead@rule@offset=\dimen412
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [51] [52
+ [53] [54
 
 ]
-Overfull \hbox (20.78072pt too wide) in paragraph at lines 1447--1447
+Overfull \hbox (20.78072pt too wide) in paragraph at lines 1465--1465
 \T1/Cochineal-TLF/m/n/12 (-10) 2023-10-31. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/blog/what -[] embedded -[]
  []
 
 
-Overfull \hbox (5.28377pt too wide) in paragraph at lines 1447--1447
+Overfull \hbox (5.28377pt too wide) in paragraph at lines 1465--1465
 []\T1/Cochineal-TLF/m/it/12 (-10) Embed Vi-su-a-li-zati-ons Using Web Com-po-nents\T1/Cochineal-TLF/m/n/12 (-10) . Go-od-Data. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https :
  []
 
 
-Overfull \hbox (10.94525pt too wide) in paragraph at lines 1447--1447
+Overfull \hbox (10.94525pt too wide) in paragraph at lines 1465--1465
 \T1/newtxttz/m/n/10.95 //www . gooddata . com/docs/cloud/embed -[] visualizations/web -[] components/
  []
 
-[53
+[55
 
 ]
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 1446.
+(Font)              scaled to size 12.0pt on input line 1464.
 
-Overfull \hbox (8.47386pt too wide) in paragraph at lines 1447--1447
+Overfull \hbox (8.47386pt too wide) in paragraph at lines 1465--1465
 []$\T1/newtxttz/m/n/10.95 https : //medium . com/web -[] security/understanding -[] oauth2 -[] a50f29f0fbf7$[]\T1/Cochineal-TLF/m/n/12 (-10) . 
  []
 
 
-Overfull \hbox (23.71718pt too wide) in paragraph at lines 1447--1447
+Overfull \hbox (23.71718pt too wide) in paragraph at lines 1465--1465
 \T1/Cochineal-TLF/m/n/12 (-10) stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //technologyadvice . com/blog/information -[] technology/
  []
 
 
-Overfull \hbox (6.8463pt too wide) in paragraph at lines 1447--1447
+Overfull \hbox (6.8463pt too wide) in paragraph at lines 1465--1465
 []$\T1/newtxttz/m/n/10.95 https : //www . trustradius . com/products/microsoft -[] power -[] bi -[] embedded/
  []
 
 
-Overfull \hbox (22.11537pt too wide) in paragraph at lines 1447--1447
+Overfull \hbox (22.11537pt too wide) in paragraph at lines 1465--1465
 []\T1/Cochineal-TLF/m/it/12 (-10) What is Lo-o-ker? \T1/Cochineal-TLF/m/n/12 (-10) TrustRa-dius, 2023-12. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . trustradius .
  []
 
@@ -2381,24 +2383,21 @@ Overfull \hbox (22.11537pt too wide) in paragraph at lines 1447--1447
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [54{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_7ifgnr.enc}]
+ [56{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_7ifgnr.enc}]
 \FASThesis@runninghead@rule@offset=\dimen414
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [55] [56
+ [57] [58
 
-] (bp.lof) [57] [58
+] (bp.lof) [59] [60
 
-] (bp.lot) [59] [60
+] (bp.lot) [61] [62
 
-] (bp.lol) [61] [62
-
-] 
+] (bp.lol) [63] 
 
 <QR code requested for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" in version 0-M.>
 <Copying the QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" in version 6-M as previously calculated.>
-[63]
 
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
@@ -2438,14 +2437,14 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `bp.out' has not changed.
-(rerunfilecheck)             Checksum: 7522EB992D0A5A9DEBC8E64149180A5C;8789.
+(rerunfilecheck)             Checksum: CDD70CEDFDF076B022D089E38804717E;8796.
 Package logreq Info: Writing requests to 'bp.run.xml'.
 \openout1 = `bp.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  52470 strings out of 474586
- 993492 string characters out of 5758344
+ 993490 string characters out of 5758344
  2017558 words of memory out of 5000000
  73302 multiletter control sequences out of 15000+600000
  999202 words of font info for 280 fonts, out of 8000000 for 9000
@@ -2458,7 +2457,7 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (74 pages, 1779037 bytes).
+Output written on bp.pdf (74 pages, 1779057 bytes).
 PDF statistics:
  1358 PDF objects out of 1440 (max. 8388607)
  412 named destinations out of 1000 (max. 500000)

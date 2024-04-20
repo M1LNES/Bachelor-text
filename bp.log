@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  20 APR 2024 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  20 APR 2024 20:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2350,43 +2350,27 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
  [53] [54
 
 ]
-Overfull \hbox (20.78072pt too wide) in paragraph at lines 1465--1465
-\T1/Cochineal-TLF/m/n/12 (-10) 2023-10-31. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/blog/what -[] embedded -[]
+Overfull \hbox (34.64034pt too wide) in paragraph at lines 1465--1465
+\T1/Cochineal-TLF/m/n/12 (-10) 20]. []Do-stupné z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/docs/cloud/embed -[] visualizations/
  []
 
 
-Overfull \hbox (5.28377pt too wide) in paragraph at lines 1465--1465
-[]\T1/Cochineal-TLF/m/it/12 (-10) Embed Vi-su-a-li-zati-ons Using Web Com-po-nents\T1/Cochineal-TLF/m/n/12 (-10) . Go-od-Data. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https :
- []
-
-
-Overfull \hbox (10.94525pt too wide) in paragraph at lines 1465--1465
-\T1/newtxttz/m/n/10.95 //www . gooddata . com/docs/cloud/embed -[] visualizations/web -[] components/
+Overfull \hbox (15.90599pt too wide) in paragraph at lines 1465--1465
+[]\T1/Cochineal-TLF/m/n/12 (-10) Do-stupné z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/docs/cloud/embed -[] visualizations/
  []
 
 [55
 
 ]
+Overfull \hbox (7.27242pt too wide) in paragraph at lines 1465--1465
+[]\T1/Cochineal-TLF/m/it/12 (-10) HTTP au-then-ti-cation []\T1/Cochineal-TLF/m/n/12 (-10) [on-line][]. [[]cit.[] 2024-04-20]. []Do-stupné z[]: []$\T1/newtxttz/m/n/10.95 https : //developer .
+ []
+
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/sc' will be
 (Font)              scaled to size 12.0pt on input line 1464.
 
-Overfull \hbox (8.47386pt too wide) in paragraph at lines 1465--1465
-[]$\T1/newtxttz/m/n/10.95 https : //medium . com/web -[] security/understanding -[] oauth2 -[] a50f29f0fbf7$[]\T1/Cochineal-TLF/m/n/12 (-10) . 
- []
-
-
-Overfull \hbox (23.71718pt too wide) in paragraph at lines 1465--1465
-\T1/Cochineal-TLF/m/n/12 (-10) stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //technologyadvice . com/blog/information -[] technology/
- []
-
-
-Overfull \hbox (6.8463pt too wide) in paragraph at lines 1465--1465
-[]$\T1/newtxttz/m/n/10.95 https : //www . trustradius . com/products/microsoft -[] power -[] bi -[] embedded/
- []
-
-
-Overfull \hbox (22.11537pt too wide) in paragraph at lines 1465--1465
-[]\T1/Cochineal-TLF/m/it/12 (-10) What is Lo-o-ker? \T1/Cochineal-TLF/m/n/12 (-10) TrustRa-dius, 2023-12. []Do-stupné také z[]: []$\T1/newtxttz/m/n/10.95 https : //www . trustradius .
+Overfull \hbox (10.62303pt too wide) in paragraph at lines 1465--1465
+\T1/newtxttz/m/n/10.95 www . oauth . com/oauth2 -[] servers/access -[] tokens/access -[] token -[] response/
  []
 
 \FASThesis@runninghead@rule@offset=\dimen413
@@ -2453,11 +2437,11 @@ Package logreq Info: Writing requests to 'bp.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52470 strings out of 474586
- 993490 string characters out of 5758344
+ 52461 strings out of 474586
+ 993247 string characters out of 5758344
  2017558 words of memory out of 5000000
  73302 multiletter control sequences out of 15000+600000
- 999202 words of font info for 280 fonts, out of 8000000 for 9000
+ 997831 words of font info for 274 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,13n,113p,1969b,3321s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -2467,9 +2451,9 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (74 pages, 1779070 bytes).
+Output written on bp.pdf (74 pages, 1778684 bytes).
 PDF statistics:
- 1358 PDF objects out of 1440 (max. 8388607)
+ 1356 PDF objects out of 1440 (max. 8388607)
  412 named destinations out of 1000 (max. 500000)
  62122 words of extra memory for PDF output out of 74296 (max. 10000000)
 

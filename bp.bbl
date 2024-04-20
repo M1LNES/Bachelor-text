@@ -43,8 +43,12 @@
       \field{day}{31}
       \field{month}{10}
       \field{title}{Embedded Analytics: All You Need To Know}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
       \field{year}{2023}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.gooddata.com/blog/what-embedded-analytics/
       \endverb
@@ -73,8 +77,12 @@
       \field{day}{22}
       \field{month}{2}
       \field{title}{Co je Dashboard?}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
       \field{year}{2023}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://vojtechbruk.cz/pojem/dashboard/
       \endverb
@@ -89,11 +97,11 @@
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{[Online: accessed 9.Dec.2023]}
       \field{title}{Dashboard}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.emplifi.io/platform/latest/home/dashboard
       \endverb
@@ -107,10 +115,12 @@
       }
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{month}{4}
-      \field{note}{[Online: accessed 11.Apr.2024]}
-      \field{year}{2024}
-      \field{dateera}{ce}
+      \field{labeltitlesource}{title}
+      \field{title}{Actionable insights from LinkedIn now available for owned profiles in Emplifi Content Hub and Dashboard}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://emplifi.io/resources/blog/linkedin-insights-emplifi-analytics-dashboard-widgets
       \endverb
@@ -128,8 +138,12 @@
       \field{day}{15}
       \field{month}{12}
       \field{title}{Software as a Service (SaaS): Definition and Examples}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
       \field{year}{2022}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.investopedia.com/terms/s/software-as-a-service-saas.asp
       \endverb
@@ -157,10 +171,13 @@
       \field{labeltitlesource}{title}
       \field{day}{14}
       \field{month}{9}
-      \field{note}{[Online: accessed 7.Apr.2024]}
       \field{title}{What’s an iFrame and how can I use it?}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
       \field{year}{2017}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.go1.com/blog/whats-iframe-can-use
       \endverb
@@ -175,8 +192,11 @@
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
-      \field{note}{[Online: accessed 7.Apr.2024]}
       \field{title}{Embed Visualizations Using Web Components}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.gooddata.com/docs/cloud/embed-visualizations/web-components/
       \endverb
@@ -194,8 +214,12 @@
       \field{day}{13}
       \field{month}{7}
       \field{title}{SDK vs. API: What’s the Difference?}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
       \field{year}{2021}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.ibm.com/blog/sdk-vs-api/
       \endverb
@@ -210,8 +234,11 @@
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
-      \field{note}{[Online: accessed 7.Apr.2024]}
       \field{title}{Embed Visualizations Using React SDK}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.gooddata.com/docs/cloud/embed-visualizations/react-sdk/
       \endverb
@@ -229,8 +256,12 @@
       \field{day}{8}
       \field{month}{6}
       \field{title}{What is API Authentication?}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
       \field{year}{2023}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://nonamesecurity.com/learn/what-is-api-authentication/
       \endverb
@@ -259,8 +290,12 @@
       \field{day}{26}
       \field{month}{7}
       \field{title}{4 Most Used REST API Authentication Methods}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
       \field{year}{2019}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://blog.restcase.com/4-most-used-rest-api-authentication-methods/
       \endverb
@@ -272,11 +307,11 @@
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{[Online: accessed 9.Dec.2023]}
       \field{title}{HTTP authentication}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication
       \endverb
@@ -291,11 +326,11 @@
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{[Online: accessed 9.Dec.2023]}
       \field{title}{What is an API key?}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://aws.amazon.com/what-is/api-key/
       \endverb
@@ -350,8 +385,12 @@
       \field{day}{2}
       \field{month}{8}
       \field{title}{Understanding OAuth2}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
       \field{year}{2023}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://medium.com/web-security/understanding-oauth2-a50f29f0fbf7
       \endverb
@@ -366,11 +405,11 @@
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
-      \field{month}{4}
-      \field{note}{[Online: accessed 7.Apr.2024]}
       \field{title}{Auth Flow Diagrams}
-      \field{year}{2024}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.eraser.io/use-case/auth-flow-diagrams
       \endverb
@@ -385,11 +424,11 @@
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{[Online: accessed 9.Dec.2023]}
       \field{title}{Access Token Response}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/
       \endverb
@@ -404,10 +443,11 @@
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
-      \field{month}{12}
       \field{title}{GoodData embedded analytics platform}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.gooddata.com/embedded-analytics/
       \endverb
@@ -422,11 +462,11 @@
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{[Online: accessed 9.Dec.2023]}
       \field{title}{What is GoodData?}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.trustradius.com/products/gooddata/reviews?qs=pros-and-cons#reviews
       \endverb
@@ -455,8 +495,12 @@
       \field{day}{30}
       \field{month}{1}
       \field{title}{Best Embedded Analytics Tools (2023)}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
       \field{year}{2023}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://technologyadvice.com/blog/information-technology/embedded-analytics-software/
       \endverb
@@ -471,11 +515,11 @@
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{[Online: accessed 9.Dec.2023]}
       \field{title}{What is Microsoft Power BI Embedded?}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.trustradius.com/products/microsoft-power-bi-embedded/reviews?qs=pros-and-cons
       \endverb
@@ -490,11 +534,11 @@
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{[Online: accessed 9.Dec.2023]}
       \field{title}{Introduction to LookML}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://cloud.google.com/looker/docs/what-is-lookml
       \endverb
@@ -509,11 +553,11 @@
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{[Online: accessed 9.Dec.2023]}
       \field{title}{What is Looker?}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.trustradius.com/products/looker/reviews	
       \endverb
@@ -542,10 +586,11 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{4}
       \field{title}{Auth Flow Diagrams}
-      \field{year}{2024}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.analytics8.com/blog/comparing-embedded-analytics-solutions-in-five-business-intelligence-tools/#tableau
       \endverb
@@ -560,11 +605,11 @@
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
-      \field{month}{4}
-      \field{note}{[Online: accessed 8.Apr.2024]}
       \field{title}{What is Tableau Desktop?}
-      \field{year}{2024}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.trustradius.com/products/tableau-desktop/reviews
       \endverb
@@ -593,8 +638,12 @@
       \field{day}{18}
       \field{month}{2}
       \field{title}{Why You Should Use React.js For Web Development}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
       \field{year}{2021}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.freecodecamp.org/news/why-use-react-for-web-development/
       \endverb
@@ -623,8 +672,12 @@
       \field{day}{12}
       \field{month}{3}
       \field{title}{10 Key Reasons Why You Should Use React for Web Development}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
       \field{year}{2023}
       \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.techmagic.co/blog/why-we-use-react-js-in-the-development/
       \endverb
@@ -639,11 +692,11 @@
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{note}{[Online: accessed 9.Dec.2023]}
       \field{title}{What is Dom in React?}
-      \field{year}{2023}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.javatpoint.com/what-is-dom-in-react
       \endverb
@@ -683,10 +736,10 @@
       }
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{month}{4}
-      \field{note}{[Online: accessed 13.Apr.2024]}
-      \field{year}{2024}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://legacy.reactjs.org/docs/components-and-props.html
       \endverb
@@ -723,11 +776,11 @@
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
-      \field{month}{4}
-      \field{note}{[Online: accessed 11.Apr.2024]}
       \field{title}{MUI documentation}
-      \field{year}{2024}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://mui.com/
       \endverb
@@ -742,11 +795,11 @@
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
-      \field{month}{4}
-      \field{note}{[Online: accessed 9.Apr.2024]}
       \field{title}{Emplifi API Documentation}
-      \field{year}{2024}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://api.emplifi.io/
       \endverb
@@ -758,11 +811,11 @@
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
-      \field{month}{4}
-      \field{note}{[Online: accessed 11.Apr.2024]}
       \field{title}{Powerful asynchronous state management for TS/JS, React, Solid, Vue, Svelte and Angular}
-      \field{year}{2024}
-      \field{dateera}{ce}
+      \field{urlday}{20}
+      \field{urlmonth}{4}
+      \field{urlyear}{2024}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://tanstack.com/query/latest
       \endverb

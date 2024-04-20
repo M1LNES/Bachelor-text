@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  19 APR 2024 19:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  20 APR 2024 16:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2168,6 +2168,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 747--747
  []
 
 
+Underfull \hbox (badness 4084) in paragraph at lines 747--748
+[]|\T1/Cochineal-TLF/m/n/12 (+10) Soubor za-ji²-´u-jící kon-zis-tenci verzí zá-vis-lostí
+ []
+
+
 Overfull \hbox (0.9891pt too wide) in paragraph at lines 751--751
 []|[][]\T1/newtxttz/m/n/10.95 webpack.config.js| 
  []
@@ -2285,6 +2290,11 @@ Overfull \hbox (1.8pt too wide) detected at line 1170
 ]
 Overfull \hbox (1.8pt too wide) detected at line 1211
 [] 
+ []
+
+
+Overfull \hbox (0.94716pt too wide) in paragraph at lines 1234--1235
+[]\T1/Cochineal-TLF/m/n/12 (-10) Dokumentace ob-sa-huje i od-kaz na Gi-tHub re-po-zi-tá° se zdro-jo-vým kó-dem. V n¥m
  []
 
 [45]
@@ -2457,7 +2467,7 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (74 pages, 1779057 bytes).
+Output written on bp.pdf (74 pages, 1779070 bytes).
 PDF statistics:
  1358 PDF objects out of 1440 (max. 8388607)
  412 named destinations out of 1000 (max. 500000)

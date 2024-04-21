@@ -552,7 +552,7 @@ nespecifikovaný parametr, můžeme jej dodefinovat použitím instance PreJSONu
 \end{lstlisting}
 		
 Atributy \texttt{customer\_id} a \texttt{time} jsou již předdefinové, ale na uživateli zůstává možnost volby parametru \texttt{platform}. Datový typ parametru musí být vždy specifikován.
-Zde se očekává string hodnota, která může nabývat (opět pouze pro ukázku) např. hodnot "instragram", "facebook", "snapchat", "linkedin" apod. Uživatel tedy zvolí jednu ze sociálních sítí
+Zde se očekává string hodnota, která může nabývat (opět pouze pro ukázku) např. hodnot \texttt{instragram}, \texttt{facebook}, \texttt{snapchat}, \texttt{linkedin} apod. Uživatel tedy zvolí jednu ze sociálních sítí
 a pomocí funkce \texttt{expand()} může tuto hodnotu dodefinovat. Výsledek může vypadat poté jako na ukázce \ref{expandedPreJson}.
 
 \begin{lstlisting}[language=json, caption={Expandovaný PreJSON objekt}, label=expandedPreJson]
@@ -595,7 +595,7 @@ Následně je třeba tuto komponentu s~předanými parametry vložit do komponen
 
 \section{Návrh knihovny}
 
-Knihovna se bude skládat jak z~front-endové části (vykreslování widgetů), tak i back-endové (provolávání API endpointů). Jejím cílem bude identifikovat, jaká data stáhnout z~API a patřičně je zpracovat, případně reagovat na chyby (nevalidní data, vypršení platnosti tokenu).
+Knihovna se bude skládat jak z~frontendové části (vykreslování widgetů), tak i backendové (provolávání API endpointů). Jejím cílem bude identifikovat, jaká data stáhnout z~API a patřičně je zpracovat, případně reagovat na chyby (nevalidní data, vypršení platnosti tokenu).
 \subsection{Omni Studio}
 Veškeré vizualizace se nachází v~interní aplikaci Omni Studio, která slouží vývojářům k~rychlému a jednoduchému zobrazení grafů. K~embedování bude zapotřebí mít přístup do této aplikace (přes VPN). Tato interní aplikace
 obsahuje stovky dashboardů, na nichž se nachází widgety. Jak již bylo zmíněno, widgety nejsou ovšem jen vizualizované grafy, ale může se jednat např. o~tabulky, výběrové seznamy či prostý text sloužící k~popisu boardu.
@@ -925,7 +925,7 @@ což je podmínka, která jestliže je splněna, tak se spustí stahování dat.
 je kód čitelnější.
 
 Nehledě na výsledek a stav vizualizace, uplatní se na výsledek této komponenty výška, šířka a styly předané přes properties. Pro budoucí rozšíření knihovny byla tato komponenta
-naimplementována obecněji - tj. pokud proběhly veškeré data fetche v~pořádku, ještě se zkontroluje, zda-li typ widgetu je opravdu "vision". Momentálně jiný typ widgetu ani podporován není,
+naimplementována obecněji - tj. pokud proběhly veškeré data fetche v~pořádku, ještě se zkontroluje, zda-li typ widgetu je opravdu \texttt{vision}. Momentálně jiný typ widgetu ani podporován není,
 ale komponenta je připravena v~budoucnosti na podporu všech druhů widgetů.
 
 

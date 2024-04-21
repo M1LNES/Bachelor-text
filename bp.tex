@@ -284,8 +284,8 @@ Součástí autorizační odpovědi bývá i několik dalších údajů. Odpově
 }
 \end{lstlisting}
 	  
-Odpověď bývá ve formátu JSON (JavaScript Object Notation) a obsahuje informace o~daném přístupovém tokenu (access\_token). Kromě přístupového tokenu obvykle obsahuje i refresh\_token. Ten umožňuje uživateli 
-používat stále jeden token bez nutnosti generování nového \cite{oauthResponseExample}. Dále může obsahovat specifikující práva uživatele (scope), platnost tokenu (expires\_in) či typ tokenu (token\_type), jež některé z~nich byly zmíněny v~předchozí kapitole.
+Odpověď bývá ve formátu JSON (JavaScript Object Notation) a obsahuje informace o~daném přístupovém tokenu (\texttt{access\_token}). Kromě přístupového tokenu obvykle obsahuje i \texttt{refresh\_token}. Ten umožňuje uživateli 
+používat stále jeden token bez nutnosti generování nového \cite{oauthResponseExample}. Dále může obsahovat specifikující práva uživatele (\texttt{scope}), platnost tokenu (\texttt{expires\_in}) či typ tokenu (\texttt{token\_type}), jež některé z~nich byly zmíněny v~předchozí kapitole.
 Přesný formát odpovědi je ale specifikován samotným API - tudíž každé API může mít jiné délky přístupových a obnovovacích tokenů, časové platnosti tokenů či i samotné atributy v~odpovědi a jejich názvy.
 %
 % Podkapitola existující řešení
@@ -296,7 +296,7 @@ internetových recenzí či firmy, které byly pro inspiraci doporučeny extern�
 \subsection{GoodData}
 Firma GoodData byla zmíněna zadavatelem jako jedna z~nejvýraznějších na trhu. Dodává embedded analytics systémy firmám jako je VISA, Zalando či Bentley \cite{goodDataEmbeddingPlatform}. 
 Embedování provádí třemi zmíněnými způsoby - HTML iframem, webovou komponentou či React SDK. Zákazníkům nabízí přizpůsobení dashboardů tak, aby odpovídaly zákazníkovo značce. GoodData získaly
-v~roce 2023 hned několik ocenění firmou TrustRadius, důvěryhodnou platformou v~oblasti B2B (bussines to bussines) \cite{trustRadiusDiscusionGoodData}. Firma GoodData obdržela ocenění Best Value for Price,
+v~roce 2023 hned několik ocenění firmou TrustRadius, důvěryhodnou platformou v~oblasti B2B (Bussines to Bussines) \cite{trustRadiusDiscusionGoodData}. Firma GoodData obdržela ocenění Best Value for Price,
 Best Relationship či Top Rated 2023. Zákazníci firmy GoodData si v~recenzích chválí hlavně snadné používání, zákaznickou podporu, širokou škálu podporovaných databází či uživatelsky přívětivé
 rozhraní \cite{trustRadiusDiscusionGoodData}. Naopak se zmiňují, že dokumentace může být nedostačující či některé endpointy v~API mají neintuitivní parametry. I~tak ale 92\% recenzentů uvádí,
 že by si produkt zakoupili znovu.
@@ -311,7 +311,7 @@ Microsoft Power BI podstatně méně recenzí než k~produktu GoodData (5x mén�
 V~oblasti modelování data vyniká platforma Powered by Looker \cite{bestEmbTools2023}. Jedná se o~produkt služby Google Cloud, který poskytuje způsob, jak sledovat změny a prohlížet jejich
 historii v~databázi. Disponuje modelovacím jazykem LookML založeným na SQL, který slouží k~vytváření sémantických datových modelů. Pomocí něj lze popisovat jednotlivé dimenze, agregáty,
 výpočty či datové vztahy v~databázi \cite{googleLookMLDoc}. Z~toho vyplývá, že datové modely jsou rozšiřitelné, opakovatelně použitelné a konzistentní a tudíž efektivní. V~roce 2022 byl tento produkt
-oceněn Top Rated a Most Loved společností TrustRadius \cite{trustRadiusDiscusionLooker}. Uživatelé zmiňují, že produkt může být pomalejší a že nástroje na přizpůsobení dashboardů by mohly být
+oceněn jako Top Rated a Most Loved společností TrustRadius \cite{trustRadiusDiscusionLooker}. Uživatelé zmiňují, že produkt může být pomalejší a že nástroje na přizpůsobení dashboardů by mohly být
 vylepšeny a rozšířeny.
 
 

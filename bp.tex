@@ -260,7 +260,6 @@ Pokud API bude sloužit pouze ke čtení, je zabezpečení API klíčem tou nejl
 OAuth (Open Authorization) protokol byl vyvinut jako řešení pro udělování přístupu na předem definovanou dobu bez sdílené uživatelských jmen a hesel \cite{understandingOAuth2}. OAuth 2.0
 je nejlepší volbou pro identifikaci osobních uživatelských účtů a udělování patřičných oprávnění \cite{mostUsedAuthentication}. Proces autentizace je vidět na obrázku \ref{fig:oauth2Diagram}.
 
-
 \begin{figure}
 	\centering
 	\includegraphics[width=1\textwidth]{pictures/oauth2-diagram.png}
@@ -268,12 +267,12 @@ je nejlepší volbou pro identifikaci osobních uživatelských účtů a udělo
 	\label{fig:oauth2Diagram}
 \end{figure}
 
-
 Nejprve se uživatel přihlásí do systému - nejčastěji formou uživatelského jména a hesla, nebo klientského id a secretu. Tím se pošle HTTP požadavek na endpoint. Autorizace uživateli následně
 vrátí token. Pokud má uživatel již platný token, může přistupovat k~datům. Naopak pokud mu token již expiroval nebo není platný, volání do API mu vrátí chybové hlášení. 
 
-Součástí autorizační odpovědi bývá i několik dalších údajů. Odpověď může vypadat např. jako na \ref{tokenResponse}. 
+Součástí autorizační odpovědi bývá i několik dalších údajů. Odpověď může vypadat např. jako na ukázce \ref{tokenResponse}. 
 
+\begin{minipage}[c]{0.95\textwidth}
 \begin{lstlisting}[language=json, caption={Ukázková odpověď autorizačního serveru}, label=tokenResponse]
 {
 	"access_token": "G7k4Q2s1bD5z9x",
@@ -283,7 +282,8 @@ Součástí autorizační odpovědi bývá i několik dalších údajů. Odpově
 	"scope": "create"
 }
 \end{lstlisting}
-	  
+\end{minipage}
+
 Odpověď bývá ve formátu JSON (JavaScript Object Notation) a obsahuje informace o~daném přístupovém tokenu (\texttt{access\_token}). Kromě přístupového tokenu obvykle obsahuje i \texttt{refresh\_token}. Ten umožňuje uživateli 
 používat stále jeden token bez nutnosti generování nového \cite{oauthResponseExample}. Dále může obsahovat specifikující práva uživatele (\texttt{scope}), platnost tokenu (\texttt{expires\_in}) či typ tokenu (\texttt{token\_type}), jež některé z~nich byly zmíněny v~předchozí kapitole.
 Přesný formát odpovědi je ale specifikován samotným API - tudíž každé API může mít jiné délky přístupových a obnovovacích tokenů, časové platnosti tokenů či i samotné atributy v~odpovědi a jejich názvy.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  21 APR 2024 15:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  21 APR 2024 15:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2015,7 +2015,7 @@ Overfull \hbox (1.8pt too wide) detected at line 330
  []
 
 [13]
-<pictures/emplifiAPI.png, id=607, 1204.5pt x 630.85687pt>
+<pictures/emplifiAPI.png, id=608, 1204.5pt x 630.85687pt>
 File: pictures/emplifiAPI.png Graphic file (type png)
 <use pictures/emplifiAPI.png>
 Package pdftex.def Info: pictures/emplifiAPI.png  used on input line 380.
@@ -2105,7 +2105,7 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [18]
-<pictures/omni-studio.png, id=689, 1630.59187pt x 1212.02812pt>
+<pictures/omni-studio.png, id=690, 1630.59187pt x 1212.02812pt>
 File: pictures/omni-studio.png Graphic file (type png)
 <use pictures/omni-studio.png>
 Package pdftex.def Info: pictures/omni-studio.png  used on input line 607.
@@ -2277,7 +2277,7 @@ Overfull \hbox (1.8pt too wide) detected at line 1242
 [] 
  []
 
-<pictures/QR.pdf, id=916, 770.12718pt x 770.12718pt>
+<pictures/QR.pdf, id=917, 770.12718pt x 770.12718pt>
 File: pictures/QR.pdf Graphic file (type pdf)
 <use pictures/QR.pdf>
 Package pdftex.def Info: pictures/QR.pdf  used on input line 1267.
@@ -2441,9 +2441,9 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (72 pages, 1778972 bytes).
+Output written on bp.pdf (72 pages, 1779169 bytes).
 PDF statistics:
- 1345 PDF objects out of 1440 (max. 8388607)
+ 1346 PDF objects out of 1440 (max. 8388607)
  411 named destinations out of 1000 (max. 500000)
  62127 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -385,11 +385,15 @@ přístupový token a zaslání prvního requestu s~žádostí o~data.
 Pro vytvoření tokenu je třeba uživatele přesměrovat na webovou URL (Uniform Resource Locator), kde bude požádán o~udělení souhlasu z~jeho Emplifi Suite účtu.
 Do URL (\url{https://api.emplifi.io/oauth2/0/auth}), na kterou uživatele přesměrujeme, bude třeba vložit několik parametrů potřebných k~autentizaci a k~následnému vrácení tokenu. 
 
-\begin{center}
+%\begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
 	\caption{Seznam všech parametrů vkládaných do URL adresy při tvorbě tokenu \cite{emplifiDocs}}
 	\label{tab:allParametersAPI}\\
 	\toprule[1.5pt]
+	\textbf{Parametry} & \textbf{Popis}\\
+	\midrule
+	\endfirsthead
+	\multicolumn{2}{c}{\tablename{}~\thetable{} \textit{(pokračování z předchozí stránky)}}\\
 	\endhead
 	\midrule
 	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
@@ -401,25 +405,28 @@ Do URL (\url{https://api.emplifi.io/oauth2/0/auth}), na kterou uživatele přesm
 	\midrule
 	\verb"redirect_uri" & Návratová adresa. Na tuto adresu bude při úspěšné autorizaci přesměrován přístupový token. Zároveň tato adresa musí být povolena vývojáři v~interní databázi.\\
 	\midrule
-	\verb"response_type" & Typ - Emplifi momentálně podporuje pouze hodnotu "code".\\
+	\verb"response_type" & Typ - Emplifi momentálně podporuje pouze hodnotu \texttt{code}.\\
 	\midrule
 	\verb"scope" & Specifikuje prostředky oddělené mezerou, ke kterým aplikace může přistupovat klientským účtem. Ty při udělování souhlasu budou předloženy ke schválení. \\
 	\midrule
 	\verb"state" & Hodnota sloužící k~validaci přijaté odpovědi. Při zaslání requestu je vložena hodnota do parametru, autorizační server jí při zpracování dotazu odešle zpět s~daty. Uživatelská aplikace by následně měla porovnávat, zda tato zaslaná hodnota je shodná s~původní - to slouží k~zabránění útoků Cross-site Request Forgery.\\
 	\midrule
-	\verb"prompt" & Musí být nastavena na hodnotu "consent", pokud má být refresh token vrácen společně s~přístupovým.\\
+	\verb"prompt" & Musí být nastavena na hodnotu \texttt{consent}, pokud má být refresh token vrácen společně s~přístupovým.\\
 	\end{longtable}
-\end{center}
-
+%\end{center}
 
 Pokud veškeré parametry budou správně nastaveny a uživatel udělí souhlas s~používáním Suite účtu, na URL \texttt{redirect\_uri} se vrátí zpráva s~autorizačním kódem. Tento kód
 slouží k~výměně za přístupový token. O~ten je možno si zažádat POST requestem na adresu \url{https://api.emplifi.io/oauth2/0/token}. Struktura requestu je popsána v~tabulkách \ref{tab:exampleRequestHeader} a \ref{tab:exampleRequestBody}.
 
-\begin{center}
+%\begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
 	\caption{Hlavička requestu na token \cite{emplifiDocs}}
 	\label{tab:exampleRequestHeader}\\
 	\toprule[1.5pt]
+	\textbf{Parametry} & \textbf{Popis}\\
+	\midrule
+	\endfirsthead
+	\multicolumn{2}{c}{\tablename{}~\thetable{} \textit{(pokračování z předchozí stránky)}}\\
 	\endhead
 	\midrule
 	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
@@ -427,17 +434,21 @@ slouží k~výměně za přístupový token. O~ten je možno si zažádat POST r
 	\bottomrule[1.5pt]
 	\endlastfoot
 	%
-	\verb"Authorization" & Řetězec \texttt{Basic} s~klientským identifikátorem a zakódovaným klientským secretem oddělený dvojtečkou v~Base64. Výsledná hodnota vypadá např. takto: "Basic Y2xpZW50X2lkOmNsaWVudF9zZWNyZXQ=."\\
+	\verb"Authorization" & Řetězec \texttt{Basic} s~klientským identifikátorem a zakódovaným klientským secretem oddělený dvojtečkou v~Base64. Výsledná hodnota vypadá např. takto: \texttt{Basic Y2xpZW50X2lkOmNsaWVudF9zZWNyZXQ=.}\\
 	\midrule
-	\verb"Content-Type" & Hodnota "application/x-www-form-urlencoded" \\
+	\verb"Content-Type" & Hodnota \texttt{application/x-www-form-urlencoded} \\
 	\end{longtable}
-\end{center}
+%\end{center}
 
-\begin{center}
+%\begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
 	\caption{Tělo requestu na token \cite{emplifiDocs}}
 	\label{tab:exampleRequestBody}\\
 	\toprule[1.5pt]
+	\textbf{Parametry} & \textbf{Popis}\\
+	\midrule
+	\endfirsthead
+	\multicolumn{2}{c}{\tablename{}~\thetable{} \textit{(pokračování z předchozí stránky)}}\\
 	\endhead
 	\midrule
 	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
@@ -447,19 +458,23 @@ slouží k~výměně za přístupový token. O~ten je možno si zažádat POST r
 	%
 	\verb"code" & Řetězec sloužící k~následné validaci při zpětném volání. \\
 	\midrule
-	\verb"grant_type" & Hodnota "authorization\_code" \\
+	\verb"grant_type" & Hodnota \texttt{authorization\_code} \\
 	\midrule
 	\verb"redirect_uri" & URL adresa, kam bude přesměrován token. Musí být stejná jako v~tabulce \ref{tab:allParametersAPI} \\
 	\end{longtable}
-\end{center}
+%\end{center}
 
 Následně obdržíme token ve formátu jako na \ref{tokenResponse}. Přesné návratové hodnoty jsou popsány v~tabulce \ref{tab:exampleRequestResponse}.
 
-\begin{center}
+%\begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
 	\caption{Tělo odpovědi se zaslaným tokenem \cite{emplifiDocs}}
 	\label{tab:exampleRequestResponse}\\
 	\toprule[1.5pt]
+	\textbf{Parametry} & \textbf{Popis}\\
+	\midrule
+	\endfirsthead
+	\multicolumn{2}{c}{\tablename{}~\thetable{} \textit{(pokračování z předchozí stránky)}}\\
 	\endhead
 	\midrule
 	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
@@ -469,15 +484,15 @@ Následně obdržíme token ve formátu jako na \ref{tokenResponse}. Přesné n�
 	%
 	\verb"access_token" & Přístupový token k~Emplifi Public API. \\
 	\midrule
-	\verb"token_type" & Jediný podporovaný typem je "bearer". \\
+	\verb"token_type" & Jediný podporovaný typem je \texttt{bearer}. \\
 	\midrule
 	\verb"expires_in" & Platnost tokenu ve vteřinách. \\
 	\midrule
-	\verb"refresh_token" & Token pro obnovení přístupového tokenu. Zaslán pouze v~případě, pokud \verb"scope" obsahuje řetězec "offline\_access".\\
+	\verb"refresh_token" & Token pro obnovení přístupového tokenu. Zaslán pouze v~případě, pokud \verb"scope" obsahuje řetězec \texttt{offline\_access}.\\
 	\midrule
 	\verb"scope" & Prostředky, které byly uživatelem uděleny. Odděleny mezerou. \\
 	\end{longtable}
-\end{center}
+%\end{center}
 
 
 
@@ -488,11 +503,15 @@ API vrátí odpověď s~informací, že uživatel či účet překročili maxim�
 
 Má-li uživatel platný token, může začít se zasíláním dotazů. Emplifi API disponuje množstvím endpointů, přičemž endpointy využívané k~embedování jsou zmíněné v~tabulce \ref{tab:embeddingEndpoints}. 
 
-\begin{center}
+%\begin{center}
 	\begin{longtable}{p{.25\textwidth}p{.6\textwidth}}
 	\caption{Endpointy používané k~embedování}
 	\label{tab:embeddingEndpoints}\\
 	\toprule[1.5pt]
+	\textbf{Název} & \textbf{Popis}\\
+	\midrule
+	\endfirsthead
+	\multicolumn{2}{c}{\tablename{}~\thetable{} \textit{(pokračování z předchozí stránky)}}\\
 	\endhead
 	\midrule
 	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
@@ -504,9 +523,9 @@ Má-li uživatel platný token, může začít se zasíláním dotazů. Emplifi 
 	\midrule
 	\verb"/3/omni-studio" &  Získávání widget konfigurací, fieldů a vytváření Omni API tokenů\\
 	\midrule
-	\verb"/oauth2/0" &  Vytváření Public API tokenů. \\
+	\verb"/oauth2/0" &  Vytváření Public API a Omni API tokenů. \\
 	\end{longtable}
-\end{center}
+%\end{center}
 
 Endpoint omni-studio bylo nutné vytvořit zadavatelem, jelikož Omni API endpointy bylo možné volat pouze při použití firemní VPN (Virtual Private Network). Nyní lze tyto endpointy provolávat prostřednictvím Public API. Původní
 strukturu Omni API requestu lze vložit do těla public API requestu, což umožní uživateli embedovat grafy i mimo VPN.
@@ -550,11 +569,15 @@ neobsahuje ale např. nadpisy, nápovědy apod., to bude zajišťovat výsledná
 
 O~vykreslování se stará komponenta \texttt{<Vision/>}. Pro potřeby BP budou využívány parametry uvedené v~tabulce \ref{tab:visionParams}.
 
-\begin{center}
+%\begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
 	\caption{Parametry komponenty <Vision/>}
 	\label{tab:visionParams}\\
 	\toprule[1.5pt]
+	\textbf{Parametry} & \textbf{Popis}\\
+	\midrule
+	\endfirsthead
+	\multicolumn{2}{c}{\tablename{}~\thetable{} \textit{(pokračování z předchozí stránky)}}\\
 	\endhead
 	\midrule
 	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
@@ -566,7 +589,7 @@ O~vykreslování se stará komponenta \texttt{<Vision/>}. Pro potřeby BP budou 
 	\midrule
 	\verb"input" &  Data zobrazována v~grafu. \\
 	\end{longtable}
-\end{center}
+%\end{center}
 
 Následně je třeba tuto komponentu s~předanými parametry vložit do komponenty \texttt{<VisionContextProvider/>}, aby došlo ke správnému vyrenderování.
 
@@ -710,11 +733,15 @@ Výsledná transformovaná knihovna má následující strukturu:
 Veškeré složky či soubory uvedené ve výše zmiňovaném adresáři jsou podrobně popsány v~tabulce \ref{tab:dirLibrary}
 
 
-\begin{center}
+%\begin{center}
 	\begin{longtable}{p{.25\textwidth}p{.6\textwidth}}
 	\caption{Obsah knihovny}
 	\label{tab:dirLibrary}\\
 	\toprule[1.5pt]
+	\textbf{Prvek} & \textbf{Popis}\\
+	\midrule
+	\endfirsthead
+	\multicolumn{2}{c}{\tablename{}~\thetable{} \textit{(pokračování z předchozí stránky)}}\\
 	\endhead
 	\midrule
 	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
@@ -750,7 +777,7 @@ Veškeré složky či soubory uvedené ve výše zmiňovaném adresáři jsou po
 	\midrule
 	\verb"webpack.config.js" & Definuje, jak bude zdrojový kód knihovny sestaven.  \\
 	\end{longtable}
-\end{center}
+%\end{center}
 
 \subsection{Skript po instalaci}
 
@@ -800,7 +827,7 @@ V~tomto adresáři se nachází veškeré funkce, které se využívají k~dotaz
 Soubor \texttt{functions.js} obsahuje funkci určenou pro parsování řetězce na string. Byla vytvořena z~důvodu jednoduché manipulace s~uživatelovým vstupem. Není tedy třeba
 testovat, zda je řetězec validní JSON objekt nebo ne, tato funkce vrátí buď zparsovaný JSON objekt, nebo hodnotu null.
 
-Jelikož časový rozsah widgetů lze určit i řetězcem (např. hodnota P60D/now[sD] specifikuje posledních 60 dní), je třeba jej umět převést z~tohoto řetězce. O~to se stará soubor
+Jelikož časový rozsah widgetů lze určit i řetězcem (např. hodnota \texttt{P60D/now[sD]} specifikuje posledních 60 dní), je třeba jej umět převést z~tohoto řetězce. O~to se stará soubor
 \texttt{prejson-suite.js}, jehož výstupem je objekt, který tento časový úsek reprezentuje.
 
 Veškeré funkce, které zpostředkovávají komunikaci mezi frontendem a backendovými routami, jsou specifikovány v~souboru \texttt{widget-config.js}. Obsahuje 4 procedury pro výše zmiňované
@@ -815,11 +842,15 @@ je zpracování parametrů pro widget, stažení a načtení dat a následně js
 
 K~funkcionalitě je nutno specifikovat několik parametrů, které jsou specifikované v~tabulce \ref{tab:widgetProps}.
 
-\begin{center}
+%\begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
-	\caption{Properties komponenty <Widget/>}
+	\caption{Parametry komponenty <Widget/>}
 	\label{tab:widgetProps}\\
 	\toprule[1.5pt]
+	\textbf{Parametr} & \textbf{Popis}\\
+	\midrule
+	\endfirsthead
+	\multicolumn{2}{c}{\tablename{}~\thetable{} \textit{(pokračování z předchozí stránky)}}\\
 	\endhead
 	\midrule
 	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
@@ -843,7 +874,7 @@ K~funkcionalitě je nutno specifikovat několik parametrů, které jsou specifik
 	\midrule
 	\verb"tokenFunc" & Funkce vracející tokeny, které jsou následně používány na backendu místo systémové proměnné. \\
 	\end{longtable}
-\end{center}
+%\end{center}
 
 Nejprve se z~pole parametrů vytvoří objekt. Tento objekt obsahuje vždy jméno atributu (což je název proměnné z~Omni Studia, kterou je třeba dodefinovat) a k~němu patřičná hodnota (specifikovaná
 hodnota pro nedefinovaný parametr). Pokud se nejdná o~pole, vrátí se prázdný objekt.
@@ -1229,17 +1260,29 @@ client (webpack 5.90.3) compiled successfully
 \end{console}
 
 V~konzoli se ukáže adresa, na které je dokumentace spuštěna. Pro účel bakalářské práce byla tato dokumentace
-zveřejněna na adrese \url{https://embedding-docs.vercel.app/}. 
+zveřejněna i na veřejné URL adrese, na kterou je možné se přesměrovat naskenováním QR (Quick Response) kódu na obrázku \ref{fig:qrCode}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.25\textwidth]{pictures/QR.pdf}
+	\caption{QR kód směřující na on-line uživatelskou dokumentaci}
+	\label{fig:qrCode}
+\end{figure}
 
 Dokumentace obsahuje i odkaz na GitHub repozitář se zdrojovým kódem. V~něm se nachází i tato dokumentace vyexportovaná do souboru \texttt{.pdf} v~adresáři \texttt{docs}. 
 
+
 V~tabulce \ref{tab:docsTabs} jsou popsány jednotlivé sekce, které dokumentace obsahuje.
 
-\begin{center}
+%\begin{center}
 	\begin{longtable}{p{.25\textwidth}p{.6\textwidth}}
 	\caption{Struktura uživatelské dokumentace}
 	\label{tab:docsTabs}\\
 	\toprule[1.5pt]
+	\textbf{Sekce} & \textbf{Popis}\\
+	\midrule
+	\endfirsthead
+	\multicolumn{2}{c}{\tablename{}~\thetable{} \textit{(pokračování z předchozí stránky)}}\\
 	\endhead
 	\midrule
 	\multicolumn{2}{r}{\textit{(tabulka pokračuje na další stránce)}}\\
@@ -1255,7 +1298,7 @@ V~tabulce \ref{tab:docsTabs} jsou popsány jednotlivé sekce, které dokumentace
 	\midrule
 	\verb"Embedding-Studio" & Popisuje funkcionalitu rozhraní a návod k~jeho použití. \\
 	\end{longtable}
-\end{center}
+%\end{center}
 
 \chapter{Testovací scénáře}\label{app:testCases}
 \section{Testování knihovny}
@@ -1293,7 +1336,7 @@ Očekávaný výsledek je vykreslení vizualizace s~aplikovanými MUI styly.
 	\item Do atributů \texttt{width} a \texttt{height} vložíme námi zvolené číselné hodnoty pro velikost (v~pixelech).
 	\item Zobrazíme.
 \end{enumerate}
-Očekávaný výsledek je vykreslení vizualizace s~výškou {height} a šířkou \texttt{width}.
+Očekávaný výsledek je vykreslení vizualizace s~výškou \texttt{height} a šířkou \texttt{width}.
 
 \subsubsection{Vykreslení widgetu s~debuggovacími výpisy}
 \begin{enumerate}

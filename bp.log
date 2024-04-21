@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  20 APR 2024 20:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  21 APR 2024 14:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1506,17 +1506,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'czech'.
- (bp.aux
-
-LaTeX Warning: Label `tab:exampleRequestResponse' multiply defined.
-
-
-LaTeX Warning: Label `tab:dirLibrary' multiply defined.
-
-
-LaTeX Warning: Label `tab:docsTabs' multiply defined.
-
-<Reading QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" at level 6-M from aux file.>
+ (bp.aux <Reading QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" at level 6-M from aux file.>
 )
 \openout1 = `bp.aux'.
 
@@ -2083,18 +2073,20 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 6.1pt on input line 386.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 395.
+(Font)              scaled to size 12.0pt on input line 396.
 \FASThesis@runninghead@rule@offset=\dimen382
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 \FASThesis@runninghead@rule@offset=\dimen383
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [15 <./pictures/emplifiAPI.png>]
-Underfull \hbox (badness 1478) in paragraph at lines 476--477
+Underfull \hbox (badness 1478) in paragraph at lines 491--492
 []|\T1/Cochineal-TLF/m/n/12 (+10) Token pro ob-no-vení p°í-stu-po-vého to-kenu. Za-slán
  []
 
@@ -2116,7 +2108,7 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 <pictures/omni-studio.png, id=689, 1630.59187pt x 1212.02812pt>
 File: pictures/omni-studio.png Graphic file (type png)
 <use pictures/omni-studio.png>
-Package pdftex.def Info: pictures/omni-studio.png  used on input line 584.
+Package pdftex.def Info: pictures/omni-studio.png  used on input line 607.
 (pdftex.def)             Requested size: 386.95749pt x 287.61925pt.
 \FASThesis@runninghead@rule@offset=\dimen387
 
@@ -2134,13 +2126,13 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [21]
 LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
-(Font)              scaled to size 10.0pt on input line 631.
-LaTeX Font Info:    Trying to load font information for TS1+newtxttz on input line 633.
+(Font)              scaled to size 10.0pt on input line 654.
+LaTeX Font Info:    Trying to load font information for TS1+newtxttz on input line 656.
  (D:\Install\MikTex\tex/latex/newtxtt\ts1newtxttz.fd
 File: ts1newtxttz.fd 2014/05/30
 )
 LaTeX Font Info:    Font shape `TS1/newtxttz/m/n' will be
-(Font)              scaled to size 10.0pt on input line 633.
+(Font)              scaled to size 10.0pt on input line 656.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `newtxttz' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
@@ -2150,182 +2142,192 @@ Package microtype Info: Loading generic protrusion settings for font family
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [22]
-\FASThesis@runninghead@rule@offset=\dimen391
-
-Overfull \vbox (14.49998pt too high) has occurred while \output is active []
-
- [23] [24
-
-]
-Overfull \hbox (1.8pt too wide) detected at line 666
+Overfull \hbox (1.8pt too wide) detected at line 689
 [] 
  []
 
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on input line 708.
-(D:\Install\MikTex\tex/latex/fontawesome5\ufontawesomefree1.fd) [25{D:/Install/MikTex/fonts/enc/dvips/fontawesome5/fa5free1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 747--747
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on input line 731.
+(D:\Install\MikTex\tex/latex/fontawesome5\ufontawesomefree1.fd) [23
+
+{D:/Install/MikTex/fonts/enc/dvips/fontawesome5/fa5free1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 774--774
 []|[][]\T1/newtxttz/m/n/10.95 package-
  []
 
 
-Underfull \hbox (badness 4084) in paragraph at lines 747--748
+Underfull \hbox (badness 4084) in paragraph at lines 774--775
 []|\T1/Cochineal-TLF/m/n/12 (+10) Soubor za-ji²-´u-jící kon-zis-tenci verzí zá-vis-lostí
  []
 
 
-Overfull \hbox (0.9891pt too wide) in paragraph at lines 751--751
+Overfull \hbox (0.9891pt too wide) in paragraph at lines 778--778
 []|[][]\T1/newtxttz/m/n/10.95 webpack.config.js| 
  []
+
+\FASThesis@runninghead@rule@offset=\dimen391
+
+Overfull \vbox (14.49998pt too high) has occurred while \output is active []
+
+ [24]
+Underfull \vbox (badness 3690) has occurred while \output is active []
 
 \FASThesis@runninghead@rule@offset=\dimen392
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [26]
+ [25]
+Overfull \hbox (0.13843pt too wide) in paragraph at lines 817--817
+|[] []| 
+ []
+
 \FASThesis@runninghead@rule@offset=\dimen393
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [27]
-Overfull \hbox (0.13843pt too wide) in paragraph at lines 790--790
-|[] []| 
- []
-
+ [26]
+LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 864.
 \FASThesis@runninghead@rule@offset=\dimen394
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [28]
-LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 833.
+ [27]
 \FASThesis@runninghead@rule@offset=\dimen395
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [29]
+ [28]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 \FASThesis@runninghead@rule@offset=\dimen396
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+ [29]
 \FASThesis@runninghead@rule@offset=\dimen397
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+ [30]
+LaTeX Font Info:    Font shape `T1/newtxttz/b/n' will be
+(Font)              scaled to size 10.0pt on input line 956.
+LaTeX Font Info:    Font shape `T1/newtxtt/m/n' will be
+(Font)              scaled to size 10.0pt on input line 975.
 \FASThesis@runninghead@rule@offset=\dimen398
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [32]
-LaTeX Font Info:    Font shape `T1/newtxttz/b/n' will be
-(Font)              scaled to size 10.0pt on input line 925.
-LaTeX Font Info:    Font shape `T1/newtxtt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 944.
+ [31]
+Overfull \hbox (0.87741pt too wide) in paragraph at lines 1010--1010
+|[] []| 
+ []
+
 \FASThesis@runninghead@rule@offset=\dimen399
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [33]
-Overfull \hbox (0.87741pt too wide) in paragraph at lines 979--979
-|[] []| 
- []
-
+ [32]
 \FASThesis@runninghead@rule@offset=\dimen400
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [34]
+ [33]
 \FASThesis@runninghead@rule@offset=\dimen401
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [35]
-Underfull \vbox (badness 5417) has occurred while \output is active []
-
+ [34]
 \FASThesis@runninghead@rule@offset=\dimen402
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [36]
+ [35]
 \FASThesis@runninghead@rule@offset=\dimen403
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [37]
+ [36]
+Overfull \hbox (1.8pt too wide) detected at line 1150
+[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37
+
+]
 \FASThesis@runninghead@rule@offset=\dimen404
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [38]
-Overfull \hbox (1.8pt too wide) detected at line 1119
+Overfull \hbox (1.8pt too wide) detected at line 1201
 [] 
  []
 
+[39
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] [40
 
- [39
+] [41] [42
 
 ]
+Overfull \hbox (1.8pt too wide) detected at line 1242
+[] 
+ []
+
+<pictures/QR.pdf, id=916, 770.12718pt x 770.12718pt>
+File: pictures/QR.pdf Graphic file (type pdf)
+<use pictures/QR.pdf>
+Package pdftex.def Info: pictures/QR.pdf  used on input line 1267.
+(pdftex.def)             Requested size: 96.73936pt x 96.7357pt.
+
+Overfull \hbox (0.94716pt too wide) in paragraph at lines 1272--1273
+[]\T1/Cochineal-TLF/m/n/12 (-10) Dokumentace ob-sa-huje i od-kaz na Gi-tHub re-po-zi-tá° se zdro-jo-vým kó-dem. V n¥m
+ []
+
+
+Underfull \vbox (badness 1406) has occurred while \output is active []
+
+ [43 <./pictures/QR.pdf>]
 \FASThesis@runninghead@rule@offset=\dimen405
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [40]
-Overfull \hbox (1.8pt too wide) detected at line 1170
+ [44]
+Overfull \hbox (1.8pt too wide) detected at line 1303
 [] 
  []
 
-[41
-
-] [42
-
-] [43] [44
+[45
 
 ]
-Overfull \hbox (1.8pt too wide) detected at line 1211
-[] 
- []
-
-
-Overfull \hbox (0.94716pt too wide) in paragraph at lines 1234--1235
-[]\T1/Cochineal-TLF/m/n/12 (-10) Dokumentace ob-sa-huje i od-kaz na Gi-tHub re-po-zi-tá° se zdro-jo-vým kó-dem. V n¥m
- []
-
-[45]
 \FASThesis@runninghead@rule@offset=\dimen406
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [46]
-Overfull \hbox (1.8pt too wide) detected at line 1260
-[] 
- []
-
-[47
-
-]
 \FASThesis@runninghead@rule@offset=\dimen407
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [48]
+ [47]
 \FASThesis@runninghead@rule@offset=\dimen408
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [49]
+ [48]
+Overfull \hbox (0.14542pt too wide) in paragraph at lines 1434--1434
+|[] []| 
+ []
+
 \FASThesis@runninghead@rule@offset=\dimen409
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [50]
-Overfull \hbox (0.14542pt too wide) in paragraph at lines 1391--1391
+ [49]
+Overfull \hbox (0.67545pt too wide) in paragraph at lines 1491--1491
 |[] []| 
  []
 
@@ -2333,62 +2335,53 @@ Overfull \hbox (0.14542pt too wide) in paragraph at lines 1391--1391
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [51]
-Overfull \hbox (0.67545pt too wide) in paragraph at lines 1448--1448
-|[] []| 
- []
-
+ [50]
 \FASThesis@runninghead@rule@offset=\dimen411
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [52]
-\FASThesis@runninghead@rule@offset=\dimen412
-
-Overfull \vbox (14.49998pt too high) has occurred while \output is active []
-
- [53] [54
+ [51] [52
 
 ]
-Overfull \hbox (34.64034pt too wide) in paragraph at lines 1465--1465
+Overfull \hbox (34.64034pt too wide) in paragraph at lines 1508--1508
 \T1/Cochineal-TLF/m/n/12 (-10) 20]. []Do-stupné z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/docs/cloud/embed -[] visualizations/
  []
 
 
-Overfull \hbox (15.90599pt too wide) in paragraph at lines 1465--1465
+Overfull \hbox (15.90599pt too wide) in paragraph at lines 1508--1508
 []\T1/Cochineal-TLF/m/n/12 (-10) Do-stupné z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/docs/cloud/embed -[] visualizations/
  []
 
-[55
+[53
 
 ]
-Overfull \hbox (7.27242pt too wide) in paragraph at lines 1465--1465
+Overfull \hbox (7.27242pt too wide) in paragraph at lines 1508--1508
 []\T1/Cochineal-TLF/m/it/12 (-10) HTTP au-then-ti-cation []\T1/Cochineal-TLF/m/n/12 (-10) [on-line][]. [[]cit.[] 2024-04-20]. []Do-stupné z[]: []$\T1/newtxttz/m/n/10.95 https : //developer .
  []
 
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 1464.
+(Font)              scaled to size 12.0pt on input line 1507.
 
-Overfull \hbox (10.62303pt too wide) in paragraph at lines 1465--1465
+Overfull \hbox (10.62303pt too wide) in paragraph at lines 1508--1508
 \T1/newtxttz/m/n/10.95 www . oauth . com/oauth2 -[] servers/access -[] tokens/access -[] token -[] response/
  []
 
+\FASThesis@runninghead@rule@offset=\dimen412
+
+Overfull \vbox (14.49998pt too high) has occurred while \output is active []
+
+ [54{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_7ifgnr.enc}]
 \FASThesis@runninghead@rule@offset=\dimen413
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [56{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_7ifgnr.enc}]
-\FASThesis@runninghead@rule@offset=\dimen414
+ [55] [56
 
-Overfull \vbox (14.49998pt too high) has occurred while \output is active []
+] (bp.lof) [57] [58
 
- [57] [58
+] (bp.lot) [59] [60
 
-] (bp.lof) [59] [60
-
-] (bp.lot) [61] [62
-
-] (bp.lol) [63] 
+] (bp.lol) [61] 
 
 <QR code requested for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" in version 0-M.>
 <Copying the QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" in version 6-M as previously calculated.>
@@ -2396,13 +2389,13 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 1476.
+(in both cases you will find help in the memoir manual). on input line 1519.
 
 File: img/background-kiv.pdf Graphic file (type pdf)
 <use img/background-kiv.pdf>
-Package pdftex.def Info: img/background-kiv.pdf  used on input line 1476.
+Package pdftex.def Info: img/background-kiv.pdf  used on input line 1519.
 (pdftex.def)             Requested size: 597.5064pt x 845.08348pt.
-[64
+[62
 
 ]
 \tf@toc=\write7
@@ -2427,9 +2420,6 @@ L3 programming layer <2020/03/25>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `bp.out' has not changed.
 (rerunfilecheck)             Checksum: CDD70CEDFDF076B022D089E38804717E;8796.
 Package logreq Info: Writing requests to 'bp.run.xml'.
@@ -2438,9 +2428,9 @@ Package logreq Info: Writing requests to 'bp.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  52461 strings out of 474586
- 993247 string characters out of 5758344
+ 993310 string characters out of 5758344
  2017558 words of memory out of 5000000
- 73302 multiletter control sequences out of 15000+600000
+ 73303 multiletter control sequences out of 15000+600000
  997831 words of font info for 274 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,13n,113p,1969b,3321s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2451,9 +2441,9 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (74 pages, 1778684 bytes).
+Output written on bp.pdf (72 pages, 1778982 bytes).
 PDF statistics:
- 1356 PDF objects out of 1440 (max. 8388607)
- 412 named destinations out of 1000 (max. 500000)
- 62122 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1345 PDF objects out of 1440 (max. 8388607)
+ 411 named destinations out of 1000 (max. 500000)
+ 62127 words of extra memory for PDF output out of 74296 (max. 10000000)
 

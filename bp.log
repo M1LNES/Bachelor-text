@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  21 APR 2024 16:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  21 APR 2024 21:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1895,11 +1895,11 @@ Overfull \hbox (1.8pt too wide) detected at line 176
 [] 
  []
 
-<pictures/emplifi-dashboard-example.png, id=462, 1578.89874pt x 926.46124pt>
-File: pictures/emplifi-dashboard-example.png Graphic file (type png)
-<use pictures/emplifi-dashboard-example.png>
-Package pdftex.def Info: pictures/emplifi-dashboard-example.png  used on input line 188.
-(pdftex.def)             Requested size: 386.95749pt x 227.0486pt.
+<pictures/emplifi-dashboard-example-kopie.png, id=462, 1919.67188pt x 804.00375pt>
+File: pictures/emplifi-dashboard-example-kopie.png Graphic file (type png)
+<use pictures/emplifi-dashboard-example-kopie.png>
+Package pdftex.def Info: pictures/emplifi-dashboard-example-kopie.png  used on input line 188.
+(pdftex.def)             Requested size: 386.95749pt x 162.06151pt.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
 (Font)              scaled to size 8.8pt on input line 193.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
@@ -1954,22 +1954,19 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 5.5pt on input line 194.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
 (Font)              scaled to size 7.3pt on input line 194.
-[5 <./pictures/emplifi-dashboard-example.png>]
+[5 <./pictures/emplifi-dashboard-example-kopie.png>]
 LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
 (Font)              scaled to size 11.03998pt on input line 212.
-
-Underfull \vbox (badness 8132) has occurred while \output is active []
-
 \FASThesis@runninghead@rule@offset=\dimen376
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [6]
+ [6{D:/Install/MikTex/fonts/enc/dvips/newtxtt/txttAec.enc}]
 \FASThesis@runninghead@rule@offset=\dimen377
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [7{D:/Install/MikTex/fonts/enc/dvips/newtxtt/txttAec.enc}]
+ [7]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 243.
 LaTeX Font Info:    Trying to load font information for T1+newtxtt on input line 243.
  (D:\Install\MikTex\tex/latex/newtxtt\t1newtxtt.fd
@@ -1983,7 +1980,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 244.
-<pictures/oauth2-diagram.png, id=521, 2057.6875pt x 1521.685pt>
+<pictures/oauth2-diagram.png, id=522, 2057.6875pt x 1521.685pt>
 File: pictures/oauth2-diagram.png Graphic file (type png)
 <use pictures/oauth2-diagram.png>
 Package pdftex.def Info: pictures/oauth2-diagram.png  used on input line 266.
@@ -1993,6 +1990,8 @@ Package pdftex.def Info: pictures/oauth2-diagram.png  used on input line 266.
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [8]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 \FASThesis@runninghead@rule@offset=\dimen379
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
@@ -2436,7 +2435,7 @@ Package logreq Info: Writing requests to 'bp.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  52448 strings out of 474586
- 993145 string characters out of 5758344
+ 993187 string characters out of 5758344
  2017558 words of memory out of 5000000
  73290 multiletter control sequences out of 15000+600000
  997831 words of font info for 274 fonts, out of 8000000 for 9000
@@ -2449,7 +2448,7 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (72 pages, 1779108 bytes).
+Output written on bp.pdf (72 pages, 1619215 bytes).
 PDF statistics:
  1346 PDF objects out of 1440 (max. 8388607)
  411 named destinations out of 1000 (max. 500000)

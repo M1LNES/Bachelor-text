@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  25 APR 2024 19:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  25 APR 2024 20:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2459,7 +2459,7 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (76 pages, 1630142 bytes).
+Output written on bp.pdf (76 pages, 1630147 bytes).
 PDF statistics:
  1386 PDF objects out of 1440 (max. 8388607)
  419 named destinations out of 1000 (max. 500000)

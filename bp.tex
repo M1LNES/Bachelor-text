@@ -1051,27 +1051,27 @@ o~souhlas. Po potvrzení je opět na \texttt{redirect\_uri} zaslán autorizačn�
 vystavil zmiňovaný endpoint na Public API. Do těla requestu se uloží parametry pro Omni API (znázorněno na ukázce \ref{omniApiCall}) a následně se provede volání na vystavený endpoint
 \texttt{/3/omni-studio/oauth2/token}. 
 
-\begin{lstlisting}[language=Javascript, caption={Parametry pro Omni API}, label=omniApiCall]
-body: JSON.stringify({
-		headers: {
-			Accept: 'application/json',
-			'Content-Type': 'application/x-www-form-urlencoded',
-			Authorization: `Basic ${Buffer.from(
-				`${process.env.CLIENT_ID_OMNI_STUDIO}:
-				${process.env.CLIENT_SECRET_OMNI_STUDIO}`
-			).toString('base64')}`,
-		},
-		body: `grant_type=authorization_code&
-		code=${res.req.query.code}&redirect_uri=${uri}`,
-}),
-\end{lstlisting}
-
 Jak je vidět, i pro Omni API je třeba autentizace formou klientského ID a secretu, ale jak je vidět, jedná se o~jiné hodnoty než v~Public API. Pro každé API
 je tedy třeba jiného ID a secretu. Po vrácení tokenu z~API je opět v~poli requestů nalezen objekt s~daným request ID, hodnota tokenu v~objektu je nahrazena přijatou hodnotou a okno, v~němž
 uživatel uděloval oprávnění, je zavřeno. 
 
 Pole pro requesty jsou dvě - jedno pro Public API, druhé pro Omni API. Nevýhodou při fetchování Omni API tokenu je ta, že v~systémové proměnné musí být platný token - uživatel nemá jak předat
-backendové routě, která zachytává kód vrácený z~API, svůj Public API token (pokud je vůbec vygenerován). Proto je třeba, aby toto rozhraní v~systémové proměnné (prozatím) obsahovalo stále platný 
+backendové routě, která zachytává kód vrácený z~API, svůj Public API token (pokud je vůbec vygenerován). 
+\begin{lstlisting}[language=Javascript, caption={Parametry pro Omni API}, label=omniApiCall]
+	body: JSON.stringify({
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/x-www-form-urlencoded',
+				Authorization: `Basic ${Buffer.from(
+					`${process.env.CLIENT_ID_OMNI_STUDIO}:
+					${process.env.CLIENT_SECRET_OMNI_STUDIO}`
+				).toString('base64')}`,
+			},
+			body: `grant_type=authorization_code&
+			code=${res.req.query.code}&redirect_uri=${uri}`,
+	}),
+\end{lstlisting}
+Proto je třeba, aby toto rozhraní v~systémové proměnné (prozatím) obsahovalo stále platný 
 Public API token. Výhodou ale je, že uživatel není omezen tím, jaký token vygeneruje první.
 
 Opět se na frontendu metodou aktivního čekání každých 500 ms kontroluje, zda-li se token objevil v~poli requestů na backendu a následně se ukládá do local storage jako na ukázce

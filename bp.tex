@@ -49,10 +49,10 @@
 %
 % _____________________________________________________________________________
 %
-\abstract{Tato bakalářská práce se zaměřuje na vývoj specializované JavaScript knihovny s~cílem umožnit snadné embedování vizualizací do aplikací třetích stran. Hlavními cíli práce jsou návrh a implementace knihovny, navržení rozhraní pro efektivní komunikaci s~Public API firmy Emplifi a zajištění bezpečného přístupu k~datům pomocí OAuth 2 protokolu. V~teoretické části práce je diskutována problematika spojená s~embedováním vizualizací do externích aplikací, bezpečný přístup k~datům třetích stran a jsou analyzována již existující řešení. Praktická část se zaměřuje na návrh a implementaci JavaScript knihovny, popisuje navržení rozhraní pro efektivní komunikaci s~API a zabývá se implementací bezpečného přístupu k~datům v~souladu se standardem OAuth 2.
+\abstract{Tato bakalářská práce se zaměřuje na vývoj specializované JavaScript knihovny s~cílem umožnit snadné integrování vizualizací do aplikací třetích stran. Hlavními cíli práce jsou návrh a implementace knihovny, navržení rozhraní pro efektivní komunikaci s~Public API firmy Emplifi a zajištění bezpečného přístupu k~datům pomocí OAuth 2 protokolu. V~teoretické části práce je diskutována problematika spojená s~integrováním vizualizací do externích aplikací, bezpečný přístup k~datům třetích stran a jsou analyzována již existující řešení. Praktická část se zaměřuje na návrh a implementaci JavaScript knihovny, popisuje navržení rozhraní pro efektivní komunikaci s~API a zabývá se implementací bezpečného přístupu k~datům v~souladu se standardem OAuth 2.
 }
 % *** English abstract ***
-{This bachelor thesis focuses on the development of a specialized JavaScript library to enable easy embedding of visualizations into third-party applications. The main goals of the thesis are to design and implement the library, design an interface to communicate efficiently with Emplifi's Public API and provide secure data access using the OAuth 2 protocol. The theoretical part of the thesis discusses the issues related to embedding visualizations in external applications, secure access to third-party data and analyzes existing solutions. The practical part focuses on the design and implementation of a JavaScript library, describes the design of interfaces for efficient communication with APIs and deals with the implementation of secure data access in accordance with the OAuth 2 standard.}
+{This bachelor thesis focuses on the development of a specialized JavaScript library to enable easy integration of visualizations into third-party applications. The main goals of the thesis are to design and implement the library, design an interface to communicate efficiently with Emplifi's Public API and provide secure data access using the OAuth 2 protocol. The theoretical part of the thesis discusses the issues related to integration of visualizations in external applications, secure access to third-party data and analyzes existing solutions. The practical part focuses on the design and implementation of a JavaScript library, describes the design of interfaces for efficient communication with APIs and deals with the implementation of secure data access in accordance with the OAuth 2 standard.}
 \keywords{OAuth 2.0, embedování, Emplifi Public API, token, JavaScript}
 % _____________________________________________________________________________
 %
@@ -69,6 +69,8 @@ Ing. Michalovi Kacerovskému za poskytování připomínek v~rámci detailní re
 Monice Opltové za důkladné a pečlivé otestování implementované praktické části
 
 Doc. Ing. Daliborovi Fialovi, Ph.D. za jeho spolupráci a ochotu při tvorbě teoretické části
+
+Mgr. Janovi Anderlemu za pomoc při kontrole gramatiky a stylistických nedostatků
 
 a také rodině za podporu během celého studia.
 }
@@ -158,12 +160,12 @@ a také rodině za podporu během celého studia.
 V~současné době internetu tvoří data významnou a důležitou součást každodenního života. Problematikou dat je nejen je efektivní ukládání, 
 ale také rychlé a efektivní interpretování. 
 Vizualizace dat není pouhým trendem, ale stala se klíčovým nástrojem v~mnoha odvětvích. Od oblasti logistiky, kde pomáha monitorovat a řídit tok zásob a logistické operace, až po oblast sociálního marketingu, kde je využívána k~personalizovaným reklamám či sledování aktivit zákazníků. 
-Pro snadné integrování vizualizací do aplikací třetích stran se využívá koncept embedded analytics – ten umožňuje uživatelům rychlý a efektivní přístup k~datům bez potřeby přecházet mezi různými aplikacemi. 
+Pro snadné integrování vizualizací do aplikací třetích stran se využívá koncept \textit{embedded analytics} (integrované analytické nástroje) – ten umožňuje uživatelům rychlý a efektivní přístup k~datům bez potřeby přecházet mezi různými aplikacemi. 
 
-Cílem této práce zadanou společností Emplifi, která se specializuje na sociální marketing, je vytvořit praktickou knihovnu umožňující embedování analytických grafů do aplikací třetích stran. 
+Cílem této práce zadanou společností Emplifi, která se specializuje na sociální marketing, je vytvořit praktickou knihovnu umožňující integrování analytických grafů do aplikací třetích stran. 
 Velký důraz bude kladen na bezpečný přístup k~datům skrze OAuth 2 protokol, který je klíčovým prvkem Emplifi Public API. Součástí bude také administrační rozhraní, jenž umožní snadné generování a obnovování OAuth 2 tokenů, a podrobná uživatelská dokumentace, která bude obsahovat veškeré informace k~nastavení a používání knihovny či uživatelského rozhraní.
 
-V~rámci teoretické části bude podrobně diskutována problematika spojená s~embedováním. Analyzovat se budou způsoby embedování, princip bezpečnostního protokolu OAuth 2 a již existující řešení embedded analytics.
+V~rámci teoretické části bude podrobně diskutována problematika spojená s~integrováním. Analyzovat se budou způsoby integrování, princip bezpečnostního protokolu OAuth 2 a již existující řešení embedded analytics.
 
 Tímto způsobem práce nespojuje pouze technologickou inovaci s~nutností bezpečnosti dat, ale také reaguje na aktuální potřeby v~odvětví sociálního marketingu a digitálního prostoru.
 % _____________________________________________________________________________
@@ -190,7 +192,7 @@ Emplifi dashboardy umožňují definovat, vytvářet a vizualizovat aktivity už
 	\label{fig:emplifiDashUkazka}
 \end{figure}
 
-Na obrázku \ref{fig:emplifiDashUkazka} vidíme příklad dashboardu - skládá se z~několika grafů, obvykle nazývané jako widgety \cite{emplifiDashboard}, jejichž obsah lze modifikovat pomocí přepínačů v~liště. Obsah může být modifikován v~časovém období (posledních 30 dní, poslední rok, konkrétní časový rozsah, ...), ale lze jej modifikovat také na základě metrik jako je např. sociální síť (Facebook, Instragram, LinkedIn), druh interakcí (komentáře, reakce, sdílení) apod.\footnote{Widgety nemusí být obecně pouze vizualizace, může se jednat také o~ovládací prvky (např. výběrové seznamy, check boxy, textfieldy apod.). Tato možnost se využívá zejména ve vývojářských dashboardech pro rychlejší tvorbu vizualizací. V~samotném produktu firmy se ale používá kvůli uživatelské přívětivosti pouze pro vizualizace \cite{emplifiDashboard}. 
+Na obrázku \ref{fig:emplifiDashUkazka} vidíme příklad dashboardu - skládá se z~několika grafů, obvykle nazývané jako widgety \cite{emplifiDashboard}, jejichž obsah lze modifikovat pomocí přepínačů v~liště. Obsah může být modifikován v~časovém období (posledních 30 dní, poslední rok, konkrétní časový rozsah, ...), ale lze jej modifikovat také na základě metrik jako je např. sociální síť (Facebook, Instragram, LinkedIn), druh interakcí (komentáře, reakce, sdílení) apod.\footnote{Widgety nemusí být obecně pouze vizualizace, může se jednat také o~ovládací prvky (např. výběrové seznamy, zaškrtávací políčka, textová pole apod.). Tato možnost se využívá zejména ve vývojářských dashboardech pro rychlejší tvorbu vizualizací. V~samotném produktu firmy se ale používá kvůli uživatelské přívětivosti pouze pro vizualizace \cite{emplifiDashboard}. 
 }
 
 Embedded analytics se nechová a nevypadá jako samostatná aplikace, ale je integrován do jiného softwaru nebo webového portálu. Koncoví uživatelé často ani nepoznají, že se jedná
@@ -267,8 +269,8 @@ je nejlepší volbou pro identifikaci osobních uživatelských účtů a udělo
 	\label{fig:oauth2Diagram}
 \end{figure}
 
-Nejprve se uživatel přihlásí do systému - nejčastěji formou uživatelského jména a hesla, nebo klientského id a secretu. Tím se pošle HTTP požadavek na endpoint. Autorizace uživateli následně
-vrátí token. Pokud má uživatel již platný token, může přistupovat k~datům. Naopak pokud mu token již expiroval nebo není platný, volání do API mu vrátí chybové hlášení. 
+Nejprve se uživatel přihlásí do systému - nejčastěji formou uživatelského jména a hesla, nebo klientského id a secretu. Tím se pošle HTTP požadavek na koncový bod (častěji známý pod termínem endpoint). 
+Autorizace uživateli následně vrátí token. Pokud má uživatel již platný token, může přistupovat k~datům. Naopak pokud mu token již expiroval nebo není platný, volání do API mu vrátí chybové hlášení. 
 
 Součástí autorizační odpovědi bývá i několik dalších údajů. Odpověď může vypadat např. jako na ukázce \ref{tokenResponse}. 
 
@@ -363,7 +365,7 @@ React se kvůli těmto vlastnostem doporučuje využívat u \cite{whyUsingReact2
 \item Multi-platformních aplikací
 \end{enumerate}
 
-Na frontend komponent knihovny a rozhraní pro obnovu tokenů bude použita knihovna MUI, která nabízí širokou škálu předdefinovaných komponent a stylů \cite{muiDocs}. 	
+Na frontend (část, která je přístupná a interaktivní pro uživatele) komponent knihovny a rozhraní pro obnovu tokenů bude použita knihovna MUI, která nabízí širokou škálu předdefinovaných komponent a stylů \cite{muiDocs}. 	
 
 \subsection{Emplifi API}	
 Data potřebná k~embedování grafů budou získávána prostřednictvím Emplifi Public API. 
@@ -374,7 +376,7 @@ Struktura dotazů a ukázkové dotazy jsou dostupné na veřejné dokumentaci \c
 \subsubsection{Vytvoření tokenu}
 
 Vytvoření tokenu je umožněno pouze osobám, jež mají u~firmy Emplifi vytvořený účet v~produktu Suite. Na obrázku \ref{fig:emplifAPIDiagram} je schéma, které udává průběh akcí během žádání o~
-přístupový token a zaslání prvního requestu s~žádostí o~data.
+přístupový token a zaslání prvního požadavku (requestu) s~žádostí o~data.
 \begin{figure}
 	\centering
 	\includegraphics[width=1\textwidth]{pictures/emplifiAPI.png}
@@ -411,7 +413,7 @@ Do URL (\url{https://api.emplifi.io/oauth2/0/auth}), na kterou uživatele přesm
 	\midrule
 	\verb"state" & Hodnota sloužící k~validaci přijaté odpovědi. Při zaslání requestu je vložena hodnota do parametru, autorizační server jí při zpracování dotazu odešle zpět s~daty. Uživatelská aplikace by následně měla porovnávat, zda tato zaslaná hodnota je shodná s~původní - to slouží k~zabránění útoků Cross-site Request Forgery.\\
 	\midrule
-	\verb"prompt" & Musí být nastavena na hodnotu \texttt{consent}, pokud má být refresh token vrácen společně s~přístupovým.\\
+	\verb"prompt" & Musí být nastavena na hodnotu \texttt{consent}, pokud má být obnovovací token vrácen společně s~přístupovým.\\
 	\end{longtable}
 %\end{center}
 
@@ -532,7 +534,7 @@ strukturu Omni API requestu lze vložit do těla public API requestu, což umož
 
 \subsubsection{Knihovny pro fetchování dat}
 
-V~současné době existuje mnoho knihoven určené pro fetchování dat. Data bude nejprve nutné načíst na backend běžící aplikace, která je následně vrátí na frontend. Na backendu probíhá fetchování dvojím způsobem - 
+V~současné době existuje mnoho knihoven určené pro stahování (fetchování) dat. Data bude nejprve nutné načíst na backend (část, která zajišťuje logiku, správu dat a komunikaci s databázemi nebo externími službami) běžící aplikace, která je následně vrátí na frontend. Na backendu probíhá fetchování dvojím způsobem - 
 využitím zabudovaného fetch API v~Node.js a knihovnou axios. Pro načítání dat z~backendu na frontend budeme využívat rozhraní JavaScriptu Fetch API a knihovnu TanStack React Query. Její výhodou je cachování
 requestů \cite{tanstackQueryDocs} - pokud byl poslán jednou již stejný dotaz na data, načtení dat neproběhne z~API, ale z~uložené cache. To omezí počet requestů zaslaných na API a zmenší prodlevu vizualizace (data načtou rychleji z~cache než z~API). 
 
@@ -571,7 +573,7 @@ O~vykreslování se stará komponenta \texttt{<Vision/>}. Pro potřeby BP budou 
 
 %\begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
-	\caption{Parametry komponenty <Vision/>}
+	\caption{Parametry komponenty \texttt{<Vision/>}}
 	\label{tab:visionParams}\\
 	\toprule[1.5pt]
 	\textbf{Parametry} & \textbf{Popis}\\
@@ -618,12 +620,12 @@ Tyto hodnoty se následně převedou do pole JSON objektů a následně se při 
 daty.
 
 Tyto parametry budou klíčové pro správnou funkcionalitu knihovny - zajistí správné vykreslení a pokud nebudou v~rámci aplikace specifikovány nějakými prvky (např. že by uživatelova aplikace obsahovala
-inputy/výběrové seznamy pro všechny nespecifikované hodnoty), bude nutné je specifikovat ručně. To bude provedeno předáním přes properties React komponenty.
+vstupy/výběrové seznamy pro všechny nespecifikované hodnoty), bude nutné je specifikovat ručně. To bude provedeno předáním přes atributy (v praxi nazývané jako tzv. properties) React komponenty.
 
 \subsection{Funkcionalita knihovny}
 Knihovna tedy bude obsahovat obecnou komponentu \texttt{<Widget/>}, která bude reprezentovat právě jednu vizualizaci. Bude nutné komponentě předat číslo boardu, číslo widgetu a případně parametry, které 
 budou expandovány knihovnou PreJSON v~konfiguraci widgetu. Tato komponenta se postará o~veškeré fetchování dat a následnou vizualizaci. Jelikož Vision knihovna vizualizuje pouze samotný graf, bude nutné, aby
-Widget komopnenta uměla zobrazit i nadpisy, podnadpisy a další prvky obsažené v~hlavičce. Bude tedy třeba zajistit základní stylování (např. fonty a velikost písma), ale uživateli bude umožněno vložení CSS stylů
+Widget komponenta uměla zobrazit i nadpisy, podnadpisy a další prvky obsažené v~hlavičce. Bude tedy třeba zajistit základní stylování (např. fonty a velikost písma), ale uživateli bude umožněno vložení CSS stylů
 opět přes propsu komponenty - to nabídne uživateli větší možnosti, jak si embedovaný graf sám vystylovat. Postup při vizualizaci bude vypadat přibližně takto:
 
 \begin{enumerate}
@@ -646,7 +648,7 @@ věci potřebné k~embedování sloučí do jednoho UI (tj. bude se jednat o~jed
 
 K~vytvoření tokenů bude sloužit patička stránky. V~ní se budou nacházet dvě tlačítka - jedno pro vytvoření Public API tokenu, druhé pro Omni API token. K~vytvoření těchto tokenů je třeba být přihlášen v
 účtu Suite, jak bylo dřívě zmíněno. Po stisknutí tlačítka bude uživatel přesměrován na stránku, kde udělí patřičné oprávnění, že se pro jeho účet vytvoří token. Po potvrzení se uživateli token uloží
-do local storage webového prohlížeče. To umožní okamžitou možnost embedování v~UI a zároveň snadnou přístupnost k~tomuto tokenu. Pokud bude chtít uživatel token používat ve své aplikaci, jednoduše jej z~local storage
+do místního uložiště (častěji nazývané jako local storage) webového prohlížeče. To umožní okamžitou možnost embedování v~UI a zároveň snadnou přístupnost k~tomuto tokenu. Pokud bude chtít uživatel token používat ve své aplikaci, jednoduše jej z~local storage
 zkopíruje k~sobě do aplikace, kde jej bude dále moci normálně využívat. To by platilo pro případ, kdy by jeden z~tokenů vypršel. Ovšem bude-li uživatel nový a bude nutno vygenerovat oba dva tokeny pro potřebné vizualizace,
 bude přidáno tlačítko, které uživateli zkopíruje oba dva tokeny ve formátu \texttt{.env} souboru. Uživatel tedy nebude muset sám hodnoty přepisovat, ale pouze je vloží zkopírované do \texttt{.env} souboru. Zkopírované tokeny
 budou ve formátu:
@@ -699,14 +701,14 @@ Zároveň v~době vývoje nebyly ještě zadavatelem vystaveny endpointy na Omni
 že pro vyvíjení bylo třeba být připojen na firemní VPN. To samé platilo i pro správné fungování - spustil-li uživatel aplikaci lokálně a nebyl připojen na VPN, grafy nemohly být vykresleny,
 protože aplikace neměla přístup k~Omni Studio API. 
 
-Pro frontend aplikace byl použit framework React a další knihovny jako např. MUI, tanstack react query apod. Backendová část byla psána v~Node.js. Backend používal webový server express - ten
+Pro frontend aplikace byl použit framework React a další knihovny jako např. MUI, Tanstack React Query apod. Backendová část byla psána v~Node.js. Backend používal webový server express - ten
 řešil veškeré načítání a posílání dat. Kód byl členěn do dvou hlavních složek - \texttt{server} a \texttt{client}. Adresář \texttt{server} obsahoval inicializaci backendu a následné nastvení a spuštění webového serveru. Naopak
 adresář \texttt{client} obsahoval funkcionální komponenty k~vykreslování embedovaných grafů a pomocné funkce, které sloužily k~přeposílání dat z~frontendu na backend či opačně. Jakmile aplikace
 dokázala vykreslovat libovolné grafy, byla transformována z~React aplikace do samotné JavaScriptové knihovny.
 
 \subsection{Struktura knihovny}
 
-Výsledná transformovaná knihovna má následující strukturu:
+Výsledná transformovaná knihovna má strukturu, která je uvedena na následující stránce.
 
 \dirtree{%
     .0 {}.
@@ -793,9 +795,9 @@ Tento skript se automaticky spouští při instalaci dependencí této knihovny 
 
 \subsection{Backendové routy}
 
-Jak již bylo zmíněno, výstupem knihovny budou mimo jiné i routy serveru Express, které budou zajišťovat a zprostředkovávat komunikace s~API.
+Jak již bylo zmíněno, výstupem knihovny budou mimo jiné i cesty (běžné nazývané jako tzv. routy) serveru Express, které budou zajišťovat a zprostředkovávat komunikace s~API.
 
-Výstupem jsou tři backendové routy, které slouží ke stažení widget konfigurace, kte stažení dat pro widget a ke stažení dashboard fieldů (jejich význam bude vysvětlen u~samotného vykreslování).
+Výstupem jsou tři backendové routy, které slouží ke stažení widget konfigurace, ke stažení dat pro widget a ke stažení dashboard fieldů (pole, které specifikují datový typ PreJSON objektu).
 Routy pro widget konfigurace a dashboard fieldy jsou typu GET - ten slouží zejména ke čtení dat, nikoliv upravování, mazání či vkládání. Obě tyto routy přijímají v~parametru requestu ID
 dashboardu a následně provedou volání na API. 
 
@@ -844,7 +846,7 @@ K~funkcionalitě je nutno specifikovat několik parametrů, které jsou specifik
 
 %\begin{center}
 	\begin{longtable}{p{.2\textwidth}p{.65\textwidth}}
-	\caption{Parametry komponenty <Widget/>}
+	\caption{Parametry komponenty \texttt{<Widget/>}}
 	\label{tab:widgetProps}\\
 	\toprule[1.5pt]
 	\textbf{Parametr} & \textbf{Popis}\\
@@ -1013,7 +1015,7 @@ Toto přesměrování je realizováno tak, že při každém stisku tlačítka j
 hodnotou tokenu \texttt{null}. Mezitím se frontend každých 500 ms dotazuje metodou aktivního čekání, zda se již pro jeho request vygeneroval token. To se ověřuje pomocí kontrolování hodnoty
 tokenu v~objektu - je-li objekt stále \texttt{null}, probíhá kontrola stále dokola, dokud token není vygenerován a nebo uživatel nezavře stránku uživatelského rozhraní.
 
-Přesměrování na stránku suite probíhá způsobem, který byl popsán v~návrhu aplikace. Z~frontendu se aplikace provolá na backendovou routu, která následně přesměruje nové okno
+Přesměrování na stránku Suite probíhá způsobem, který byl popsán v~návrhu aplikace. Z~frontendu se aplikace provolá na backendovou routu, která následně přesměruje nové okno
 na URL vygenerovanou funkcí \texttt{getPublicApiCallbackUrl()}. Tato funkce přidá do URL adresy OAuth providera potřebné parametry zmíněné v~tabulce \ref{tab:allParametersAPI}.
 Až uživatel udělí patřičná oprávnění, na URL specifikovanou v~\texttt{redirect\_uri} je zaslán autorizační kód. Tento kód se zachytí na backendu aplikace a
 vytvoří se nový dotaz pro API. Zde je nutné se autorizovat pomocí klientského ID a secretu. O~to se stará funkce \texttt{getAuthorization()}, která je zmíněna na 
@@ -1104,11 +1106,11 @@ Pro zobrazování náhledů vizualizací je třeba mít v~local storage platné 
 Pro boolean hodnoty jsou to přepínače, pro JSON objekty (parametry a CSS styly) a číselné hodnoty jsou to textová pole. Všechny tyto komponenty
 jsou importovány z~knihovny MUI.
 
-Hodnoty těchto parametrů jsou ukládány v~Redux storu. Tento reduxový store obsahuje dva reducery: 
+Hodnoty těchto parametrů jsou ukládány v~Reduxovém uložišti (storu). Tento reduxový store obsahuje dva reducery: 
 
 \begin{enumerate}
-	\item playground - spravuje hodnoty \texttt{<Widget/>} parametrů 
-	\item playgroundUI - spravuje stavy dialogů (které z~dialogových oken je otevřené)
+	\item \texttt{playground} - spravuje hodnoty \texttt{<Widget/>} parametrů 
+	\item \texttt{playgroundUI} - spravuje stavy dialogů (které z~dialogových oken je otevřené)
 \end{enumerate}
 
 V~playgroundu (vzniklý název pro toto výsledné UI) je nutné umět k~těmto hodnotám přistupovat a měnit je. K~tomu slouží funkce \texttt{useSelector()} a \texttt{useDispatch()},
@@ -1147,10 +1149,11 @@ Při implementaci knihovny byly vytvářeny Markdown (\texttt{.md}) soubory, kte
 aby vytvořil webovou stránku, která je přístupná pro uživatele. Tímto způsobem byla vytvořena přehledná dokumentace, která slouží jako důležitý zdroj informací nejen pro koncové uživatele,
 ale také pro vývojáře. Zdrojové soubory výsledné dokumentace se nachází ve složce \texttt{docs} uložené ve zdrojovém kódu knihovny. Návod na její použití se nachází v~příloze \ref{app:docuDocs}.
 
-\chapter{Testování a možná rozšíření}
+\chapter{Testování a zhodnocení}
 \section{Testování}
+\label{sect:testovani}
 Při testování byl kladen velký důraz na správnou funkcionalitu a stabilitu knihovny. Výsledná knihovna byla testována jednotkovými testy a testováním podle
-scénářů. Jednotkové testy pokrývají 100\% výkonného kódu (testováno nástrojem istanbul/nyc, který zkoumá míru pokrytí kódu testy), což zahrnuje testování všech funkcí a komponent, 
+scénářů. Jednotkové testy (často nazývané jako unit) pokrývají 100\% výkonného kódu (testováno nástrojem istanbul/nyc, který zkoumá míru pokrytí kódu testy), což zahrnuje testování všech funkcí a komponent, 
 které jsou přímou součástí implementace knihovny.
 Tyto testy ověřují správnost a spolehlivost výkonného kódu v~různých scénářích a podmínkách.
 
@@ -1161,7 +1164,7 @@ Je však důležité poznamenat, že některé části funkcionality, jako např
 Z~tohoto důvodu není nutné testovat tato mapování v~rámci testů, protože jsou považovány za externě ověřené a stabilní.
 
 Namísto toho se zaměřujeme na testování klíčových aspektů funkcionality, které mohou být náchylnější k~chybám a které mohou ovlivnit výkon nebo spolehlivost knihovny. 
-Tímto přístupem zajišťujeme, že naše unit testy jsou účinné a efektivní ve zjišťování a prevenci chyb v~implementaci naší knihovny.
+Tímto přístupem zajišťujeme, že unit testy jsou účinné a efektivní ve zjišťování a prevenci chyb v~implementaci naší knihovny.
 
 Pro jednotkové testy bylo také nutné využít mockování. Veškerá mockovaná data jsou uložena v~samostatném souboru a jsou předávána při volání API, 
 což zajišťuje konzistentní a opakovatelné prostředí pro testování.
@@ -1175,7 +1178,43 @@ Tímto způsobem jsme se snažili zajistit, že knihovna nejen splňuje požadav
 Výsledkem tohoto testování bylo zdokonalení uživatelského rozhraní a identifikace potřebných úprav a vylepšení, které byly následně doimplementovány. Veškeré testovací scénáře
 jsou uvedené v~příloze \ref{app:testCases}.
 
+\section{Dosažené výsledky}
+\subsection{Funkcionalita}
+Knihovna nabízí možnost vkládání grafů dvěma způsoby. Prvním způsobem je komponenta \texttt{<Widget/>}, kde se specifikováním příslušných parametrů stáhnou potřebné konfigurace, data
+a následně se graf zobrazí. Slouží pro vizualizaci již existujícíh grafů v~aplikaci Omni Studio a provádí veškeré stahování a transformaci dat - vizualizace jsou tedy dynamické
+a schopné reagovat na uživatelovy interakce (např. zvolení jiného časové rozsahu). Komponenta také cachuje stažená data, což pomáhá k~rychlejšímu překreslování vizualizací,
+které byly dříve vykresleny. Tato komponenta ovšem vyžaduje pro stahování dat platné přístupové tokeny (Public API a Omni API). Ty mohou být specifikovány
+předáním funkce parametrem \texttt{tokenFunc}, která vrací dvojici přístupových tokenů, nebo jsou automaticky načítány ze systémových proměnných (případně souboru \texttt{.env}). Veškeré
+vykreslování následně provádí dceřinná komponenta \texttt{<WidgetVision/>}.
+
+Druhou možností je využítití komponenty \texttt{<WidgetVision/>}, která přijímá již expandované konfigurace a stažená data. Tato komponenta může být použita
+zejména pro statické vizualizace (tam, kde není třeba reagovat na změnu času či jiných hodnot). K~vykreslení nepotřebuje ani jeden z~přístupových tokenů. 
+
+Uživatelské rozhraní poskytuje umožňuje snadnou generaci tokenů a náhled vizualizací. Pro generování Public API tokenu je třeba být přihlášen v~Suite produktu, pro
+generování Omni API tokenu je třeba být připojen na firemní VPN. Po udělení oprávnění se přístupové tokeny automaticky uloží do local storage. Pokud je chce uživatel zkopírovat,
+v patičce stránky může využít tlačítko, které tokeny zkopíruje ve formátu souboru \texttt{.env}. Jestliže jsou oba tokeny platné, umožní se uživateli generovat náhled na vizualizace.
+Vyplněním políček ve formuláři specifikuje parametry komponenty \texttt{<Widget/>} a po stisknutí tlačítka se daná vizualizace vykreslí. Zároveň se objeví i tlačítko, které po rozkliknutí
+otevře dialog, v~němž je vygenerovný zdrojový kód dané vizualizace využívající komponentu \texttt{<Widget/>}, který stačí pouze zkopírovat a vložit do uživatelovy aplikace.
+
+\subsection{Reakce na nevalidní stavy}
+Jak již bylo zmíněno v~sekci \ref{sect:testovani}, knihovna je schopna správně reagovat na nevalidní stavy. Mezi nevalidní stavy patří např. expirace tokenů,
+nespecifikované PreJSON parametry či nespecifikované čísla widgetů a boardů. Použitím knihovní funkce \texttt{useQuery} je zajištěno, že pokud neproběhlo předešlé stahování
+a modifikace konfigurací (či jiných dat stahovaných z API) v~pořádku, nebudou na API posílány další requesty. To částečně zamezuje plýtváním počtu requestů, které jsou uživateli
+na hodinu povoleny (limit je 500 requestů za hodinu).
+
+V~uživatelském rozhraní je ověřována při každém spuštění platnost tokenů uložených v~local storage. Pokud jsou tokeny validní, je umožněno uživateli vizualizovat náhledy. V~opačném
+případě je tlačítko pro vizualizaci deaktivováno a uživatel je nucen vytvořit nový token.
+
+\subsection{Doba vykreslování}
+Nejvíce času z celého procesu zabírá stahování dat z~Emplifi API. Čas, po kterém se komponenta vykreslí, bude záviset na počtu datových requestů. Čím více bude
+datových requestů, tím více bude nutno provádět volání na API a tím delší bude čekací doba na stažení všech potřebných dat. Pro běžné vizualizace (4 requesty - 1 pro fieldy,
+1 pro konfiguraci widgetu a 2 pro data) trvá vykreslení zhruba 1-3 vteřiny. Pokud jsou grafy interaktivní (reagují na změnu vstupu - např. čas), byla částečná optimalizace
+docílena použitím knihovní funkce \texttt{useQuery}, která requesty cachuje a zabraňuje tak odesílání identických dotazů, které byly již dříve poslány.
+
 \section{Možná rozšíření}
+Přestože aplikace dosahuje stanovených cílů a požadavků, bylo identifikováno několik oblastí, ve~kterých by mohla být rozšířena či zdokonalena pro
+efektivnější a uživatelsky přívětivější použití.
+~
 \subsection{Plně automatická obnova tokenu}
 Pro lepší uživatelskou přívětivost by se knihovna mohla automaticky starat o~obnovování tokenu. Uživatel by nemusel po vypršení tokenu generovan ručně nový, ale
 po jeho vypršení by se automaticky vygeneroval nový přístupový token, který by knihovna nahradila za expirovaný.
@@ -1202,7 +1241,7 @@ Uživatel by pouze specifikoval číslo widgetu a veškeré povolené hodnoty by
 Cílem bakalářské práce bylo vytvoření JavaScript knihovny, která umožní uživatelům embedovat grafy do aplikací třetích stran skrze
 Emplifi Public API. Důležitou součástí bylo i navržení uživatelského rozhraní pro vytváření přístupových tokenů.
 
-Nejprve byly zmíněny možnosti embedování a již existující řešení včetně srovnání zpětných vazeb zákazníků. Velká pozornost byla také
+Nejprve byly zmíněny možnosti integrování a již existující řešení včetně srovnání zpětných vazeb zákazníků. Velká pozornost byla také
 věnována k~srovnávání jednotlivých přístupů k~API.
 
 Při implementaci knihovny bylo klíčové nejen zajistit její funkčnost, ale také udržovat přehledný a efektivní kód.

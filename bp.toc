@@ -1,97 +1,101 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
-\contentsline {chapter}{\chapternumberline {1}Úvod}{3}{chapter.1}%
-\contentsline {chapter}{\chapternumberline {2}Embedded analytics a zabezpečení}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Princip}{5}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Iframe}{6}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Webová komponenta}{6}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}React SDK + API}{7}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Zabezpečení}{7}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}HTTP autentizace}{7}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}API key}{8}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}OAuth}{8}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Existující řešení}{10}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}GoodData}{10}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Microsoft Power BI}{10}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Powered by Looker}{10}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Tableau}{11}{subsection.2.3.4}%
-\contentsline {chapter}{\chapternumberline {3}Návrh knihovny a uživatelského rozhraní}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Technologie}{13}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}JavaScript a React}{13}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Emplifi API}{14}{subsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.2.1}Vytvoření tokenu}{14}{subsubsection.3.1.2.1}%
-\contentsline {subsubsection}{\numberline {3.1.2.2}Endpointy}{17}{subsubsection.3.1.2.2}%
-\contentsline {subsubsection}{\numberline {3.1.2.3}Knihovny pro fetchování dat}{17}{subsubsection.3.1.2.3}%
-\contentsline {subsection}{\numberline {3.1.3}PreJSON a Vision}{18}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Návrh knihovny}{19}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Omni Studio}{19}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Funkcionalita knihovny}{20}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Návrh UI}{21}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Vytváření tokenů}{21}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Náhled vizualizací}{22}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Dokumentace}{22}{section.3.4}%
-\contentsline {chapter}{\chapternumberline {4}Implementace}{23}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Implementace knihovny}{23}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Vývoj knihovny v~čase}{23}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Struktura knihovny}{23}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Skript po instalaci}{25}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Backendové routy}{26}{subsection.4.1.4}%
-\contentsline {subsection}{\numberline {4.1.5}Organizace frontendové části}{26}{subsection.4.1.5}%
-\contentsline {subsubsection}{\numberline {4.1.5.1}Adresář constants}{26}{subsubsection.4.1.5.1}%
-\contentsline {subsubsection}{\numberline {4.1.5.2}Adresář functions}{27}{subsubsection.4.1.5.2}%
-\contentsline {subsubsection}{\numberline {4.1.5.3}Adresář components}{27}{subsubsection.4.1.5.3}%
-\contentsline {subsubsection}{\numberline {4.1.5.4}Sestavení knihovny}{30}{subsubsection.4.1.5.4}%
-\contentsline {section}{\numberline {4.2}Implementace uživatelského rozhraní}{30}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Importování knihovny}{30}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Inicializace aplikace}{31}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Vytváření tokenů}{32}{subsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.3.1}Public API token}{32}{subsubsection.4.2.3.1}%
-\contentsline {subsubsection}{\numberline {4.2.3.2}Omni API token}{33}{subsubsection.4.2.3.2}%
-\contentsline {subsubsection}{\numberline {4.2.3.3}Kontrola validity tokenů}{34}{subsubsection.4.2.3.3}%
-\contentsline {subsubsection}{\numberline {4.2.3.4}Zkopírování tokenů}{34}{subsubsection.4.2.3.4}%
-\contentsline {subsection}{\numberline {4.2.4}Náhled vizualizací}{34}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Dokumentace}{36}{subsection.4.2.5}%
-\contentsline {chapter}{\chapternumberline {5}Testování a možná rozšíření}{37}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Testování}{37}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Možná rozšíření}{38}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Plně automatická obnova tokenu}{38}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Předdefinované třídy}{38}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Podpora ostatních typů widgetů}{38}{subsection.5.2.3}%
-\contentsline {chapter}{\chapternumberline {6}Závěr}{39}{chapter.6}%
-\contentsline {chapter}{Přehled zkratek}{41}{chapter*.2}%
-\contentsline {appendix}{\chapternumberline {A}Uživatelská dokumentace}{43}{appendix.A}%
-\contentsline {appendix}{\chapternumberline {B}Testovací scénáře}{45}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Testování knihovny}{45}{section.B.1}%
-\contentsline {subsection}{\numberline {B.1.1}Pozitivní scénáře}{45}{subsection.B.1.1}%
-\contentsline {subsubsection}{\numberline {B.1.1.1}Vykreslení widgetu}{45}{subsubsection.B.1.1.1}%
-\contentsline {subsubsection}{\numberline {B.1.1.2}Vykreslení widgetu s~hlavičkou}{45}{subsubsection.B.1.1.2}%
-\contentsline {subsubsection}{\numberline {B.1.1.3}Vykreslení widgetu s~MUI styly}{45}{subsubsection.B.1.1.3}%
-\contentsline {subsubsection}{\numberline {B.1.1.4}Vykreslení widgetu s~danou výškou/šířkou}{46}{subsubsection.B.1.1.4}%
-\contentsline {subsubsection}{\numberline {B.1.1.5}Vykreslení widgetu s~debuggovacími výpisy}{46}{subsubsection.B.1.1.5}%
-\contentsline {subsubsection}{\numberline {B.1.1.6}Správné cáchování}{46}{subsubsection.B.1.1.6}%
-\contentsline {subsection}{\numberline {B.1.2}Negativní scénáře}{47}{subsection.B.1.2}%
-\contentsline {subsubsection}{\numberline {B.1.2.1}Nevalidní číslo widgetu}{47}{subsubsection.B.1.2.1}%
-\contentsline {subsubsection}{\numberline {B.1.2.2}Nespecifikování všech parametrů}{47}{subsubsection.B.1.2.2}%
-\contentsline {subsubsection}{\numberline {B.1.2.3}Nevalidní formát datových requestů}{47}{subsubsection.B.1.2.3}%
-\contentsline {subsubsection}{\numberline {B.1.2.4}Nevalidní formát konfigurace widgetu}{47}{subsubsection.B.1.2.4}%
-\contentsline {subsubsection}{\numberline {B.1.2.5}Nevalidní číslo dashboardu}{48}{subsubsection.B.1.2.5}%
-\contentsline {subsubsection}{\numberline {B.1.2.6}Nevalidní Public API token}{48}{subsubsection.B.1.2.6}%
-\contentsline {subsubsection}{\numberline {B.1.2.7}Nevalidní Omni API token}{48}{subsubsection.B.1.2.7}%
-\contentsline {subsubsection}{\numberline {B.1.2.8}Překročení limitu Public API tokenu}{48}{subsubsection.B.1.2.8}%
-\contentsline {subsubsection}{\numberline {B.1.2.9}Nepodporovaný typ widgetu}{49}{subsubsection.B.1.2.9}%
-\contentsline {section}{\numberline {B.2}Testování UI}{49}{section.B.2}%
-\contentsline {subsection}{\numberline {B.2.1}Pozitivní scénáře}{49}{subsection.B.2.1}%
-\contentsline {subsubsection}{\numberline {B.2.1.1}Generování Public API tokenu}{49}{subsubsection.B.2.1.1}%
-\contentsline {subsubsection}{\numberline {B.2.1.2}Generování Omni API tokenu}{49}{subsubsection.B.2.1.2}%
-\contentsline {subsubsection}{\numberline {B.2.1.3}Zkopírování tokenů}{49}{subsubsection.B.2.1.3}%
-\contentsline {subsubsection}{\numberline {B.2.1.4}Náhled vizualizace}{50}{subsubsection.B.2.1.4}%
-\contentsline {subsubsection}{\numberline {B.2.1.5}Kód pro embedování vizualizace}{50}{subsubsection.B.2.1.5}%
-\contentsline {subsubsection}{\numberline {B.2.1.6}Kontrola tokenů}{50}{subsubsection.B.2.1.6}%
-\contentsline {subsubsection}{\numberline {B.2.1.7}Vyplnění formuláře přes URL}{50}{subsubsection.B.2.1.7}%
-\contentsline {subsection}{\numberline {B.2.2}Negativní scénáře}{51}{subsection.B.2.2}%
-\contentsline {subsubsection}{\numberline {B.2.2.1}Neaktivní VPN}{51}{subsubsection.B.2.2.1}%
-\contentsline {subsubsection}{\numberline {B.2.2.2}Vložení nevalidního tokenu do local storage}{51}{subsubsection.B.2.2.2}%
-\contentsline {chapter}{Bibliografie}{53}{section*.4}%
+\contentsline {chapter}{\chapternumberline {1}Úvod}{5}{chapter.1}%
+\contentsline {chapter}{\chapternumberline {2}Embedded analytics a zabezpečení}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Princip}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Iframe}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Webová komponenta}{8}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}React SDK + API}{9}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Zabezpečení}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}HTTP autentizace}{9}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}API key}{10}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}OAuth}{10}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Existující řešení}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}GoodData}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Microsoft Power BI}{12}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Powered by Looker}{12}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Tableau}{13}{subsection.2.3.4}%
+\contentsline {chapter}{\chapternumberline {3}Návrh knihovny a uživatelského rozhraní}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Technologie}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}JavaScript a React}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Emplifi API}{16}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Vytvoření tokenu}{16}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}Endpointy}{19}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}Knihovny pro fetchování dat}{19}{subsubsection.3.1.2.3}%
+\contentsline {subsection}{\numberline {3.1.3}PreJSON a Vision}{20}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Návrh knihovny}{21}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Omni Studio}{21}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Funkcionalita knihovny}{22}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Návrh UI}{23}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Vytváření tokenů}{23}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Náhled vizualizací}{24}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Dokumentace}{24}{section.3.4}%
+\contentsline {chapter}{\chapternumberline {4}Implementace}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Implementace knihovny}{25}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Vývoj knihovny v~čase}{25}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Struktura knihovny}{25}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Skript po instalaci}{27}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Backendové routy}{28}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Organizace frontendové části}{28}{subsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.5.1}Adresář constants}{28}{subsubsection.4.1.5.1}%
+\contentsline {subsubsection}{\numberline {4.1.5.2}Adresář functions}{29}{subsubsection.4.1.5.2}%
+\contentsline {subsubsection}{\numberline {4.1.5.3}Adresář components}{29}{subsubsection.4.1.5.3}%
+\contentsline {subsubsection}{\numberline {4.1.5.4}Sestavení knihovny}{32}{subsubsection.4.1.5.4}%
+\contentsline {section}{\numberline {4.2}Implementace uživatelského rozhraní}{33}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Importování knihovny}{33}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Inicializace aplikace}{33}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Vytváření tokenů}{34}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}Public API token}{34}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}Omni API token}{35}{subsubsection.4.2.3.2}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}Kontrola validity tokenů}{36}{subsubsection.4.2.3.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.4}Zkopírování tokenů}{37}{subsubsection.4.2.3.4}%
+\contentsline {subsection}{\numberline {4.2.4}Náhled vizualizací}{37}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Dokumentace}{38}{subsection.4.2.5}%
+\contentsline {chapter}{\chapternumberline {5}Testování a zhodnocení}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Testování}{39}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Dosažené výsledky}{40}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Funkcionalita}{40}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Reakce na nevalidní stavy}{41}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Doba vykreslování}{41}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Možná rozšíření}{41}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Plně automatická obnova tokenu}{41}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Předdefinované třídy}{42}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Podpora ostatních typů widgetů}{42}{subsection.5.3.3}%
+\contentsline {chapter}{\chapternumberline {6}Závěr}{43}{chapter.6}%
+\contentsline {chapter}{Přehled zkratek}{45}{chapter*.2}%
+\contentsline {appendix}{\chapternumberline {A}Uživatelská dokumentace}{47}{appendix.A}%
+\contentsline {appendix}{\chapternumberline {B}Testovací scénáře}{49}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Testování knihovny}{49}{section.B.1}%
+\contentsline {subsection}{\numberline {B.1.1}Pozitivní scénáře}{49}{subsection.B.1.1}%
+\contentsline {subsubsection}{\numberline {B.1.1.1}Vykreslení widgetu}{49}{subsubsection.B.1.1.1}%
+\contentsline {subsubsection}{\numberline {B.1.1.2}Vykreslení widgetu s~hlavičkou}{49}{subsubsection.B.1.1.2}%
+\contentsline {subsubsection}{\numberline {B.1.1.3}Vykreslení widgetu s~MUI styly}{49}{subsubsection.B.1.1.3}%
+\contentsline {subsubsection}{\numberline {B.1.1.4}Vykreslení widgetu s~danou výškou/šířkou}{50}{subsubsection.B.1.1.4}%
+\contentsline {subsubsection}{\numberline {B.1.1.5}Vykreslení widgetu s~debuggovacími výpisy}{50}{subsubsection.B.1.1.5}%
+\contentsline {subsubsection}{\numberline {B.1.1.6}Správné cáchování}{50}{subsubsection.B.1.1.6}%
+\contentsline {subsection}{\numberline {B.1.2}Negativní scénáře}{51}{subsection.B.1.2}%
+\contentsline {subsubsection}{\numberline {B.1.2.1}Nevalidní číslo widgetu}{51}{subsubsection.B.1.2.1}%
+\contentsline {subsubsection}{\numberline {B.1.2.2}Nespecifikování všech parametrů}{51}{subsubsection.B.1.2.2}%
+\contentsline {subsubsection}{\numberline {B.1.2.3}Nevalidní formát datových requestů}{51}{subsubsection.B.1.2.3}%
+\contentsline {subsubsection}{\numberline {B.1.2.4}Nevalidní formát konfigurace widgetu}{51}{subsubsection.B.1.2.4}%
+\contentsline {subsubsection}{\numberline {B.1.2.5}Nevalidní číslo dashboardu}{52}{subsubsection.B.1.2.5}%
+\contentsline {subsubsection}{\numberline {B.1.2.6}Nevalidní Public API token}{52}{subsubsection.B.1.2.6}%
+\contentsline {subsubsection}{\numberline {B.1.2.7}Nevalidní Omni API token}{52}{subsubsection.B.1.2.7}%
+\contentsline {subsubsection}{\numberline {B.1.2.8}Překročení limitu Public API tokenu}{52}{subsubsection.B.1.2.8}%
+\contentsline {subsubsection}{\numberline {B.1.2.9}Nepodporovaný typ widgetu}{53}{subsubsection.B.1.2.9}%
+\contentsline {section}{\numberline {B.2}Testování UI}{53}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}Pozitivní scénáře}{53}{subsection.B.2.1}%
+\contentsline {subsubsection}{\numberline {B.2.1.1}Generování Public API tokenu}{53}{subsubsection.B.2.1.1}%
+\contentsline {subsubsection}{\numberline {B.2.1.2}Generování Omni API tokenu}{53}{subsubsection.B.2.1.2}%
+\contentsline {subsubsection}{\numberline {B.2.1.3}Zkopírování tokenů}{53}{subsubsection.B.2.1.3}%
+\contentsline {subsubsection}{\numberline {B.2.1.4}Náhled vizualizace}{54}{subsubsection.B.2.1.4}%
+\contentsline {subsubsection}{\numberline {B.2.1.5}Kód pro embedování vizualizace}{54}{subsubsection.B.2.1.5}%
+\contentsline {subsubsection}{\numberline {B.2.1.6}Kontrola tokenů}{54}{subsubsection.B.2.1.6}%
+\contentsline {subsubsection}{\numberline {B.2.1.7}Vyplnění formuláře přes URL}{54}{subsubsection.B.2.1.7}%
+\contentsline {subsection}{\numberline {B.2.2}Negativní scénáře}{55}{subsection.B.2.2}%
+\contentsline {subsubsection}{\numberline {B.2.2.1}Neaktivní VPN}{55}{subsubsection.B.2.2.1}%
+\contentsline {subsubsection}{\numberline {B.2.2.2}Vložení nevalidního tokenu do local storage}{55}{subsubsection.B.2.2.2}%
+\contentsline {chapter}{Bibliografie}{57}{section*.4}%
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
@@ -286,6 +290,6 @@
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
 \babel@toc {czech}{}\relax 
-\contentsline {chapter}{Seznam obrázků}{57}{appendix*.5}%
-\contentsline {chapter}{Seznam tabulek}{59}{appendix*.6}%
-\contentsline {chapter}{Seznam výpisů}{61}{appendix*.7}%
+\contentsline {chapter}{Seznam obrázků}{61}{appendix*.5}%
+\contentsline {chapter}{Seznam tabulek}{63}{appendix*.6}%
+\contentsline {chapter}{Seznam výpisů}{65}{appendix*.7}%

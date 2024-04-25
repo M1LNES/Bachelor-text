@@ -163,9 +163,9 @@ Vizualizace dat není pouhým trendem, ale stala se klíčovým nástrojem v~mno
 Pro snadné integrování vizualizací do aplikací třetích stran se využívá koncept \textit{embedded analytics} (integrované analytické nástroje) – ten umožňuje uživatelům rychlý a efektivní přístup k~datům bez potřeby přecházet mezi různými aplikacemi. 
 
 Cílem této práce zadanou společností Emplifi, která se specializuje na sociální marketing, je vytvořit praktickou knihovnu umožňující integrování analytických grafů do aplikací třetích stran. 
-Velký důraz bude kladen na bezpečný přístup k~datům skrze OAuth 2 protokol, který je klíčovým prvkem Emplifi Public API. Součástí bude také administrační rozhraní, jenž umožní snadné generování a obnovování OAuth 2 tokenů, a podrobná uživatelská dokumentace, která bude obsahovat veškeré informace k~nastavení a používání knihovny či uživatelského rozhraní.
+Velký důraz bude kladen na bezpečný přístup k~datům skrze OAuth 2 protokol, který je klíčovým prvkem Emplifi Public API. Součástí bude také administrační rozhraní, jenž umožní snadné generování OAuth 2 tokenů, a podrobná uživatelská dokumentace, která bude obsahovat veškeré informace k~nastavení a používání knihovny či uživatelského rozhraní.
 
-V~rámci teoretické části bude podrobně diskutována problematika spojená s~integrováním. Analyzovat se budou způsoby integrování, princip bezpečnostního protokolu OAuth 2 a již existující řešení embedded analytics.
+V~rámci teoretické části bude podrobně diskutována problematika spojená s~integrováním. Analyzovat se budou způsoby integrování, princip bezpečnostního protokolu OAuth 2 a již existující řešení \textit{embedded analytics}.
 
 Tímto způsobem práce nespojuje pouze technologickou inovaci s~nutností bezpečnosti dat, ale také reaguje na aktuální potřeby v~odvětví sociálního marketingu a digitálního prostoru.
 % _____________________________________________________________________________
@@ -490,7 +490,7 @@ Následně obdržíme token ve formátu jako na \ref{tokenResponse}. Přesné n�
 	\midrule
 	\verb"expires_in" & Platnost tokenu ve vteřinách. \\
 	\midrule
-	\verb"refresh_token" & Token pro obnovení přístupového tokenu. Zaslán pouze v~případě, pokud \verb"scope" obsahuje řetězec \texttt{offline\_access}.\\
+	\verb"refresh_token" & Obnovovací token. Zaslán pouze v~případě, pokud \verb"scope" obsahuje řetězec \texttt{offline\_access}.\\
 	\midrule
 	\verb"scope" & Prostředky, které byly uživatelem uděleny. Odděleny mezerou. \\
 	\end{longtable}
@@ -523,26 +523,26 @@ Má-li uživatel platný token, může začít se zasíláním dotazů. Emplifi 
 	%
 	\verb"/3/omni/metrics" & Získávání dat pro vizualizace. Data jsou ve formátu omni. \\
 	\midrule
-	\verb"/3/omni-studio" &  Získávání widget konfigurací, fieldů a vytváření Omni API tokenů\\
+	\verb"/3/omni-studio" &  Získávání widget konfigurací, fieldů a vytváření Omni API tokenů.\\
 	\midrule
 	\verb"/oauth2/0" &  Vytváření Public API a Omni API tokenů. \\
 	\end{longtable}
 %\end{center}
 
-Endpoint omni-studio bylo nutné vytvořit zadavatelem, jelikož Omni API endpointy bylo možné volat pouze při použití firemní VPN (Virtual Private Network). Nyní lze tyto endpointy provolávat prostřednictvím Public API. Původní
-strukturu Omni API requestu lze vložit do těla public API requestu, což umožní uživateli embedovat grafy i mimo VPN.
+Endpoint \texttt{/3/omni-studio} bylo nutné vytvořit zadavatelem, jelikož Omni API endpointy bylo možné volat pouze při použití firemní VPN (Virtual Private Network). Nyní lze tyto endpointy provolávat prostřednictvím Public API. Původní
+strukturu Omni API requestu lze vložit do těla Public API requestu, což umožní uživateli embedovat grafy i mimo VPN.
 
 \subsubsection{Knihovny pro fetchování dat}
 
 V~současné době existuje mnoho knihoven určené pro stahování (fetchování) dat. Data bude nejprve nutné načíst na backend (část, která zajišťuje logiku, správu dat a komunikaci s databázemi nebo externími službami) běžící aplikace, která je následně vrátí na frontend. Na backendu probíhá fetchování dvojím způsobem - 
 využitím zabudovaného fetch API v~Node.js a knihovnou axios. Pro načítání dat z~backendu na frontend budeme využívat rozhraní JavaScriptu Fetch API a knihovnu TanStack React Query. Její výhodou je cachování
-requestů \cite{tanstackQueryDocs} - pokud byl poslán jednou již stejný dotaz na data, načtení dat neproběhne z~API, ale z~uložené cache. To omezí počet requestů zaslaných na API a zmenší prodlevu vizualizace (data načtou rychleji z~cache než z~API). 
+requestů \cite{tanstackQueryDocs} - pokud byl poslán jednou již stejný dotaz na data, načtení dat neproběhne z~API, ale z~uložené cache. To omezí počet requestů zaslaných na API a zmenší prodlevu vizualizace (data se načtou výrazně rychleji z~webové cache než z~API). 
 
 \subsection{PreJSON a Vision}
 
 Interní knihovny, které budou využiti k~upravování widget konfigurací (PreJSON) a následné vizualizaci grafů (Vision).
 
-PreJSON slouží k~expandování konfigurací widgetů. Stažené konfigurace widgetů obsahují tzv. preJSON hodnoty, které jsou později dodefinovány uživatelem. Např. je-li stažena konfigurace, která obsahuje
+PreJSON slouží k~expandování konfigurací widgetů. Stažené konfigurace widgetů obsahují tzv. PreJSON hodnoty, které jsou později dodefinovány uživatelem. Např. je-li stažena konfigurace, která obsahuje
 nespecifikovaný parametr, můžeme jej dodefinovat použitím instance PreJSONu \cite{preJSONDocs}. Na zjedodušené ukázce \ref{notExpandedPreJson} je zobrazen PreJSON objekt, který by mohl specifikovat tělo dotazu. 
 
 \begin{lstlisting}[language=json, caption={Neexpandovaný PreJSON objekt}, label=notExpandedPreJson]
@@ -566,7 +566,7 @@ a pomocí funkce \texttt{expand()} může tuto hodnotu dodefinovat. Výsledek m�
 \end{lstlisting}
 
 Knihovna Vision slouží k~vytváření vizualizací. Obsahuje komponentu, která ovšem nespecifikuje, jak daná vizualizace bude vypadat \cite{visionDocs}, ale slouží k~vykreslení vizualizace. 
-Veškeré data a konfigy vizualizace (např. jakou barvu bude mít graf, jaká je popsána osa X apod.) jsou předány uživatelem a knihovna se pouze postará o~vykreslení. Tato výsledná vizualizace 
+Veškeré data a konfigy vizualizace (např. jakou barvu bude mít graf, jak je popsána osa X apod.) jsou předány uživatelem a knihovna se pouze postará o~vykreslení. Tato výsledná vizualizace 
 neobsahuje ale např. nadpisy, nápovědy apod., to bude zajišťovat výsledná knihovna této bakalářské práce.
 
 O~vykreslování se stará komponenta \texttt{<Vision/>}. Pro potřeby BP budou využívány parametry uvedené v~tabulce \ref{tab:visionParams}.
@@ -702,7 +702,7 @@ Zároveň v~době vývoje nebyly ještě zadavatelem vystaveny endpointy na Omni
 protože aplikace neměla přístup k~Omni Studio API. 
 
 Pro frontend aplikace byl použit framework React a další knihovny jako např. MUI, Tanstack React Query apod. Backendová část byla psána v~Node.js. Backend používal webový server express - ten
-řešil veškeré načítání a posílání dat. Kód byl členěn do dvou hlavních složek - \texttt{server} a \texttt{client}. Adresář \texttt{server} obsahoval inicializaci backendu a následné nastvení a spuštění webového serveru. Naopak
+řešil veškeré načítání a posílání dat. Kód byl členěn do dvou hlavních složek - \texttt{server} a \texttt{client}. Adresář \texttt{server} obsahoval inicializaci backendu a následné nastavení a spuštění webového serveru. Naopak
 adresář \texttt{client} obsahoval funkcionální komponenty k~vykreslování embedovaných grafů a pomocné funkce, které sloužily k~přeposílání dat z~frontendu na backend či opačně. Jakmile aplikace
 dokázala vykreslovat libovolné grafy, byla transformována z~React aplikace do samotné JavaScriptové knihovny.
 
@@ -827,7 +827,7 @@ pro hodnoty widgetů jejich PreJSON typ. Ta je poté využívána při deklaraci
 V~tomto adresáři se nachází veškeré funkce, které se využívají k~dotazování dat z~frontendu na backend či funkce pro PreJSON.
 
 Soubor \texttt{functions.js} obsahuje funkci určenou pro parsování řetězce na string. Byla vytvořena z~důvodu jednoduché manipulace s~uživatelovým vstupem. Není tedy třeba
-testovat, zda je řetězec validní JSON objekt nebo ne, tato funkce vrátí buď zparsovaný JSON objekt, nebo hodnotu null.
+testovat, zda je řetězec validní JSON objekt nebo ne, tato funkce vrátí buď zparsovaný JSON objekt, nebo hodnotu \texttt{null}.
 
 Jelikož časový rozsah widgetů lze určit i řetězcem (např. hodnota \texttt{P60D/now[sD]} specifikuje posledních 60 dní), je třeba jej umět převést z~tohoto řetězce. O~to se stará soubor
 \texttt{prejson-suite.js}, jehož výstupem je objekt, který tento časový úsek reprezentuje.
@@ -879,7 +879,7 @@ K~funkcionalitě je nutno specifikovat několik parametrů, které jsou specifik
 %\end{center}
 
 Nejprve se z~pole parametrů vytvoří objekt. Tento objekt obsahuje vždy jméno atributu (což je název proměnné z~Omni Studia, kterou je třeba dodefinovat) a k~němu patřičná hodnota (specifikovaná
-hodnota pro nedefinovaný parametr). Pokud se nejdná o~pole, vrátí se prázdný objekt.
+hodnota pro nedefinovaný parametr). Pokud se nejedná o~pole, vrátí se prázdný objekt.
 
 Následuje první stahování dat. Dle \texttt{boardID} předaného v~properties se pošle request na API, který stáhne fieldy z~daného boardu. Fieldy slouží k~přesné specifikaci datového typu - např.
 obsahuje-li konfigurace widgetu parametr \texttt{time}, specifikace hodnoty vypadat takto:
@@ -903,7 +903,7 @@ neexistuje widget s~daným ID, je vrácena chybová hláška o~nenalezení widge
 widget konfigurace. 
 
 Pro expandaci je nejprve nutné převést datové requesty widget konfigurace do PreJSON objektu. Po úspěšné převedení dat se vezme námi vytvořený objekt s~datovými requesty a vytvořenou instancí \texttt{PreJSONContext} se zkontroluje, zda-li uživatel zadal všechny parametry, které jsou
-potřebné k~expandování a následné vizualizaci. Pokud uživatel nezadal všechny ptořebné parametry, expandace neproběhne a uživatele o~tom informuje chybová hláška. Pokud ale zadal 
+potřebné k~expandování a následné vizualizaci. Pokud uživatel nezadal všechny potřebné parametry, expandace neproběhne a uživatele o~tom informuje chybová hláška. Pokud ale zadal 
 všechny potřebné parametry, expanduje PreJSON objekt danými parametry a následně zkonvertuje do objektu JSON.
 
 Posledním krokem je stažení dat. To proběhne pouze v~případě, jestliže expandování datových requestů proběhlo v~pořádku. Requesty jsou pak jeden po druhém postupně volány a vrácená data
@@ -916,7 +916,7 @@ chyba, je vypsána místo samotné vizualizace.
 
 Než se výše popsané kroky provedou, bude třeba indikovat načítání komponenty - zejména pokud datových requestů bude více a bude nutné posílat více dotazů na API. Tento stav bude velmi jednoduché 
 detekovat, protože používaná fetchovací funkce \texttt{useQuery()} vrací nejen načtená data, ale také dokáže indikovat, zda-li došlo při stahování k~chybě nebo jestli stahování stále probíhá. Proto
-je pro všechna tři načtení udržován stav \texttt{useQuery()} \texttt{isLoading} (pro každou funkci samozřejmě přejmenován na jiný název proměnné). Díky nim lze snadno vizualizovat, zda se vizualizace stále načítá.
+je pro všechna tři načítání udržován funkcí \texttt{useQuery()} stav \texttt{isLoading} (pro každou funkci samozřejmě přejmenován na jiný název proměnné). Díky nim lze snadno vizualizovat, zda se vizualizace stále načítá.
 Pro tuto indikaci je použita předdefinovaná komponenta \texttt{<CircularProgress/>} z~knihovny MUI.
 
 Výhodou používání \texttt{useQuery()} je také zmiňované cachování. Každé volání \texttt{useQuery()} má svůj klíč a jestliže již data byla jednou žádána s~tímto klíčem,
@@ -938,10 +938,10 @@ zřízeny i dvě komponenty. které vizualizují neexpandované a expandované d
 \subsubsection{Sestavení knihovny}
 
 Protože knihovna obsahuje frontendovou část i backendovou část, výstupem budou dva soubory. Pro přehlednost jsou exportované komponenty a routy v~kořenu adresáře \texttt{src}. Zároveň používání
-funkce \texttt{useQuery} vyžaduje tzv. QueryProvidera. Proto při exportu \texttt{<Widget/>} je komponenta vložená do komponenty \texttt{<QueryClientProvider/>}, která přijímá v~properties instanci
-Query Clienta. Tato komponenta obohacená o~Query Clienta je poté vyexportována jako normální \texttt{<Widget/>} komponenta a uživatel tedy nemusí ve svém projektu tohoto Query Clienta vytvářet.
+funkce \texttt{useQuery} vyžaduje tzv. \texttt{QueryProvidera}. Proto při exportu \texttt{<Widget/>} je komponenta vložená do komponenty \texttt{<QueryClientProvider/>}, která přijímá v~properties instanci
+\texttt{QueryClient}. Tato komponenta obohacená o~Query Clienta je poté vyexportována jako normální \texttt{<Widget/>} komponenta a uživatel tedy nemusí ve svém projektu tohoto Query Clienta vytvářet.
 
-Pro sestavení knihovny se využívá modul webpack. Jeho konfigurace je uložená v~kořenovým adresáři knihovny a obsahuje dvě konfigurace pro sestavení a kompilaci (často
+Pro sestavení knihovny se využívá modul webpack. Jeho konfigurace je uložená v~kořenovém adresáři knihovny a obsahuje dvě konfigurace pro sestavení a kompilaci (často
 označováno jako \textit{build}) - pro frontendovou část a backendovou.
 Na sestavení knihovny je následně vytvořen skript, který je definovaný v~\texttt{package.json} a spouští se pomocí npm. Výsledné dva vytvořené soubory (\texttt{empli-embed-backend.js} a \texttt{empli-embed.js})
 jsou uloženy do složky \texttt{dist}. Poté už je třeba jen aktualizovanou verzi knihovny zveřejnit na \url{https://www.npmjs.com/}. Pro tuto akci je taktéž vytvořen skript v~\texttt{package.json}.
@@ -952,7 +952,7 @@ Podrobnější informace jsou v~uživatelské dokumentaci.
 \subsection{Importování knihovny}
 
 Jelikož uživatelské rozhraní bude sloužit i k~náhledům na vizualizace, je nutné knihovnu naimporovat (je ale nutné ji instalovat do již existujícího projektu). Protože se ale knihovna nachází na npm, bude to velice snadné.
-Postup i průběh je znázorněn na výpisu: 
+Postup i průběh je znázorněn na následujícím výpisu.
 \setwinprompt{C:/Users/janochmi/ReactProjects/init_example}
 \begin{console}{Instalace knihovny}
 `\winprompt` npm i empli-embed
@@ -1047,11 +1047,11 @@ dva tokeny se uloží do local storage, jak je uvedeno na ukázce \ref{savingPub
 
 \subsubsection{Omni API token}
 K~vytvoření Omni API tokenu je nutné být přihlášen na firemní VPN. Princip je velmi podobný. Uživateli se otevře nové okno, kde je přesměrován na stránku Omni Studia, kde je požádán
-o~souhlas. Po potvrzení je opět na \texttt{redirect\_uri} zaslán autorizační kód. Nyní je třeba zaslat dotaz na Omni APi, které je ovšem schované za VPN. Zadavatel ovšem pro tento případ
+o~souhlas. Po potvrzení je opět na \texttt{redirect\_uri} zaslán autorizační kód. Nyní je třeba zaslat dotaz na Omni API, které je ovšem schované za VPN. Zadavatel ovšem pro tento případ
 vystavil zmiňovaný endpoint na Public API. Do těla requestu se uloží parametry pro Omni API (znázorněno na ukázce \ref{omniApiCall}) a následně se provede volání na vystavený endpoint
 \texttt{/3/omni-studio/oauth2/token}. 
 
-Jak je vidět, i pro Omni API je třeba autentizace formou klientského ID a secretu, ale jak je vidět, jedná se o~jiné hodnoty než v~Public API. Pro každé API
+Jak je vidět, i pro Omni API je třeba autentizace formou klientského ID a secretu, ale jak je patrné, jedná se o~jiné hodnoty než v~Public API. Pro každé API
 je tedy třeba jiného ID a secretu. Po vrácení tokenu z~API je opět v~poli requestů nalezen objekt s~daným request ID, hodnota tokenu v~objektu je nahrazena přijatou hodnotou a okno, v~němž
 uživatel uděloval oprávnění, je zavřeno. 
 
@@ -1087,14 +1087,14 @@ Opět se na frontendu metodou aktivního čekání každých 500 ms kontroluje, 
 \subsubsection{Kontrola validity tokenů}
 
 Při otevření stránky či po každém nastavení nového tokenu se spustí automaticky funkce \texttt{checkTokenAvailability()}, která kontroluje platnost tokenů. Pokud se v~local storage nenachází
-žádná hodnota pro token, je automaticky token nastaven na nevalidní a nastavena informační hláška při najetí myší na daný label tokeun. Pokud se ovšem nachází v~local storage nachází
+žádná hodnota pro token, je automaticky token nastaven na nevalidní a nastavena informační hláška při najetí myší na daný label tokenu. Pokud se ovšem nachází v~local storage nachází
 nějaká hodnota (ať už platný token, tak i ten nevalidní), vezme se daná hodnota a pošle se jako autorizační token v~dotazu na API. Pokud API vrátí validní data, je zřejmé, že token je platný.
-Na frontendu se následně nastaví validita tokenu na \texttt{true} a zlačítko pro obnovení tokenu zmizí a je nahrazeno zelenou checkmark ikonkou. Pokud ale API vrátí chybovou hlášku, 
+Na frontendu se následně nastaví validita tokenu na \texttt{true} a tlačítko pro obnovení tokenu zmizí a je nahrazeno zelenou ikonkou zaškrtnutí. Pokud ale API vrátí chybovou hlášku, 
 vezme se tato chybová hláška a uloží se do informační hlášky labelu, token bude stále nevalidní a tlačítko se bude stále zobrazovat. 
 
 \subsubsection{Zkopírování tokenů}
 
-Pro tuto funkcionalitu je vystaveno tlačítko, které po stisknutí uloží do clipboardu oba dva tokeny (jak Omni API, tak Public API) a umožní je tak ihned
+Pro tuto funkcionalitu je vystaveno tlačítko, které po stisknutí uloží do clipboardu (schránky) oba dva tokeny (jak Omni API, tak Public API) a umožní je tak ihned
 manuálně vložit do \texttt{.env} souboru. K~tokenům je možné stále přistupovat i přes local storage, ale tato varianta je méně uživatelsky přívětivější než jedno stisknutí tlačítka.
 
 
@@ -1103,7 +1103,7 @@ manuálně vložit do \texttt{.env} souboru. K~tokenům je možné stále přist
 % tady pak hlavně zmínit ten redux - ten to také dost natáhne - a jednotlivé modaly
 Pro zobrazování náhledů vizualizací je třeba mít v~local storage platné tokeny. Pokud platné nebudou, aplikace automaticky nastaví parametr tlačítko
 \texttt{disabled} na \texttt{true}. Pro veškeré parametry, které přijímá komponenta \texttt{<Widget/>}, jsou vytvořeny vlastní ovládací prvky.
-Pro boolean hodnoty jsou to přepínače, pro JSON objekty (parametry a CSS styly) a číselné hodnoty jsou to textová pole. Všechny tyto komponenty
+Pro \texttt{boolean} hodnoty jsou to přepínače, pro JSON objekty (parametry a CSS styly) a číselné hodnoty jsou to textová pole. Všechny tyto komponenty
 jsou importovány z~knihovny MUI.
 
 Hodnoty těchto parametrů jsou ukládány v~Reduxovém uložišti (storu). Tento reduxový store obsahuje dva reducery: 
@@ -1115,7 +1115,7 @@ Hodnoty těchto parametrů jsou ukládány v~Reduxovém uložišti (storu). Tent
 
 V~playgroundu (vzniklý název pro toto výsledné UI) je nutné umět k~těmto hodnotám přistupovat a měnit je. K~tomu slouží funkce \texttt{useSelector()} a \texttt{useDispatch()},
 které je třeba naimportovat. Pro přístup ke stavu je využita funkce \texttt{useSelector()}, která vrací objekt s~destruktorovanými proměnnými z~Redux storu. Naopak funkce 
-\texttt{useDispatch()} slouží k~odesílání akcí do Redux storu, které které umožňují měnit stav aplikace. Dále je třeba naimporovat z~jednotlivých sliců action creatory, které
+\texttt{useDispatch()} slouží k~odesílání akcí do Redux storu, které umožňují měnit stav aplikace. Dále je třeba naimporovat z~jednotlivých sliců action creatory, které
 slouží k~vytvoření příslušné akce, jež může následně upravovat stav aplikace. Změna aplikačního stavu je pak prováděna např. následujícím příkazem:
 
 \begin{lstlisting}[language=Javascript]
@@ -1172,8 +1172,8 @@ což zajišťuje konzistentní a opakovatelné prostředí pro testování.
 Dále byla knihovna testována v~rámci testování uživatelského rozhraní - opět probíhalo testování podle scénářů a testerem přímo ze zadavatelské firmy.
 
 Během testování uživatelského rozhraní byla ověřována především uživatelská přívětivost, intuitivnost a funkčnost knihovny z~pohledu reálných uživatelů. 
-Tester ze zadavatelské firmy se podílel na identifikaci potenciálních problémů a nedostatků v~uživatelském rozhraní a poskytoval cennou zpětnou vazbu ohledně použitelnosti a uživatelského zážitku.
-Tímto způsobem jsme se snažili zajistit, že knihovna nejen splňuje požadavky a očekávání našich uživatelů, ale také poskytuje optimální uživatelský zážitek při interakci s~aplikací.
+Tester ze zadavatelské firmy se podílel na identifikaci potenciálních problémů a nedostatků v~uživatelském rozhraní a poskytoval cennou zpětnou vazbu ohledně použitelnosti.
+Tímto způsobem jsme se snažili zajistit, že knihovna a rozhraní splňují požadavky a očekávání uživatelů.
 
 Výsledkem tohoto testování bylo zdokonalení uživatelského rozhraní a identifikace potřebných úprav a vylepšení, které byly následně doimplementovány. Veškeré testovací scénáře
 jsou uvedené v~příloze \ref{app:testCases}.
@@ -1190,14 +1190,14 @@ vykreslování následně provádí dceřinná komponenta \texttt{<WidgetVision/
 Druhou možností je využítití komponenty \texttt{<WidgetVision/>}, která přijímá již expandované konfigurace a stažená data. Tato komponenta může být použita
 zejména pro statické vizualizace (tam, kde není třeba reagovat na změnu času či jiných hodnot). K~vykreslení nepotřebuje ani jeden z~přístupových tokenů. 
 
-Uživatelské rozhraní poskytuje umožňuje snadnou generaci tokenů a náhled vizualizací. Pro generování Public API tokenu je třeba být přihlášen v~Suite produktu, pro
+Uživatelské rozhraní poskytuje umožňuje snadnou generaci tokenů a náhled vizualizací. Pro generování Public API tokenu je třeba být přihlášen v~produktu Suite, pro
 generování Omni API tokenu je třeba být připojen na firemní VPN. Po udělení oprávnění se přístupové tokeny automaticky uloží do local storage. Pokud je chce uživatel zkopírovat,
 v patičce stránky může využít tlačítko, které tokeny zkopíruje ve formátu souboru \texttt{.env}. Jestliže jsou oba tokeny platné, umožní se uživateli generovat náhled na vizualizace.
 Vyplněním políček ve formuláři specifikuje parametry komponenty \texttt{<Widget/>} a po stisknutí tlačítka se daná vizualizace vykreslí. Zároveň se objeví i tlačítko, které po rozkliknutí
 otevře dialog, v~němž je vygenerovný zdrojový kód dané vizualizace využívající komponentu \texttt{<Widget/>}, který stačí pouze zkopírovat a vložit do uživatelovy aplikace.
 
 \subsection{Reakce na nevalidní stavy}
-Jak již bylo zmíněno v~sekci \ref{sect:testovani}, knihovna je schopna správně reagovat na nevalidní stavy. Mezi nevalidní stavy patří např. expirace tokenů,
+Jak již bylo zmíněno v~sekci \ref{sect:testovani}, knihovna je schopna reagovat na nevalidní stavy. Mezi nevalidní stavy patří např. expirace tokenů,
 nespecifikované PreJSON parametry či nespecifikované čísla widgetů a boardů. Použitím knihovní funkce \texttt{useQuery} je zajištěno, že pokud neproběhlo předešlé stahování
 a modifikace konfigurací (či jiných dat stahovaných z API) v~pořádku, nebudou na API posílány další requesty. To částečně zamezuje plýtváním počtu requestů, které jsou uživateli
 na hodinu povoleny (limit je 500 requestů za hodinu).
@@ -1238,11 +1238,11 @@ Uživatel by pouze specifikoval číslo widgetu a veškeré povolené hodnoty by
 % _____________________________________________________________________________
 %
 \chapter{Závěr}
-Cílem bakalářské práce bylo vytvoření JavaScript knihovny, která umožní uživatelům embedovat grafy do aplikací třetích stran skrze
+Cílem bakalářské práce bylo vytvoření JavaScript knihovny, která umožní uživatelům intergovat grafy do aplikací třetích stran skrze
 Emplifi Public API. Důležitou součástí bylo i navržení uživatelského rozhraní pro vytváření přístupových tokenů.
 
 Nejprve byly zmíněny možnosti integrování a již existující řešení včetně srovnání zpětných vazeb zákazníků. Velká pozornost byla také
-věnována k~srovnávání jednotlivých přístupů k~API.
+věnována srovnávání jednotlivých přístupů k~API.
 
 Při implementaci knihovny bylo klíčové nejen zajistit její funkčnost, ale také udržovat přehledný a efektivní kód.
 Velký důraz byl kladen na správnou implementaci funkčních požadavků a na použití moderních technologií. 
@@ -1392,7 +1392,7 @@ Očekávaný výsledek je vykreslení vizualizace s~vypsanými datovými request
 	\item Do atributu \texttt{params} vložíme potřebné parametry.
 	\item Zobrazíme.
 	\item Změníme na jiné číslo widgetu a znovu zobrazíme.
-	\item Změníme na původní číslo widgetu.
+	\item Změníme na původní číslo widgetu a opět zobrazíme.
 \end{enumerate}
 Očekávaný výsledek je okamžité vykreslení vizualizace, protože původní data jsou cachována.
 
@@ -1431,7 +1431,7 @@ Očekávaný výsledek je vypsání chybové hlášky, že výsledná konfigurac
 
 \subsubsection{Nevalidní číslo dashboardu}
 \begin{enumerate}
-	\item Do \texttt{<Widget/>} komponenty zadáme do čísla dasbhoardu libovolný řetězec.
+	\item Do \texttt{<Widget/>} komponenty zadáme do čísla dashboardu libovolný řetězec.
 	\item Zobrazíme.
 \end{enumerate}
 Očekávaný výsledek je vypsání chybové hlášky a stabilita aplikace.
@@ -1504,7 +1504,7 @@ Předpokladem je mít vygenerované oba tokeny.
 \begin{enumerate}
 	\item Vyplníme uživatelské rozhraní (tj. číslo boardu, widgetu, parametry, MUI styly apod.).
 	\item Stiskneme tlačítko pro náhled.
-	\item V~pravém horním rohu se objeví tlačítko Embed.
+	\item V~pravém horním rohu se objeví tlačítko \texttt{Embed}.
 	\item Stiskneme jej.
 \end{enumerate}
 Očekávaný výsledek je otevření dialogu se zmenšenou vizualizací a vygenerovaným React kódem.

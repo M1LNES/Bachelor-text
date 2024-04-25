@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  25 APR 2024 18:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  25 APR 2024 19:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2090,10 +2090,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [17 <./pictures/emplifiAPI.png>]
-Underfull \hbox (badness 1478) in paragraph at lines 493--494
-[]|\T1/Cochineal-TLF/m/n/12 (+10) Token pro ob-no-vení p°í-stu-po-vého to-kenu. Za-slán
- []
-
 \FASThesis@runninghead@rule@offset=\dimen385
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
@@ -2109,7 +2105,7 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [20]
-<pictures/omni-studio.png, id=718, 1630.59187pt x 1212.02812pt>
+<pictures/omni-studio.png, id=717, 1630.59187pt x 1212.02812pt>
 File: pictures/omni-studio.png Graphic file (type png)
 <use pictures/omni-studio.png>
 Package pdftex.def Info: pictures/omni-studio.png  used on input line 609.
@@ -2265,7 +2261,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [39
 
 ]
-Underfull \vbox (badness 3724) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \FASThesis@runninghead@rule@offset=\dimen405
 
@@ -2463,7 +2459,7 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (76 pages, 1630111 bytes).
+Output written on bp.pdf (76 pages, 1630142 bytes).
 PDF statistics:
  1386 PDF objects out of 1440 (max. 8388607)
  419 named destinations out of 1000 (max. 500000)

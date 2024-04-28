@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber bp"] 1714260214 "bp.bcf" "bp.bbl" "bp" 1714318310 0
+["biber bp"] 1714336699 "bp.bcf" "bp.bbl" "bp" 1714337796 0
   "./bp.bib" 1713637233 7185 3eab6af1653ad870369caa8c043028c8 ""
-  "bp.bcf" 1714318309 112467 f0a54b3db3d3292f23e61b3e84f90bb3 "pdflatex"
+  "bp.bcf" 1714337795 112467 f0a54b3db3d3292f23e61b3e84f90bb3 "pdflatex"
   (generated)
   "bp.bbl"
   "bp.blg"
   (rewritten before read)
-["pdflatex"] 1714318302 "c:/Users/milan/Desktop/LaTex/bp/bp.tex" "bp.pdf" "bp" 1714318310 0
+["pdflatex"] 1714337789 "c:/Users/milan/Desktop/LaTex/bp/bp.tex" "bp.pdf" "bp" 1714337796 0
   "C:/Users/milan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1714303417 166744 39fb954ef9835c353c346bacce54d89c ""
   "C:/Users/milan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1713548187 24200609 d11e3e0e45de9280d1d1cb58172c0219 ""
   "C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/enc/dvips/GTAmerica/a_ewcozh.enc" 1701518284 3379 251d25309ec463a6b41e6c44f528547e ""
@@ -302,21 +302,20 @@
   "D:/Install/MikTex/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "D:/Install/MikTex/tex/latex/xstring/xstring.sty" 1693735632 123 a302f2c651a95033260db60e51527ae8 ""
   "D:/Install/MikTex/tex/latex/xurl/xurl.sty" 1641733940 4675 e4b8c405820368c2dfb03526e16d725a ""
-  "bp.aux" 1714318308 35757 608d698ca0463c85a2cb1bee7e78ff97 "pdflatex"
-  "bp.bbl" 1714260225 31679 1d95d68c8001b3bf6daea2614ca85d44 "biber bp"
-  "bp.lof" 1714318309 6347 29496a2095c33dd9be6df552b8c1d45f "pdflatex"
-  "bp.lol" 1714318309 1331 407de4f894eeb253b1b4cc6339512613 "pdflatex"
-  "bp.lot" 1714318309 6908 8aaae7c8d5f8dba8c09cb00dbfb8b96f "pdflatex"
-  "bp.out" 1714318309 9387 88419d1c11d89aec2da52f1cdd31bd9a "pdflatex"
-  "bp.run.xml" 1714318309 2419 0c8fdbf3a3681e152c52f6fd575e2c02 "pdflatex"
-  "bp.tex" 1714318301 108035 2cf5be4f6d2f130882c404dc040ac488 ""
-  "bp.toc" 1714318309 14600 942beecf122f41e9129166e35e9610c9 "pdflatex"
-  "c:/Users/milan/Desktop/LaTex/bp/bp.tex" 1714318301 108035 2cf5be4f6d2f130882c404dc040ac488 ""
+  "bp.aux" 1714337795 37185 c63fcca48d00cec766469b426d18c548 "pdflatex"
+  "bp.bbl" 1714336702 31679 1d95d68c8001b3bf6daea2614ca85d44 "biber bp"
+  "bp.lof" 1714337795 6347 29496a2095c33dd9be6df552b8c1d45f "pdflatex"
+  "bp.lol" 1714337795 1331 407de4f894eeb253b1b4cc6339512613 "pdflatex"
+  "bp.lot" 1714337795 6908 8aaae7c8d5f8dba8c09cb00dbfb8b96f "pdflatex"
+  "bp.out" 1714337795 9387 88419d1c11d89aec2da52f1cdd31bd9a "pdflatex"
+  "bp.run.xml" 1714337795 2419 0c8fdbf3a3681e152c52f6fd575e2c02 "pdflatex"
+  "bp.tex" 1714337788 108110 f9888c1435a60b065083dd71929c661c ""
+  "bp.toc" 1714337795 14600 942beecf122f41e9129166e35e9610c9 "pdflatex"
+  "c:/Users/milan/Desktop/LaTex/bp/bp.tex" 1714337788 108110 f9888c1435a60b065083dd71929c661c ""
   "fasthesis.cls" 1708004154 55614 9f38ebd9514516418993889d32c89852 ""
   "img/background-kiv.pdf" 1701518290 8873 b97839523fb81367fe0494450b7edebc ""
   "img/kiv-black-cz.pdf" 1701518290 8971 8015c8d8d645426feaf34fd9b87f0981 ""
   "img/kiv-cmyk-cz.pdf" 1701518290 9000 3fc5dce2904960610cfa13eb46492e6c ""
-  "pictures/QR.pdf" 1713701859 2402 204ed8d80af77b852d5fbc72fe5378c5 ""
   "pictures/emplifi-dashboard-example-kopie.png" 1713727319 124493 87c4f7635772431eb3a032af2fdad963 ""
   "pictures/emplifiAPI.png" 1712694564 63739 c09a1afb8132173cb8423d2cc5273571 ""
   "pictures/oauth2-diagram.png" 1702171252 254400 07cf453056203297b404034eaafa8cac ""

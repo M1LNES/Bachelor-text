@@ -32,7 +32,7 @@
 \usepackage{color}
 \usepackage{enumitem}
 \usepackage{xurl}
-
+\usepackage{qrcode}
 %\usepackage{float} 
 \title{Vývoj JavaScript knihovny pro~embedování vizualizací skrze~Emplifi Public API}
 \author{Milan}{Janoch}{}{}
@@ -1302,17 +1302,17 @@ client (webpack 5.90.3) compiled successfully
 \end{console}
 
 V~konzoli se ukáže adresa, na které je dokumentace spuštěna. Pro účel bakalářské práce byla tato dokumentace
-zveřejněna i na veřejné URL adrese, na kterou je možné se přesměrovat naskenováním QR (Quick Response) kódu na obrázku \ref{fig:qrCode}.
+zveřejněna i na veřejné URL adrese, na kterou je možné se přesměrovat naskenováním QR (Quick Response) kódu na obrázku \ref{fig:qrCode}.\footnote{https://embedding-docs.vercel.app/}
 
-\begin{figure}[h]
+
+\begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.25\textwidth]{pictures/QR.pdf}
+	\qrcode[height=3cm,version=5]{https://embedding-docs.vercel.app/}
 	\caption{QR kód směřující na on-line uživatelskou dokumentaci}
 	\label{fig:qrCode}
 \end{figure}
 
 Dokumentace obsahuje i odkaz na GitHub repozitář se zdrojovým kódem. V~něm se nachází i tato dokumentace vyexportovaná do souboru \texttt{.pdf} v~adresáři \texttt{docs}. 
-
 
 V~tabulce \ref{tab:docsTabs} jsou popsány jednotlivé sekce, které dokumentace obsahuje.
 

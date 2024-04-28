@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  28 APR 2024 17:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  28 APR 2024 22:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1508,7 +1508,8 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'czech'.
- (bp.aux <Reading QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" at level 6-M from aux file.>
+ (bp.aux <Reading QR code for "https://embedding-docs.vercel.app/" at level 5-H from aux file.>
+<Reading QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" at level 6-M from aux file.>
 )
 \openout1 = `bp.aux'.
 
@@ -2264,19 +2265,19 @@ Overfull \hbox (1.8pt too wide) detected at line 1284
 [] 
  []
 
-<pictures/QR.pdf, id=927, 770.12718pt x 770.12718pt>
-File: pictures/QR.pdf Graphic file (type pdf)
-<use pictures/QR.pdf>
-Package pdftex.def Info: pictures/QR.pdf  used on input line 1309.
-(pdftex.def)             Requested size: 96.73936pt x 96.7357pt.
 
-Overfull \hbox (0.94716pt too wide) in paragraph at lines 1314--1315
+
+<QR code requested for "https://embedding-docs.vercel.app/" in version 5-M.>
+<Error-correction level increased from M to H at no cost.>
+<Copying the QR code for "https://embedding-docs.vercel.app/" in version 5-H as previously calculated.>
+
+Overfull \hbox (0.94716pt too wide) in paragraph at lines 1315--1316
 []\T1/Cochineal-TLF/m/n/12 (-10) Dokumentace ob-sa-huje i od-kaz na Gi-tHub re-po-zi-tá° se zdro-jo-vým kó-dem. V n¥m
  []
 
 [42
 
- <./pictures/QR.pdf>]
+]
 \FASThesis@runninghead@rule@offset=\dimen408
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
@@ -2376,7 +2377,8 @@ Package pdftex.def Info: img/background-kiv.pdf  used on input line 1561.
 \tf@lol=\write10
 \openout10 = `bp.lol'.
 
- (bp.aux <Reading QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" at level 6-M from aux file.>
+ (bp.aux <Reading QR code for "https://embedding-docs.vercel.app/" at level 5-H from aux file.>
+<Reading QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" at level 6-M from aux file.>
 )
  ***********
 LaTeX2e <2023-11-01>
@@ -2389,10 +2391,10 @@ Package logreq Info: Writing requests to 'bp.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52474 strings out of 474586
- 993849 string characters out of 5758344
+ 52470 strings out of 474586
+ 993793 string characters out of 5758344
  2025558 words of memory out of 5000000
- 73306 multiletter control sequences out of 15000+600000
+ 73301 multiletter control sequences out of 15000+600000
  998588 words of font info for 278 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,13n,113p,1969b,3323s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2403,9 +2405,9 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (65 pages, 1624926 bytes).
+Output written on bp.pdf (65 pages, 1625986 bytes).
 PDF statistics:
- 1339 PDF objects out of 1440 (max. 8388607)
- 409 named destinations out of 1000 (max. 500000)
- 61135 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1338 PDF objects out of 1440 (max. 8388607)
+ 410 named destinations out of 1000 (max. 500000)
+ 61130 words of extra memory for PDF output out of 61914 (max. 10000000)
 

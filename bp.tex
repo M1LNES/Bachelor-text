@@ -24,7 +24,7 @@
 %
 % _____________________________________________________________________________
 %
-\documentclass[czech, bc, kiv, he, iso690numb]{fasthesis}
+\documentclass[czech, bc, kiv, he, iso690numb, viewonly]{fasthesis} % TODO sirotek hned v druhe kapitole pod obrazkem
 \usepackage{dirtree}
 \usepackage{hyperref}
 \usepackage{fontawesome5} 
@@ -157,13 +157,13 @@ a také rodině za podporu během celého studia.
 % _____________________________________________________________________________
 %
 \chapter{Úvod}
-V~současné době internetu tvoří data významnou a důležitou součást každodenního života. Problematikou dat je nejen je efektivní ukládání, 
+V~současné době internetu tvoří data významnou a důležitou součást každodenního života. Problematikou dat je nejen jejich efektivní ukládání, 
 ale také rychlé a efektivní interpretování. 
 Vizualizace dat není pouhým trendem, ale stala se klíčovým nástrojem v~mnoha odvětvích. Od oblasti logistiky, kde pomáha monitorovat a řídit tok zásob a logistické operace, až po oblast sociálního marketingu, kde je využívána k~personalizovaným reklamám či sledování aktivit zákazníků. 
 Pro snadné integrování vizualizací do aplikací třetích stran se využívá koncept \textit{embedded analytics} (integrované analytické nástroje) – ten umožňuje uživatelům rychlý a efektivní přístup k~datům bez potřeby přecházet mezi různými aplikacemi. 
 
-Cílem této práce zadanou společností Emplifi, která se specializuje na sociální marketing, je vytvořit praktickou knihovnu umožňující integrování analytických grafů do aplikací třetích stran. 
-Velký důraz bude kladen na bezpečný přístup k~datům skrze OAuth 2 protokol, který je klíčovým prvkem Emplifi Public API. Součástí bude také administrační rozhraní, jenž umožní snadné generování OAuth 2 tokenů, a podrobná uživatelská dokumentace, která bude obsahovat veškeré informace k~nastavení a používání knihovny či uživatelského rozhraní.
+Cílem této práce zadané společností Emplifi, která se specializuje na sociální marketing, je vytvořit praktickou knihovnu umožňující integrování analytických grafů do aplikací třetích stran. 
+Velký důraz bude kladen na bezpečný přístup k~datům skrze OAuth 2 protokol, který je klíčovým prvkem Emplifi Public API. Součástí bude také administrační rozhraní, jež umožní snadné generování OAuth 2 tokenů, a podrobná uživatelská dokumentace, která bude obsahovat veškeré informace k~nastavení a používání knihovny či uživatelského rozhraní.
 
 V~rámci teoretické části bude podrobně diskutována problematika spojená s~integrováním. Analyzovat se budou způsoby integrování, princip bezpečnostního protokolu OAuth 2 a již existující řešení \textit{embedded analytics}.
 
@@ -176,13 +176,13 @@ Tímto způsobem práce nespojuje pouze technologickou inovaci s~nutností bezpe
 % _____________________________________________________________________________
 %
 \chapter{Embedded analytics a zabezpečení}
-V~této kapitole se zmíníme o~principu embedded analytics, zabezpečení dat pomocí OAuth 2 tokenu a již existujících řešeních.
+V~této kapitole se zmíníme o~principu embedded analytics, zabezpečení dat pomocí OAuth 2 protokolu a již existujících řešeních.
 
 %
 %   Podkapitola princip
 %
 \section{Princip}
-Embedded analytics transformuje data do grafů a dashboardů \cite{goodDataEmbedded}. Dashboard je souhrn informací a nástrojů, který umožňuje rychle a jednoduše zobrazovat důležité metriky (např. počet komentářů pod příspěvkem) \cite{coJeDashboard}.
+Embedded analytics transformuje data do grafů a dashboardů \cite{goodDataEmbedded}. Dashboard je souhrn informací a nástrojů, které umožňují rychle a jednoduše zobrazovat důležité metriky (např. počet komentářů pod příspěvkem) \cite{coJeDashboard}.
 Emplifi dashboardy umožňují definovat, vytvářet a vizualizovat aktivity uživatelů na sociálních sítí \cite{emplifiDashboard}, což umožňuje komplexní pohled na interakci s~obsahem.
 
 \begin{figure}
@@ -192,14 +192,14 @@ Emplifi dashboardy umožňují definovat, vytvářet a vizualizovat aktivity už
 	\label{fig:emplifiDashUkazka}
 \end{figure}
 
-Na obrázku \ref{fig:emplifiDashUkazka} vidíme příklad dashboardu - skládá se z~několika grafů, obvykle nazývané jako widgety \cite{emplifiDashboard}, jejichž obsah lze modifikovat pomocí přepínačů v~liště. Obsah může být modifikován v~časovém období (posledních 30 dní, poslední rok, konkrétní časový rozsah, ...), ale lze jej modifikovat také na základě metrik jako je např. sociální síť (Facebook, Instragram, LinkedIn), druh interakcí (komentáře, reakce, sdílení) apod.\footnote{Widgety nemusí být obecně pouze vizualizace, může se jednat také o~ovládací prvky (např. výběrové seznamy, zaškrtávací políčka, textová pole apod.). Tato možnost se využívá zejména ve vývojářských dashboardech pro rychlejší tvorbu vizualizací. V~samotném produktu firmy se ale používá kvůli uživatelské přívětivosti pouze pro vizualizace \cite{emplifiDashboard}. 
+Na obrázku \ref{fig:emplifiDashUkazka} vidíme příklad dashboardu - skládá se z~několika grafů, obvykle nazývané jako widgety \cite{emplifiDashboard}, jejichž obsah lze modifikovat pomocí přepínačů v~liště. Obsah může být modifikován v~časovém období (posledních 30 dní, poslední rok, konkrétní časový rozsah...), ale lze jej modifikovat také na základě metrik, jako je např. sociální síť (Facebook, Instragram, LinkedIn), druh interakcí (komentáře, reakce, sdílení) apod.\footnote{Widgety nemusí být obecně pouze vizualizace, může se jednat také o~ovládací prvky (např. výběrové seznamy, zaškrtávací políčka, textová pole apod.). Tato možnost se využívá zejména ve vývojářských dashboardech pro rychlejší tvorbu vizualizací. V~samotném produktu firmy se ale používá kvůli uživatelské přívětivosti pouze pro vizualizace \cite{emplifiDashboard}. 
 }
 
-Embedded analytics se nechová a nevypadá jako samostatná aplikace, ale je integrován do jiného softwaru nebo webového portálu. Koncoví uživatelé často ani nepoznají, že se jedná
+Embedded analytics se nechová a nevypadá jako samostatná aplikace, ale je integrován do jiného softwaru nebo webového portálu. Koncoví uživatelé často ani nepoznají, že se jedná o
 integrovanou analytiku a vnímají software s~touto integrovanou analytikou jako jeden nástroj \cite{goodDataEmbedded}. To umožňuje softwarovým společnostem získat a plně
 integrovat analytickou platformu s~jejich vlastním SaaS produktem bez nutnosti velkých investic do vývoje vlastního řešení. 
 
-SaaS (Software as a Service) je licenční model, v~němž přístup je poskytován na základě předplatného, přičemž software je umístěn na externích serverech, nikoli na firemních serverech \cite{saasDefinition}.
+SaaS (Software as a Service) je licenční model, v~němž přístup je poskytován na základě předplatného, přičemž software je umístěn na externích serverech, nikoli na serverech firemních \cite{saasDefinition}.
 K~těmto službám se běžně přistupuje prostřednictvím webového prohlížeče s~přihlašovacím jménem a heslem. Výhodou je, že místo toho, aby mělo každé zařízení ve firmě nainstalované
 tento program, stačí se do programu přihlásit přes internet. Pro firmu to znamená úsporu financí, jelikož nemusí investovat do nového hardwaru, na němž by dané programy běžely. 
 Nevýhodou SaaS je bezpečnost dat a rychlost jejich doručování. Protože jsou data umístěna na externích serverech, je třeba zajistit rychlé a spolehlivé internetové připojení a vyloučit
@@ -208,7 +208,7 @@ přístup neoprávněných uživatelů.
 Existuje hned několik způsobů, jak data embedovat. Mezi nejpopulárnější a nejrozšířenější způsoby patří HTML (Hypertext Markup Language) iframe, webová komponenta či React SDK s~voláním API \cite{goodDataEmbedded}. 
 
 \subsection{Iframe}
-Nejjednodušší a nejrychlejší metodou embedování je využití použití iframu \cite{goodDataEmbedded}. Iframe (inline frame) je HTML prvek, který umožňuje načíst HTML stránku uvnitř dokumentu \cite{iFrameAdv}. Používá se pro vložení určitého obsahu z~jednoho zdroje do druhého. To se poté jeví jako nové okno v~dané stránce, jedná se ovšem o~embedovaný iframe. Tuto možnost embedování využívají např. Google Mapy nebo YouTube \cite{iFrameAdv}. Velkou výhodou je, že není třeba instalovat pro běh žádné dependence.
+Nejjednodušší a nejrychlejší metodou embedování je využití iframu \cite{goodDataEmbedded}. Iframe (inline frame) je HTML prvek, který umožňuje načíst HTML stránku uvnitř dokumentu \cite{iFrameAdv}. Používá se pro vložení určitého obsahu z~jednoho zdroje do druhého. To se poté jeví jako nové okno v~dané stránce, jedná se ovšem o~embedovaný iframe. Tuto možnost embedování využívají např. Google Mapy nebo YouTube \cite{iFrameAdv}. Velkou výhodou je, že není třeba instalovat pro běh žádné dependence.
 
 \subsection{Webová komponenta}
 Pokročilejší technikou pro embedování je použití webové komponenty. Výhoda opět spočívá v~tom, že není třeba instalovat závislosti pro běh. Embedování probíhá pomocí knihovny, která se naimportuje přes HTML tag \texttt{<script>}. Poté je možno embedovat vizualizace pouze prostřednictvím naimplementovaných webových komponent \cite{webComp}.
@@ -217,9 +217,9 @@ Pokročilejší technikou pro embedování je použití webové komponenty. Výh
 Poslední zmiňovanou možností je embedování prostřednictvím React SDK s~voláním API. 
 
 SDK (Software development kit) je označení sady nástrojů pro tvorbu softwaru \cite{SDKvsAPI}, které umožňuje vývojářům vytvářet rychleji a standartizovaně nové aplikace. API 
-(Application Programming Interface) je rozhraní usnadňující komunikaci mezi dvěmi platformami. Uživatel specifikuje požadavek na data, rozhraní API provede volání na webový server, který
+(Application Programming Interface) je rozhraní usnadňující komunikaci mezi dvěma platformami. Uživatel specifikuje požadavek na data, rozhraní API provede volání na webový server, který
 následně tento požadavek zpracuje a odešle odpověď na specifikované volání (může se jednat např. o~data ve formátu JSON). Díky tomu se krátí vývojový cyklus (automatizace), efektivně 
-se poskytují nové služby uživatelům a může zlepšit reputaci důvěryhodnost značky.
+se poskytují nové služby uživatelům a může zlepšit reputaci a důvěryhodnost značky.
 
 K~embedování je potřeba následovat instrukce (např. nainstalování dependencí, zprovoznění backendu apod.) a zajistit, že všechny kroky v~nich obsažené budou splněny \cite{reactSDKComp}. Jedná se tedy o~programátorsky náročnější metodu, ovšem výhoda spočívá ve větší flexibilitě vývojářů, kteří mohou vizualizace snadno modifikovat \cite{goodDataEmbedded}.
 
@@ -246,7 +246,7 @@ Samotné ověřování pomocí HTTP Basic se ovšem nedoporučuje. Přenášené
 	Authorization: Basic drgnpdrgud653==,
 \end{lstlisting}
 
-Bearer schéma obsahuje tzv. bearer tokeny. Bearer token specifikuje, k~jakým zdrojům může uživatel v~API přistupovat \cite{mostUsedAuthentication}. Token je obvykle řetězec vygenerovaný serverem v~reakci na požadavek na přihlášení. Opět je nutné zajistit zabezpečené spojení jako v~případě Basic schématu. Atribut hlavičky s~tokenem může vypadat např. jako na ukázce \ref{bearerHeader}
+Bearer schéma obsahuje tzv. bearer tokeny. Bearer token specifikuje, k~jakým zdrojům může uživatel v~API přistupovat \cite{mostUsedAuthentication}. Token je obvykle řetězec vygenerovaný serverem v~reakci na požadavek na přihlášení. Opět je nutné zajistit zabezpečené spojení jako v~případě Basic schématu. Atribut hlavičky s~tokenem může vypadat např. jako na ukázce \ref{bearerHeader}.
 
 \begin{lstlisting}[language=json, caption={Autorizační atribut - Bearer schéma}, label=bearerHeader]
 	Authorization: Bearer se5Edg345dsBNN-7df,
@@ -259,7 +259,7 @@ nejsou časově omezené - to může znamenat bezpečnostní problém v~případ
 Pokud API bude sloužit pouze ke čtení, je zabezpečení API klíčem tou nejlepší volbou - uživatelé budou moci data stahovat, ale nikterak modifikovat či mazat \cite{mostUsedAuthentication}. 
 
 \subsection{OAuth}
-OAuth (Open Authorization) protokol byl vyvinut jako řešení pro udělování přístupu na předem definovanou dobu bez sdílené uživatelských jmen a hesel \cite{understandingOAuth2}. OAuth 2.0
+OAuth (Open Authorization) protokol byl vyvinut jako řešení pro udělování přístupu na předem definovanou dobu bez sdílení uživatelských jmen a hesel \cite{understandingOAuth2}. OAuth 2.0
 je nejlepší volbou pro identifikaci osobních uživatelských účtů a udělování patřičných oprávnění \cite{mostUsedAuthentication}. Proces autentizace je vidět na obrázku \ref{fig:oauth2Diagram}.
 
 \begin{figure}

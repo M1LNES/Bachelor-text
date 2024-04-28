@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  25 APR 2024 20:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  28 APR 2024 02:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1462,8 +1462,6 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \FASThesis@subsubsection@num@width=\skip291
 \FASThesis@subsubsection@title@maxspace=\skip292
 \FASThesis@sect@temp@gap=\skip293
-\c@ttlp@side=\count549
-\ttlp@side=\count550
 \FASThesis@button@font@size=\skip294
 \FASThesis@sans@font@size=\skip295
 \FASThesis@typewriter@font@size=\skip296
@@ -1477,10 +1475,10 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 \DT@rulewidth=\dimen362
 \DT@dotwidth=\dimen363
 \DTbaselineskip=\dimen364
-\DT@counti=\count551
-\DT@countii=\count552
-\DT@countiii=\count553
-\DT@countiv=\count554
+\DT@counti=\count549
+\DT@countii=\count550
+\DT@countiii=\count551
+\DT@countiv=\count552
 \DT@indent=\dimen365
 \DT@parskip=\dimen366
 \DT@baselineskip=\dimen367
@@ -1498,8 +1496,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen368
 \enit@toks=\toks57
 \enit@inbox=\box96
-\enit@count@id=\count555
-\enitdp@description=\count556
+\enit@count@id=\count553
+\enitdp@description=\count554
 )
 LaTeX Info: Redefining \oldstylenums on input line 84.
 Package csquotes Info: Checking for multilingual support...
@@ -1548,8 +1546,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
 LaTeX Font Info:    ... okay on input line 84.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
 LaTeX Font Info:    ... okay on input line 84.
-\c@mv@tabular=\count557
-\c@mv@boldtabular=\count558
+\c@mv@tabular=\count555
+\c@mv@boldtabular=\count556
 LaTeX Info: Command `\dddot' is already robust on input line 84.
 LaTeX Info: Command `\ddddot' is already robust on input line 84.
 LaTeX Info: Redefining \microtypecontext on input line 84.
@@ -1599,16 +1597,16 @@ Package biblatex Info: Reference section=0 on input line 84.
 Package biblatex Info: Reference segment=0 on input line 84.
  (D:\Install\MikTex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count559
+\scratchcounter=\count557
 \scratchdimen=\dimen369
 \scratchbox=\box97
-\nofMPsegments=\count560
-\nofMParguments=\count561
+\nofMPsegments=\count558
+\nofMParguments=\count559
 \everyMPshowfont=\toks58
-\MPscratchCnt=\count562
+\MPscratchCnt=\count560
 \MPscratchDim=\dimen370
-\MPnumerator=\count563
-\makeMPintoPDFobject=\count564
+\MPnumerator=\count561
+\makeMPintoPDFobject=\count562
 \everyMPtoPDFconversion=\toks59
 ) (D:\Install\MikTex\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1616,7 +1614,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (D:\Install\MikTex\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count565
+\c@lstlisting=\count563
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1625,7 +1623,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
+* modes: 
 * h-part:(L,W,R)=(105.27519pt, 386.95749pt, 105.27519pt)
 * v-part:(T,H,B)=(93.89409pt, 637.34174pt, 113.81102pt)
 * \paperwidth=597.50787pt
@@ -1639,7 +1637,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \headsep=19.8738pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=92.0pt
+* \marginparwidth=42.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=12.0pt plus 4.0pt minus 4.0pt
@@ -1647,8 +1645,8 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1771,15 +1769,13 @@ Package pdftex.def Info: img/background-kiv.pdf  used on input line 85.
 [1
 
 
-{C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/enc/dvips/GTAmerica/a_ewcozh.enc} <./img/background-kiv.pdf> <./img/kiv-cmyk-cz.pdf>] [2
-
-]
+{C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/enc/dvips/GTAmerica/a_ewcozh.enc} <./img/background-kiv.pdf> <./img/kiv-cmyk-cz.pdf>]
 \FASThesis@titlebox@bw=\box99
 LaTeX Font Info:    Font shape `T1/newtxttz/bc/n' will be
 (Font)              scaled to size 25.75995pt on input line 85.
 \FASThesis@auxdim@lx=\dimen373
 \FASThesis@auxdim@ly=\dimen374
-<img/kiv-black-cz.pdf, id=320, 762.42366pt x 133.46764pt>
+<img/kiv-black-cz.pdf, id=316, 762.42366pt x 133.46764pt>
 File: img/kiv-black-cz.pdf Graphic file (type pdf)
 <use img/kiv-black-cz.pdf>
 Package pdftex.def Info: img/kiv-black-cz.pdf  used on input line 85.
@@ -1794,7 +1790,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has b
 <to be read again> 
                    \relax 
 l.85 \frontpages[tm]
-                     % or notm if the `trademark' declaration is not needed [1 <./img/kiv-black-cz.pdf>]
+                     % or notm if the `trademark' declaration is not needed [1
+
+ <./img/kiv-black-cz.pdf>]
 LaTeX Font Info:    Trying to load font information for TS1+Cochineal-TLF on input line 85.
  (D:\Install\MikTex\tex/latex/cochineal\ts1cochineal-tlf.fd
 File: TS1Cochineal-TLF.fd 2016/01/19 (msharpe) Font definitions for TS1/Cochineal-TLF.
@@ -1811,18 +1809,13 @@ LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/sl' will be
 (Font)              scaled to size 12.0pt on input line 85.
 LaTeX Font Info:    Font shape `T1/newtxttz/m/sl' will be
 (Font)              scaled to size 11.03998pt on input line 85.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.85 \frontpages[tm]
-                     % or notm if the `trademark' declaration is not needed [2{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_rwqxgv.enc}{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_cuw7wa.enc}{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_otkq6i.enc}{D:/Install/MikTex/fonts/enc/dvips/cochineal/cochTH-tlf-t1.enc}]
+ [2{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_rwqxgv.enc}{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_cuw7wa.enc}{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_otkq6i.enc}{D:/Install/MikTex/fonts/enc/dvips/cochineal/cochTH-tlf-t1.enc}]
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.85 \frontpages[tm]
                      % or notm if the `trademark' declaration is not needed
-<zadanibp.pdf, id=336, page=1, 597.51233pt x 845.0471pt>
+<zadanibp.pdf, id=333, page=1, 597.51233pt x 845.0471pt>
 File: zadanibp.pdf Graphic file (type pdf)
 <use zadanibp.pdf, page 1>
 Package pdftex.def Info: zadanibp.pdf , page1 used on input line 85.
@@ -1836,7 +1829,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has 
                    \relax 
 l.85 \frontpages[tm]
                      % or notm if the `trademark' declaration is not needed
-<zadanibp.pdf, id=362, page=2, 597.51233pt x 845.0471pt>
+<zadanibp.pdf, id=359, page=2, 597.51233pt x 845.0471pt>
 File: zadanibp.pdf Graphic file (type pdf)
 <use zadanibp.pdf, page 2>
 Package pdftex.def Info: zadanibp.pdf , page2 used on input line 85.
@@ -1863,9 +1856,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has 
 <to be read again> 
                    \relax 
 l.85 \frontpages[tm]
-                     % or notm if the `trademark' declaration is not needed [2] [3] [4
+                     % or notm if the `trademark' declaration is not needed [2] [3] (bp.toc [1
 
-] (bp.toc [1
 
 ]
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/it' will be
@@ -1886,23 +1878,21 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [3] [4
-
-]
+ [3]
 Overfull \hbox (1.8pt too wide) detected at line 159
 [] 
  []
 
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/it' will be
 (Font)              scaled to size 12.0pt on input line 163.
-[5] [6
+[4
 
 ]
 Overfull \hbox (1.8pt too wide) detected at line 178
 [] 
  []
 
-<pictures/emplifi-dashboard-example-kopie.png, id=490, 1919.67188pt x 804.00375pt>
+<pictures/emplifi-dashboard-example-kopie.png, id=474, 1919.67188pt x 804.00375pt>
 File: pictures/emplifi-dashboard-example-kopie.png Graphic file (type png)
 <use pictures/emplifi-dashboard-example-kopie.png>
 Package pdftex.def Info: pictures/emplifi-dashboard-example-kopie.png  used on input line 190.
@@ -1961,19 +1951,21 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 (Font)              scaled to size 5.5pt on input line 196.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
 (Font)              scaled to size 7.3pt on input line 196.
-[7 <./pictures/emplifi-dashboard-example-kopie.png>]
+[5
+
+ <./pictures/emplifi-dashboard-example-kopie.png>]
 LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
 (Font)              scaled to size 11.03998pt on input line 214.
 \FASThesis@runninghead@rule@offset=\dimen377
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [8{D:/Install/MikTex/fonts/enc/dvips/newtxtt/txttAec.enc}]
+ [6{D:/Install/MikTex/fonts/enc/dvips/newtxtt/txttAec.enc}]
 \FASThesis@runninghead@rule@offset=\dimen378
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [9]
+ [7]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 245.
 LaTeX Font Info:    Trying to load font information for T1+newtxtt on input line 245.
  (D:\Install\MikTex\tex/latex/newtxtt\t1newtxtt.fd
@@ -1987,7 +1979,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 246.
-<pictures/oauth2-diagram.png, id=551, 2057.6875pt x 1521.685pt>
+<pictures/oauth2-diagram.png, id=535, 2057.6875pt x 1521.685pt>
 File: pictures/oauth2-diagram.png Graphic file (type png)
 <use pictures/oauth2-diagram.png>
 Package pdftex.def Info: pictures/oauth2-diagram.png  used on input line 267.
@@ -1996,32 +1988,30 @@ Package pdftex.def Info: pictures/oauth2-diagram.png  used on input line 267.
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+ [8]
 \FASThesis@runninghead@rule@offset=\dimen380
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [11 <./pictures/oauth2-diagram.png>]
+ [9 <./pictures/oauth2-diagram.png>]
 \FASThesis@runninghead@rule@offset=\dimen381
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [12]
+ [10]
 \FASThesis@runninghead@rule@offset=\dimen382
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [13] [14
-
-]
+ [11]
 Overfull \hbox (1.8pt too wide) detected at line 332
 [] 
  []
 
-[15]
-<pictures/emplifiAPI.png, id=637, 1204.5pt x 630.85687pt>
+[12
+
+]
+<pictures/emplifiAPI.png, id=617, 1204.5pt x 630.85687pt>
 File: pictures/emplifiAPI.png Graphic file (type png)
 <use pictures/emplifiAPI.png>
 Package pdftex.def Info: pictures/emplifiAPI.png  used on input line 382.
@@ -2082,30 +2072,28 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+ [13]
 \FASThesis@runninghead@rule@offset=\dimen384
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [17 <./pictures/emplifiAPI.png>]
+ [14 <./pictures/emplifiAPI.png>]
 \FASThesis@runninghead@rule@offset=\dimen385
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [18]
+ [15]
 \FASThesis@runninghead@rule@offset=\dimen386
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [19]
+ [16]
 \FASThesis@runninghead@rule@offset=\dimen387
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [20]
-<pictures/omni-studio.png, id=717, 1630.59187pt x 1212.02812pt>
+ [17]
+<pictures/omni-studio.png, id=698, 1630.59187pt x 1212.02812pt>
 File: pictures/omni-studio.png Graphic file (type png)
 <use pictures/omni-studio.png>
 Package pdftex.def Info: pictures/omni-studio.png  used on input line 609.
@@ -2114,17 +2102,17 @@ Package pdftex.def Info: pictures/omni-studio.png  used on input line 609.
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [21]
+ [18]
 \FASThesis@runninghead@rule@offset=\dimen389
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [22 <./pictures/omni-studio.png>]
+ [19 <./pictures/omni-studio.png>]
 \FASThesis@runninghead@rule@offset=\dimen390
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [23]
+ [20]
 LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
 (Font)              scaled to size 10.0pt on input line 656.
 LaTeX Font Info:    Trying to load font information for TS1+newtxttz on input line 658.
@@ -2141,13 +2129,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [24]
+ [21]
 Overfull \hbox (1.8pt too wide) detected at line 691
 [] 
  []
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on input line 733.
-(D:\Install\MikTex\tex/latex/fontawesome5\ufontawesomefree1.fd) [25
+(D:\Install\MikTex\tex/latex/fontawesome5\ufontawesomefree1.fd) [22
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 776--776
@@ -2168,14 +2156,12 @@ Overfull \hbox (0.9891pt too wide) in paragraph at lines 780--780
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [26{D:/Install/MikTex/fonts/enc/dvips/fontawesome5/fa5free1.enc}]
-Underfull \vbox (badness 3690) has occurred while \output is active []
-
+ [23{D:/Install/MikTex/fonts/enc/dvips/fontawesome5/fa5free1.enc}]
 \FASThesis@runninghead@rule@offset=\dimen393
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [27]
+ [24]
 Overfull \hbox (0.13843pt too wide) in paragraph at lines 819--819
 |[] []| 
  []
@@ -2184,33 +2170,29 @@ Overfull \hbox (0.13843pt too wide) in paragraph at lines 819--819
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [28]
+ [25]
 LaTeX Font Info:    Font shape `T1/newtxttz/m/n' will be
 (Font)              scaled to size 9.19998pt on input line 866.
 \FASThesis@runninghead@rule@offset=\dimen395
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [29]
+ [26]
 \FASThesis@runninghead@rule@offset=\dimen396
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+ [27]
 \FASThesis@runninghead@rule@offset=\dimen397
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+ [28]
 \FASThesis@runninghead@rule@offset=\dimen398
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [32]
+ [29]
 LaTeX Font Info:    Font shape `T1/newtxttz/b/n' will be
 (Font)              scaled to size 10.0pt on input line 958.
 LaTeX Font Info:    Font shape `T1/newtxtt/m/n' will be
@@ -2219,7 +2201,7 @@ LaTeX Font Info:    Font shape `T1/newtxtt/m/n' will be
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [33]
+ [30]
 Overfull \hbox (0.87741pt too wide) in paragraph at lines 1012--1012
 |[] []| 
  []
@@ -2228,74 +2210,63 @@ Overfull \hbox (0.87741pt too wide) in paragraph at lines 1012--1012
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [34]
+ [31]
 \FASThesis@runninghead@rule@offset=\dimen401
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [35]
-Underfull \vbox (badness 6001) has occurred while \output is active []
-
+ [32]
 \FASThesis@runninghead@rule@offset=\dimen402
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [36]
+ [33]
 \FASThesis@runninghead@rule@offset=\dimen403
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [37]
+ [34]
 \FASThesis@runninghead@rule@offset=\dimen404
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [38]
+ [35]
 Overfull \hbox (1.8pt too wide) detected at line 1152
 [] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39
+[36
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 \FASThesis@runninghead@rule@offset=\dimen405
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [40]
-Underfull \vbox (badness 2401) has occurred while \output is active []
-
+ [37]
 \FASThesis@runninghead@rule@offset=\dimen406
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [41]
+ [38]
 \FASThesis@runninghead@rule@offset=\dimen407
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [42]
+ [39]
 Overfull \hbox (1.8pt too wide) detected at line 1240
 [] 
  []
 
-[43
+[40
 
-] [44
-
-] [45] [46
+] [41
 
 ]
 Overfull \hbox (1.8pt too wide) detected at line 1281
 [] 
  []
 
-<pictures/QR.pdf, id=955, 770.12718pt x 770.12718pt>
+<pictures/QR.pdf, id=927, 770.12718pt x 770.12718pt>
 File: pictures/QR.pdf Graphic file (type pdf)
 <use pictures/QR.pdf>
 Package pdftex.def Info: pictures/QR.pdf  used on input line 1306.
@@ -2305,37 +2276,36 @@ Overfull \hbox (0.94716pt too wide) in paragraph at lines 1311--1312
 []\T1/Cochineal-TLF/m/n/12 (-10) Dokumentace ob-sa-huje i od-kaz na Gi-tHub re-po-zi-tá° se zdro-jo-vým kó-dem. V n¥m
  []
 
+[42
 
-Underfull \vbox (badness 1406) has occurred while \output is active []
-
- [47 <./pictures/QR.pdf>]
+ <./pictures/QR.pdf>]
 \FASThesis@runninghead@rule@offset=\dimen408
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [48]
+ [43]
 Overfull \hbox (1.8pt too wide) detected at line 1342
 [] 
  []
 
-[49
+[44
 
 ]
 \FASThesis@runninghead@rule@offset=\dimen409
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [50]
+ [45]
 \FASThesis@runninghead@rule@offset=\dimen410
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [51]
+ [46]
 \FASThesis@runninghead@rule@offset=\dimen411
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [52]
+ [47]
 Overfull \hbox (0.14542pt too wide) in paragraph at lines 1473--1473
 |[] []| 
  []
@@ -2344,7 +2314,7 @@ Overfull \hbox (0.14542pt too wide) in paragraph at lines 1473--1473
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [53]
+ [48]
 Overfull \hbox (0.67545pt too wide) in paragraph at lines 1530--1530
 |[] []| 
  []
@@ -2353,14 +2323,12 @@ Overfull \hbox (0.67545pt too wide) in paragraph at lines 1530--1530
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [54]
+ [49]
 \FASThesis@runninghead@rule@offset=\dimen414
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [55] [56
-
-]
+ [50]
 Overfull \hbox (34.64034pt too wide) in paragraph at lines 1547--1547
 \T1/Cochineal-TLF/m/n/12 (-10) 20]. []Do-stupné z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/docs/cloud/embed -[] visualizations/
  []
@@ -2370,7 +2338,8 @@ Overfull \hbox (15.90599pt too wide) in paragraph at lines 1547--1547
 []\T1/Cochineal-TLF/m/n/12 (-10) Do-stupné z[]: []$\T1/newtxttz/m/n/10.95 https : //www . gooddata . com/docs/cloud/embed -[] visualizations/
  []
 
-[57
+[51
+
 
 ]
 Overfull \hbox (7.27242pt too wide) in paragraph at lines 1547--1547
@@ -2388,18 +2357,18 @@ Overfull \hbox (10.62303pt too wide) in paragraph at lines 1547--1547
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [58{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_7ifgnr.enc}]
+ [52{D:/Install/MikTex/fonts/enc/dvips/cochineal/coch_7ifgnr.enc}]
 \FASThesis@runninghead@rule@offset=\dimen416
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [59] [60
+ [53] (bp.lof) [54
 
-] (bp.lof) [61] [62
+] (bp.lot) [55
 
-] (bp.lot) [63] [64
+] (bp.lol) [56
 
-] (bp.lol) [65] 
+] 
 
 <QR code requested for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" in version 0-M.>
 <Copying the QR code for "https://portal.zcu.cz/StagPortletsJSR168/CleanUrl?urlid=prohlizeni-prace-detail&praceIdno=" in version 6-M as previously calculated.>
@@ -2413,7 +2382,7 @@ File: img/background-kiv.pdf Graphic file (type pdf)
 <use img/background-kiv.pdf>
 Package pdftex.def Info: img/background-kiv.pdf  used on input line 1558.
 (pdftex.def)             Requested size: 597.5064pt x 845.08348pt.
-[66
+[57
 
 ]
 \tf@toc=\write7
@@ -2445,10 +2414,10 @@ Package logreq Info: Writing requests to 'bp.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52458 strings out of 474586
- 993279 string characters out of 5758344
+ 52446 strings out of 474586
+ 993197 string characters out of 5758344
  2017558 words of memory out of 5000000
- 73295 multiletter control sequences out of 15000+600000
+ 73293 multiletter control sequences out of 15000+600000
  997426 words of font info for 272 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,13n,113p,1969b,3321s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2459,9 +2428,9 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (76 pages, 1630147 bytes).
+Output written on bp.pdf (65 pages, 1624605 bytes).
 PDF statistics:
- 1386 PDF objects out of 1440 (max. 8388607)
- 419 named destinations out of 1000 (max. 500000)
+ 1339 PDF objects out of 1440 (max. 8388607)
+ 409 named destinations out of 1000 (max. 500000)
  62159 words of extra memory for PDF output out of 74296 (max. 10000000)
 

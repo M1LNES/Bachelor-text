@@ -435,6 +435,8 @@ INPUT D:\Install\MikTex\tex\latex\fontawesome5\fontawesome5-mapping.def
 INPUT D:\Install\MikTex\tex\latex\fontawesome5\fontawesome5-mapping.def
 INPUT D:\Install\MikTex\tex\latex\enumitem\enumitem.sty
 INPUT D:\Install\MikTex\tex\latex\enumitem\enumitem.sty
+INPUT D:\Install\MikTex\tex\latex\xurl\xurl.sty
+INPUT D:\Install\MikTex\tex\latex\xurl\xurl.sty
 INPUT .\bp.aux
 INPUT .\bp.aux
 INPUT bp.aux
@@ -486,10 +488,6 @@ INPUT .\img\background-kiv.pdf
 INPUT C:\Users\milan\Desktop\LaTex\bp\texmf\tex\latex\GTAmerica\t1gtamerica-lf.fd
 INPUT C:\Users\milan\Desktop\LaTex\bp\texmf\tex\latex\GTAmerica\t1gtamerica-lf.fd
 INPUT C:\Users\milan\Desktop\LaTex\bp\texmf\tex\latex\GTAmerica\t1gtamerica-lf.fd
-INPUT D:\Install\MikTex\tex\latex\newtxtt\t1newtxttz.fd
-INPUT D:\Install\MikTex\tex\latex\newtxtt\t1newtxttz.fd
-INPUT D:\Install\MikTex\tex\latex\newtxtt\t1newtxttz.fd
-INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxttza.tfm
 INPUT D:\Install\MikTex\tex\latex\cochineal\ot1mincochineal.fd
 INPUT D:\Install\MikTex\tex\latex\cochineal\ot1mincochineal.fd
 INPUT D:\Install\MikTex\tex\latex\cochineal\ot1mincochineal.fd
@@ -558,7 +556,6 @@ INPUT D:\Install\MikTex\tex\latex\cochineal\ts1cochineal-tlf.fd
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Roman-ts1.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Bold-tlf-t1.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Italic-tlf-th-t1.tfm
-INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxttzsla.tfm
 INPUT D:\Install\MikTex\fonts\vf\public\cochineal\Cochineal-Roman-ts1.vf
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Roman-ts1--base.tfm
 INPUT D:\Install\MikTex\fonts\enc\dvips\cochineal\coch_rwqxgv.enc
@@ -631,6 +628,9 @@ INPUT D:\Install\MikTex\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\newtx\ntxexa.tfm
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Roman-tlf-t1.tfm
+INPUT D:\Install\MikTex\tex\latex\newtxtt\t1newtxttz.fd
+INPUT D:\Install\MikTex\tex\latex\newtxtt\t1newtxttz.fd
+INPUT D:\Install\MikTex\tex\latex\newtxtt\t1newtxttz.fd
 INPUT D:\Install\MikTex\fonts\tfm\public\newtxtt\newtxttza.tfm
 INPUT D:\Install\MikTex\fonts\vf\public\cochineal\Cochineal-Roman-tlf-t1.vf
 INPUT D:\Install\MikTex\fonts\tfm\public\cochineal\Cochineal-Roman-tlf-t1--base.tfm

@@ -160,7 +160,7 @@ a také rodině za podporu během celého studia.
 \chapter{Úvod}
 V~současné době internetu tvoří data významnou a důležitou součást každodenního života. Problematikou dat je nejen jejich efektivní ukládání, 
 ale také rychlé a efektivní interpretování. 
-Vizualizace dat není pouhým trendem, ale stala se klíčovým nástrojem v~mnoha odvětvích. Od oblasti logistiky, kde pomáha monitorovat a řídit tok zásob a logistické operace, až po oblast sociálního marketingu, kde je využívána k~personalizovaným reklamám či sledování aktivit zákazníků. 
+Vizualizace dat není pouhým trendem, ale stala se klíčovým nástrojem v~mnoha odvětvích. Od oblasti logistiky, kde pomáhá monitorovat a řídit tok zásob a logistické operace, až po oblast sociálního marketingu, kde je využívána k~personalizovaným reklamám či sledování aktivit zákazníků. 
 Pro snadné integrování vizualizací do aplikací třetích stran se využívá koncept \textit{embedded analytics} (integrované analytické nástroje) – ten umožňuje uživatelům rychlý a efektivní přístup k~datům bez potřeby přecházet mezi různými aplikacemi. 
 
 Cílem této práce zadané společností Emplifi, která se specializuje na sociální marketing, je vytvořit praktickou knihovnu umožňující integrování analytických grafů do aplikací třetích stran. 
@@ -200,7 +200,7 @@ Embedded analytics se nechová a nevypadá jako samostatná aplikace, ale je int
 integrovanou analytiku a vnímají software s~touto integrovanou analytikou jako jeden nástroj \cite{goodDataEmbedded}. To umožňuje softwarovým společnostem získat a plně
 integrovat analytickou platformu s~jejich vlastním SaaS produktem bez nutnosti velkých investic do vývoje vlastního řešení. 
 
-SaaS (Software as a Service) je licenční model, v~němž přístup je poskytován na základě předplatného, přičemž software je umístěn na externích serverech, nikoli na serverech firemních \cite{saasDefinition}.
+SaaS (Software as a Service) je licenční model, v~němž je přístup poskytován na základě předplatného, přičemž software je umístěn na externích serverech, nikoli na serverech firemních \cite{saasDefinition}.
 K~těmto službám se běžně přistupuje prostřednictvím webového prohlížeče s~přihlašovacím jménem a heslem. Výhodou je, že místo toho, aby mělo každé zařízení ve firmě nainstalované
 tento program, stačí se do programu přihlásit přes internet. Pro firmu to znamená úsporu financí, jelikož nemusí investovat do nového hardwaru, na němž by dané programy běžely. 
 Nevýhodou SaaS je bezpečnost dat a rychlost jejich doručování. Protože jsou data umístěna na externích serverech, je třeba zajistit rychlé a spolehlivé internetové připojení a vyloučit
@@ -295,7 +295,7 @@ Přesný formát odpovědi je ale specifikován samotným API - tudíž každé 
 %
 \section{Existující řešení}
 Embedded analytics problematikou se zabývá mnoho firem a každá z~nich disponuje jinými způsoby řešení. Zde budou zmíněny firmy, které se objevují často na vrchních příčkách
-internetových recenzí či firmy, které byly pro inspiraci doporučeny externím zadavatelem. Pro aktuálnost jsou brány informace ze zdrojů z~roků 2022/2023.
+internetových recenzí, či firmy, které byly pro inspiraci doporučeny externím zadavatelem. Pro aktuálnost jsou brány informace ze zdrojů z~roků 2022/2023.
 \subsection{GoodData}
 Firma GoodData byla zmíněna zadavatelem jako jedna z~nejvýraznějších na trhu. Dodává embedded analytics systémy firmám jako je VISA, Zalando či Bentley \cite{goodDataEmbeddingPlatform}. 
 Embedování provádí třemi zmíněnými způsoby - HTML iframem, webovou komponentou či React SDK. Zákazníkům nabízí přizpůsobení dashboardů tak, aby odpovídaly zákazníkově značce. GoodData získaly
@@ -320,7 +320,7 @@ vylepšeny a rozšířeny.
 
 \subsection{Tableau}
 Tableau vyniká ve vytváření estetických a interaktivních vizualizací \cite{tableauBlog}. Dále nabízí zákazníkům publikaci vizualizací prostřednictvím produktu Tableau Online. Cena produktu začíná na \$70 měsíčně za jednoho uživatele \cite{trustRadiusTableAU}. 
-Zákazníci produkt hodnotí velmi kladně - 100 \% z~nich uvádí, že implementace proběhla jak očekávali, 98 \% je s~výsledkem spokojeno a 91 \% by si tento produkt zakoupilo zase \cite{trustRadiusTableAU}. Silné stránky 
+Zákazníci produkt hodnotí velmi kladně - 100 \% z~nich uvádí, že implementace proběhla, jak očekávali, 98 \% je s~výsledkem spokojeno a 91 \% by si tento produkt zakoupilo zase \cite{trustRadiusTableAU}. Silné stránky 
 tohoto produktu spočívají v~automatickém generování kódu pro embedování a jednoduché vkládání dashboardů do webových stránek \cite{tableauBlog}. Kritika naopak zaznívá na zákaznickou podporu či pomalé načítání při velkém množství dat \cite{trustRadiusTableAU}.
 
 % _____________________________________________________________________________
@@ -555,7 +555,7 @@ nespecifikovaný parametr, můžeme jej dodefinovat použitím instance PreJSONu
 \end{lstlisting}
 		
 Atributy \texttt{customer\_id} a \texttt{time} jsou již předdefinované, ale na uživateli zůstává možnost volby parametru \texttt{platform}. Datový typ parametru musí být vždy specifikován.
-Zde se očekává string hodnota, která může nabývat (opět pouze pro ukázku) např. hodnot \texttt{instragram}, \texttt{facebook}, \texttt{snapchat}, \texttt{linkedin} apod. Uživatel tedy zvolí jednu ze sociálních sítí
+Zde se očekává string hodnota, která může nabývat (opět pouze pro ukázku) např. hodnot \texttt{instagram}, \texttt{facebook}, \texttt{snapchat}, \texttt{linkedin} apod. Uživatel tedy zvolí jednu ze sociálních sítí
 a pomocí funkce \texttt{expand()} může tuto hodnotu dodefinovat. Výsledek může vypadat poté jako na ukázce \ref{expandedPreJson}.
 
 \begin{lstlisting}[language=json, caption={Expandovaný PreJSON objekt}, label=expandedPreJson]
@@ -648,7 +648,7 @@ věci potřebné k~embedování sloučí do jednoho UI (tj. bude se jednat o~jed
 \subsection{Vytváření tokenů}
 
 K~vytvoření tokenů bude sloužit patička stránky. V~ní se budou nacházet dvě tlačítka - jedno pro vytvoření Public API tokenu, druhé pro Omni API token. K~vytvoření těchto tokenů je třeba být přihlášen v
-účtu Suite, jak bylo dřívě zmíněno. Po stisknutí tlačítka bude uživatel přesměrován na stránku, kde udělí patřičné oprávnění, že se pro jeho účet vytvoří token. Po potvrzení se uživateli token uloží
+účtu Suite, jak bylo dříve zmíněno. Po stisknutí tlačítka bude uživatel přesměrován na stránku, kde udělí patřičné oprávnění, že se pro jeho účet vytvoří token. Po potvrzení se uživateli token uloží
 do místního úložiště (častěji nazývané jako local storage) webového prohlížeče. To umožní okamžitou možnost embedování v~UI a zároveň snadnou přístupnost k~tomuto tokenu. Pokud bude chtít uživatel token používat ve své aplikaci, jednoduše jej z~local storage
 zkopíruje k~sobě do aplikace, kde jej bude dále moci normálně využívat. To by platilo pro případ, kdy by jeden z~tokenů vypršel. Ovšem bude-li uživatel nový a bude nutno vygenerovat oba dva tokeny pro potřebné vizualizace,
 bude přidáno tlačítko, které uživateli zkopíruje oba dva tokeny ve formátu \texttt{.env} souboru. Uživatel tedy nebude muset sám hodnoty přepisovat, ale pouze je vloží zkopírované do \texttt{.env} souboru. Zkopírované tokeny
@@ -899,7 +899,7 @@ key: "${daterange:time}"
 ...
 \end{lstlisting}
 
-Dále je možno načíst konfiguraci widgetu, která obsahuje jak specifikaci vizualizace (barvy, popisky os, ...), tak i datové requesty. Opět se specifikuje číslo dashboardu, API stáhne veškeré widgety z~toho boardu a následně se dle \texttt{widgetID} vyfiltrují na jeden vyhovující. Jestliže
+Dále je možno načíst konfiguraci widgetu, která obsahuje jak specifikaci vizualizace (barvy, popisky os...), tak i datové requesty. Opět se specifikuje číslo dashboardu, API stáhne veškeré widgety z~toho boardu a následně se dle \texttt{widgetID} vyfiltrují na jeden vyhovující. Jestliže
 neexistuje widget s~daným ID, je vrácena chybová hláška o~nenalezení widgetu a stahování dat neproběhne. Pokud byly specifikované identifikátory správné, dalším krokem je expandování
 widget konfigurace. 
 
@@ -932,7 +932,7 @@ naimplementována obecněji - tj. pokud proběhly veškeré data fetche v~pořá
 ale komponenta je připravena v~budoucnosti na podporu všech druhů widgetů.
 
 
-Dceřiná komponenta \texttt{<WidgetVision/>} následně zpracovává přijatou konfiguraci a data a poté je vizualizuje. Nejprve zkontroluje hlavičku konfigurace (nadpisy, podnadpisy, tooltipy, ...),
+Dceřiná komponenta \texttt{<WidgetVision/>} následně zpracovává přijatou konfiguraci a data a poté je vizualizuje. Nejprve zkontroluje hlavičku konfigurace (nadpisy, podnadpisy, tooltipy...),
 předá data a widget konfiguraci komponentě \texttt{<Vision/>} a vykreslí patičku s~informačním štítkem, že se jedná o~data pocházející z~Emplifi. Pro vývojářské a debuggovací účely jsou 
 zřízeny i dvě komponenty, které vizualizují neexpandované a expandované datové requesty. Pokud uživatel nespecifikuje pomocí properties, že je chce vypsat, jsou automaticky ignorovány a nevykresleny.
 
@@ -945,9 +945,9 @@ funkce \texttt{useQuery} vyžaduje tzv. \texttt{QueryProvidera}. Proto při expo
 Pro sestavení knihovny se využívá modul webpack. Jeho konfigurace je uložená v~kořenovém adresáři knihovny a obsahuje dvě konfigurace pro sestavení a kompilaci (často
 označováno jako \textit{build}) - pro frontendovou část a backendovou.
 Na sestavení knihovny je následně vytvořen skript, který je definovaný v~\texttt{package.json} a spouští se pomocí npm. Výsledné dva vytvořené soubory (\texttt{empli-embed-backend.js} a \texttt{empli-embed.js})
-jsou uloženy do složky \texttt{dist}. Poté už je třeba jen aktualizovanou verzi knihovny zveřejnit na \url{https://www.npmjs.com/}. Pro tuto akci je taktéž vytvořen skript v~\texttt{package.json}.
+jsou uloženy do složky \texttt{dist}. Poté už je třeba jen aktualizovanou verzi knihovny zveřejnit na \url{https://www.npmjs.com/}. Pro tuto akci je použit jeden z~příkazů npm.
 Podrobnější informace jsou v~uživatelské dokumentaci.
-
+\\
 \section{Implementace uživatelského rozhraní}
 
 \subsection{Importování knihovny}
@@ -1148,7 +1148,7 @@ ale pouze takto:
 
 Při implementaci knihovny byly vytvářeny Markdown (\texttt{.md}) soubory, které popisují důležité části knihovny a aplikace. Následně nástroj Docusaurus tyto soubory zkompiloval,
 aby vytvořil webovou stránku, která je přístupná pro uživatele. Tímto způsobem byla vytvořena přehledná dokumentace, která slouží jako důležitý zdroj informací nejen pro koncové uživatele,
-ale také pro vývojáře. Zdrojové soubory výsledné dokumentace se nachází ve složce \texttt{docs} uložené ve zdrojovém kódu knihovny. Návod na její použití se nachází v~příloze \ref{app:docuDocs}.
+ale také pro vývojáře. Zdrojové soubory výsledné dokumentace se nachází ve složce \texttt{docs} uložené v kořenovém adresáři knihovny. Návod na její použití se nachází v~příloze \ref{app:docuDocs}.
 
 \chapter{Testování a zhodnocení}
 \section{Testování}
@@ -1264,6 +1264,7 @@ také možnosti rozšíření, které by mohly dále zvýšit funkcionalitu a u�
 
 \begin{itemize}[align=left, labelwidth=1.5cm, labelsep=10pt, leftmargin=!]
     \item[\textbf{API}]    Application Programming Interface  
+    \item[\textbf{B2B}]	 Bussines to Bussines
     \item[\textbf{CSS}]	 Cascading Style Sheets
     \item[\textbf{DOM}] 	Document Object Model
     \item[\textbf{HTML}]  Hypertext Markup Language

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  28 APR 2024 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2024.4.19)  28 APR 2024 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2182,6 +2182,10 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [28]
+Underfull \hbox (badness 10000) in paragraph at lines 945--951
+
+ []
+
 \FASThesis@runninghead@rule@offset=\dimen398
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
@@ -2256,17 +2260,17 @@ Overfull \hbox (1.8pt too wide) detected at line 1241
 ] [41
 
 ]
-Overfull \hbox (1.8pt too wide) detected at line 1283
+Overfull \hbox (1.8pt too wide) detected at line 1284
 [] 
  []
 
 <pictures/QR.pdf, id=927, 770.12718pt x 770.12718pt>
 File: pictures/QR.pdf Graphic file (type pdf)
 <use pictures/QR.pdf>
-Package pdftex.def Info: pictures/QR.pdf  used on input line 1308.
+Package pdftex.def Info: pictures/QR.pdf  used on input line 1309.
 (pdftex.def)             Requested size: 96.73936pt x 96.7357pt.
 
-Overfull \hbox (0.94716pt too wide) in paragraph at lines 1313--1314
+Overfull \hbox (0.94716pt too wide) in paragraph at lines 1314--1315
 []\T1/Cochineal-TLF/m/n/12 (-10) Dokumentace ob-sa-huje i od-kaz na Gi-tHub re-po-zi-tá° se zdro-jo-vým kó-dem. V n¥m
  []
 
@@ -2278,7 +2282,7 @@ Overfull \hbox (0.94716pt too wide) in paragraph at lines 1313--1314
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [43]
-Overfull \hbox (1.8pt too wide) detected at line 1344
+Overfull \hbox (1.8pt too wide) detected at line 1345
 [] 
  []
 
@@ -2300,7 +2304,7 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [47]
-Overfull \hbox (0.14542pt too wide) in paragraph at lines 1475--1475
+Overfull \hbox (0.14542pt too wide) in paragraph at lines 1476--1476
 |[] []| 
  []
 
@@ -2309,7 +2313,7 @@ Overfull \hbox (0.14542pt too wide) in paragraph at lines 1475--1475
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
  [48]
-Overfull \hbox (0.67545pt too wide) in paragraph at lines 1532--1532
+Overfull \hbox (0.67545pt too wide) in paragraph at lines 1533--1533
 |[] []| 
  []
 
@@ -2327,7 +2331,7 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
 ]
 LaTeX Font Info:    Font shape `T1/Cochineal-TLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 1548.
+(Font)              scaled to size 12.0pt on input line 1549.
 \FASThesis@runninghead@rule@offset=\dimen415
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
@@ -2351,11 +2355,11 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 1560.
+(in both cases you will find help in the memoir manual). on input line 1561.
 
 File: img/background-kiv.pdf Graphic file (type pdf)
 <use img/background-kiv.pdf>
-Package pdftex.def Info: img/background-kiv.pdf  used on input line 1560.
+Package pdftex.def Info: img/background-kiv.pdf  used on input line 1561.
 (pdftex.def)             Requested size: 597.5064pt x 845.08348pt.
 [57
 
@@ -2399,7 +2403,7 @@ pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 <D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Bold.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Italic.pfb><D:/Install/MikTex/fonts/type1/public/cochineal/Cochineal-Roman.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Regular.pfb><D:/Install/MikTex/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedBold.pfb><C:/Users/milan/Desktop/LaTex/bp/texmf/fonts/type1/lcdftools/GTAmerica/GTAmerica-CondensedRegular.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxbtt.pfb><D:/Install/MikTex/fonts/type1/public/newtxtt/newtxtt.pfb><D:/Install/MikTex/fonts/type1/public/txfonts/tcxtt.pfb>
-Output written on bp.pdf (65 pages, 1624897 bytes).
+Output written on bp.pdf (65 pages, 1624926 bytes).
 PDF statistics:
  1339 PDF objects out of 1440 (max. 8388607)
  409 named destinations out of 1000 (max. 500000)
